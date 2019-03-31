@@ -2,13 +2,19 @@ Type: Package
 Package: tvthemes
 Title: TV show themes and color palettes for ggplot2 graphics
 Version: 0.0.0.9000
-Author@R: 
+Authors@R: 
   person(given = "Ryo",
          family = "Nakagawara",
          role = c("aut", "cre"),
          email = "ryonakagawara@gmail.com")
+Maintainer: Ryo Nakagawara <ryonakagawara@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1
+Imports: 
+    ggplot2,
+    extrafont,
+    scales

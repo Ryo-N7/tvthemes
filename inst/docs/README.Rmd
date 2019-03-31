@@ -1,0 +1,10 @@
+---
+output:: rmarkdown::github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## `tvthemes` : Themes and Color Palettes based on American TV Shows for `ggplot2` visualizations
+
