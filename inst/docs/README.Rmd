@@ -8,3 +8,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## `tvthemes` : Themes and Color Palettes based on American TV Shows for `ggplot2` visualizations
 
+```{r}
+library(tidyverse)
+library(tvthemes)
+library(extrafont)
+# import_univers()
+# import_univers_extrablack()
+import_champion_htf_heaveyweight()
+loadfonts()
+
+mtcars %>% 
+  mutate(cyl = as_factor(cyl)) %>% 
+  ggplot(aes(mpg, hp, color = cyl, fill = cyl)) +
+  geom_point(size = 2) +
+  geom_rect(aes(xmin = 100, xmax = 300, ymin = 200, ymax = 300)) +
+  scale_fill_brooklyn99() +
+  labs(x = "horsepowerinho", y = "mile per gallones",
+       title = "Well this package thing isn't going all dandy and sunshines") +
+  theme_brooklyn99(font.text = "Champion HTF-Heavyweight",
+                   font.title = "Champion HTF-Heavyweight",
+                   font.legend = "Helvetica")
+```
+

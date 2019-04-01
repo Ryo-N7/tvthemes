@@ -57,3 +57,51 @@ import_univers_extrablack <- function() {
     )
   )
 }
+
+#' @title import_champion_htf_heaveyweight
+#' @description imports Champion HTF-Heavyweight font
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @seealso
+#'  \code{\link[extrafont]{font_import}}
+#' @rdname import_champion_htf_heaveyweight
+#' @export
+#' @importFrom extrafont font_import
+
+import_champion_htf_heaveyweight <- function() {
+
+  champion_htf_heaveyweight_font_dir <- system.file("fonts", "Champion-HTF-Heavyweight", package = "tvthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(champion_htf_heaveyweight_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You should install these fonts on your system directly. The files are located in [%s]",
+      champion_htf_heaveyweight_font_dir
+    )
+  )
+}
+
+#' @title import_roboto_condensed
+#' @description taken from hrbrmstrthemes
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @seealso
+#'  \code{\link[extrafont]{font_import}}
+#' @rdname import_roboto_condensed
+#' @export
+#' @importFrom extrafont font_import
+
+import_roboto_condensed <- function() {
+
+  rc_font_dir <- system.file("fonts", "roboto-condensed", package = "hrbrthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(rc_font_dir, prompt=FALSE)))
+
+  message(
+    sprintf(
+      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+      rc_font_dir)
+  )
+
+}
