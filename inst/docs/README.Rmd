@@ -18,15 +18,84 @@ import_champion_htf_heaveyweight()
 loadfonts()
 
 mtcars %>% 
-  mutate(cyl = as_factor(cyl)) %>% 
-  ggplot(aes(mpg, hp, color = cyl, fill = cyl)) +
-  geom_point(size = 2) +
+  mutate(cyl = as_factor(cyl),
+         carb = as_factor(carb)) %>% 
+  ggplot(aes(mpg, hp, fill = cyl)) +
+  #geom_point(aes(color = carb), size = 2) +
+  geom_point(size = 2, color = "#41b6c4") +
   geom_rect(aes(xmin = 100, xmax = 300, ymin = 200, ymax = 300)) +
+  scale_color_brooklyn99() +
   scale_fill_brooklyn99() +
   labs(x = "horsepowerinho", y = "mile per gallones",
        title = "Well this package thing isn't going all dandy and sunshines") +
-  theme_brooklyn99(font.text = "Champion HTF-Heavyweight",
+  theme_brooklyn99(font.text = "Roboto Condensed",
                    font.title = "Champion HTF-Heavyweight",
                    font.legend = "Helvetica")
+```
+
+
+
+```{r}
+mtcars %>% 
+  mutate(cyl = as_factor(cyl),
+         carb = as_factor(carb)) %>% 
+  ggplot(aes(mpg, hp, fill = cyl)) +
+  #geom_point(aes(color = carb), size = 2) +
+  geom_col(fill = "#549E39") +
+  geom_point(size = 2, color = "#41b6c4") +
+  geom_rect(aes(xmin = 100, xmax = 300, ymin = 200, ymax = 300)) +
+  theme(text = element_text(family = "Champion HTF-Heavyweight"),
+        axis.text = element_text(size = 8),
+        axis.title.y = element_text(angle = 0, vjust= 0.5),
+        plot.background = element_rect(color = NA, fill = "#fcf7e8"),
+        panel.background = element_rect(color = NA, fill = "#fcf7e8"),
+        panel.grid.major.x = element_blank())
+```
+
+
+
+```{r}
+mtcars %>% 
+  mutate(cyl = as_factor(cyl),
+         carb = as_factor(carb)) %>% 
+  ggplot(aes(mpg, hp)) +
+  #geom_point(aes(color = carb), size = 2) +
+  geom_col(fill = "#4C3114") + # "#549E39" lightgreen
+  geom_point(size = 2, color = "#7A491E") +   #  #4C3114 darker brown
+  theme(text = element_text(family = "Champion HTF-Heavyweight"),
+        axis.text = element_text(size = 8),
+        axis.title.y = element_text(angle = 0, vjust= 0.5),
+        plot.background = element_rect(color = NA, fill = "#CCFFBB"),#238443
+        panel.background = element_rect(color = NA, fill = "#238443"), # #1A5E1FFF darkgreen
+        panel.grid.major.x = element_blank())
+```
+
+
+
+```{r}
+library(shadowtext)
+library(glue)
+
+header <- ggplot() +
+  geom_shadowtext(aes(y = 3.15, x = 2,
+           family = "Champion HTF-Heavyweight"), 
+           color = "#fcf7e8", size = 50,
+           label = glue("Parks & Recreation")) +
+  # annotate(geom = "text", y = 3.15, x = 2, size = 50, 
+  #          family = "Champion HTF-Heavyweight", color = "#fcf7e8",
+  #          label = glue("Parks & Recreation")) +
+  geom_shadowtext(aes(y = 3.15, x = 2,
+           family = "Champion HTF-Heavyweight"), 
+           color = "#fcf7e8", size = 25,
+           label = glue("Parks & Recreation")) +
+  # annotate(geom = "text", y = 2.5, x= 2, size = 25, 
+  #          family = "Champion HTF-Heavyweight", color = "white",
+  #          label= "Parks & Recreation") +
+  ylim(0, 4) +
+  theme_void() +
+  theme(plot.background = element_rect(color = "#fcf7e8", 
+                                       fill = "#005502", # "#1A5E1FFF" "#CCFFBB"
+                                       size = 5))
+header
 ```
 

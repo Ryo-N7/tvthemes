@@ -4,7 +4,10 @@ brooklyn99_palette <- c(
   "#000E33", ## dark navy
   "#e41a1c", ## red
   "#FCF40E", ## yellow
-  "#e7298a"  ## hot pink
+  "#e7298a", ## hot pink
+  "#f16913", ## orange
+  "#000000", ## black
+  "#525252"  ## grey
 )
 
 #' @title brooklyn99_pal
@@ -115,3 +118,4 @@ scale_colour_brooklyn99_dark <- scale_color_brooklyn99_dark
 scale_fill_brooklyn99_dark <- function(...){
   ggplot2::discrete_scale("fill", "brooklyn99_dark", brooklyn99_dark_pal(), ...)
 }
+
