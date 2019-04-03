@@ -4,7 +4,16 @@
 \alias{theme_parksAndRec}
 \title{theme_parksAndRec}
 \usage{
-theme_parksAndRec()
+theme_parksAndRec(font.text = "Champion HTF-Heavyweight",
+  font.title = "Champion HTF-Heavyweight",
+  font.legend = "Champion HTF-Heavyweight")
+}
+\arguments{
+\item{font.text}{text font}
+
+\item{font.title}{title font}
+
+\item{font.legend}{legend font}
 }
 \value{
 OUTPUT_DESCRIPTION

@@ -62,13 +62,44 @@ mtcars %>%
   #geom_point(aes(color = carb), size = 2) +
   geom_col(fill = "#4C3114") + # "#549E39" lightgreen
   geom_point(size = 2, color = "#7A491E") +   #  #4C3114 darker brown
+  geom_point(color = "yellow") +
+  geom_point(color = "#fee0d2") +
+  labs(title = "Parks and Recreation",
+       subtitle = "blahblah Leslie Knope") +
   theme(text = element_text(family = "Champion HTF-Heavyweight"),
-        axis.text = element_text(size = 8),
-        axis.title.y = element_text(angle = 0, vjust= 0.5),
-        plot.background = element_rect(color = NA, fill = "#CCFFBB"),#238443
-        panel.background = element_rect(color = NA, fill = "#238443"), # #1A5E1FFF darkgreen
-        panel.grid.major.x = element_blank())
+        axis.text = element_text(size = 8, color = "grey20"),
+        axis.title = element_text(color = "grey20"),
+        plot.background = element_rect(color = NA, fill = "#CCFFBB"),#238443   #CCFFBB
+        panel.background = element_rect(color = NA, fill = "#238443"), # #1A5E1FFF darkgreen  #238443
+        panel.grid.major = element_line(color = "#fee0d2"),
+        panel.grid.minor = element_line(color = "#fee0d2"))
 ```
+
+# light
+
+```{r}
+mtcars %>% 
+  mutate(cyl = as_factor(cyl),
+         carb = as_factor(carb)) %>% 
+  ggplot(aes(mpg, hp)) +
+  #geom_point(aes(color = carb), size = 2) +
+  geom_col(fill = "#4C3114") + # "#549E39" lightgreen
+  geom_point(size = 2, color = "#7A491E") +   #  #4C3114 darker brown
+  geom_point(color = "yellow") +
+  geom_point(color = "#fee0d2") +
+  labs(title = "Parks and Recreation",
+       subtitle = "blahblah Leslie Knope") +
+  theme(text = element_text(family = "Champion HTF-Heavyweight"),
+        axis.text = element_text(size = 8, color = "grey20"),
+        axis.title = element_text(color = "grey20"),
+        plot.background = element_rect(color = NA, fill = "#41ab5d"),#238443   #CCFFBB
+        panel.background = element_rect(color = NA, fill = "#CCFFBB"), # #1A5E1FFF darkgreen  #238443
+        panel.grid.major = element_line(color = "grey20"),
+        panel.grid.minor = element_line(color = "grey20")) +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0))
+```
+
 
 
 
