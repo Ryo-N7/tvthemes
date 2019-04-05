@@ -6,8 +6,8 @@ brooklyn99_palette <- c(
   "#FCF40E", ## yellow
   "#e7298a", ## hot pink
   "#f16913", ## orange
-  "#000000", ## black
-  "#525252"  ## grey
+  "#525252", ## grey
+  "#000000"  ## black
 )
 
 #' @title brooklyn99_pal

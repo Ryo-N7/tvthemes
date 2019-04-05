@@ -19,7 +19,7 @@ import_univers <- function() {
 
   univers_font_dir <- system.file("fonts", "Univers", package = "tvthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(univers_font_dir, prompt = FALSE)))
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = univers_font_dir, prompt = FALSE)))
 
   message(
     sprintf(
@@ -48,7 +48,7 @@ import_univers_extrablack <- function() {
 
   univers_extrablack_font_dir <- system.file("fonts", "Univers LT 93 ExtraBlackEx", package = "tvthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(univers_extrablack_font_dir, prompt = FALSE)))
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = univers_extrablack_font_dir, prompt = FALSE)))
 
   message(
     sprintf(
@@ -58,7 +58,7 @@ import_univers_extrablack <- function() {
   )
 }
 
-#' @title import_champion_htf_heaveyweight
+#' @title import_champion_htf_heavyweight
 #' @description imports Champion HTF-Heavyweight font
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
@@ -68,16 +68,16 @@ import_univers_extrablack <- function() {
 #' @export
 #' @importFrom extrafont font_import
 
-import_champion_htf_heaveyweight <- function() {
+import_champion_htf_heavyweight <- function() {
 
-  champion_htf_heaveyweight_font_dir <- system.file("fonts", "Champion-HTF-Heavyweight", package = "tvthemes")
+  champion_htf_heavyweight_font_dir <- system.file("fonts", "Champion-HTF-Heavyweight", package = "tvthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(champion_htf_heaveyweight_font_dir, prompt = FALSE)))
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = champion_htf_heavyweight_font_dir, prompt = FALSE)))
 
   message(
     sprintf(
       "You should install these fonts on your system directly. The files are located in [%s]",
-      champion_htf_heaveyweight_font_dir
+      champion_htf_heavyweight_font_dir
     )
   )
 }
@@ -94,9 +94,9 @@ import_champion_htf_heaveyweight <- function() {
 
 import_roboto_condensed <- function() {
 
-  rc_font_dir <- system.file("fonts", "roboto-condensed", package = "hrbrthemes")
+  rc_font_dir <- system.file("fonts", "Roboto-Condensed", package = "hrbrthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(rc_font_dir, prompt=FALSE)))
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = rc_font_dir, prompt = FALSE)))
 
   message(
     sprintf(
@@ -104,4 +104,28 @@ import_roboto_condensed <- function() {
       rc_font_dir)
   )
 
+}
+
+#' @title import_simpsons
+#' @description The Simpsons Font ("Akbar" font)
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @seealso
+#'  \code{\link[extrafont]{font_import}}
+#' @rdname import_simpsons
+#' @export
+#' @importFrom extrafont font_import
+
+import_simpsons <- function() {
+
+  simpsons_font_dir <- system.file("fonts", "Simpsons-Font", package = "tvthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = simpsons_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You should install these fonts on your system directly. The files are located in [%s]",
+      simpsons_font_dir
+    )
+  )
 }

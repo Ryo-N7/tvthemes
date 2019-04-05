@@ -8,15 +8,20 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## `tvthemes` : Themes and Color Palettes based on American TV Shows for `ggplot2` visualizations
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(tvthemes)
 library(extrafont)
 # import_univers()
 # import_univers_extrablack()
-import_champion_htf_heaveyweight()
+import_champion_htf_heavyweight()
+import_simpsons()
 loadfonts()
+```
 
+# b99
+
+```{r}
 mtcars %>% 
   mutate(cyl = as_factor(cyl),
          carb = as_factor(carb)) %>% 
@@ -33,6 +38,20 @@ mtcars %>%
                    font.legend = "Helvetica")
 ```
 
+# b99 dark
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), 
+                 col = "black", size = 0.1,
+                 binwidth = 0.1) +
+  scale_fill_brooklyn99_dark() +
+  theme_brooklyn99()
+```
+
+
+# ?
 
 
 ```{r}
@@ -52,56 +71,60 @@ mtcars %>%
         panel.grid.major.x = element_blank())
 ```
 
-
+# p&r normal
 
 ```{r}
-mtcars %>% 
-  mutate(cyl = as_factor(cyl),
-         carb = as_factor(carb)) %>% 
-  ggplot(aes(mpg, hp)) +
-  #geom_point(aes(color = carb), size = 2) +
-  geom_col(fill = "#4C3114") + # "#549E39" lightgreen
-  geom_point(size = 2, color = "#7A491E") +   #  #4C3114 darker brown
-  geom_point(color = "yellow") +
-  geom_point(color = "#fee0d2") +
+# mtcars %>% 
+#   mutate(cyl = as_factor(cyl),
+#          carb = as_factor(carb)) %>% 
+  # ggplot(aes(mpg, hp)) +
+  # #geom_point(aes(color = carb), size = 2) +
+  # geom_col(fill = "#4C3114") + # "#549E39" lightgreen
+  # geom_point(size = 2, color = "#7A491E") +   #  #4C3114 darker brown
+  # geom_point(color = "yellow") +
+  # geom_point(color = "#fee0d2") +
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   labs(title = "Parks and Recreation",
        subtitle = "blahblah Leslie Knope") +
-  theme(text = element_text(family = "Champion HTF-Heavyweight"),
+  theme(text = element_text(family = "Akbar"),
+        plot.subtitle = element_text(color = "grey20"),
         axis.text = element_text(size = 8, color = "grey20"),
         axis.title = element_text(color = "grey20"),
         plot.background = element_rect(color = NA, fill = "#CCFFBB"),#238443   #CCFFBB
         panel.background = element_rect(color = NA, fill = "#238443"), # #1A5E1FFF darkgreen  #238443
         panel.grid.major = element_line(color = "#fee0d2"),
-        panel.grid.minor = element_line(color = "#fee0d2"))
+        panel.grid.minor = element_line(color = "#fee0d2")) +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_parksAndRec()
 ```
 
-# light
+# p&r light
 
 ```{r}
-mtcars %>% 
-  mutate(cyl = as_factor(cyl),
-         carb = as_factor(carb)) %>% 
-  ggplot(aes(mpg, hp)) +
-  #geom_point(aes(color = carb), size = 2) +
-  geom_col(fill = "#4C3114") + # "#549E39" lightgreen
-  geom_point(size = 2, color = "#7A491E") +   #  #4C3114 darker brown
-  geom_point(color = "yellow") +
-  geom_point(color = "#fee0d2") +
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   labs(title = "Parks and Recreation",
        subtitle = "blahblah Leslie Knope") +
-  theme(text = element_text(family = "Champion HTF-Heavyweight"),
-        axis.text = element_text(size = 8, color = "grey20"),
-        axis.title = element_text(color = "grey20"),
+  theme(text = element_text(family = "Champion HTF-Heavyweight", color = "#fee8c8"),
+        axis.text = element_text(size = 8, color = "#fee8c8"),
+        axis.title = element_text(color = "#fee8c8"),
         plot.background = element_rect(color = NA, fill = "#41ab5d"),#238443   #CCFFBB
         panel.background = element_rect(color = NA, fill = "#CCFFBB"), # #1A5E1FFF darkgreen  #238443
         panel.grid.major = element_line(color = "grey20"),
-        panel.grid.minor = element_line(color = "grey20")) +
+        panel.grid.minor = element_line(color = "grey20"),
+        legend.title = element_text(color = "grey20"),
+        legend.text = element_text(color = "grey20", size = 9)) +
   scale_y_continuous(expand = c(0,0)) +
-  scale_x_continuous(expand = c(0,0))
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_parksAndRec()
 ```
 
 
-
+# P&R logo
 
 ```{r}
 library(shadowtext)
@@ -128,5 +151,34 @@ header <- ggplot() +
                                        fill = "#005502", # "#1A5E1FFF" "#CCFFBB"
                                        size = 5))
 header
+```
+
+
+
+# The Simpsons
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  geom_bar(fill = "#FFD235") +
+  labs(title = "Los Simpsons",
+       subtitle = "blahblah Homer Simpson Sector 7G skateboard") +
+  theme(text = element_text(family = "Akbar", color = "#fee8c8"),
+        axis.text = element_text(size = 8, color = "#fee8c8"),
+        axis.title = element_text(color = "#fee8c8"),
+        plot.title = element_text(color = "#FFD235"),
+        plot.background = element_rect(color = NA, fill = "#7199E1"),#238443   #CCFFBB
+        panel.background = element_rect(color = NA, fill = "#7199E1"), 
+        panel.grid.major = element_line(color = "#fee8c8"),
+        panel.grid.minor = element_line(color = "#fee8c8"),
+        legend.title = element_text(color = "grey20"),
+        legend.text = element_text(color = "grey20", size = 9),
+        legend.key = element_rect(colour = "black", linetype = "solid", size = 1.5),
+        legend.background = element_rect(color = "black", fill = "#7199E1",
+                                         linetype = "solid")) +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_parksAndRec()
 ```
 
