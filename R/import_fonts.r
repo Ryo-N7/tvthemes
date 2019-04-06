@@ -129,3 +129,75 @@ import_simpsons <- function() {
     )
   )
 }
+
+
+#' @title import_southpark
+#' @description South Park font
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @seealso
+#'  \code{\link[extrafont]{font_import}}
+#' @rdname import_southpark
+#' @export
+#' @importFrom extrafont font_import
+
+import_southpark <- function() {
+  southpark_font_dir <- system.file("fonts", "South-Park", package = "tvthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = southpark_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You should install these fonts on your system directly. The files are located in [%s]",
+      southpark_font_dir
+    )
+  )
+}
+
+#' @title import_rickAndMorty
+#' @description Rick & Morty font ("Get Schwifty")
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @rdname import_rickAndMorty
+#' @export
+#' @importFrom extrafont font_import
+
+import_rickAndMorty <- function() {
+  rickAndMorty_font_dir <- system.file("fonts", "Rick-And-Morty", package = "tvthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = rickAndMorty_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You should install these fonts on your system directly. The files are located in [%s]",
+      rickAndMorty_font_dir
+    )
+  )
+}
+
+#' @title import_spongeBob
+#' @description SpongeBob SquarePants font ("Some-Time-Later")
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @rdname import_spongeBob
+#' @export
+#' @importFrom extrafont font_import
+
+import_spongeBob <- function() {
+  spongeBob_font_dir <- system.file("fonts", "SpongeBob", package = "tvthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = spongeBob_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You should install these fonts on your system directly. The files are located in [%s]",
+      spongeBob_font_dir
+    )
+  )
+}

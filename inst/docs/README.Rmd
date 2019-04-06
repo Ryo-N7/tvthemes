@@ -14,8 +14,8 @@ library(tvthemes)
 library(extrafont)
 # import_univers()
 # import_univers_extrablack()
-import_champion_htf_heavyweight()
-import_simpsons()
+# import_champion_htf_heavyweight()
+# import_simpsons()
 loadfonts()
 ```
 
@@ -161,7 +161,7 @@ header
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  geom_bar(fill = "#FFD235") +
+  #geom_bar(fill = "#FFD235") +
   labs(title = "Los Simpsons",
        subtitle = "blahblah Homer Simpson Sector 7G skateboard") +
   theme(text = element_text(family = "Akbar", color = "#fee8c8"),
@@ -179,6 +179,29 @@ mpg %>%
                                          linetype = "solid")) +
   scale_y_continuous(expand = c(0,0)) +
   scale_x_continuous(expand = c(0,0)) +
+  scale_fill_simpsons() +
   scale_fill_parksAndRec()
+```
+
+
+
+
+# The Good Place
+
+- Pobody's Nerfect t-shirt color scheme (yellow/purple/brown/darknavy)
+
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  #geom_bar(fill = "#FFD235") +
+  labs(title = "Rick and Morty",
+       subtitle = "blahblah Gazorpazorp Summer goddamit") +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_rickAndMorty() + theme_minimal()
+  scale_fill_simpsons() +
+  theme(text = element_text(family = "Some Time Later"))
 ```
 

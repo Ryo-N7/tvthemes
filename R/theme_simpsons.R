@@ -3,7 +3,7 @@ theme_simpsons <- function(font.text = "Akbar",
                               font.legend = "Akbar"){
 
   theme(text = element_text(family = font.text),
-        title = element_text(family = font.title),
+        plot.title = element_text(family = font.title, color = "#FFD235"),
         axis.text = element_text(size = 8, color = "grey20"),
         axis.title = element_text(color = "grey20"),
         legend.title = element_text(family = font.legend),
