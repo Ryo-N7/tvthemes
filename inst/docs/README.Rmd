@@ -191,6 +191,11 @@ mpg %>%
 - Pobody's Nerfect t-shirt color scheme (yellow/purple/brown/darknavy)
 
 
+
+
+
+# Rick & Morty
+
 ```{r}
 mpg %>% 
   ggplot(aes(displ)) +
@@ -200,8 +205,110 @@ mpg %>%
        subtitle = "blahblah Gazorpazorp Summer goddamit") +
   scale_y_continuous(expand = c(0,0)) +
   scale_x_continuous(expand = c(0,0)) +
-  scale_fill_rickAndMorty() + theme_minimal()
-  scale_fill_simpsons() +
-  theme(text = element_text(family = "Some Time Later"))
+  scale_fill_rickAndMorty() + 
+  theme_minimal() +
+  theme(text = element_text(family = "Get Schwifty"),
+        plot.background = element_rect(color = NA, fill = "#ece5d3"), 
+        panel.background = element_rect(color = NA, fill = "#ece5d3")) -> randm
+
+ggsave("randm.png")
 ```
 
+# Avatar: The Last Airbender theme
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  ggpomological::scale_fill_pomological() +
+  # ggpomological::theme_pomological()
+  # scale_fill_parksAndRec() +
+  theme(plot.background = element_rect(fill = "#ece5d3"), 
+        panel.background = element_rect(fill = "#ece5d3"))
+```
+
+```{r}
+basic_iris_plot <- ggplot(iris) +
+  aes(x = Sepal.Length, y = Sepal.Width, color = Species) +
+  geom_point(size = 2)
+
+basic_iris_plot +
+  ggpomological::scale_color_pomological() +
+  ggpomological::theme_pomological() -> basicpom
+
+ggpomological::paint_pomological(basicpom)
+
+ggsave("basicpom.png")
+```
+
+
+
+```{r}
+scales::show_col(dutchmasters::dutchmasters$view_of_Delft)
+scales::show_col(dutchmasters::dutchmasters$milkmaid)
+scales::show_col(dutchmasters::dutchmasters$little_street)
+```
+
+
+```{r}
+ggplot(diamonds, aes(color, fill = clarity)) +
+  geom_bar() +
+  dutchmasters::scale_fill_dutchmasters(palette = "staalmeesters") -> dmasters
+
+ggsave("dmasters.png")
+```
+
+
+# Avatar: Fire Nation
+
+Flameo, Hotman!
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_fire_nation() +
+  theme(plot.background = element_rect(fill = "#ece5d3"), 
+        panel.background = element_rect(fill = "#ece5d3"))
+```
+
+
+# Avatar: Air Nomads
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_air_nomads() +
+  theme(plot.background = element_rect(fill = "#ece5d3"), 
+        panel.background = element_rect(fill = "#ece5d3"))
+```
+
+
+# Avatar: Water Tribe
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_water_tribe() +
+  theme(plot.background = element_rect(fill = "#ece5d3"), 
+        panel.background = element_rect(fill = "#ece5d3"))
+```
+
+
+
+# Avatar: Earth Kingdom
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_earth_kingdom() +
+  theme(plot.background = element_rect(fill = "#ece5d3"), 
+        panel.background = element_rect(fill = "#ece5d3"))
+```
+
+
+
+# South Park
