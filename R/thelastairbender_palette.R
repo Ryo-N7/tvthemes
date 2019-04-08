@@ -1,62 +1,64 @@
 ## Fire Nation ----
 
-fire_nation_palette <- c(
+fireNation_palette <- c(
   "#ecb100", ## gold/yellowish
   "#a10000", ## darker red
   "#7E605E", ## lighish gray
+  "#FF4500", ## orangered
   "#994823", ## brown-orange
   "#4B4C4E", ## charcoal grey
   "#572530", ## wine violet
   "#000000"  ## black
 )
 
-#' @title fire_nation_pal
+#' @title fireNation_pal
 #' @description Fire Nation palette
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname fire_nation_pal
+#' @rdname fireNation_pal
 #' @export
 #' @importFrom scales manual_pal
 
-fire_nation_pal <- function(){
-  scales::manual_pal(fire_nation_palette)
+fireNation_pal <- function(){
+  scales::manual_pal(fireNation_palette)
 }
 
-#' @title scale_color_fire_nation
+#' @title scale_color_fireNation
 #' @description Fire Nation color scale
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname scale_color_fire_nation
+#' @rdname scale_color_fireNation
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_fire_nation <- function(...){
-  ggplot2::discrete_scale("color", "fire_nation", fire_nation_pal(), ...)
+scale_color_fireNation <- function(...){
+  ggplot2::discrete_scale("color", "fireNation", fireNation_pal(), ...)
 }
 
-#' @title scale_fill_fire_nation
+#' @title scale_fill_fireNation
 #' @description Fire Nation fill scale
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname scale_fill_fire_nation
+#' @rdname scale_fill_fireNation
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_fire_nation <- function(...){
-  ggplot2::discrete_scale("fill", "fire_nation", fire_nation_pal(), ...)
+scale_fill_fireNation <- function(...){
+  ggplot2::discrete_scale("fill", "fireNation", fireNation_pal(), ...)
 }
 
 ## Air Nomads ----
 
-air_nomads_palette <- c(
+airNomads_palette <- c(
   "#ff9933", ## saffron
   "#C24841", ## darker orange
   "#DBC5A0", ## skybison beige
   "#8B5B45", ## skybison brown
   "#87AFD1", ## light blue
-  "#EEB05A"  ## lighter orange
+  "#EEB05A", ## lighter orange
+  "#FFFF33"  ## lightyellow
 )
 
 #ff9933 saffron
@@ -65,30 +67,31 @@ air_nomads_palette <- c(
 #DBC5A0 skybison beige
 #8B5B45 skybison brown
 #87AFD1 light blue
+#FFFF33  ## lightyellow
 
-#' @title air_nomads_pal
+#' @title airNomads_pal
 #' @description Air Nomads palette
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname air_nomads_pal
+#' @rdname airNomads_pal
 #' @export
 #' @importFrom scales manual_pal
 
-air_nomads_pal <- function(){
-  scales::manual_pal(air_nomads_palette)
+airNomads_pal <- function(){
+  scales::manual_pal(airNomads_palette)
 }
 
-#' @title scale_color_air_nomads
+#' @title scale_color_airNomads
 #' @description Air Nomads color scale
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname scale_color_air_nomads
+#' @rdname scale_color_airNomads
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_air_nomads <- function(...){
-  ggplot2::discrete_scale("color", "air_nomads", air_nomads_pal(), ...)
+scale_color_airNomads <- function(...){
+  ggplot2::discrete_scale("color", "airNomads", airNomads_pal(), ...)
 }
 
 #' @title scale_fill_air_nomads
@@ -96,17 +99,17 @@ scale_color_air_nomads <- function(...){
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname scale_fill_air_nomads
+#' @rdname scale_fill_airNomads
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_air_nomads <- function(...){
-  ggplot2::discrete_scale("fill", "air_nomads", air_nomads_pal(), ...)
+scale_fill_airNomads <- function(...){
+  ggplot2::discrete_scale("fill", "airNomads", airNomads_pal(), ...)
 }
 
 ## Earth Kingdom ----
 
-earth_kingdom_palette <- c(
+earthKingdom_palette <- c(
   "#B1A866", ## army green
   "#646742", ## darker army green
   "#D2CFAB", ## beige-ish
@@ -129,7 +132,7 @@ earth_kingdom_palette <- c(
 #7F6100 light brown
 #FEFED8 light yellow
 
-#' @title earth_kingdom_pal
+#' @title earthKingdom_pal
 #' @description Earth Kingdom palette
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
@@ -137,39 +140,39 @@ earth_kingdom_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-earth_kingdom_pal <- function(){
-  scales::manual_pal(earth_kingdom_palette)
+earthKingdom_pal <- function(){
+  scales::manual_pal(earthKingdom_palette)
 }
 
-#' @title scale_color_earth_kingdom
+#' @title scale_color_earthKingdom
 #' @description Earth Kingdom color scale
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname scale_color_earth_kingdom
+#' @rdname scale_color_earthKingdom
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_earth_kingdom <- function(...){
-  ggplot2::discrete_scale("color", "earth_kingdom", earth_kingdom_pal(), ...)
+scale_color_earthKingdom <- function(...){
+  ggplot2::discrete_scale("color", "earthKingdom", earthKingdom_pal(), ...)
 }
 
-#' @title scale_fill_earth_kingdom
+#' @title scale_fill_earthKingdom
 #' @description Earth Kingdom fill scale
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname scale_fill_earth_kingdom
+#' @rdname scale_fill_earthKingdom
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_earth_kingdom <- function(...){
-  ggplot2::discrete_scale("fill", "earth_kingdom", earth_kingdom_pal(), ...)
+scale_fill_earthKingdom <- function(...){
+  ggplot2::discrete_scale("fill", "earthKingdom", earthKingdom_pal(), ...)
 }
 
 ## Water Tribe ----
 
-water_tribe_palette <- c(
+waterTribe_palette <- c(
   "#0047ab", ## cobalt
   "#1DB4D3", ## turqoise
   "#fffafa", ## snow white
@@ -191,40 +194,40 @@ water_tribe_palette <- c(
 #AFB5B8 ## light grey
 #A2CAED ## light blue
 
-#' @title water_tribe_pal
+#' @title waterTribe_pal
 #' @description Water Tribe palette
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname water_tribe_pal
+#' @rdname waterTribe_pal
 #' @export
 #' @importFrom scales manual_pal
 
-water_tribe_pal <- function(){
-  scales::manual_pal(water_tribe_palette)
+waterTribe_pal <- function(){
+  scales::manual_pal(waterTribe_palette)
 }
 
-#' @title scale_color_water_tribe
+#' @title scale_color_waterTribe
 #' @description Water Tribe color scale
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname scale_color_water_tribe
+#' @rdname scale_color_waterTribe
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_water_tribe <- function(...){
-  ggplot2::discrete_scale("color", "water_tribe", water_tribe_pal(), ...)
+scale_color_waterTribe <- function(...){
+  ggplot2::discrete_scale("color", "waterTribe", waterTribe_pal(), ...)
 }
 
-#' @title scale_fill_water_tribe
+#' @title scale_fill_waterTribe
 #' @description Water Tribe fill scale
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @rdname scale_fill_water_tribe
+#' @rdname scale_fill_waterTribe
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_water_tribe <- function(...){
-  ggplot2::discrete_scale("fill", "water_tribe", water_tribe_pal(), ...)
+scale_fill_waterTribe <- function(...){
+  ggplot2::discrete_scale("fill", "waterTribe", waterTribe_pal(), ...)
 }

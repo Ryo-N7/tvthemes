@@ -164,23 +164,10 @@ mpg %>%
   #geom_bar(fill = "#FFD235") +
   labs(title = "Los Simpsons",
        subtitle = "blahblah Homer Simpson Sector 7G skateboard") +
-  theme(text = element_text(family = "Akbar", color = "#fee8c8"),
-        axis.text = element_text(size = 8, color = "#fee8c8"),
-        axis.title = element_text(color = "#fee8c8"),
-        plot.title = element_text(color = "#FFD235"),
-        plot.background = element_rect(color = NA, fill = "#7199E1"),#238443   #CCFFBB
-        panel.background = element_rect(color = NA, fill = "#7199E1"), 
-        panel.grid.major = element_line(color = "#fee8c8"),
-        panel.grid.minor = element_line(color = "#fee8c8"),
-        legend.title = element_text(color = "grey20"),
-        legend.text = element_text(color = "grey20", size = 9),
-        legend.key = element_rect(colour = "black", linetype = "solid", size = 1.5),
-        legend.background = element_rect(color = "black", fill = "#7199E1",
-                                         linetype = "solid")) +
   scale_y_continuous(expand = c(0,0)) +
   scale_x_continuous(expand = c(0,0)) +
   scale_fill_simpsons() +
-  scale_fill_parksAndRec()
+  theme_simpsons()
 ```
 
 
@@ -223,8 +210,13 @@ mpg %>%
   ggpomological::scale_fill_pomological() +
   # ggpomological::theme_pomological()
   # scale_fill_parksAndRec() +
-  theme(plot.background = element_rect(fill = "#ece5d3"), 
-        panel.background = element_rect(fill = "#ece5d3"))
+  labs(title = "Avatar: The Last Airbender",
+       subtitle = "Avatar State, Yip Yip!") +
+  theme_theLastAirbender() -> tlatheme
+
+tlatheme
+
+ggsave("tlatheme.png")
 ```
 
 ```{r}
@@ -267,9 +259,14 @@ Flameo, Hotman!
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_fire_nation() +
-  theme(plot.background = element_rect(fill = "#ece5d3"), 
-        panel.background = element_rect(fill = "#ece5d3"))
+  scale_fill_fireNation() +
+  labs(title = "Flameo, Hotman!",
+       subtitle = "Fire. Wang Fire. This is my wife, Sapphire.") +
+  theme_theLastAirbender() -> flameo
+
+flameo
+
+ggsave("flameo.png")
 ```
 
 
@@ -279,9 +276,10 @@ mpg %>%
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_air_nomads() +
-  theme(plot.background = element_rect(fill = "#ece5d3"), 
-        panel.background = element_rect(fill = "#ece5d3"))
+  scale_fill_airNomads() +
+  labs(title = "Let's head to the Eastern Air Temple!",
+       subtitle = "Appa, Yip Yip!") +
+  theme_theLastAirbender()
 ```
 
 
@@ -291,9 +289,10 @@ mpg %>%
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_water_tribe() +
-  theme(plot.background = element_rect(fill = "#ece5d3"), 
-        panel.background = element_rect(fill = "#ece5d3"))
+  scale_fill_waterTribe() +
+  labs(title = "I'm thinking maybe we could... do an activity together?",
+       subtitle = "... Do an activity? :)") +
+  theme_theLastAirbender()
 ```
 
 
@@ -304,11 +303,29 @@ mpg %>%
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_earth_kingdom() +
-  theme(plot.background = element_rect(fill = "#ece5d3"), 
-        panel.background = element_rect(fill = "#ece5d3"))
+  scale_fill_earthKingdom() +
+  labs(title = "There is no war in Ba Sing Se",
+       subtitle = "(Welcome to Lake Laogai)") +
+  theme_theLastAirbender() -> earthkingdom
+
+earthkingdom
+
+ggsave("earthkingdom.png")
 ```
 
 
 
 # South Park
+
+# Spongebob Squarepants
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_spongeBob() +
+  labs(title = "F is for Fire that burns down the whole town!",
+       subtitle = "U is for Uranium... bombs! N is for No survivors when you're-") +
+  theme(text = element_text(family = "Some Time Later")) 
+```
+

@@ -163,7 +163,7 @@ import_southpark <- function() {
 #' @title import_rickAndMorty
 #' @description Rick & Morty font ("Get Schwifty")
 #' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @details Actual font is ... well, Justin Roiland's actual handwriting
 #' @rdname import_rickAndMorty
 #' @export
 #' @importFrom extrafont font_import
@@ -182,7 +182,7 @@ import_rickAndMorty <- function() {
 }
 
 #' @title import_spongeBob
-#' @description SpongeBob SquarePants font ("Some-Time-Later")
+#' @description spongeBob SquarePants font ("Some-Time-Later")
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
 #' @rdname import_spongeBob
@@ -198,6 +198,27 @@ import_spongeBob <- function() {
     sprintf(
       "You should install these fonts on your system directly. The files are located in [%s]",
       spongeBob_font_dir
+    )
+  )
+}
+
+#' @title import_theLastAirbender
+#' @description The Last Airbender font ("Slayer")
+#' @return OUTPUT_DESCRIPTION
+#' @details Actual font is Herculanum (can be bought for $35)
+#' @rdname import_theLastAirbender
+#' @export
+#' @importFrom extrafont font_import
+
+import_theLastAirbender <- function() {
+  theLastAirbender_font_dir <- system.file("fonts", "Slayer", package = "tvthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = theLastAirbender_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You should install these fonts on your system directly. The files are located in [%s]",
+      theLastAirbender_font_dir
     )
   )
 }

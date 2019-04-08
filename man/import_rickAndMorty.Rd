@@ -13,5 +13,5 @@ OUTPUT_DESCRIPTION
 Rick & Morty font ("Get Schwifty")
 }
 \details{
-DETAILS
+Actual font is ... well, Justin Roiland's actual handwriting
 }

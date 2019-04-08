@@ -10,7 +10,7 @@ import_spongeBob()
 OUTPUT_DESCRIPTION
 }
 \description{
-SpongeBob SquarePants font ("Some-Time-Later")
+spongeBob SquarePants font ("Some-Time-Later")
 }
 \details{
 DETAILS
