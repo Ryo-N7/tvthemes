@@ -21,7 +21,8 @@
 theme_brooklyn99 <- function(
   font.text = "Univers",
   font.title = "Univers LT 93 ExtraBlackEx",
-  font.legend = "Univers"
+  font.legend = "Univers",
+  title.size = 20
 ){
   ## use theme_minimal as the base
   theme_minimal() +
@@ -29,7 +30,8 @@ theme_brooklyn99 <- function(
     theme(text = element_text(family = "Univers", color = "#F9FEFF",
                               size = 14),
           plot.title = element_text(family = "Univers LT 93 ExtraBlackEx",
-                                    size = 20, color = "#F9FEFF"),
+                                    size = title.size, color = "#F9FEFF"),
+          # background/panel options
           plot.background = element_rect(color = NA, fill = "#0053CD"),
           panel.background = element_rect(color = NA, fill = "#0053CD"),
           # axis options

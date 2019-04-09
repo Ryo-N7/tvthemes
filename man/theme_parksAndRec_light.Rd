@@ -6,7 +6,7 @@
 \usage{
 theme_parksAndRec_light(font.text = "Champion HTF-Heavyweight",
   font.title = "Champion HTF-Heavyweight",
-  font.legend = "Champion HTF-Heavyweight")
+  font.legend = "Champion HTF-Heavyweight", title.size = 11)
 }
 \arguments{
 \item{font.text}{PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'}

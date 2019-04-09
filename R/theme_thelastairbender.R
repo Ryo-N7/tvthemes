@@ -9,14 +9,17 @@
 #' @export
 
 theme_theLastAirbender <- function(font.text = "Slayer",
-                              font.title = "Slayer",
-                              font.legend = "Slayer"){
+                                   font.title = "Slayer",
+                                   font.legend = "Slayer",
+                                   title.size = 11){
 
   theme(text = element_text(family = font.text),
-        title = element_text(family = font.title),
+        title = element_text(family = font.title, size = title.size),
         plot.subtitle = element_text(color = "grey20"),
+        # axis options
         axis.text = element_text(size = 8, color = "grey20"),
         axis.title = element_text(color = "grey20"),
+        # background/panel options
         plot.background = element_rect(fill = "#ece5d3"),
         panel.background = element_rect(fill = "#ece5d3"),
         # legend options

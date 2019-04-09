@@ -5,7 +5,8 @@
 \title{theme_brooklyn99}
 \usage{
 theme_brooklyn99(font.text = "Univers",
-  font.title = "Univers LT 93 ExtraBlackEx", font.legend = "Univers")
+  font.title = "Univers LT 93 ExtraBlackEx", font.legend = "Univers",
+  title.size = 20)
 }
 \arguments{
 \item{font.text}{main font text, Default: Univers}
