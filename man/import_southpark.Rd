@@ -13,7 +13,8 @@ OUTPUT_DESCRIPTION
 South Park font
 }
 \details{
-DETAILS
+import_*() functions inspired by hrbrmstrthemes
+You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }
 \examples{
 \dontrun{

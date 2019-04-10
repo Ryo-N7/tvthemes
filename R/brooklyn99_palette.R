@@ -67,8 +67,12 @@ brooklyn99_dark_palette <- c(
   "#6CA9C3", ## light blue
   "#3A3533", ## dark gray
   "#000E33", ## dark navy
+  "#800000", ## maroon
   "#CBCFD2", ## light gray
-  "#175E78"  ## turqoise
+  "#175E78", ## turqoise
+  "#DAA520", ## goldenrod
+  "#174D79", ## dark teal
+  "#000000"  ## black
 )
 
 #' @title brooklyn99_dark_pal

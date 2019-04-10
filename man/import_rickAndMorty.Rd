@@ -13,5 +13,7 @@ OUTPUT_DESCRIPTION
 Rick & Morty font ("Get Schwifty")
 }
 \details{
-Actual font is ... well, Justin Roiland's actual handwriting
+Actual font is ... well, Justin Roiland's actual handwriting.
+import_*() functions inspired by hrbrmstrthemes
+You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }

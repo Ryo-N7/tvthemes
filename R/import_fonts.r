@@ -1,67 +1,8 @@
-#' @title import_univers
-#' @description import 'Univers' font
-#' @return OUTPUT_DESCRIPTION
-#' @details import_*() functions inspired by hrbrmstrthemes
-#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  import_univers()
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[extrafont]{font_import}}
-#' @rdname import_univers
-#' @export
-#' @importFrom extrafont font_import
-
-import_univers <- function() {
-
-  univers_font_dir <- system.file("fonts", "Univers", package = "tvthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(paths = univers_font_dir, prompt = FALSE)))
-
-  message(
-    sprintf(
-      "You should install these fonts on your system directly. The files are located in [%s]",
-      univers_font_dir
-    )
-  )
-}
-
-#' @title import_univers_extrablack
-#' @description FUNCTION_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[extrafont]{font_import}}
-#' @rdname import_univers_extrablack
-#' @export
-#' @importFrom extrafont font_import
-import_univers_extrablack <- function() {
-
-  univers_extrablack_font_dir <- system.file("fonts", "Univers LT 93 ExtraBlackEx", package = "tvthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(paths = univers_extrablack_font_dir, prompt = FALSE)))
-
-  message(
-    sprintf(
-      "You should install these fonts on your system directly. The files are located in [%s]",
-      univers_font_dir
-    )
-  )
-}
-
 #' @title import_champion_htf_heavyweight
 #' @description imports Champion HTF-Heavyweight font
 #' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @details import_*() functions inspired by hrbrmstrthemes
+#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
 #' @rdname import_champion_htf_heaveyweight
@@ -85,7 +26,8 @@ import_champion_htf_heavyweight <- function() {
 #' @title import_roboto_condensed
 #' @description taken from hrbrmstrthemes
 #' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @details import_*() functions inspired by hrbrmstrthemes
+#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
 #' @rdname import_roboto_condensed
@@ -109,7 +51,8 @@ import_roboto_condensed <- function() {
 #' @title import_simpsons
 #' @description The Simpsons Font ("Akbar" font)
 #' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @details import_*() functions inspired by hrbrmstrthemes
+#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
 #' @rdname import_simpsons
@@ -134,7 +77,8 @@ import_simpsons <- function() {
 #' @title import_southpark
 #' @description South Park font
 #' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @details import_*() functions inspired by hrbrmstrthemes
+#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -163,7 +107,9 @@ import_southpark <- function() {
 #' @title import_rickAndMorty
 #' @description Rick & Morty font ("Get Schwifty")
 #' @return OUTPUT_DESCRIPTION
-#' @details Actual font is ... well, Justin Roiland's actual handwriting
+#' @details Actual font is ... well, Justin Roiland's actual handwriting.
+#' import_*() functions inspired by hrbrmstrthemes
+#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @rdname import_rickAndMorty
 #' @export
 #' @importFrom extrafont font_import
@@ -184,7 +130,8 @@ import_rickAndMorty <- function() {
 #' @title import_spongeBob
 #' @description spongeBob SquarePants font ("Some-Time-Later")
 #' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @details import_*() functions inspired by hrbrmstrthemes
+#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @rdname import_spongeBob
 #' @export
 #' @importFrom extrafont font_import
@@ -205,7 +152,9 @@ import_spongeBob <- function() {
 #' @title import_theLastAirbender
 #' @description The Last Airbender font ("Slayer")
 #' @return OUTPUT_DESCRIPTION
-#' @details Actual font is Herculanum (can be bought for $35)
+#' @details Actual font is Herculanum (can be bought for $35).
+#' import_*() functions inspired by hrbrmstrthemes
+#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @rdname import_theLastAirbender
 #' @export
 #' @importFrom extrafont font_import
