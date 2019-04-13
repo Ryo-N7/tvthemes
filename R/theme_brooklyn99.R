@@ -19,27 +19,27 @@
 #' @import ggplot2
 
 theme_brooklyn99 <- function(
-  font.text = "Univers",
-  font.title = "Univers LT 93 ExtraBlackEx",
-  font.legend = "Univers",
+  font.text = "Calibri Light",
+  font.title = "Calibri Bold",
+  font.legend = "Calibri Light",
   title.size = 20
 ){
   ## use theme_minimal as the base
   theme_minimal() +
     ## main b99 theme
-    theme(text = element_text(family = "Univers", color = "#F9FEFF",
+    theme(text = element_text(family = font.text, color = "#F9FEFF",
                               size = 14),
-          plot.title = element_text(family = "Univers LT 93 ExtraBlackEx",
+          plot.title = element_text(family = font.title, face = "bold",
                                     size = title.size, color = "#F9FEFF"),
           # background/panel options
           plot.background = element_rect(color = NA, fill = "#0053CD"),
           panel.background = element_rect(color = NA, fill = "#0053CD"),
           # axis options
-          axis.text = element_text(family = "Univers", color = "#F9FEFF", size = 12),
+          axis.text = element_text(family = font.text, color = "#F9FEFF", size = 12),
           axis.title = element_text(size = 14),
           # legend options
-          legend.title = element_text(family = "Univers", color = "#F9FEFF"),
-          legend.text = element_text(family = "Univers", color = "#F9FEFF", size = 9),
+          legend.title = element_text(family = font.text, color = "#F9FEFF"),
+          legend.text = element_text(family = font.text, color = "#F9FEFF", size = 9),
           legend.position = "bottom",
           legend.key = element_rect(colour = "black", linetype = "solid", size = 1.5),
           legend.background = element_rect(color = "black", fill = "#0053CD",

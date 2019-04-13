@@ -4,8 +4,8 @@
 \alias{theme_brooklyn99}
 \title{theme_brooklyn99}
 \usage{
-theme_brooklyn99(font.text = "Univers",
-  font.title = "Univers LT 93 ExtraBlackEx", font.legend = "Univers",
+theme_brooklyn99(font.text = "Calibri Light",
+  font.title = "Calibri Bold", font.legend = "Calibri Light",
   title.size = 20)
 }
 \arguments{

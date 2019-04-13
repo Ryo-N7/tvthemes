@@ -1,10 +1,10 @@
 #' @title theme_simpsons
 #' @description The Simpsons theme
-#' @param font.text PARAM_DESCRIPTION, Default: 'Akbar'
-#' @param font.title PARAM_DESCRIPTION, Default: 'Akbar'
-#' @param font.legend PARAM_DESCRIPTION, Default: 'Akbar'
+#' @param font.text font for text, Default: 'Akbar'
+#' @param font.title font for title, Default: 'Akbar'
+#' @param font.legend font for legend, Default: 'Akbar'
 #' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @details Largely inspired by `@nathancunn`'s blog posts
 #' @rdname theme_simpsons
 #' @export
 

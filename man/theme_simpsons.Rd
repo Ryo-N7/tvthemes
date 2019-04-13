@@ -8,11 +8,11 @@ theme_simpsons(font.text = "Akbar", font.title = "Akbar",
   font.legend = "Akbar", title.size = 11)
 }
 \arguments{
-\item{font.text}{PARAM_DESCRIPTION, Default: 'Akbar'}
+\item{font.text}{font for text, Default: 'Akbar'}
 
-\item{font.title}{PARAM_DESCRIPTION, Default: 'Akbar'}
+\item{font.title}{font for title, Default: 'Akbar'}
 
-\item{font.legend}{PARAM_DESCRIPTION, Default: 'Akbar'}
+\item{font.legend}{font for legend, Default: 'Akbar'}
 }
 \value{
 OUTPUT_DESCRIPTION
@@ -21,5 +21,5 @@ OUTPUT_DESCRIPTION
 The Simpsons theme
 }
 \details{
-DETAILS
+Largely inspired by `@nathancunn`'s blog posts
 }
