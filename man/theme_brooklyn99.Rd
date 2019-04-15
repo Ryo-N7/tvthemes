@@ -6,7 +6,7 @@
 \usage{
 theme_brooklyn99(font.text = "Calibri Light",
   font.title = "Calibri Bold", font.legend = "Calibri Light",
-  title.size = 20)
+  title.size = 18)
 }
 \arguments{
 \item{font.text}{main font text, Default: Univers}

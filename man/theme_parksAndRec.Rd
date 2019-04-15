@@ -6,7 +6,7 @@
 \usage{
 theme_parksAndRec(font.text = "Champion HTF-Heavyweight",
   font.title = "Champion HTF-Heavyweight",
-  font.legend = "Champion HTF-Heavyweight", title.size = 11)
+  font.legend = "Champion HTF-Heavyweight", title.size = 18)
 }
 \arguments{
 \item{font.text}{text font}

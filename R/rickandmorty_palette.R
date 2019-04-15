@@ -7,8 +7,8 @@ rickAndMorty_palette <- c(
   "#44281d",  ## regular brown
   "#3a4767", ## #3a4767 morty pants navy
   "#F8D3AC", ## #7FD112 portal green   #F8D3AC skin beige
-  "#E64358",  ## #2D8844 portal darker green   #E64358 beth red
-  "#ededee"  ## light grey
+  "#E64358"#,  ## #2D8844 portal darker green   #E64358 beth red
+  #"#ededee"  ## light grey
 )
 
 ## various blue-turqoise shades

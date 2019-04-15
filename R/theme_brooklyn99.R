@@ -2,9 +2,9 @@
 #' @description Brooklyn Nine-Nine theme
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @param font.text main font text, Default: Univers
-#' @param font.title title font, Default: Univers LT 93 ExtraBlackEx
-#' @param font.legend legend font, Default: Univers
+#' @param font.text main font text, Default: Calibri Light
+#' @param font.title title font, Default: Roboto Condensed
+#' @param font.legend legend font, Default: Calibri Light
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -20,9 +20,9 @@
 
 theme_brooklyn99 <- function(
   font.text = "Calibri Light",
-  font.title = "Calibri Bold",
+  font.title = "Roboto Condensed",
   font.legend = "Calibri Light",
-  title.size = 20
+  title.size = 18
 ){
   ## use theme_minimal as the base
   theme_minimal() +
@@ -37,6 +37,7 @@ theme_brooklyn99 <- function(
           # axis options
           axis.text = element_text(family = font.text, color = "#F9FEFF", size = 12),
           axis.title = element_text(size = 14),
+          axis.ticks = element_blank(),
           # legend options
           legend.title = element_text(family = font.text, color = "#F9FEFF"),
           legend.text = element_text(family = font.text, color = "#F9FEFF", size = 9),

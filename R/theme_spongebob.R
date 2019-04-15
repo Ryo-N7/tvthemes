@@ -18,7 +18,7 @@
 theme_spongeBob <- function(font.text = "Some Time Later",
                             font.title = "Some Time Later",
                             font.legend = "Some Time Later",
-                            title.size = 14) {
+                            title.size = 18) {
   theme(text = element_text(family = font.text, color = "#F9FEFF",
                             size = 12),
         plot.title = element_text(family = font.title,
@@ -29,6 +29,7 @@ theme_spongeBob <- function(font.text = "Some Time Later",
         # axis options
         axis.text = element_text(family = font.text, color = "#F9FEFF", size = 12),
         axis.title = element_text(size = 14),
+        axis.ticks = element_blank(),
         # legend options
         legend.title = element_text(family = font.legend, color = "#F9FEFF"),
         legend.text = element_text(family = font.legend, color = "#F9FEFF", size = 9),

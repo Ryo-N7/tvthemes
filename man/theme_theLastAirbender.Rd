@@ -5,7 +5,7 @@
 \title{theme_theLastAirbender}
 \usage{
 theme_theLastAirbender(font.text = "Slayer", font.title = "Slayer",
-  font.legend = "Slayer", title.size = 11)
+  font.legend = "Slayer", title.size = 18)
 }
 \arguments{
 \item{font.text}{PARAM_DESCRIPTION, Default: 'Slayer'}

@@ -1,44 +1,73 @@
 ---
 output:: rmarkdown::github_document
+title:: "`tvthemes` : Themes and Color Palettes based on American TV Shows for `ggplot2` visualizations"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## `tvthemes` : Themes and Color Palettes based on American TV Shows for `ggplot2` visualizations
+What kick-started this whole package was my [blogpost]() looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom theme so I decided to expand it to other shows!
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages(devtools)
+devtools::install_github("Ryo-N7/tvthemes")
+```
+
 
 ```{r, message=FALSE, warning=FALSE}
+# devtools::install_github("Ryo-N7/tvthemes")
 library(tidyverse)
 library(tvthemes)
+library(glue)
 library(extrafont)
-# import_univers()
-# import_univers_extrablack()
-# import_champion_htf_heavyweight()
-# import_simpsons()
-loadfonts()
+loadfonts()   # load fonts on your computer
 ```
 
-# b99
+## Fonts
+
+```{r, eval=FALSE}
+import_champion_htf_heavyweight()
+import_simpsons()
+import_theLastAirbender()
+```
+
 
 ```{r}
-mtcars %>% 
-  mutate(cyl = as_factor(cyl),
-         carb = as_factor(carb)) %>% 
-  ggplot(aes(mpg, hp, fill = cyl)) +
-  #geom_point(aes(color = carb), size = 2) +
-  geom_point(size = 2, color = "#41b6c4") +
-  geom_rect(aes(xmin = 100, xmax = 300, ymin = 200, ymax = 300)) +
-  scale_color_brooklyn99() +
-  scale_fill_brooklyn99() +
-  labs(x = "horsepowerinho", y = "mile per gallones",
-       title = "Well this package thing isn't going all dandy and sunshines") +
-  theme_brooklyn99(font.text = "Roboto Condensed",
-                   font.title = "Champion HTF-Heavyweight",
-                   font.legend = "Helvetica")
+import_champion_htf_heavyweight()
+import_simpsons()
+import_theLastAirbender()
 ```
 
-# b99 dark
+## Brooklyn Nine-Nine
+
+Bright colors for best contrast.
+
+```{r}
+options(scipen=999)  # turn-off scientific notation like 1e+48
+data("midwest", package = "ggplot2")
+ggplot(midwest, aes(x = area, y = poptotal)) + 
+  geom_point(aes(col = state, size = popdensity)) + 
+  geom_smooth(method = "loess", se = F, color = "black") + 
+  xlim(c(0, 0.1)) + 
+  ylim(c(0, 500000)) + 
+  labs(subtitle = "Area Vs Population", 
+       y = "Population", 
+       x = "Area", 
+       title = "New Retro Theme", 
+       caption = "Source: midwest") + 
+  theme_brooklyn99(font.text = "Calibri Light",
+                   font.title = "Calibri Bold",
+                   font.legend = "Univers",
+                   title.size = 20) +
+  scale_color_brooklyn99()
+```
+
+## b99 dark
+
+Slightly more subdued colors.
 
 ```{r}
 mpg %>% 
@@ -47,31 +76,13 @@ mpg %>%
                  col = "black", size = 0.1,
                  binwidth = 0.1) +
   scale_fill_brooklyn99_dark() +
+  labs(title = "blahblahbalh nikolaj, do you know what a clap back is ",
+       subtitle = "because i do") +
   theme_brooklyn99()
 ```
 
 
-# ?
-
-
-```{r}
-mtcars %>% 
-  mutate(cyl = as_factor(cyl),
-         carb = as_factor(carb)) %>% 
-  ggplot(aes(mpg, hp, fill = cyl)) +
-  #geom_point(aes(color = carb), size = 2) +
-  geom_col(fill = "#549E39") +
-  geom_point(size = 2, color = "#41b6c4") +
-  geom_rect(aes(xmin = 100, xmax = 300, ymin = 200, ymax = 300)) +
-  theme(text = element_text(family = "Champion HTF-Heavyweight"),
-        axis.text = element_text(size = 8),
-        axis.title.y = element_text(angle = 0, vjust= 0.5),
-        plot.background = element_rect(color = NA, fill = "#fcf7e8"),
-        panel.background = element_rect(color = NA, fill = "#fcf7e8"),
-        panel.grid.major.x = element_blank())
-```
-
-# p&r normal
+## p&r normal
 
 ```{r}
 # mtcars %>% 
@@ -88,7 +99,7 @@ mpg %>%
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   labs(title = "Parks and Recreation",
        subtitle = "blahblah Leslie Knope") +
-  theme(text = element_text(family = "Akbar"),
+  theme(text = element_text(family = "Champion HTF-Heavyweight"),
         plot.subtitle = element_text(color = "grey20"),
         axis.text = element_text(size = 8, color = "grey20"),
         axis.title = element_text(color = "grey20"),
@@ -101,7 +112,7 @@ mpg %>%
   scale_fill_parksAndRec()
 ```
 
-# p&r light
+## p&r light
 
 ```{r}
 mpg %>% 
@@ -124,7 +135,7 @@ mpg %>%
 ```
 
 
-# P&R logo
+### P&R logo
 
 ```{r}
 library(shadowtext)
@@ -155,25 +166,27 @@ header
 
 
 
-# The Simpsons
+## The Simpsons
 
 ```{r}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  #geom_bar(fill = "#FFD235") +
-  labs(title = "Los Simpsons",
-       subtitle = "blahblah Homer Simpson Sector 7G skateboard") +
+  labs(title = "The Simpsons",
+       subtitle = "Theme inspired in part by @nathancunn's blog posts",
+       caption = glue("
+                      A 'Bake 'em Away, Toys!' Production
+                      Location: Sector 7G")) +
   scale_y_continuous(expand = c(0,0)) +
   scale_x_continuous(expand = c(0,0)) +
   scale_fill_simpsons() +
-  theme_simpsons()
+  theme_simpsons(title.size = 18)
 ```
 
 
 
 
-# The Good Place
+## The Good Place
 
 - Pobody's Nerfect t-shirt color scheme (yellow/purple/brown/darknavy)
 
@@ -181,7 +194,7 @@ mpg %>%
 
 
 
-# Rick & Morty
+## Rick & Morty
 
 ```{r}
 mpg %>% 
@@ -201,7 +214,7 @@ mpg %>%
 ggsave("randm.png")
 ```
 
-# Avatar: The Last Airbender theme
+## Avatar: The Last Airbender theme
 
 ```{r}
 mpg %>% 
@@ -251,7 +264,7 @@ ggsave("dmasters.png")
 ```
 
 
-# Avatar: Fire Nation
+### Avatar: Fire Nation
 
 Flameo, Hotman!
 
@@ -270,7 +283,7 @@ ggsave("flameo.png")
 ```
 
 
-# Avatar: Air Nomads
+### Avatar: Air Nomads
 
 ```{r}
 mpg %>% 
@@ -283,21 +296,21 @@ mpg %>%
 ```
 
 
-# Avatar: Water Tribe
+### Avatar: Water Tribe
 
 ```{r}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   scale_fill_waterTribe() +
-  labs(title = "I'm thinking maybe we could... do an activity together?",
+  labs(title = "I am thinking maybe we could... do an activity together?",
        subtitle = "... Do an activity? :)") +
-  theme_theLastAirbender()
+  theme_theLastAirbender(title.size = 8)
 ```
 
 
 
-# Avatar: Earth Kingdom
+### Avatar: Earth Kingdom
 
 ```{r}
 mpg %>% 
@@ -315,9 +328,15 @@ ggsave("earthkingdom.png")
 
 
 
-# South Park
+## South Park
 
-# Spongebob Squarepants
+
+```{r}
+
+```
+
+
+## Spongebob Squarepants
 
 ```{r}
 mpg %>% 
@@ -326,6 +345,51 @@ mpg %>%
   scale_fill_spongeBob() +
   labs(title = "F is for Fire that burns down the whole town!",
        subtitle = "U is for Uranium... bombs! N is for No survivors when you're-") +
-  theme(text = element_text(family = "Some Time Later")) 
+  theme_spongeBob()
 ```
 
+
+
+## tvthemes hex sticker
+
+Creating the hex sticker for this package was done with the `hexSticker` package by ____. The image I chose was from [here](https://www.irasutoya.com/2017/07/blog-post_930.html) of a boy sitting way too close while watching TV. I would have liked to use something from one of the actual TV shows that appear in this package but don't know if that would violate copyright or something so I went with the safe option of using a free "irasutoya" picture.
+
+```{r eval=FALSE}
+library(hexSticker)
+download.file("https://3.bp.blogspot.com/-kHda-2huAF8/WUdZKshMQkI/AAAAAAABFDM/sXt-PT9dKtYp2Y0Y_OV64TJzs7PvOLZmgCLcBGAs/s800/tv_boy_chikaku.png",
+              destfile = paste0(tempdir() , ".png"), mode="wb")
+
+sticker(subplot = paste0(tempdir() , ".png"), package = "tvthemes",
+        p_size = 20, p_x = 1, p_y = 1.65, 
+        p_color = "#8B4411", p_family = "Roboto Condensed",
+        s_x = 1.0, s_y = .95,
+        s_width = 0.6, s_height = 0.6, 
+        h_fill = "#f5f5dc", h_color = "black",
+        filename = "tvthemes_hexsticker.png")
+```
+
+
+```{r}
+library(hexSticker)
+library(magick)
+library(extrafont)
+loadfonts()
+
+download.file("https://3.bp.blogspot.com/-kHda-2huAF8/WUdZKshMQkI/AAAAAAABFDM/sXt-PT9dKtYp2Y0Y_OV64TJzs7PvOLZmgCLcBGAs/s800/tv_boy_chikaku.png",
+              destfile = paste0(tempdir() , ".png"), mode="wb")
+
+sticker(subplot = paste0(tempdir() , ".png"), package = "tvthemes",
+        p_size = 22, p_x = 1, p_y = 1.5, 
+        p_color = "#8B4411", p_family = "Roboto Condensed",
+        s_x = 1.0, s_y = .85,
+        s_width = 0.6, s_height = 0.6, 
+        h_fill = "#f5f5dc", h_color = "black",
+        filename = "tvthemes_hexsticker.png") 
+
+stickeroo <- image_read("tvthemes_hexsticker.png")
+stickeroo2 <- stickeroo %>% image_scale("121x140")
+image_write(stickeroo2, "logo.png")
+```
+
+
+![]()

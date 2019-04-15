@@ -5,7 +5,7 @@
 \title{theme_simpsons}
 \usage{
 theme_simpsons(font.text = "Akbar", font.title = "Akbar",
-  font.legend = "Akbar", title.size = 11)
+  font.legend = "Akbar", title.size = 18)
 }
 \arguments{
 \item{font.text}{font for text, Default: 'Akbar'}

@@ -6,7 +6,7 @@
 \usage{
 theme_spongeBob(font.text = "Some Time Later",
   font.title = "Some Time Later", font.legend = "Some Time Later",
-  title.size = 14)
+  title.size = 18)
 }
 \arguments{
 \item{font.text}{text font, Default: 'Some Time Later'}

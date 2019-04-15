@@ -11,13 +11,14 @@
 theme_parksAndRec <- function(font.text = "Champion HTF-Heavyweight",
                               font.title = "Champion HTF-Heavyweight",
                               font.legend = "Champion HTF-Heavyweight",
-                              title.size = 11) {
+                              title.size = 18) {
 
   theme(text = element_text(family = font.text),
         title = element_text(family = font.title, size = title.size),
         # axis options
         axis.text = element_text(size = 8, color = "grey20"),
-        axis.title = element_text(color = "grey20"),
+        axis.title = element_text(color = "grey20", size = 14),
+        axis.ticks = element_blank(),
         # background/panel options
         plot.background = element_rect(color = NA, fill = "#CCFFBB"),#238443
         panel.background = element_rect(color = NA, fill = "#238443"), # #1A5E1FFF darkgreen
@@ -48,13 +49,14 @@ theme_parksAndRec <- function(font.text = "Champion HTF-Heavyweight",
 theme_parksAndRec_light <- function(font.text = "Champion HTF-Heavyweight",
                                     font.title = "Champion HTF-Heavyweight",
                                     font.legend = "Champion HTF-Heavyweight",
-                                    title.size = 11) {
+                                    title.size = 18) {
 
   theme(text = element_text(family = font.text),
         title = element_text(family = font.title, size = title.size),
         # axis options
         axis.text = element_text(size = 8, color = "grey20"),
-        axis.title = element_text(color = "grey20"),
+        axis.title = element_text(color = "grey20", size = 14),
+        axis.ticks = element_blank(),
         # background/panel options
         plot.background = element_rect(color = NA, fill = "#238443"),  #238443
         panel.background = element_rect(color = NA, fill = "#CCFFBB"), # #1A5E1FFF darkgreen

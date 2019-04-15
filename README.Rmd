@@ -1,0 +1,180 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "70%",
+  warning = FALSE, 
+  message = FALSE,
+  fig.align = "center"
+)
+```
+
+# tvthemes <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
+
+Ryo Nakagawara
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+<!-- badges: end -->
+
+The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite American TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows!
+
+```{r, echo=FALSE, message=FALSE}
+pacman::p_load(ggplot2, dplyr, tvthemes, extrafont)
+loadfonts()
+```
+
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_brooklyn99_dark() +
+  labs(title = "Cars and stuff",
+       subtitle = "Terry LOVES ggplot2!") +
+  theme_brooklyn99()
+```
+
+
+## List of available TV shows
+
+- __Avatar: The Last Airbender__: theme + palettes (Fire Nation, Water Tribe, Earth Kingdom, Air Nomads)
+- __Brooklyn Nine-Nine__: theme + palettes + custom header
+- __Game of Thrones/A Song of Ice & Fire__: palettes (Stark, Lannister, Tully, Baratheon, Targaryen, Tyrell, Greyjoy)
+- __Rick & Morty__: palette
+- __Parks & Recreation__: two themes (light and dark) + palettes
+- __The Simpsons__: theme and palette
+- __Spongebob Squarepants__: theme and palette
+
+
+## Installation
+
+`tvthemes` is currently available only on Github, you can install it by:
+
+```{r, eval=FALSE}
+# install.packages(devtools)
+devtools::install_github("Ryo-N7/tvthemes")
+```
+
+I hope to have a CRAN version soon!
+
+## Fonts
+
+The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are custom-made fonts made by font foundries and therefore can be rather expensive (for a regular person like you or me). So I endeavoured to find FREE fonts to use that were somewhat similar to the real ones used by the show from resources like `Google Fonts`. In the documentation you can find the __actual__ fonts used by the TV shows if you are so inclined to buy them! In some cases there were fan-made fonts such as "Some Time Later" for Spongebob or that I was able to include within the package. Instead of dealing with `extrafont` yourself I repurposed the `import_*()` functions from the `hrbrmstrthemes` package so you can import the fonts yourself very easily. Do note that you still might need to install the fonts directly on your computer from the files found in `inst/fonts`.
+
+```{r, eval=FALSE}
+import_simpsons()
+import_theLastAirbender()
+import_rickAndMorty()
+import_roboto_condensed() ## hrbrmstrthemes
+import_spongeBob()
+import_southpark()
+```
+
+## Example
+
+### Avatar: Fire Nation
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_fireNation() +
+  labs(title = "Flameo, Hotman!",
+       subtitle = "Fire. Wang Fire. This is my wife, Sapphire.") +
+  theme_theLastAirbender()
+```
+
+
+### Avatar: Air Nomads
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_airNomads() +
+  labs(title = "Let's head to the Eastern Air Temple!",
+       subtitle = "Appa, Yip Yip!") +
+  theme_theLastAirbender()
+```
+
+
+### Avatar: Water Tribe
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_waterTribe() +
+  labs(title = "I am thinking maybe we could... do an activity together?",
+       subtitle = "... Do an activity? :)") +
+  theme_theLastAirbender(title.size = 8)
+```
+
+
+
+### Avatar: Earth Kingdom
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_earthKingdom() +
+  labs(title = "There is no war in Ba Sing Se",
+       subtitle = "(Welcome to Lake Laogai)") +
+  theme_theLastAirbender(title.size = 14)
+```
+
+
+### The Simpsons
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  labs(title = "The Simpsons",
+       subtitle = "Theme inspired in part by @nathancunn's blog posts",
+       caption = glue::glue("
+                      A 'Bake 'em Away, Toys!' Production
+                      Location: Sector 7G")) +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_simpsons() +
+  theme_simpsons(title.size = 24)
+```
+
+### Spongebob Squarepants
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_spongeBob() +
+  labs(title = "F is for Fire that burns down the whole town!",
+       subtitle = "U is for Uranium... bombs! N is for No survivors when you're-") +
+  theme_spongeBob()
+```
+
+
+### Rick and Morty
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  labs(title = "Rick and Morty",
+       subtitle = "blahblah Gazorpazorp Summer goddamit") +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_rickAndMorty() + 
+  theme_rickAndMorty(title.size = 16)
+```
+
