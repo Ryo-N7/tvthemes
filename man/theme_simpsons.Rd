@@ -5,7 +5,9 @@
 \title{theme_simpsons}
 \usage{
 theme_simpsons(font.text = "Akbar", font.title = "Akbar",
-  font.legend = "Akbar", title.size = 18)
+  font.legend = "Akbar", title.size = 18, text.size = 14,
+  subtitle.size = 12, axis.title.size = 14, axis.text.size = 10,
+  legend.title.size = 10, legend.text.size = 9)
 }
 \arguments{
 \item{font.text}{font for text, Default: 'Akbar'}
@@ -13,6 +15,20 @@ theme_simpsons(font.text = "Akbar", font.title = "Akbar",
 \item{font.title}{font for title, Default: 'Akbar'}
 
 \item{font.legend}{font for legend, Default: 'Akbar'}
+
+\item{title.size}{title font size}
+
+\item{text.size}{text font size}
+
+\item{subtitle.size}{subtitle font size}
+
+\item{axis.title.size}{axis title font size}
+
+\item{axis.text.size}{axis text font size}
+
+\item{legend.title.size}{legend title font size}
+
+\item{legend.text.size}{legend text font size}
 }
 \value{
 OUTPUT_DESCRIPTION

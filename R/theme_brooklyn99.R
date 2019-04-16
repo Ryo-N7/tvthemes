@@ -5,6 +5,13 @@
 #' @param font.text main font text, Default: Calibri Light
 #' @param font.title title font, Default: Roboto Condensed
 #' @param font.legend legend font, Default: Calibri Light
+#' @param title.size title font size
+#' @param text.size text font size
+#' @param subtitle.size subtitle font size
+#' @param axis.title.size axis title font size
+#' @param axis.text.size axis text font size
+#' @param legend.title.size legend title font size
+#' @param legend.text.size legend text font size
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -22,27 +29,34 @@ theme_brooklyn99 <- function(
   font.text = "Calibri Light",
   font.title = "Roboto Condensed",
   font.legend = "Calibri Light",
-  title.size = 18
+  title.size = 18,
+  text.size = 14,
+  subtitle.size = 12,
+  axis.title.size = 14,
+  axis.text.size = 12,
+  legend.title.size = 10,
+  legend.text.size = 9
 ){
   ## use theme_minimal as the base
   theme_minimal() +
     ## main b99 theme
     theme(text = element_text(family = font.text, color = "#F9FEFF",
-                              size = 14),
+                              size = text.size),
           plot.title = element_text(family = font.title, face = "bold",
                                     size = title.size, color = "#F9FEFF"),
+          plot.subtitle = element_text(size = subtitle.size),
           # background/panel options
           plot.background = element_rect(color = NA, fill = "#0053CD"),
           panel.background = element_rect(color = NA, fill = "#0053CD"),
           # axis options
-          axis.text = element_text(family = font.text, color = "#F9FEFF", size = 12),
-          axis.title = element_text(size = 14),
+          axis.text = element_text(family = font.text, color = "#F9FEFF", size = axis.text.size),
+          axis.title = element_text(size = axis.title.size),
           axis.ticks = element_blank(),
           # legend options
           legend.title = element_text(family = font.text, color = "#F9FEFF"),
-          legend.text = element_text(family = font.text, color = "#F9FEFF", size = 9),
+          legend.text = element_text(family = font.text, color = "#F9FEFF", size = legend.text.size),
           legend.position = "bottom",
-          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.5),
+          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.1),
           legend.background = element_rect(color = "black", fill = "#0053CD",
                                            linetype = "solid"))
 }

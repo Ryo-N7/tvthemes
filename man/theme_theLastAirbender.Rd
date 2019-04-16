@@ -5,7 +5,9 @@
 \title{theme_theLastAirbender}
 \usage{
 theme_theLastAirbender(font.text = "Slayer", font.title = "Slayer",
-  font.legend = "Slayer", title.size = 18)
+  font.legend = "Slayer", title.size = 14, text.size = 10,
+  subtitle.size = 12, axis.title.size = 10, axis.text.size = 8,
+  legend.title.size = 10, legend.text.size = 8)
 }
 \arguments{
 \item{font.text}{PARAM_DESCRIPTION, Default: 'Slayer'}
@@ -13,6 +15,20 @@ theme_theLastAirbender(font.text = "Slayer", font.title = "Slayer",
 \item{font.title}{PARAM_DESCRIPTION, Default: 'Slayer'}
 
 \item{font.legend}{PARAM_DESCRIPTION, Default: 'Slayer'}
+
+\item{title.size}{title font size}
+
+\item{text.size}{text font size}
+
+\item{subtitle.size}{subtitle font size}
+
+\item{axis.title.size}{axis title font size}
+
+\item{axis.text.size}{axis text font size}
+
+\item{legend.title.size}{legend title font size}
+
+\item{legend.text.size}{legend text font size}
 }
 \value{
 OUTPUT_DESCRIPTION

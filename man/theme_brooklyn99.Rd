@@ -5,15 +5,31 @@
 \title{theme_brooklyn99}
 \usage{
 theme_brooklyn99(font.text = "Calibri Light",
-  font.title = "Calibri Bold", font.legend = "Calibri Light",
-  title.size = 18)
+  font.title = "Roboto Condensed", font.legend = "Calibri Light",
+  title.size = 18, text.size = 14, subtitle.size = 12,
+  axis.title.size = 14, axis.text.size = 12, legend.title.size = 10,
+  legend.text.size = 9)
 }
 \arguments{
-\item{font.text}{main font text, Default: Univers}
+\item{font.text}{main font text, Default: Calibri Light}
 
-\item{font.title}{title font, Default: Univers LT 93 ExtraBlackEx}
+\item{font.title}{title font, Default: Roboto Condensed}
 
-\item{font.legend}{legend font, Default: Univers}
+\item{font.legend}{legend font, Default: Calibri Light}
+
+\item{title.size}{title font size}
+
+\item{text.size}{text font size}
+
+\item{subtitle.size}{subtitle font size}
+
+\item{axis.title.size}{axis title font size}
+
+\item{axis.text.size}{axis text font size}
+
+\item{legend.title.size}{legend title font size}
+
+\item{legend.text.size}{legend text font size}
 }
 \value{
 OUTPUT_DESCRIPTION

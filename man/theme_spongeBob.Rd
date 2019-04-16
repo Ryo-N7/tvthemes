@@ -6,7 +6,9 @@
 \usage{
 theme_spongeBob(font.text = "Some Time Later",
   font.title = "Some Time Later", font.legend = "Some Time Later",
-  title.size = 18)
+  title.size = 18, text.size = 12, subtitle.size = 12,
+  axis.title.size = 14, axis.text.size = 12, legend.title.size = 10,
+  legend.text.size = 9)
 }
 \arguments{
 \item{font.text}{text font, Default: 'Some Time Later'}
@@ -16,6 +18,18 @@ theme_spongeBob(font.text = "Some Time Later",
 \item{font.legend}{legend font, Default: 'Some Time Later'}
 
 \item{title.size}{size of title, Default: 14}
+
+\item{text.size}{text font size}
+
+\item{subtitle.size}{subtitle font size}
+
+\item{axis.title.size}{axis title font size}
+
+\item{axis.text.size}{axis text font size}
+
+\item{legend.title.size}{legend title font size}
+
+\item{legend.text.size}{legend text font size}
 }
 \value{
 OUTPUT_DESCRIPTION

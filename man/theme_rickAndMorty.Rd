@@ -6,7 +6,9 @@
 \usage{
 theme_rickAndMorty(font.text = "Get Schwifty",
   font.title = "Get Schwifty", font.legend = "Get Schwifty",
-  title.size = 18)
+  title.size = 20, text.size = 12, subtitle.size = 14,
+  axis.title.size = 14, axis.text.size = 10, legend.title.size = 10,
+  legend.text.size = 9)
 }
 \arguments{
 \item{font.text}{text font, Default: 'Get Schwifty'}
@@ -16,6 +18,18 @@ theme_rickAndMorty(font.text = "Get Schwifty",
 \item{font.legend}{legend font, Default: 'Get Schwifty'}
 
 \item{title.size}{title size, Default: 11}
+
+\item{text.size}{text font size}
+
+\item{subtitle.size}{subtitle font size}
+
+\item{axis.title.size}{axis title font size}
+
+\item{axis.text.size}{axis text font size}
+
+\item{legend.title.size}{legend title font size}
+
+\item{legend.text.size}{legend text font size}
 }
 \value{
 OUTPUT_DESCRIPTION

@@ -6,7 +6,9 @@
 \usage{
 theme_parksAndRec_light(font.text = "Champion HTF-Heavyweight",
   font.title = "Champion HTF-Heavyweight",
-  font.legend = "Champion HTF-Heavyweight", title.size = 18)
+  font.legend = "Champion HTF-Heavyweight", title.size = 18,
+  text.size = 14, subtitle.size = 12, axis.title.size = 14,
+  axis.text.size = 8, legend.title.size = 10, legend.text.size = 9)
 }
 \arguments{
 \item{font.text}{PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'}
@@ -14,6 +16,20 @@ theme_parksAndRec_light(font.text = "Champion HTF-Heavyweight",
 \item{font.title}{PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'}
 
 \item{font.legend}{PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'}
+
+\item{title.size}{title font size}
+
+\item{text.size}{text font size}
+
+\item{subtitle.size}{subtitle font size}
+
+\item{axis.title.size}{axis title font size}
+
+\item{axis.text.size}{axis text font size}
+
+\item{legend.title.size}{legend title font size}
+
+\item{legend.text.size}{legend text font size}
 }
 \value{
 OUTPUT_DESCRIPTION
