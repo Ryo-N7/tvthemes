@@ -53,12 +53,12 @@ scale_fill_fireNation <- function(...){
 
 airNomads_palette <- c(
   "#ff9933", ## saffron
-  "#C24841", ## darker orange
-  "#DBC5A0", ## skybison beige
+  "#C24841", ## darker reddish-orange
+  "#FFFF33", ## lightyellow
   "#8B5B45", ## skybison brown
   "#87AFD1", ## light blue
   "#EEB05A", ## lighter orange
-  "#FFFF33"  ## lightyellow
+  "#DBC5A0"  ## skybison beige
 )
 
 #ff9933 saffron
@@ -110,14 +110,14 @@ scale_fill_airNomads <- function(...){
 ## Earth Kingdom ----
 
 earthKingdom_palette <- c(
+  "#015E05", ## greeen
   "#B1A866", ## army green
+  "#7A5C12", ## khaki brown
   "#646742", ## darker army green
-  "#D2CFAB", ## beige-ish
   "#25351C", ## swamp green
   "#4C7022", ## khaki green
   "#C7C45E", ## lime green
-  "#7A5C12", ## khaki brown
-  "#015E05", ## greeen
+  "#D2CFAB", ## beige-ish
   "#FEFED8"  ## light yellow
 )
 
@@ -175,10 +175,10 @@ scale_fill_earthKingdom <- function(...){
 waterTribe_palette <- c(
   "#0047ab", ## cobalt
   "#1DB4D3", ## turqoise
-  "#fffafa", ## snow white
+  "#A2CAED", ## light blue
   "#AFB5B8", ## light grey
   "#120976", ## purple blue
-  "#A2CAED", ## light blue
+  "#fffafa", ## snow white
   "#174D79", ## light teal blue
   "#949BBC"  ## light purple
 )

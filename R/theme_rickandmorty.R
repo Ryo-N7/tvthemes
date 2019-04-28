@@ -34,10 +34,10 @@ theme_rickAndMorty <- function(font.text = "Get Schwifty",
 
   theme(text = element_text(family = font.text, size = text.size),
         title = element_text(family = font.title, size = title.size),
-        plot.subtitle = element_text(size = subtitle.size),
+        plot.subtitle = element_text(family = font.title, size = subtitle.size),
         # axis options
-        axis.text = element_text(size = axis.title.size, color = "black"),
-        axis.title = element_text(size = axis.text.size, color = "black"),
+        axis.text = element_text(family = font.text, size = axis.title.size, color = "black"),
+        axis.title = element_text(family = font.title, size = axis.text.size, color = "black"),
         axis.ticks = element_blank(),
         # background/panel options
         plot.background = element_rect(color = NA, fill = "#9bff16"),
@@ -45,7 +45,7 @@ theme_rickAndMorty <- function(font.text = "Get Schwifty",
         panel.grid.major.x = element_blank(),
         # legend options
         legend.title = element_text(family = font.legend, size = legend.title.size),
-        legend.text = element_text(size = legend.text.size),
+        legend.text = element_text(family = font.legend, size = legend.text.size),
         legend.background = element_rect(color = "black", fill = "#9bff16",
                                          linetype = "solid")
         )

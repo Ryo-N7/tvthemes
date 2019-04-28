@@ -4,11 +4,11 @@
 \alias{theme_parksAndRec_light}
 \title{theme_parksAndRec_light}
 \usage{
-theme_parksAndRec_light(font.text = "Champion HTF-Heavyweight",
-  font.title = "Champion HTF-Heavyweight",
-  font.legend = "Champion HTF-Heavyweight", title.size = 18,
-  text.size = 14, subtitle.size = 12, axis.title.size = 14,
-  axis.text.size = 8, legend.title.size = 10, legend.text.size = 9)
+theme_parksAndRec_light(font.text = "Titillium Web",
+  font.title = "Titillium Web Black", font.legend = "Titillium Web",
+  title.size = 20, text.size = 16, subtitle.size = 14,
+  axis.title.size = 14, axis.text.size = 12, legend.title.size = 14,
+  legend.text.size = 12)
 }
 \arguments{
 \item{font.text}{PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'}

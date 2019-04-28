@@ -4,3 +4,4 @@
 .Ruserdata
 *.txt
 inst/docs/*.png
+*.Rmd

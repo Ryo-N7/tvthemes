@@ -1,12 +1,14 @@
 ## Parks & Rec regular palette ----
 parksAndRec_palette <- c(
-  "#69983a", ## #1A5E1F darkgreen
-  "#f7fcb9",  ## lime green <<<<
+  "#bdbdbd", ## yellowtan #fcf7e8  grey #969696    #bdbdbd
+  "#a51209", ## maroon
   "#ffdb58",  ## lighter green (turqoise-ish) #238443     #ffdb58  mustard
   "#ec7014",  ## #4C3114 darker brown   #ec7014 darker orange
   "#7A491E",  ## regular brown
+  "#C24841", ## darker reddish-orange
   "#005502", ## darker green
-  "#bdbdbd", ## yellowtan #fcf7e8  grey #969696    #bdbdbd
+  "#f7fcb9",  ## lime green <<<<
+  "#69983a", ## lightish gree #1A5E1F darkgreen
   "#b5651d"  ## beige #fee0d2     #b5651d light brown
 )
 

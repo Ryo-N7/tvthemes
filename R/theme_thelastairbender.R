@@ -28,10 +28,10 @@ theme_theLastAirbender <- function(font.text = "Slayer",
 
   theme(text = element_text(family = font.text, size = text.size),
         title = element_text(family = font.title, size = title.size),
-        plot.subtitle = element_text(color = "grey20", size = subtitle.size),
+        plot.subtitle = element_text(family = font.title, color = "grey20", size = subtitle.size),
         # axis options
-        axis.text = element_text(size = axis.text.size, color = "grey20"),
-        axis.title = element_text(color = "grey20", size = axis.title.size),
+        axis.text = element_text(family = font.text, size = axis.text.size, color = "grey20"),
+        axis.title = element_text(family = font.title, color = "grey20", size = axis.title.size),
         axis.ticks = element_blank(),
         # background/panel options
         plot.background = element_rect(fill = "#ece5d3"),

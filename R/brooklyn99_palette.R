@@ -1,12 +1,13 @@
 ## B99 regular palette ----
 brooklyn99_palette <- c(
-  "#F9FEFF", ## white
+  "#e7298a", ## hot pink
   "#72bcd4", ## lightblue
   "#e41a1c", ## red
   "#FCF40E", ## yellow
+  "#49f149", ## light-green
   "#f16913", ## orange
   "#525252", ## grey
-  "#e7298a", ## hot pink
+  "#F9FEFF", ## white
   "#000E33", ## dark navy
   "#000000"  ## black
 )

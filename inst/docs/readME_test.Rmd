@@ -58,10 +58,7 @@ ggplot(midwest, aes(x = area, y = poptotal)) +
        x = "Area", 
        title = "New Retro Theme", 
        caption = "Source: midwest") + 
-  theme_brooklyn99(font.text = "Calibri Light",
-                   font.title = "Calibri Bold",
-                   font.legend = "Univers",
-                   title.size = 20) +
+  theme_brooklyn99(title.size = 20) +
   scale_color_brooklyn99()
 ```
 
@@ -76,9 +73,11 @@ mpg %>%
                  col = "black", size = 0.1,
                  binwidth = 0.1) +
   scale_fill_brooklyn99_dark() +
-  labs(title = "blahblahbalh nikolaj, do you know what a clap back is ",
+  labs(title = "Brooklyn Nine-Nine! nikolaj, do you know what a clap back is ",
        subtitle = "because i do") +
-  theme_brooklyn99()
+  theme_brooklyn99(font.title = "Titillium Web Black",
+                   font.text = "Roboto Slab") #+
+  #theme(text = element_text(face = "bold"))
 ```
 
 

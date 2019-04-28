@@ -1,3 +1,7 @@
+## Roboto Slab
+## Calibri Light
+## Roboto Condensed
+
 #' @title theme_brooklyn99
 #' @description Brooklyn Nine-Nine theme
 #' @return OUTPUT_DESCRIPTION
@@ -44,17 +48,17 @@ theme_brooklyn99 <- function(
                               size = text.size),
           plot.title = element_text(family = font.title, face = "bold",
                                     size = title.size, color = "#F9FEFF"),
-          plot.subtitle = element_text(size = subtitle.size),
+          plot.subtitle = element_text(family = font.title, size = subtitle.size),
           # background/panel options
           plot.background = element_rect(color = NA, fill = "#0053CD"),
           panel.background = element_rect(color = NA, fill = "#0053CD"),
           # axis options
           axis.text = element_text(family = font.text, color = "#F9FEFF", size = axis.text.size),
-          axis.title = element_text(size = axis.title.size),
+          axis.title = element_text(family = font.title, size = axis.title.size),
           axis.ticks = element_blank(),
           # legend options
-          legend.title = element_text(family = font.text, color = "#F9FEFF"),
-          legend.text = element_text(family = font.text, color = "#F9FEFF", size = legend.text.size),
+          legend.title = element_text(family = font.legend, color = "#F9FEFF"),
+          legend.text = element_text(family = font.legend, color = "#F9FEFF", size = legend.text.size),
           legend.position = "bottom",
           legend.key = element_rect(colour = "black", linetype = "solid", size = 1.1),
           legend.background = element_rect(color = "black", fill = "#0053CD",

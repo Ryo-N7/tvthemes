@@ -35,13 +35,13 @@ theme_spongeBob <- function(font.text = "Some Time Later",
                             size = text.size),
         plot.title = element_text(family = font.title,
                                   size = title.size, color = "#F9FEFF"),
-        plot.subtitle = element_text(size = subtitle.size),
+        plot.subtitle = element_text(family = font.title, size = subtitle.size),
         # background/panel options
         plot.background = element_rect(color = NA, fill = "#21B8E3"),
         panel.background = element_rect(color = NA, fill = "#21B8E3"),
         # axis options
         axis.text = element_text(family = font.text, color = "#F9FEFF", size = axis.text.size),
-        axis.title = element_text(size = axis.title.size),
+        axis.title = element_text(family = font.title, size = axis.title.size),
         axis.ticks = element_blank(),
         # legend options
         legend.title = element_text(family = font.legend, color = "#F9FEFF", size = legend.title.size),

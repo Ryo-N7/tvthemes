@@ -28,10 +28,10 @@ theme_simpsons <- function(font.text = "Akbar",
 
   theme(text = element_text(family = font.text, color = "#fee8c8", size = text.size),
         plot.title = element_text(family = font.title, size = title.size, color = "#FFD235"),
-        plot.subtitle = element_text(size = subtitle.size),
+        plot.subtitle = element_text(family = font.title, size = subtitle.size),
         # axis options
-        axis.text = element_text(size = axis.text.size, color = "#fee8c8"),
-        axis.title = element_text(color = "#fee8c8", size = axis.title.size),
+        axis.text = element_text(family = font.text, size = axis.text.size, color = "#fee8c8"),
+        axis.title = element_text(family = font.title, size = axis.title.size, color = "#fee8c8"),
         axis.ticks = element_blank(),
         # background/panel options
         plot.background = element_rect(color = NA, fill = "#7199E1"),
@@ -40,7 +40,7 @@ theme_simpsons <- function(font.text = "Akbar",
         panel.grid.minor = element_line(color = "#fee8c8"),
         # legend options
         legend.title = element_text(family = font.legend, color = "#ffffff", size = legend.title.size),
-        legend.text = element_text(color = "#ffffff", size = legend.text.size),
+        legend.text = element_text(family = font.legend, color = "#ffffff", size = legend.text.size),
         legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
         legend.background = element_rect(color = "black", fill = "#7199E1",
                                          linetype = "solid")
