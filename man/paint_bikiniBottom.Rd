@@ -5,9 +5,8 @@
 \title{paint_bikiniBottom}
 \usage{
 paint_bikiniBottom(sponge_gg, width = 800, height = 500,
-  pointsize = 16, outfile = NULL,
-  sponge_background = sponge_images(c("background", "floral",
-  "floral2")), ...)
+  outfile = NULL, sponge_background = sponge_images(c("background",
+  "floral", "floral2")), ...)
 }
 \arguments{
 \item{sponge_gg}{ggplot object}
@@ -16,13 +15,13 @@ paint_bikiniBottom(sponge_gg, width = 800, height = 500,
 
 \item{height}{PARAM_DESCRIPTION, Default: 500}
 
-\item{pointsize}{PARAM_DESCRIPTION, Default: 16}
-
 \item{outfile}{PARAM_DESCRIPTION, Default: NULL}
 
 \item{sponge_background}{PARAM_DESCRIPTION, Default: sponge_images(c("background", "floral", "floral2"))}
 
 \item{...}{PARAM_DESCRIPTION}
+
+\item{pointsize}{PARAM_DESCRIPTION, Default: 16}
 }
 \value{
 OUTPUT_DESCRIPTION

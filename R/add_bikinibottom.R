@@ -72,7 +72,6 @@ paint_bikiniBottom <- function(
   sponge_gg,
   width = 800,
   height = 500,
-  pointsize = 16,
   outfile = NULL,
   sponge_background = sponge_images(c("background", "floral", "floral2")),
   ...
@@ -87,7 +86,7 @@ paint_bikiniBottom <- function(
 
   # Paint figure
   sponge_gg <- sponge_gg + ggplot2::theme(plot.background = ggplot2::element_rect(fill = 'transparent', colour = NA))
-  gg_fig <- magick::image_graph(width, height, bg = "transparent", pointsize = pointsize, ...)
+  gg_fig <- magick::image_graph(width, height, bg = "transparent", ...)
   print(sponge_gg)
   dev.off()
 
