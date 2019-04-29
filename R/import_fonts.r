@@ -1,24 +1,23 @@
-#' @title import_champion_htf_heavyweight
-#' @description imports Champion HTF-Heavyweight font
-#' @return OUTPUT_DESCRIPTION
+
+#' @title import_titillium_web
+#' @description Imports Titillium Web
 #' @details import_*() functions inspired by hrbrmstrthemes
-#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
-#' @rdname import_champion_htf_heaveyweight
+#' @rdname import_titillium_web
 #' @export
 #' @importFrom extrafont font_import
 
-import_champion_htf_heavyweight <- function() {
+import_titillium_web <- function() {
 
-  champion_htf_heavyweight_font_dir <- system.file("fonts", "Champion-HTF-Heavyweight", package = "tvthemes")
+  titillium_web_font_dir <- system.file("fonts", "Titillium-Web", package = "tvthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(paths = champion_htf_heavyweight_font_dir, prompt = FALSE)))
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = titillium_web_font_dir, prompt = FALSE)))
 
   message(
     sprintf(
       "You should install these fonts on your system directly. The files are located in [%s]",
-      champion_htf_heavyweight_font_dir
+      titillium_web_font_dir
     )
   )
 }
