@@ -67,6 +67,16 @@ ggplot(midwest, aes(x = area, y = poptotal)) +
 Slightly more subdued colors.
 
 ```{r}
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  scale_color_brooklyn99() +
+  labs(title = "Can you estimate the value of everything that was taken?",
+       subtitle = "Emotionally? $700 million.",
+       caption = "Terry LOVES ggplot2!") +
+  theme_brooklyn99()
+
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), 
@@ -163,6 +173,40 @@ header <- ggplot() +
 header
 ```
 
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  labs(title = "Parks & Recreation",
+       subtitle = "Burt Macklin, FBI!") +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_parksAndRec() + 
+  theme_parksAndRec_light()
+
+
+mpg %>% 
+  ggplot(aes(displ, hwy, group = trans, color = trans)) +
+  geom_line(size = 1.15) +
+  scale_color_parksAndRec() +
+  theme_parksAndRec_light()
+
+iris %>% 
+  ggplot(aes(x = Sepal.Length, y = Petal.Length, group = Species, color = Species)) +
+  geom_line(size = 1.24) +
+  labs(title="Seasonal B plot:", subtitle = "Air temperatures at Nottingham Castle") + 
+  scale_color_parksAndRec() + 
+  theme_parksAndRec_light()
+
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  labs(title="Seasonal B plot:", subtitle = "Air temperatures at Nottingham Castle") + 
+  scale_color_parksAndRec() + 
+  theme_parksAndRec()
+```
 
 
 ## The Simpsons
@@ -180,6 +224,41 @@ mpg %>%
   scale_x_continuous(expand = c(0,0)) +
   scale_fill_simpsons() +
   theme_simpsons(title.size = 18)
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  labs(title = "The Simpsons",
+       subtitle = "Theme inspired in part by @nathancunn's blog posts",
+       caption = glue::glue("
+                      A 'Bake 'em Away, Toys!' Production
+                      Location: Sector 7G")) +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_simpsons() +
+  theme_simpsons(title.size = 24)
+
+airquality %>% 
+  mutate(Month = as_factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  labs(title = "The Simpsons",
+       subtitle = "Theme inspired in part by @nathancunn's blog posts",
+       caption = glue::glue("
+                      A 'Bake 'em Away, Toys!' Production
+                      Location: Sector 7G")) +
+  scale_color_simpsons() +
+  theme_simpsons(title.size = 24)
+
+ggplot(mtcars, aes(x = 1, y = mpg, fill = factor(carb))) +
+  geom_area() +
+  scale_fill_simpsons() +
+  labs(title = "The Simpsons",
+       subtitle = "Theme inspired in part by @nathancunn's blog posts",
+       caption = glue::glue("
+                      A 'Bake 'em Away, Toys!' Production
+                      Location: Sector 7G")) +
+  theme_simpsons()
 ```
 
 
@@ -211,6 +290,25 @@ mpg %>%
         panel.background = element_rect(color = NA, fill = "#ece5d3")) -> randm
 
 ggsave("randm.png")
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  labs(title = "Rick and Morty",
+       subtitle = "blahblah Gazorpazorp Summer goddamit") +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_rickAndMorty() + 
+  theme_rickAndMorty()
+
+airquality %>% 
+  mutate(Month = as_factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  labs(title = "Rick and Morty",
+       subtitle = "blahblah Gazorpazorp Summer goddamit") +
+  scale_color_rickAndMorty() +
+  theme_rickAndMorty()
 ```
 
 ## Avatar: The Last Airbender theme
@@ -268,6 +366,16 @@ ggsave("dmasters.png")
 Flameo, Hotman!
 
 ```{r}
+
+airquality %>% 
+  mutate(Month = as_factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  scale_color_fireNation() +
+  labs(title = "I am thinking maybe we could... do an activity together?",
+       subtitle = "... Do an activity? :)") +
+  theme_theLastAirbender(title.size = 8)
+
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
@@ -302,6 +410,23 @@ mpg %>%
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   scale_fill_waterTribe() +
+  labs(title = "I am thinking maybe we could... do an activity together?",
+       subtitle = "... Do an activity? :)") +
+  theme_theLastAirbender(title.size = 8)
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_waterTribe() +
+  labs(title = "I am thinking maybe we could... do an activity together?",
+       subtitle = "... Do an activity? :)") +
+  theme_theLastAirbender(title.size = 8)
+
+airquality %>% 
+  mutate(Month = forcats::as_factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  scale_color_waterTribe() +
   labs(title = "I am thinking maybe we could... do an activity together?",
        subtitle = "... Do an activity? :)") +
   theme_theLastAirbender(title.size = 8)

@@ -12,7 +12,7 @@ stark_palette <- c(
   "#120976", ## purple blue
   "#898989", ## dark-grey
   "#174D79", ## light teal blue
-  "#D4CDB1", ## light-grey
+  "#D4CDB1", ## light-grey-tan
   "#fffafa", ## snow white
   "#000000"  ## black
 )
@@ -76,14 +76,13 @@ scale_fill_tyrell <- function(...){
   ggplot2::discrete_scale("fill", "tyrell", tyrell_pal(), ...)
 }
 
-## House Baratheon ----
-
 ## House Targaryen ----
 
 targaryen_palette <- c(
   "#AC1F25", ## blood-red
   "#272727", ## lightblack
   "#ff9933", ## saffron
+  "#828788", ## metallic grey
   "#96804b"  ## light-brown
 )
 
@@ -125,4 +124,46 @@ scale_fill_tully <- function(...){
 
 ## House Greyjoy ----
 
+greyjoy_palette <- c(
+  "#000000", ## black
+  "#D4CDB1", ## light-grey-tan
+  "#F7DC27", ## yellow
+  "#828788" ## metallic grey
+)
+
+tully_pal <- function() {
+  scales::manual_pal(tully_palette)
+}
+
+scale_color_tully <- function(...){
+  ggplot2::discrete_scale("color", "tully", tully_pal(), ...)
+}
+
+scale_fill_tully <- function(...){
+  ggplot2::discrete_scale("fill", "tully", tully_pal(), ...)
+}
+
 ## House Martell ----
+tully_pal <- function() {
+  scales::manual_pal(tully_palette)
+}
+
+scale_color_tully <- function(...){
+  ggplot2::discrete_scale("color", "tully", tully_pal(), ...)
+}
+
+scale_fill_tully <- function(...){
+  ggplot2::discrete_scale("fill", "tully", tully_pal(), ...)
+}
+## House Baratheon ----
+tully_pal <- function() {
+  scales::manual_pal(tully_palette)
+}
+
+scale_color_tully <- function(...){
+  ggplot2::discrete_scale("color", "tully", tully_pal(), ...)
+}
+
+scale_fill_tully <- function(...){
+  ggplot2::discrete_scale("fill", "tully", tully_pal(), ...)
+}

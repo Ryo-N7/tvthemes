@@ -46,7 +46,7 @@ theme_spongeBob <- function(font.text = "Some Time Later",
         # legend options
         legend.title = element_text(family = font.legend, color = "#F9FEFF", size = legend.title.size),
         legend.text = element_text(family = font.legend, color = "#F9FEFF", size = legend.text.size),
-        legend.position = "bottom",
+        legend.position = "right",
         legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
         legend.background = element_rect(color = "black", fill = "#21B8E3",
                                          linetype = "solid"))

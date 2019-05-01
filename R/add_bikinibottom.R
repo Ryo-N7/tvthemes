@@ -85,13 +85,14 @@ paint_bikiniBottom <- function(
   }
 
   # Paint figure
-  sponge_gg <- sponge_gg + ggplot2::theme(plot.background = ggplot2::element_rect(fill = 'transparent', colour = NA))
+  bobspog <- sponge_gg + ggplot2::theme(plot.background = ggplot2::element_rect(fill = 'transparent', colour = NA))
   gg_fig <- magick::image_graph(width, height, bg = "transparent", ...)
-  print(sponge_gg)
+  print(bobspog)
   dev.off()
 
   # Paint background
   if (file.exists(sponge_background)) {
+
     sponge_bg <- magick::image_read(sponge_background)
     sponge_bg <- magick::image_resize(sponge_bg, paste0(width, "x", height, "!"))
     sponge_bg <- magick::image_crop(sponge_bg, paste0(width, "x", height))
@@ -114,7 +115,6 @@ paint_bikiniBottom <- function(
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
 #' @rdname sponge_images
-#' @export
 
 sponge_images <- function(which = c("background", "floral", "floral2")) {
   which <- match.arg(which)
