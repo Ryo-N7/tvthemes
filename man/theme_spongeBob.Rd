@@ -4,18 +4,21 @@
 \alias{theme_spongeBob}
 \title{theme_spongeBob}
 \usage{
-theme_spongeBob(font.text = "Some Time Later",
-  font.title = "Some Time Later", font.legend = "Some Time Later",
-  title.size = 18, text.size = 12, subtitle.size = 12,
-  axis.title.size = 14, axis.text.size = 12, legend.title.size = 10,
-  legend.text.size = 9)
+theme_spongeBob(font.text = NULL, font.title = NULL,
+  font.legend = NULL, title.size = 18, text.size = 12,
+  subtitle.size = 12, axis.title.size = 14, axis.text.size = 12,
+  legend.title.size = 10, legend.text.size = 9,
+  title.color = "#F9FEFF", subtitle.color = "#F9FEFF",
+  text.color = "#F9FEFF", axis.title.color = NULL,
+  axis.text.color = "#F9FEFF", legend.title.color = "#F9FEFF",
+  legend.text.color = "#F9FEFF")
 }
 \arguments{
-\item{font.text}{text font, Default: 'Some Time Later'}
+\item{font.text}{text font}
 
-\item{font.title}{title font, Default: 'Some Time Later'}
+\item{font.title}{title font}
 
-\item{font.legend}{legend font, Default: 'Some Time Later'}
+\item{font.legend}{legend font}
 
 \item{title.size}{size of title, Default: 14}
 
@@ -35,7 +38,7 @@ theme_spongeBob(font.text = "Some Time Later",
 OUTPUT_DESCRIPTION
 }
 \description{
-Spongebob Squarepants theme
+Spongebob Squarepants theme, Recommended Font: "Some Time Later"
 }
 \details{
 DETAILS

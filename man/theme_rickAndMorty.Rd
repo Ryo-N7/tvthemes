@@ -4,20 +4,22 @@
 \alias{theme_rickAndMorty}
 \title{theme_rickAndMorty}
 \usage{
-theme_rickAndMorty(font.text = "Get Schwifty",
-  font.title = "Get Schwifty", font.legend = "Get Schwifty",
-  title.size = 20, text.size = 12, subtitle.size = 14,
-  axis.title.size = 14, axis.text.size = 10, legend.title.size = 10,
-  legend.text.size = 9)
+theme_rickAndMorty(font.text = NULL, font.title = NULL,
+  font.legend = NULL, title.size = 20, text.size = 12,
+  subtitle.size = 14, axis.title.size = 14, axis.text.size = 10,
+  legend.title.size = 10, legend.text.size = 9, title.color = NULL,
+  subtitle.color = NULL, text.color = NULL, axis.title.color = NULL,
+  axis.text.color = NULL, legend.title.color = NULL,
+  legend.text.color = NULL)
 }
 \arguments{
-\item{font.text}{text font, Default: 'Get Schwifty'}
+\item{font.text}{text font}
 
-\item{font.title}{title font, Default: 'Get Schwifty'}
+\item{font.title}{title font}
 
-\item{font.legend}{legend font, Default: 'Get Schwifty'}
+\item{font.legend}{legend font}
 
-\item{title.size}{title size, Default: 11}
+\item{title.size}{title size}
 
 \item{text.size}{text font size}
 
@@ -35,7 +37,7 @@ theme_rickAndMorty(font.text = "Get Schwifty",
 OUTPUT_DESCRIPTION
 }
 \description{
-Rick & Morty theme
+Rick & Morty theme, Font: "Get Schwifty"
 }
 \details{
 DETAILS

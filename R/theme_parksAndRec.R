@@ -2,7 +2,7 @@
 ## Champion HTF-Heavyweight
 
 #' @title theme_parksAndRec
-#' @description Parks & Recreation theme
+#' @description Parks & Recreation theme, Recommended font: "Titillium Web"
 #' @param font.text text font
 #' @param font.title title font
 #' @param font.legend legend font
@@ -18,31 +18,39 @@
 #' @rdname theme_parksAndRec
 #' @export
 
-theme_parksAndRec <- function(font.text = "Titillium Web Black",
-                              font.title = "Titillium Web Black",
-                              font.legend = "Titillium Web Black",
-                              title.size = 20,
-                              text.size = 16,
-                              subtitle.size = 14,
-                              axis.title.size = 14,
-                              axis.text.size = 12,
-                              legend.title.size = 14,
-                              legend.text.size = 12) {
+theme_parksAndRec <- function(
+  font.text = NULL,
+  font.title = NULL,
+  font.legend = NULL,
+  title.size = 20,
+  text.size = 16,
+  subtitle.size = 14,
+  axis.title.size = 14,
+  axis.text.size = 12,
+  legend.title.size = 14,
+  legend.text.size = 12,
+  title.color = NULL,
+  subtitle.color = NULL,
+  text.color = NULL,
+  axis.title.color = NULL,
+  axis.text.color = NULL,
+  legend.title.color = NULL,
+  legend.text.color = NULL) {
 
-  theme(text = element_text(family = font.text, size = text.size),
-        title = element_text(family = font.title, size = title.size, color = "black"),
-        plot.subtitle = element_text(family = font.title, size = subtitle.size),
+  theme(text = element_text(family = font.text, size = text.size, color = text.color),
+        title = element_text(family = font.title, size = title.size, color = title.color),
+        plot.subtitle = element_text(family = font.title, size = subtitle.size, color = subtitle.color),
         # axis options
-        axis.text = element_text(family = font.text, size = axis.text.size, color = "black"),
-        axis.title = element_text(family = font.title, size = axis.title.size, color = "black"),
+        axis.text = element_text(family = font.text, size = axis.text.size, color = axis.text.color),
+        axis.title = element_text(family = font.title, size = axis.title.size, color = axis.title.color),
         axis.ticks = element_blank(),
         # background/panel options
-        plot.background = element_rect(color = NA, fill = "#238443"),  #238443
-        panel.background = element_rect(color = NA, fill = "#CCFFBB"), # #1A5E1FFF darkgreen
+        plot.background = element_rect(color = NA, fill = "#238443"),
+        panel.background = element_rect(color = NA, fill = "#CCFFBB"),
         panel.grid.major.x = element_blank(),
         # legend options
-        legend.title = element_text(family = font.legend, size = legend.title.size, color = "black"),
-        legend.text = element_text(family = font.legend, size = legend.text.size, color = "black"),
+        legend.title = element_text(family = font.legend, size = legend.title.size, color = legend.title.color),
+        legend.text = element_text(family = font.legend, size = legend.text.size, color = legend.text.color),
         legend.key = element_rect(colour = "black", linetype = "solid", size = 1.15),
         legend.background = element_rect(color = "black", fill = "#CCFFBB",
                                          linetype = "solid")
@@ -51,10 +59,10 @@ theme_parksAndRec <- function(font.text = "Titillium Web Black",
 
 
 #' @title theme_parksAndRec_light
-#' @description Parks & Recreation light theme
-#' @param font.text PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'
-#' @param font.title PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'
-#' @param font.legend PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'
+#' @description Parks & Recreation light theme, Recommended font: "Titillium Web"
+#' @param font.text text font
+#' @param font.title title font
+#' @param font.legend legend font
 #' @param title.size title font size
 #' @param text.size text font size
 #' @param subtitle.size subtitle font size
@@ -73,31 +81,39 @@ theme_parksAndRec <- function(font.text = "Titillium Web Black",
 #' @rdname theme_parksAndRec_light
 #' @export
 
-theme_parksAndRec_light <- function(font.text = "Titillium Web",
-                                    font.title = "Titillium Web Black",
-                                    font.legend = "Titillium Web",
-                                    title.size = 20,
-                                    text.size = 16,
-                                    subtitle.size = 14,
-                                    axis.title.size = 14,
-                                    axis.text.size = 12,
-                                    legend.title.size = 14,
-                                    legend.text.size = 12) {
+theme_parksAndRec_light <- function(
+  font.text = NULL,
+  font.title = NULL,
+  font.legend = NULL,
+  title.size = 20,
+  text.size = 16,
+  subtitle.size = 14,
+  axis.title.size = 14,
+  axis.text.size = 12,
+  legend.title.size = 14,
+  legend.text.size = 12,
+  title.color = "grey20",
+  subtitle.color = "grey20",
+  text.color = "grey20",
+  axis.title.color = "grey20",
+  axis.text.color = "grey20",
+  legend.title.color = "grey20",
+  legend.text.color = "grey20") {
 
-  theme(text = element_text(family = font.text, size = text.size),
-        title = element_text(family = font.title, size = title.size, color = "grey20"),
-        plot.subtitle = element_text(family = font.title, size = subtitle.size),
+  theme(text = element_text(family = font.text, size = text.size, color = text.color),
+        title = element_text(family = font.title, size = title.size, color = title.color),
+        plot.subtitle = element_text(family = font.title, size = subtitle.size, color = subtitle.color),
         # axis options
-        axis.text = element_text(family = font.text, size = axis.text.size, color = "grey20"),
-        axis.title = element_text(family = font.title, size = axis.title.size, color = "grey20"),
+        axis.text = element_text(family = font.text, size = axis.text.size, color = axis.text.color),
+        axis.title = element_text(family = font.title, size = axis.title.size, color = axis.title.color),
         axis.ticks = element_blank(),
         # background/panel options
-        plot.background = element_rect(color = NA, fill = "#CCFFBB"),#238443
-        panel.background = element_rect(color = NA, fill = "#238443"), # #1A5E1FFF darkgreen
+        plot.background = element_rect(color = NA, fill = "#CCFFBB"),
+        panel.background = element_rect(color = NA, fill = "#238443"),
         panel.grid.major.x = element_blank(),
         # legend options
-        legend.title = element_text(family = font.legend, size = legend.title.size, color = "grey20"),
-        legend.text = element_text(family = font.legend, size = legend.text.size, color = "grey20"),
+        legend.title = element_text(family = font.legend, size = legend.title.size, color = legend.title.color),
+        legend.text = element_text(family = font.legend, size = legend.text.size, color = legend.text.color),
         legend.key = element_rect(colour = "grey20", linetype = "solid", size = 1.15),
         legend.background = element_rect(color = "grey20", fill = "#CCFFBB",
                                          linetype = "solid")

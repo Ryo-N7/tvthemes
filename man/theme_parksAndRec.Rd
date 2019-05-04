@@ -4,11 +4,13 @@
 \alias{theme_parksAndRec}
 \title{theme_parksAndRec}
 \usage{
-theme_parksAndRec(font.text = "Titillium Web Black",
-  font.title = "Titillium Web Black",
-  font.legend = "Titillium Web Black", title.size = 20,
-  text.size = 16, subtitle.size = 14, axis.title.size = 14,
-  axis.text.size = 12, legend.title.size = 14, legend.text.size = 12)
+theme_parksAndRec(font.text = NULL, font.title = NULL,
+  font.legend = NULL, title.size = 20, text.size = 16,
+  subtitle.size = 14, axis.title.size = 14, axis.text.size = 12,
+  legend.title.size = 14, legend.text.size = 12, title.color = NULL,
+  subtitle.color = NULL, text.color = NULL, axis.title.color = NULL,
+  axis.text.color = NULL, legend.title.color = NULL,
+  legend.text.color = NULL)
 }
 \arguments{
 \item{font.text}{text font}
@@ -35,7 +37,7 @@ theme_parksAndRec(font.text = "Titillium Web Black",
 OUTPUT_DESCRIPTION
 }
 \description{
-Parks & Recreation theme
+Parks & Recreation theme, Recommended font: "Titillium Web"
 }
 \details{
 DETAILS

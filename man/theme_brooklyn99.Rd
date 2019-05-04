@@ -4,18 +4,21 @@
 \alias{theme_brooklyn99}
 \title{theme_brooklyn99}
 \usage{
-theme_brooklyn99(font.text = "Calibri Light",
-  font.title = "Roboto Condensed", font.legend = "Calibri Light",
-  title.size = 18, text.size = 14, subtitle.size = 12,
-  axis.title.size = 14, axis.text.size = 12, legend.title.size = 10,
-  legend.text.size = 9)
+theme_brooklyn99(font.text = NULL, font.title = NULL,
+  font.legend = NULL, title.size = 18, text.size = 14,
+  subtitle.size = 12, axis.title.size = 14, axis.text.size = 12,
+  legend.title.size = 10, legend.text.size = 9,
+  title.color = "#F9FEFF", subtitle.color = "#F9FEFF",
+  text.color = "#F9FEFF", axis.title.color = "#F9FEFF",
+  axis.text.color = "#F9FEFF", legend.title.color = "#F9FEFF",
+  legend.text.color = "#F9FEFF")
 }
 \arguments{
-\item{font.text}{main font text, Default: Calibri Light}
+\item{font.text}{text font}
 
-\item{font.title}{title font, Default: Roboto Condensed}
+\item{font.title}{title font}
 
-\item{font.legend}{legend font, Default: Calibri Light}
+\item{font.legend}{legend font}
 
 \item{title.size}{title font size}
 
@@ -35,7 +38,7 @@ theme_brooklyn99(font.text = "Calibri Light",
 OUTPUT_DESCRIPTION
 }
 \description{
-Brooklyn Nine-Nine theme
+Brooklyn Nine-Nine theme, Recommended font: "Roboto Condensed" (title), "Calibri Light" (other text)
 }
 \details{
 DETAILS

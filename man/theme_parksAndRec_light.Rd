@@ -4,18 +4,21 @@
 \alias{theme_parksAndRec_light}
 \title{theme_parksAndRec_light}
 \usage{
-theme_parksAndRec_light(font.text = "Titillium Web",
-  font.title = "Titillium Web Black", font.legend = "Titillium Web",
-  title.size = 20, text.size = 16, subtitle.size = 14,
-  axis.title.size = 14, axis.text.size = 12, legend.title.size = 14,
-  legend.text.size = 12)
+theme_parksAndRec_light(font.text = NULL, font.title = NULL,
+  font.legend = NULL, title.size = 20, text.size = 16,
+  subtitle.size = 14, axis.title.size = 14, axis.text.size = 12,
+  legend.title.size = 14, legend.text.size = 12,
+  title.color = "grey20", subtitle.color = "grey20",
+  text.color = "grey20", axis.title.color = "grey20",
+  axis.text.color = "grey20", legend.title.color = "grey20",
+  legend.text.color = "grey20")
 }
 \arguments{
-\item{font.text}{PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'}
+\item{font.text}{text font}
 
-\item{font.title}{PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'}
+\item{font.title}{title font}
 
-\item{font.legend}{PARAM_DESCRIPTION, Default: 'Champion HTF-Heavyweight'}
+\item{font.legend}{legend font}
 
 \item{title.size}{title font size}
 
@@ -35,7 +38,7 @@ theme_parksAndRec_light(font.text = "Titillium Web",
 OUTPUT_DESCRIPTION
 }
 \description{
-Parks & Recreation light theme
+Parks & Recreation light theme, Recommended font: "Titillium Web"
 }
 \details{
 DETAILS

@@ -4,17 +4,20 @@
 \alias{theme_theLastAirbender}
 \title{theme_theLastAirbender}
 \usage{
-theme_theLastAirbender(font.text = "Slayer", font.title = "Slayer",
-  font.legend = "Slayer", title.size = 14, text.size = 10,
+theme_theLastAirbender(font.text = NULL, font.title = NULL,
+  font.legend = NULL, title.size = 14, text.size = 10,
   subtitle.size = 12, axis.title.size = 10, axis.text.size = 8,
-  legend.title.size = 10, legend.text.size = 8)
+  legend.title.size = 10, legend.text.size = 8, title.color = NULL,
+  subtitle.color = "grey20", text.color = NULL,
+  axis.title.color = "grey20", axis.text.color = "grey20",
+  legend.title.color = "grey20", legend.text.color = "grey20")
 }
 \arguments{
-\item{font.text}{PARAM_DESCRIPTION, Default: 'Slayer'}
+\item{font.text}{text font}
 
-\item{font.title}{PARAM_DESCRIPTION, Default: 'Slayer'}
+\item{font.title}{title font}
 
-\item{font.legend}{PARAM_DESCRIPTION, Default: 'Slayer'}
+\item{font.legend}{legend font}
 
 \item{title.size}{title font size}
 
@@ -34,7 +37,7 @@ theme_theLastAirbender(font.text = "Slayer", font.title = "Slayer",
 OUTPUT_DESCRIPTION
 }
 \description{
-Avatar: The Last Airbender theme
+Avatar: The Last Airbender theme, Recommended Font: "Slayer"
 }
 \details{
 DETAILS
