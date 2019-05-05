@@ -6,16 +6,17 @@
 #' @param text.font text font
 #' @param title.font title font
 #' @param legend.font legend font
-#' @param title.size title font size
-#' @param text.size text font size
-#' @param subtitle.size subtitle font size
-#' @param axis.title.size axis title font size
-#' @param axis.text.size axis text font size
-#' @param legend.title.size legend title font size
-#' @param legend.text.size legend text font size
+#' @param title.size title font size, Default: 20
+#' @param text.size text font size, Default: 16
+#' @param subtitle.size subtitle font size, Default: 14
+#' @param axis.title.size axis title font size, Default: 14
+#' @param axis.text.size axis text font size, Default: 12
+#' @param legend.title.size legend title font size, Default: 14
+#' @param legend.text.size legend text font size, Default: 12
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
 #' @rdname theme_parksAndRec
+#' @seealso [ggplot2::theme]
 #' @export
 
 theme_parksAndRec <- function(
@@ -63,13 +64,13 @@ theme_parksAndRec <- function(
 #' @param text.font text font
 #' @param title.font title font
 #' @param legend.font legend font
-#' @param title.size title font size
-#' @param text.size text font size
-#' @param subtitle.size subtitle font size
-#' @param axis.title.size axis title font size
-#' @param axis.text.size axis text font size
-#' @param legend.title.size legend title font size
-#' @param legend.text.size legend text font size
+#' @param title.size title font size, Default: 20
+#' @param text.size text font size, Default: 16
+#' @param subtitle.size subtitle font size, Default: 14
+#' @param axis.title.size axis title font size, Default: 14
+#' @param axis.text.size axis text font size, Default: 12
+#' @param legend.title.size legend title font size, Default: 14
+#' @param legend.text.size legend text font size, Default: 12
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
 #' @examples
@@ -79,6 +80,7 @@ theme_parksAndRec <- function(
 #'  }
 #' }
 #' @rdname theme_parksAndRec_light
+#' @seealso [ggplot2::theme]
 #' @export
 
 theme_parksAndRec_light <- function(

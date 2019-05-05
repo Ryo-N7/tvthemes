@@ -19,19 +19,19 @@ theme_theLastAirbender(text.font = NULL, title.font = NULL,
 
 \item{legend.font}{legend font}
 
-\item{title.size}{title font size}
+\item{title.size}{title font size, Default: 14}
 
-\item{text.size}{text font size}
+\item{text.size}{text font size, Default: 10}
 
-\item{subtitle.size}{subtitle font size}
+\item{subtitle.size}{subtitle font size, Default: 12}
 
-\item{axis.title.size}{axis title font size}
+\item{axis.title.size}{axis title font size, Default: 10}
 
-\item{axis.text.size}{axis text font size}
+\item{axis.text.size}{axis text font size, Default: 8}
 
-\item{legend.title.size}{legend title font size}
+\item{legend.title.size}{legend title font size, Default: 10}
 
-\item{legend.text.size}{legend text font size}
+\item{legend.text.size}{legend text font size, Default: 8}
 }
 \value{
 OUTPUT_DESCRIPTION
@@ -41,4 +41,7 @@ Avatar: The Last Airbender theme, Recommended font: "Slayer"
 }
 \details{
 DETAILS
+}
+\seealso{
+[ggplot2::theme]
 }

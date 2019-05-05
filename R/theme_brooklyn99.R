@@ -9,13 +9,13 @@
 #' @param text.font text font
 #' @param title.font title font
 #' @param legend.font legend font
-#' @param title.size title font size
-#' @param text.size text font size
-#' @param subtitle.size subtitle font size
-#' @param axis.title.size axis title font size
-#' @param axis.text.size axis text font size
-#' @param legend.title.size legend title font size
-#' @param legend.text.size legend text font size
+#' @param title.size title font size, Default: 18
+#' @param text.size text font size, Default: 14
+#' @param subtitle.size subtitle font size, Default: 12
+#' @param axis.title.size axis title font size, Default: 14
+#' @param axis.text.size axis text font size, Default: 12
+#' @param legend.title.size legend title font size, Default: 10
+#' @param legend.text.size legend text font size, Default: 9
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -27,7 +27,6 @@
 #' @rdname theme_brooklyn99
 #' @seealso [ggplot2::theme]
 #' @export
-#' @import ggplot2
 
 theme_brooklyn99 <- function(
   text.font = NULL,
