@@ -6,9 +6,9 @@
 #' @description Brooklyn Nine-Nine theme, Recommended font: "Roboto Condensed" (title), "Calibri Light" (other text)
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @param font.text text font
-#' @param font.title title font
-#' @param font.legend legend font
+#' @param text.font text font
+#' @param title.font title font
+#' @param legend.font legend font
 #' @param title.size title font size
 #' @param text.size text font size
 #' @param subtitle.size subtitle font size
@@ -30,9 +30,9 @@
 #' @import ggplot2
 
 theme_brooklyn99 <- function(
-  font.text = NULL,
-  font.title = NULL,
-  font.legend = NULL,
+  text.font = NULL,
+  title.font = NULL,
+  legend.font = NULL,
   title.size = 18,
   text.size = 14,
   subtitle.size = 12,
@@ -51,19 +51,19 @@ theme_brooklyn99 <- function(
   ## use theme_minimal as the base
   theme_minimal() +
     ## main b99 theme
-    theme(text = element_text(family = font.text, size = text.size, color = text.color),
-          plot.title = element_text(family = font.title, face = "bold", size = title.size, color = title.color),
-          plot.subtitle = element_text(family = font.title, size = subtitle.size),
+    theme(text = element_text(family = text.font, size = text.size, color = text.color),
+          plot.title = element_text(family = title.font, face = "bold", size = title.size, color = title.color),
+          plot.subtitle = element_text(family = title.font, size = subtitle.size),
           # background/panel options
           plot.background = element_rect(color = NA, fill = "#0053CD"),
           panel.background = element_rect(color = NA, fill = "#0053CD"),
           # axis options
-          axis.text = element_text(family = font.text, size = axis.text.size, color = axis.text.color),
-          axis.title = element_text(family = font.title, size = axis.title.size, color = axis.title.color),
+          axis.text = element_text(family = text.font, size = axis.text.size, color = axis.text.color),
+          axis.title = element_text(family = title.font, size = axis.title.size, color = axis.title.color),
           axis.ticks = element_blank(),
           # legend options
-          legend.title = element_text(family = font.legend, size = legend.title.size, color = legend.title.color),
-          legend.text = element_text(family = font.legend, size = legend.text.size, color = legend.text.color),
+          legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
+          legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = "bottom",
           legend.key = element_rect(colour = "black", linetype = "solid", size = 1.1),
           legend.background = element_rect(color = "black", fill = "#0053CD",

@@ -4,8 +4,8 @@
 \alias{theme_parksAndRec_light}
 \title{theme_parksAndRec_light}
 \usage{
-theme_parksAndRec_light(font.text = NULL, font.title = NULL,
-  font.legend = NULL, title.size = 20, text.size = 16,
+theme_parksAndRec_light(text.font = NULL, title.font = NULL,
+  legend.font = NULL, title.size = 20, text.size = 16,
   subtitle.size = 14, axis.title.size = 14, axis.text.size = 12,
   legend.title.size = 14, legend.text.size = 12,
   title.color = "grey20", subtitle.color = "grey20",
@@ -14,11 +14,11 @@ theme_parksAndRec_light(font.text = NULL, font.title = NULL,
   legend.text.color = "grey20")
 }
 \arguments{
-\item{font.text}{text font}
+\item{text.font}{text font}
 
-\item{font.title}{title font}
+\item{title.font}{title font}
 
-\item{font.legend}{legend font}
+\item{legend.font}{legend font}
 
 \item{title.size}{title font size}
 

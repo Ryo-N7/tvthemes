@@ -1,8 +1,8 @@
 #' @title theme_theLastAirbender
-#' @description Avatar: The Last Airbender theme, Recommended Font: "Slayer"
-#' @param font.text text font
-#' @param font.title title font
-#' @param font.legend legend font
+#' @description Avatar: The Last Airbender theme, Recommended font: "Slayer"
+#' @param text.font text font
+#' @param title.font title font
+#' @param legend.font legend font
 #' @param title.size title font size
 #' @param text.size text font size
 #' @param subtitle.size subtitle font size
@@ -16,9 +16,9 @@
 #' @export
 
 theme_theLastAirbender <- function(
-  font.text = NULL,
-  font.title = NULL,
-  font.legend = NULL,
+  text.font = NULL,
+  title.font = NULL,
+  legend.font = NULL,
   title.size = 14,
   text.size = 10,
   subtitle.size = 12,
@@ -34,19 +34,19 @@ theme_theLastAirbender <- function(
   legend.title.color = "grey20",
   legend.text.color = "grey20"){
 
-  theme(text = element_text(family = font.text, size = text.size, color = text.color),
-        title = element_text(family = font.title, size = title.size, color = title.color),
-        plot.subtitle = element_text(family = font.title, size = subtitle.size, color = subtitle.color),
+  theme(text = element_text(family = text.font, size = text.size, color = text.color),
+        title = element_text(family = title.font, size = title.size, color = title.color),
+        plot.subtitle = element_text(family = title.font, size = subtitle.size, color = subtitle.color),
         # axis options
-        axis.text = element_text(family = font.text, size = axis.text.size, color = axis.text.color),
-        axis.title = element_text(family = font.title, size = axis.title.size, color = axis.title.color),
+        axis.text = element_text(family = text.font, size = axis.text.size, color = axis.text.color),
+        axis.title = element_text(family = title.font, size = axis.title.size, color = axis.title.color),
         axis.ticks = element_blank(),
         # background/panel options
         plot.background = element_rect(fill = "#ece5d3"),
         panel.background = element_rect(fill = "#ece5d3"),
         # legend options
-        legend.title = element_text(family = font.legend, size = legend.title.size, color = legend.title.color),
-        legend.text = element_text(family = font.legend, size = legend.text.size, color = legend.text.color),
+        legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
+        legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
         legend.position = "bottom",
         legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
         legend.background = element_rect(color = "black", fill = "#ece5d3",

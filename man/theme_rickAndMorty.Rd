@@ -4,8 +4,8 @@
 \alias{theme_rickAndMorty}
 \title{theme_rickAndMorty}
 \usage{
-theme_rickAndMorty(font.text = NULL, font.title = NULL,
-  font.legend = NULL, title.size = 20, text.size = 12,
+theme_rickAndMorty(text.font = NULL, title.font = NULL,
+  legend.font = NULL, title.size = 20, text.size = 12,
   subtitle.size = 14, axis.title.size = 14, axis.text.size = 10,
   legend.title.size = 10, legend.text.size = 9, title.color = NULL,
   subtitle.color = NULL, text.color = NULL, axis.title.color = NULL,
@@ -13,11 +13,11 @@ theme_rickAndMorty(font.text = NULL, font.title = NULL,
   legend.text.color = NULL)
 }
 \arguments{
-\item{font.text}{text font}
+\item{text.font}{text font}
 
-\item{font.title}{title font}
+\item{title.font}{title font}
 
-\item{font.legend}{legend font}
+\item{legend.font}{legend font}
 
 \item{title.size}{title size}
 
@@ -37,7 +37,7 @@ theme_rickAndMorty(font.text = NULL, font.title = NULL,
 OUTPUT_DESCRIPTION
 }
 \description{
-Rick & Morty theme, Font: "Get Schwifty"
+Rick & Morty theme, Recommended font: "Get Schwifty"
 }
 \details{
 DETAILS

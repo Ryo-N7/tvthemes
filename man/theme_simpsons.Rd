@@ -4,8 +4,8 @@
 \alias{theme_simpsons}
 \title{theme_simpsons}
 \usage{
-theme_simpsons(font.text = NULL, font.title = NULL,
-  font.legend = NULL, title.size = 18, text.size = 14,
+theme_simpsons(text.font = NULL, title.font = NULL,
+  legend.font = NULL, title.size = 18, text.size = 14,
   subtitle.size = 12, axis.title.size = 14, axis.text.size = 10,
   legend.title.size = 10, legend.text.size = 9,
   title.color = "#FFD235", subtitle.color = "#fee8c8",
@@ -14,11 +14,11 @@ theme_simpsons(font.text = NULL, font.title = NULL,
   legend.text.color = "#ffffff")
 }
 \arguments{
-\item{font.text}{text font}
+\item{text.font}{text font}
 
-\item{font.title}{title font}
+\item{title.font}{title font}
 
-\item{font.legend}{legend font}
+\item{legend.font}{legend font}
 
 \item{title.size}{title font size}
 
@@ -38,7 +38,7 @@ theme_simpsons(font.text = NULL, font.title = NULL,
 OUTPUT_DESCRIPTION
 }
 \description{
-The Simpsons theme, Font: "Akbar"
+The Simpsons theme, Recommended font: "Akbar"
 }
 \details{
 Largely inspired by `@nathancunn`'s blog posts on The Simpsons
