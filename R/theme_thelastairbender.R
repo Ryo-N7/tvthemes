@@ -14,6 +14,7 @@
 #' @details DETAILS
 #' @rdname theme_theLastAirbender
 #' @seealso [ggplot2::theme]
+#' @importFrom ggplot2 element_text element_rect element_blank
 #' @export
 
 theme_theLastAirbender <- function(

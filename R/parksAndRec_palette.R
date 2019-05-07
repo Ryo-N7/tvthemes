@@ -42,6 +42,13 @@ scale_color_parksAndRec <- function(...){
   ggplot2::discrete_scale("color", "parksAndRec", parksAndRec_pal(), ...)
 }
 
+#' @title scale_colour_parksAndRec
+#' @description for British-spelling compatibility
+#' @rdname scale_colour_parksAndRec
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_parksAndRec <- scale_color_parksAndRec
 
 #' @title scale_fill_parksAndRec
 #' @description Parks & Recreation fill scale

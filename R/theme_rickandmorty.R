@@ -20,6 +20,7 @@
 #' }
 #' @rdname theme_rickAndMorty
 #' @seealso [ggplot2::theme]
+#' @importFrom ggplot2 element_text element_rect element_blank
 #' @export
 
 theme_rickAndMorty <- function(

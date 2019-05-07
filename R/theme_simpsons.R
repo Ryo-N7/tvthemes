@@ -14,6 +14,7 @@
 #' @details Largely inspired by `@nathancunn`'s blog posts on The Simpsons
 #' @rdname theme_simpsons
 #' @seealso [ggplot2::theme]
+#' @importFrom ggplot2 element_text element_rect element_blank element_line
 #' @export
 
 theme_simpsons <- function(

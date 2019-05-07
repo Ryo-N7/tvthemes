@@ -17,6 +17,7 @@
 #' @details DETAILS
 #' @rdname theme_parksAndRec
 #' @seealso [ggplot2::theme]
+#' @importFrom ggplot2 element_text element_rect element_blank
 #' @export
 
 theme_parksAndRec <- function(
@@ -81,6 +82,7 @@ theme_parksAndRec <- function(
 #' }
 #' @rdname theme_parksAndRec_light
 #' @seealso [ggplot2::theme]
+#' @importFrom ggplot2 element_text element_rect element_blank
 #' @export
 
 theme_parksAndRec_light <- function(

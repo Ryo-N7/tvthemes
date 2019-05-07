@@ -26,6 +26,7 @@
 #' }
 #' @rdname theme_brooklyn99
 #' @seealso [ggplot2::theme]
+#' @importFrom ggplot2 element_text element_rect element_blank
 #' @export
 
 theme_brooklyn99 <- function(
@@ -48,9 +49,9 @@ theme_brooklyn99 <- function(
   legend.text.color = "#F9FEFF"
 ){
   ## use theme_minimal as the base
-  theme_minimal() +
+  ggplot2::theme_minimal() +
     ## main b99 theme
-    theme(text = element_text(family = text.font, size = text.size, color = text.color),
+    theme(text = ggplot2::element_text(family = text.font, size = text.size, color = text.color),
           plot.title = element_text(family = title.font, face = "bold", size = title.size, color = title.color),
           plot.subtitle = element_text(family = title.font, size = subtitle.size),
           # background/panel options

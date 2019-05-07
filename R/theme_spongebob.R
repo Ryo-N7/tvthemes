@@ -20,6 +20,7 @@
 #' }
 #' @rdname theme_spongeBob
 #' @seealso [ggplot2::theme]
+#' @importFrom ggplot2 element_text element_rect element_blank
 #' @export
 
 theme_spongeBob <- function(

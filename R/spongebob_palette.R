@@ -48,6 +48,14 @@ scale_color_spongeBob <- function(...){
   ggplot2::discrete_scale("color", "spongeBob", spongeBob_pal(), ...)
 }
 
+#' @title scale_colour_spongeBob
+#' @description for British-spelling compatibility
+#' @rdname scale_colour_spongeBob
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_spongeBob <- scale_color_spongeBob
+
 #' @title scale_fill_spongeBob
 #' @description Spongebob Squarepants fill scale
 #' @param ... PARAM_DESCRIPTION

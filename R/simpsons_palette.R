@@ -36,6 +36,14 @@ scale_color_simpsons <- function(...){
   ggplot2::discrete_scale("color", "simpsons", simpsons_pal(), ...)
 }
 
+#' @title scale_colour_simpsons
+#' @description for British-spelling compatibility
+#' @rdname scale_colour_simpsons
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_simpsons <- scale_color_simpsons
+
 #' @title scale_fill_simpsons
 #' @description The Simpsons fill scale
 #' @param ... PARAM_DESCRIPTION

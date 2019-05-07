@@ -19,3 +19,5 @@ Imports:
     extrafont,
     scales,
     magick
+Suggests: 
+    testthat

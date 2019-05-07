@@ -36,6 +36,14 @@ scale_color_fireNation <- function(...){
   ggplot2::discrete_scale("color", "fireNation", fireNation_pal(), ...)
 }
 
+#' @title scale_colour_fireNation
+#' @description for British-spelling compatibility
+#' @rdname scale_colour_fireNation
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_fireNation <- scale_color_fireNation
+
 #' @title scale_fill_fireNation
 #' @description Fire Nation fill scale
 #' @param ... PARAM_DESCRIPTION
@@ -93,6 +101,14 @@ airNomads_pal <- function(){
 scale_color_airNomads <- function(...){
   ggplot2::discrete_scale("color", "airNomads", airNomads_pal(), ...)
 }
+
+#' @title scale_colour_airNomads
+#' @description for British-spelling compatibility
+#' @rdname scale_colour_airNomads
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_airNomads <- scale_color_airNomads
 
 #' @title scale_fill_air_nomads
 #' @description Air Nomads fill scale
@@ -157,6 +173,14 @@ scale_color_earthKingdom <- function(...){
   ggplot2::discrete_scale("color", "earthKingdom", earthKingdom_pal(), ...)
 }
 
+#' @title scale_colour_earthKingdom
+#' @description for British-spelling compatibility
+#' @rdname scale_colour_earthKingdom
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_earthKingdom <- scale_color_earthKingdom
+
 #' @title scale_fill_earthKingdom
 #' @description Earth Kingdom fill scale
 #' @param ... PARAM_DESCRIPTION
@@ -218,6 +242,14 @@ waterTribe_pal <- function(){
 scale_color_waterTribe <- function(...){
   ggplot2::discrete_scale("color", "waterTribe", waterTribe_pal(), ...)
 }
+
+#' @title scale_colour_waterTribe
+#' @description for British-spelling compatibility
+#' @rdname scale_colour_waterTribe
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_waterTribe <- scale_color_waterTribe
 
 #' @title scale_fill_waterTribe
 #' @description Water Tribe fill scale

@@ -52,6 +52,14 @@ scale_color_rickAndMorty <- function(...){
   ggplot2::discrete_scale("color", "rickAndMorty", rickAndMorty_pal(), ...)
 }
 
+#' @title scale_colour_rickAndMorty
+#' @description for British-spelling compatibility
+#' @rdname scale_colour_rickAndMorty
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_rickAndMorty <- scale_color_rickAndMorty
+
 #' @title scale_fill_rickAndMorty
 #' @description Rick & Morty fill scale
 #' @param ... PARAM_DESCRIPTION
