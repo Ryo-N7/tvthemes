@@ -10,7 +10,7 @@ theme_parksAndRec(text.font = NULL, title.font = NULL,
   legend.title.size = 14, legend.text.size = 12, title.color = NULL,
   subtitle.color = NULL, text.color = NULL, axis.title.color = NULL,
   axis.text.color = NULL, legend.title.color = NULL,
-  legend.text.color = NULL)
+  legend.text.color = NULL, legend.position = "bottom")
 }
 \arguments{
 \item{text.font}{text font}
@@ -32,6 +32,22 @@ theme_parksAndRec(text.font = NULL, title.font = NULL,
 \item{legend.title.size}{legend title font size, Default: 14}
 
 \item{legend.text.size}{legend text font size, Default: 12}
+
+\item{title.color}{title color, Default: NULL}
+
+\item{subtitle.color}{subtitle.color, Default: NULL}
+
+\item{text.color}{text color, Default: NULL}
+
+\item{axis.title.color}{axis title color, Default: NULL}
+
+\item{axis.text.color}{axis text color, Default: NULL}
+
+\item{legend.title.color}{legend title color, Default: NULL}
+
+\item{legend.text.color}{legend text color, Default: NULL}
+
+\item{legend.position}{legend position, Default: "bottom"}
 }
 \value{
 OUTPUT_DESCRIPTION

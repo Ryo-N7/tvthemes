@@ -10,6 +10,14 @@
 #' @param axis.text.size axis text font size, Default: 8
 #' @param legend.title.size legend title font size, Default: 10
 #' @param legend.text.size legend text font size, Default: 8
+#' @param title.color title color, Default: NULL
+#' @param subtitle.color subtitle.color, Default: "grey20"
+#' @param text.color text color, Default: NULL
+#' @param axis.title.color axis title color, Default: "grey20"
+#' @param axis.text.color axis text color, Default: "grey20"
+#' @param legend.title.color legend title color, Default: "grey20"
+#' @param legend.text.color legend text color, Default: "grey20"
+#' @param legend.position legend position, Default: "bottom"
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
 #' @rdname theme_theLastAirbender
@@ -34,7 +42,8 @@ theme_theLastAirbender <- function(
   axis.title.color = "grey20",
   axis.text.color = "grey20",
   legend.title.color = "grey20",
-  legend.text.color = "grey20"){
+  legend.text.color = "grey20",
+  legend.position = "bottom") {
 
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         title = element_text(family = title.font, size = title.size, color = title.color),
@@ -49,10 +58,8 @@ theme_theLastAirbender <- function(
         # legend options
         legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
         legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
-        legend.position = "bottom",
+        legend.position = legend.position,
         legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
-        legend.background = element_rect(color = "black", fill = "#ece5d3",
-                                         linetype = "solid")
+        legend.background = element_rect(color = "black", fill = "#ece5d3", linetype = "solid")
         )
-
 }

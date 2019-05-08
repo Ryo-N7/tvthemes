@@ -11,7 +11,7 @@ theme_simpsons(text.font = NULL, title.font = NULL,
   title.color = "#FFD235", subtitle.color = "#fee8c8",
   text.color = "#fee8c8", axis.title.color = "#fee8c8",
   axis.text.color = "#fee8c8", legend.title.color = "#ffffff",
-  legend.text.color = "#ffffff")
+  legend.text.color = "#ffffff", legend.position = "bottom")
 }
 \arguments{
 \item{text.font}{text font}
@@ -33,6 +33,22 @@ theme_simpsons(text.font = NULL, title.font = NULL,
 \item{legend.title.size}{legend title font size, Default: 10}
 
 \item{legend.text.size}{legend text font size, Default: 9}
+
+\item{title.color}{title color, Default: "#FFD235"}
+
+\item{subtitle.color}{subtitle.color, Default: "#fee8c8"}
+
+\item{text.color}{text color, Default: "#fee8c8"}
+
+\item{axis.title.color}{axis title color, Default: "#fee8c8"}
+
+\item{axis.text.color}{axis text color, Default: "#fee8c8"}
+
+\item{legend.title.color}{legend title color, Default: "#ffffff"}
+
+\item{legend.text.color}{legend text color, Default: "#ffffff"}
+
+\item{legend.position}{legend position, Default: "bottom"}
 }
 \value{
 OUTPUT_DESCRIPTION
@@ -41,7 +57,7 @@ OUTPUT_DESCRIPTION
 The Simpsons theme, Recommended font: "Akbar"
 }
 \details{
-Largely inspired by `@nathancunn`'s blog posts on The Simpsons
+In part inspired by `@nathancunn`'s blog posts on The Simpsons!
 }
 \seealso{
 [ggplot2::theme]

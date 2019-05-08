@@ -10,8 +10,16 @@
 #' @param axis.text.size axis text font size, Default: 10
 #' @param legend.title.size legend title font size, Default: 10
 #' @param legend.text.size legend text font size, Default: 9
+#' @param title.color title color, Default: "#FFD235"
+#' @param subtitle.color subtitle.color, Default: "#fee8c8"
+#' @param text.color text color, Default: "#fee8c8"
+#' @param axis.title.color axis title color, Default: "#fee8c8"
+#' @param axis.text.color axis text color, Default: "#fee8c8"
+#' @param legend.title.color legend title color, Default: "#ffffff"
+#' @param legend.text.color legend text color, Default: "#ffffff"
+#' @param legend.position legend position, Default: "bottom"
 #' @return OUTPUT_DESCRIPTION
-#' @details Largely inspired by `@nathancunn`'s blog posts on The Simpsons
+#' @details In part inspired by `@nathancunn`'s blog posts on The Simpsons!
 #' @rdname theme_simpsons
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line
@@ -34,7 +42,8 @@ theme_simpsons <- function(
   axis.title.color = "#fee8c8",
   axis.text.color = "#fee8c8",
   legend.title.color = "#ffffff",
-  legend.text.color = "#ffffff") {
+  legend.text.color = "#ffffff",
+  legend.position = "bottom") {
 
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         plot.title = element_text(family = title.font, size = title.size, color = title.color),
@@ -51,8 +60,8 @@ theme_simpsons <- function(
         # legend options
         legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
         legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
+        legend.position = legend.position,
         legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
-        legend.background = element_rect(color = "black", fill = "#7199E1",
-                                         linetype = "solid")
+        legend.background = element_rect(color = "black", fill = "#7199E1", linetype = "solid")
         )
 }

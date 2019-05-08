@@ -10,6 +10,14 @@
 #' @param axis.text.size axis text font size, Default: 12
 #' @param legend.title.size legend title font size, Default: 10
 #' @param legend.text.size legend text font size, Default: 9
+#' @param title.color title color, Default: "F9FEFF"
+#' @param subtitle.color subtitle.color, Default: "F9FEFF"
+#' @param text.color text color, Default: "F9FEFF"
+#' @param axis.title.color axis title color, Default: "F9FEFF"
+#' @param axis.text.color axis text color, Default: "F9FEFF"
+#' @param legend.title.color legend title color, Default: "F9FEFF"
+#' @param legend.text.color legend text color, Default: "F9FEFF"
+#' @param legend.position legend position, Default: "bottom"
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
 #' @examples
@@ -40,7 +48,9 @@ theme_spongeBob <- function(
   axis.title.color = NULL,
   axis.text.color = "#F9FEFF",
   legend.title.color = "#F9FEFF",
-  legend.text.color = "#F9FEFF") {
+  legend.text.color = "#F9FEFF",
+  legend.position = "bottom") {
+
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         plot.title = element_text(family = title.font, size = title.size, color = title.color),
         plot.subtitle = element_text(family = title.font, size = subtitle.size, color = subtitle.color),
@@ -54,8 +64,8 @@ theme_spongeBob <- function(
         # legend options
         legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
         legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
-        legend.position = "right",
+        legend.position = legend.position,
         legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
-        legend.background = element_rect(color = "black", fill = "#21B8E3",
-                                         linetype = "solid"))
+        legend.background = element_rect(color = "black", fill = "#21B8E3", linetype = "solid")
+        )
 }

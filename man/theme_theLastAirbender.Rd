@@ -10,7 +10,8 @@ theme_theLastAirbender(text.font = NULL, title.font = NULL,
   legend.title.size = 10, legend.text.size = 8, title.color = NULL,
   subtitle.color = "grey20", text.color = NULL,
   axis.title.color = "grey20", axis.text.color = "grey20",
-  legend.title.color = "grey20", legend.text.color = "grey20")
+  legend.title.color = "grey20", legend.text.color = "grey20",
+  legend.position = "bottom")
 }
 \arguments{
 \item{text.font}{text font}
@@ -32,6 +33,22 @@ theme_theLastAirbender(text.font = NULL, title.font = NULL,
 \item{legend.title.size}{legend title font size, Default: 10}
 
 \item{legend.text.size}{legend text font size, Default: 8}
+
+\item{title.color}{title color, Default: NULL}
+
+\item{subtitle.color}{subtitle.color, Default: "grey20"}
+
+\item{text.color}{text color, Default: NULL}
+
+\item{axis.title.color}{axis title color, Default: "grey20"}
+
+\item{axis.text.color}{axis text color, Default: "grey20"}
+
+\item{legend.title.color}{legend title color, Default: "grey20"}
+
+\item{legend.text.color}{legend text color, Default: "grey20"}
+
+\item{legend.position}{legend position, Default: "bottom"}
 }
 \value{
 OUTPUT_DESCRIPTION

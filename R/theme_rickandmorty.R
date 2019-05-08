@@ -10,6 +10,14 @@
 #' @param axis.text.size axis text font size, Default: 10
 #' @param legend.title.size legend title font size, Default: 10
 #' @param legend.text.size legend text font size, Default: 9
+#' @param title.color title color, Default: NULL
+#' @param subtitle.color subtitle.color, Default: NULL
+#' @param text.color text color, Default: NULL
+#' @param axis.title.color axis title color, Default: NULL
+#' @param axis.text.color axis text color, Default: NULL
+#' @param legend.title.color legend title color, Default: NULL
+#' @param legend.text.color legend text color, Default: NULL
+#' @param legend.position legend position, Default: "bottom"
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
 #' @examples
@@ -40,7 +48,8 @@ theme_rickAndMorty <- function(
   axis.title.color = NULL,
   axis.text.color = NULL,
   legend.title.color = NULL,
-  legend.text.color = NULL) {
+  legend.text.color = NULL,
+  legend.position = "bottom") {
 
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         title = element_text(family = title.font, size = title.size, color = title.color),
@@ -56,7 +65,7 @@ theme_rickAndMorty <- function(
         # legend options
         legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
         legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
-        legend.background = element_rect(color = "black", fill = "#9bff16",
-                                         linetype = "solid")
+        legend.position = legend.position,
+        legend.background = element_rect(color = "black", fill = "#9bff16", linetype = "solid")
         )
 }

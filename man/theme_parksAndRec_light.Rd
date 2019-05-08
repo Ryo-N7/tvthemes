@@ -11,7 +11,7 @@ theme_parksAndRec_light(text.font = NULL, title.font = NULL,
   title.color = "grey20", subtitle.color = "grey20",
   text.color = "grey20", axis.title.color = "grey20",
   axis.text.color = "grey20", legend.title.color = "grey20",
-  legend.text.color = "grey20")
+  legend.text.color = "grey20", legend.position = "bottom")
 }
 \arguments{
 \item{text.font}{text font}
@@ -33,6 +33,22 @@ theme_parksAndRec_light(text.font = NULL, title.font = NULL,
 \item{legend.title.size}{legend title font size, Default: 14}
 
 \item{legend.text.size}{legend text font size, Default: 12}
+
+\item{title.color}{title color, Default: "grey20"}
+
+\item{subtitle.color}{subtitle.color, Default: "grey20"}
+
+\item{text.color}{text color, Default: "grey20"}
+
+\item{axis.title.color}{axis title color, Default: "grey20"}
+
+\item{axis.text.color}{axis text color, Default: "grey20"}
+
+\item{legend.title.color}{legend title color, Default: "grey20"}
+
+\item{legend.text.color}{legend text color, Default: "grey20"}
+
+\item{legend.position}{legend position, Default: "bottom"}
 }
 \value{
 OUTPUT_DESCRIPTION

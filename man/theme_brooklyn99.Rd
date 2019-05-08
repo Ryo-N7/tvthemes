@@ -11,7 +11,7 @@ theme_brooklyn99(text.font = NULL, title.font = NULL,
   title.color = "#F9FEFF", subtitle.color = "#F9FEFF",
   text.color = "#F9FEFF", axis.title.color = "#F9FEFF",
   axis.text.color = "#F9FEFF", legend.title.color = "#F9FEFF",
-  legend.text.color = "#F9FEFF")
+  legend.text.color = "#F9FEFF", legend.position = "bottom")
 }
 \arguments{
 \item{text.font}{text font}
@@ -33,6 +33,22 @@ theme_brooklyn99(text.font = NULL, title.font = NULL,
 \item{legend.title.size}{legend title font size, Default: 10}
 
 \item{legend.text.size}{legend text font size, Default: 9}
+
+\item{title.color}{title color, Default: "F9FEFF"}
+
+\item{subtitle.color}{subtitle.color, Default: "F9FEFF"}
+
+\item{text.color}{text color, Default: "F9FEFF"}
+
+\item{axis.title.color}{axis title color, Default: "F9FEFF"}
+
+\item{axis.text.color}{axis text color, Default: "F9FEFF"}
+
+\item{legend.title.color}{legend title color, Default: "F9FEFF"}
+
+\item{legend.text.color}{legend text color, Default: "F9FEFF"}
+
+\item{legend.position}{legend position, Default: "bottom"}
 }
 \value{
 OUTPUT_DESCRIPTION
