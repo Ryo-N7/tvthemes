@@ -8,9 +8,10 @@ theme_parksAndRec(text.font = NULL, title.font = NULL,
   legend.font = NULL, title.size = 20, text.size = 16,
   subtitle.size = 14, axis.title.size = 14, axis.text.size = 12,
   legend.title.size = 14, legend.text.size = 12, title.color = NULL,
-  subtitle.color = NULL, text.color = NULL, axis.title.color = NULL,
-  axis.text.color = NULL, legend.title.color = NULL,
-  legend.text.color = NULL, legend.position = "bottom")
+  subtitle.color = NULL, text.color = NULL,
+  axis.title.color = "black", axis.text.color = "black",
+  legend.title.color = NULL, legend.text.color = NULL,
+  legend.position = "bottom")
 }
 \arguments{
 \item{text.font}{text font}

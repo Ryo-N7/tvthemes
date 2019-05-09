@@ -43,7 +43,7 @@ theme_simpsons <- function(
   axis.text.color = "#fee8c8",
   legend.title.color = "#ffffff",
   legend.text.color = "#ffffff",
-  legend.position = "bottom") {
+  legend.position = "bottom"){
 
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         plot.title = element_text(family = title.font, size = title.size, color = title.color),

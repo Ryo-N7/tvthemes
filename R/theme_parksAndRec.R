@@ -42,11 +42,11 @@ theme_parksAndRec <- function(
   title.color = NULL,
   subtitle.color = NULL,
   text.color = NULL,
-  axis.title.color = NULL,
-  axis.text.color = NULL,
+  axis.title.color = "black",
+  axis.text.color = "black",
   legend.title.color = NULL,
   legend.text.color = NULL,
-  legend.position = "bottom") {
+  legend.position = "bottom"){
 
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         title = element_text(family = title.font, size = title.size, color = title.color),

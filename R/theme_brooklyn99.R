@@ -55,7 +55,7 @@ theme_brooklyn99 <- function(
   axis.text.color = "#F9FEFF",
   legend.title.color = "#F9FEFF",
   legend.text.color = "#F9FEFF",
-  legend.position = "bottom") {
+  legend.position = "bottom"){
 
   ## use theme_minimal as the base
   ggplot2::theme_minimal() +

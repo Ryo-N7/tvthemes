@@ -43,7 +43,7 @@ theme_theLastAirbender <- function(
   axis.text.color = "grey20",
   legend.title.color = "grey20",
   legend.text.color = "grey20",
-  legend.position = "bottom") {
+  legend.position = "bottom"){
 
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         title = element_text(family = title.font, size = title.size, color = title.color),
@@ -53,8 +53,10 @@ theme_theLastAirbender <- function(
         axis.title = element_text(family = title.font, size = axis.title.size, color = axis.title.color),
         axis.ticks = element_blank(),
         # background/panel options
-        plot.background = element_rect(fill = "#ece5d3"),
-        panel.background = element_rect(fill = "#ece5d3"),
+        plot.background = element_rect(color = NA, fill = "#ece5d3"),
+        panel.background = element_rect(color = NA, fill = "#ece5d3"),
+        panel.grid.major = element_line(color = NULL, size = 1.25),
+        panel.grid.minor = element_line(color = NULL, size = 1.25),
         # legend options
         legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
         legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),

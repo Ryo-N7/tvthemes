@@ -49,7 +49,7 @@ theme_rickAndMorty <- function(
   axis.text.color = NULL,
   legend.title.color = NULL,
   legend.text.color = NULL,
-  legend.position = "bottom") {
+  legend.position = "bottom"){
 
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         title = element_text(family = title.font, size = title.size, color = title.color),

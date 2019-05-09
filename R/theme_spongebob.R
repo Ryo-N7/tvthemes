@@ -45,11 +45,11 @@ theme_spongeBob <- function(
   title.color = "#F9FEFF",
   subtitle.color = "#F9FEFF",
   text.color = "#F9FEFF",
-  axis.title.color = NULL,
+  axis.title.color = "#F9FEFF",
   axis.text.color = "#F9FEFF",
   legend.title.color = "#F9FEFF",
   legend.text.color = "#F9FEFF",
-  legend.position = "bottom") {
+  legend.position = "bottom"){
 
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         plot.title = element_text(family = title.font, size = title.size, color = title.color),
