@@ -46,11 +46,12 @@ theme_rickAndMorty <- function(
   subtitle.color = NULL,
   text.color = NULL,
   axis.title.color = NULL,
-  axis.text.color = NULL,
+  axis.text.color = "black",
   legend.title.color = NULL,
   legend.text.color = NULL,
   legend.position = "bottom"){
 
+  ggplot2::theme_minimal() +
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         title = element_text(family = title.font, size = title.size, color = title.color),
         plot.subtitle = element_text(family = title.font, size = subtitle.size, color = subtitle.color),

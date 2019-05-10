@@ -9,7 +9,7 @@ theme_rickAndMorty(text.font = NULL, title.font = NULL,
   subtitle.size = 14, axis.title.size = 14, axis.text.size = 10,
   legend.title.size = 10, legend.text.size = 9, title.color = NULL,
   subtitle.color = NULL, text.color = NULL, axis.title.color = NULL,
-  axis.text.color = NULL, legend.title.color = NULL,
+  axis.text.color = "black", legend.title.color = NULL,
   legend.text.color = NULL, legend.position = "bottom")
 }
 \arguments{

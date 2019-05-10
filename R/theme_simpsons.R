@@ -45,6 +45,7 @@ theme_simpsons <- function(
   legend.text.color = "#ffffff",
   legend.position = "bottom"){
 
+  ggplot2::theme_minimal() +
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         plot.title = element_text(family = title.font, size = title.size, color = title.color),
         plot.subtitle = element_text(family = title.font, size = subtitle.size, color = subtitle.color),
