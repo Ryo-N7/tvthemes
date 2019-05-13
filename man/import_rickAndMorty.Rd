@@ -6,9 +6,6 @@
 \usage{
 import_rickAndMorty()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Rick & Morty font ("Get Schwifty")
 }

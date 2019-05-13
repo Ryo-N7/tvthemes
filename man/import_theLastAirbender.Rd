@@ -6,14 +6,11 @@
 \usage{
 import_theLastAirbender()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 The Last Airbender font ("Slayer")
 }
 \details{
-Actual font is Herculanum (can be bought for $35).
+Actual font is Herculanum.
 import_*() functions inspired by hrbrmstrthemes
 You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }

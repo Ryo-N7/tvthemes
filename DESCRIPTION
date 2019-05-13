@@ -20,4 +20,7 @@ Imports:
     scales,
     magick
 Suggests: 
-    testthat
+    testthat,
+    gapminder,
+    emo,
+    glue

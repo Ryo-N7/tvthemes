@@ -4,17 +4,11 @@
 \alias{sponge_images}
 \title{sponge_images}
 \usage{
-sponge_images(which = c("background", "floral", "floral2"))
+sponge_images(which = c("background", "floral"))
 }
 \arguments{
-\item{which}{PARAM_DESCRIPTION, Default: c("background", "floral", "floral2")}
-}
-\value{
-OUTPUT_DESCRIPTION
+\item{which}{PARAM_DESCRIPTION, Default: c("background", "floral")}
 }
 \description{
 find SpongeBob background images
-}
-\details{
-DETAILS
 }

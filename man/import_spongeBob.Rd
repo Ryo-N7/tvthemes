@@ -6,9 +6,6 @@
 \usage{
 import_spongeBob()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 spongeBob SquarePants font ("Some-Time-Later")
 }

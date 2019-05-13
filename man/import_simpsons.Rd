@@ -6,9 +6,6 @@
 \usage{
 import_simpsons()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 The Simpsons Font ("Akbar" font)
 }

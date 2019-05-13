@@ -6,9 +6,6 @@
 \usage{
 import_roboto_condensed()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 taken from hrbrmstrthemes
 }
