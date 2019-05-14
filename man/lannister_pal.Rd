@@ -6,9 +6,6 @@
 \usage{
 lannister_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Lannister palette
 }

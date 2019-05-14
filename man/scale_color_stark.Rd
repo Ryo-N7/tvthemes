@@ -9,12 +9,6 @@ scale_color_stark(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Stark color scale
-}
-\details{
-DETAILS
 }

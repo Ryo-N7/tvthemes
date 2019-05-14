@@ -3,7 +3,7 @@ context("test-rickandmorty")
 test_that("theme_rickAndMorty works", {
   thm <- theme_rickAndMorty()
   expect_s3_class(thm, "theme")
-  expect_null(thm$text$family)
+  expect_equal(thm$text$family, "")
 })
 
 test_that("rickAndMorty_pal raises warning with large number, x > 9", {

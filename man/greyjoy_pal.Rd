@@ -6,9 +6,6 @@
 \usage{
 greyjoy_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Greyjoy palette
 }

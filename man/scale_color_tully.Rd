@@ -9,9 +9,6 @@ scale_color_tully(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Tully color scale
 }

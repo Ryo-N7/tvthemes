@@ -9,12 +9,6 @@ scale_color_brooklyn99_dark(...)
 \arguments{
 \item{...}{any other argument that can go into scale_color_*()}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 DARK color scale B99
-}
-\details{
-DETAILS
 }

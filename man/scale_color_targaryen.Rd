@@ -9,9 +9,6 @@ scale_color_targaryen(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Targaryen color scale
 }

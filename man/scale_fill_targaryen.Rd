@@ -9,14 +9,8 @@ scale_fill_targaryen(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Targaryen fill scale
-}
-\details{
-DETAILS
 }
 \examples{
 \dontrun{

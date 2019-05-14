@@ -6,12 +6,6 @@
 \usage{
 fireNation_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Fire Nation palette
-}
-\details{
-DETAILS
 }

@@ -3,7 +3,7 @@ context("test-thelastairbender")
 test_that("theme_theLastAirbender works", {
   thm <- theme_theLastAirbender()
   expect_s3_class(thm, "theme")
-  expect_null(thm$text$family)
+  expect_equal(thm$text$family, "")
 })
 
 ## FireNation

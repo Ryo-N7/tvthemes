@@ -6,12 +6,6 @@
 \usage{
 airNomads_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Air Nomads palette
-}
-\details{
-DETAILS
 }

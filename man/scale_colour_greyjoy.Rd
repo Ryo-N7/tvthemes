@@ -9,9 +9,6 @@ scale_colour_greyjoy(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Greyjoy colour scale
 }

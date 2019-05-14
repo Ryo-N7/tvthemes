@@ -6,12 +6,6 @@
 \usage{
 spongeBob_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Spongebob Squarepants palette
-}
-\details{
-DETAILS
 }

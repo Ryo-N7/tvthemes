@@ -9,12 +9,6 @@ scale_fill_brooklyn99_dark(...)
 \arguments{
 \item{...}{misc. arguments that can go into scale_fill_*() functions}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 DARK fill scales for Brooklyn Nine-Nine
-}
-\details{
-DETAILS
 }

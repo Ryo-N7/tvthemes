@@ -9,12 +9,6 @@ scale_color_waterTribe(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Water Tribe color scale
-}
-\details{
-DETAILS
 }

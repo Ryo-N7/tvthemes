@@ -9,14 +9,8 @@ scale_fill_tyrell(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Tyrell fill scale
-}
-\details{
-DETAILS
 }
 \examples{
 \dontrun{

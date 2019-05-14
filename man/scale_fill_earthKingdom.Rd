@@ -9,12 +9,6 @@ scale_fill_earthKingdom(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Earth Kingdom fill scale
-}
-\details{
-DETAILS
 }

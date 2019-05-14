@@ -6,12 +6,6 @@
 \usage{
 stark_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Stark palette
-}
-\details{
-DETAILS
 }

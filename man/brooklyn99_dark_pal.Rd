@@ -12,9 +12,6 @@ B99 dark palette
 \description{
 dark version of Brooklyn Nine-Nine palette
 }
-\details{
-DETAILS
-}
 \seealso{
 \code{\link[scales]{manual_pal}}
 }

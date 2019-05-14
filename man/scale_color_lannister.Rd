@@ -9,14 +9,8 @@ scale_color_lannister(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Lannister color scale
-}
-\details{
-DETAILS
 }
 \examples{
 \dontrun{

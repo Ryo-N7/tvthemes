@@ -3,7 +3,7 @@ context("test-simpsons")
 test_that("theme_simpsons works", {
   thm <- theme_simpsons()
   expect_s3_class(thm, "theme")
-  expect_null(thm$text$family)
+  expect_equal(thm$text$family, "")
 })
 
 test_that("simpsons_pal raises warning with large number, x > 10", {

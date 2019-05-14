@@ -3,11 +3,11 @@ context("test-parksandrec")
 test_that("theme_parksAndRec/light works", {
   thm <- theme_parksAndRec()
   expect_s3_class(thm, "theme")
-  expect_null(thm$text$family)
+  expect_equal(thm$text$family, "")
 
   thm <- theme_parksAndRec_light()
   expect_s3_class(thm, "theme")
-  expect_null(thm$text$family)
+  expect_equal(thm$text$family, "")
 })
 
 test_that("parksAndRec_pal raises warning with large number, x > 10", {

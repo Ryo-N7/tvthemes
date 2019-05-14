@@ -9,12 +9,6 @@ scale_color_fireNation(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Fire Nation color scale
-}
-\details{
-DETAILS
 }

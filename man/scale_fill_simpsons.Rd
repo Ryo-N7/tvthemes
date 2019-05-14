@@ -9,12 +9,6 @@ scale_fill_simpsons(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 The Simpsons fill scale
-}
-\details{
-DETAILS
 }

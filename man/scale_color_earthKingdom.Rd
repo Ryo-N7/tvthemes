@@ -9,12 +9,6 @@ scale_color_earthKingdom(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Earth Kingdom color scale
-}
-\details{
-DETAILS
 }

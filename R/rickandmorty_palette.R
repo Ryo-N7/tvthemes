@@ -18,11 +18,8 @@ rickAndMorty_palette <- c(
 # #a9f3fd
 # #4cb5c3
 
-
 #' @title rickAndMorty_pal
 #' @description Rick & Morty color palette
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @rdname rickAndMorty_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -34,8 +31,6 @@ rickAndMorty_pal <- function(){
 #' @title scale_color_rickAndMorty
 #' @description Rick & Morty color scale
 #' @param ... PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -54,6 +49,7 @@ scale_color_rickAndMorty <- function(...){
 
 #' @title scale_colour_rickAndMorty
 #' @description for British-spelling compatibility
+#' @param ... any other argument that can go into scale_colour_*()
 #' @rdname scale_colour_rickAndMorty
 #' @export
 #' @importFrom ggplot2 discrete_scale
@@ -63,8 +59,6 @@ scale_colour_rickAndMorty <- scale_color_rickAndMorty
 #' @title scale_fill_rickAndMorty
 #' @description Rick & Morty fill scale
 #' @param ... PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @examples
 #' \dontrun{
 #' if(interactive()){

@@ -6,21 +6,11 @@
 \usage{
 brooklyn99_pal()
 }
-\value{
-B99 palette
-}
 \description{
 Brooklyn Nine Nine Color and Fill Scales
 }
 \details{
 Colors that work well with the blue background!
-}
-\examples{
-\dontrun{
-if(interactive()){
- #EXAMPLE1
- }
-}
 }
 \seealso{
 \code{\link[scales]{manual_pal}}

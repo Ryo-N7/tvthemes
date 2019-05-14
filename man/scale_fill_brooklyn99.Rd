@@ -9,12 +9,6 @@ scale_fill_brooklyn99(...)
 \arguments{
 \item{...}{misc. arguments that can go into scale_fill_*() functions}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 fill scales for Brooklyn Nine-Nine
-}
-\details{
-DETAILS
 }

@@ -9,14 +9,8 @@ scale_fill_greyjoy(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Greyjoy fill scale
-}
-\details{
-DETAILS
 }
 \examples{
 \dontrun{

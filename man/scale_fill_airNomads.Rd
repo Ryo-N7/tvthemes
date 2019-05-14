@@ -9,12 +9,6 @@ scale_fill_airNomads(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Air Nomads fill scale
-}
-\details{
-DETAILS
 }

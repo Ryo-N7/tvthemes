@@ -9,12 +9,6 @@ scale_fill_fireNation(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Fire Nation fill scale
-}
-\details{
-DETAILS
 }

@@ -6,9 +6,6 @@
 \usage{
 tully_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Tully palette
 }

@@ -9,6 +9,3 @@ parksAndRec_pal()
 \description{
 Parks & Recreation theme
 }
-\details{
-DETAILS
-}

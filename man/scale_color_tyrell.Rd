@@ -9,9 +9,6 @@ scale_color_tyrell(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Tyrell color scale
 }

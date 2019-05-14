@@ -9,12 +9,6 @@ scale_color_spongeBob(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Spongebob Squarepants color scale
-}
-\details{
-DETAILS
 }

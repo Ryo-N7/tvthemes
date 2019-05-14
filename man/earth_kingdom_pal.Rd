@@ -6,12 +6,6 @@
 \usage{
 earthKingdom_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Earth Kingdom palette
-}
-\details{
-DETAILS
 }

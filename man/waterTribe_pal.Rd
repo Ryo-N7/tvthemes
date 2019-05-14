@@ -6,12 +6,6 @@
 \usage{
 waterTribe_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Water Tribe palette
-}
-\details{
-DETAILS
 }

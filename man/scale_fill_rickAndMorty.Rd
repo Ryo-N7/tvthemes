@@ -9,14 +9,8 @@ scale_fill_rickAndMorty(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Rick & Morty fill scale
-}
-\details{
-DETAILS
 }
 \examples{
 \dontrun{

@@ -9,14 +9,8 @@ scale_color_rickAndMorty(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Rick & Morty color scale
-}
-\details{
-DETAILS
 }
 \examples{
 \dontrun{

@@ -2,7 +2,6 @@
 
 export(airNomads_pal)
 export(brooklyn99_dark_pal)
-export(brooklyn99_logo)
 export(brooklyn99_pal)
 export(earthKingdom_pal)
 export(fireNation_pal)

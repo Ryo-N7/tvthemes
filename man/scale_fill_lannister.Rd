@@ -9,14 +9,8 @@ scale_fill_lannister(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Lannister fill scale
-}
-\details{
-DETAILS
 }
 \examples{
 \dontrun{

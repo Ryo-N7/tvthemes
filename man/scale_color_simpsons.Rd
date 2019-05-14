@@ -9,12 +9,6 @@ scale_color_simpsons(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 The Simpsons color scale
-}
-\details{
-DETAILS
 }

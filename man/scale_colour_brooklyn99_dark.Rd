@@ -6,6 +6,9 @@
 \usage{
 scale_colour_brooklyn99_dark(...)
 }
+\arguments{
+\item{...}{any other argument that can go into scale_colour_*()}
+}
 \description{
 for British-spelling compatibility
 }

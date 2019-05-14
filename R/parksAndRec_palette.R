@@ -22,7 +22,6 @@ parksAndRec_palette <- c(
 
 #' @title parksAndRec_pal
 #' @description Parks & Recreation theme
-#' @details DETAILS
 #' @rdname parksAndRec_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -44,6 +43,7 @@ scale_color_parksAndRec <- function(...){
 
 #' @title scale_colour_parksAndRec
 #' @description for British-spelling compatibility
+#' @param ... any other argument that can go into scale_colour_*()
 #' @rdname scale_colour_parksAndRec
 #' @export
 #' @importFrom ggplot2 discrete_scale

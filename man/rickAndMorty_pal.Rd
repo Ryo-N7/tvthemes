@@ -6,12 +6,6 @@
 \usage{
 rickAndMorty_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Rick & Morty color palette
-}
-\details{
-DETAILS
 }

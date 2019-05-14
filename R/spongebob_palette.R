@@ -25,8 +25,6 @@ spongeBob_palette <- c(
 
 #' @title spongeBob_pal
 #' @description Spongebob Squarepants palette
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @rdname spongeBob_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -38,8 +36,6 @@ spongeBob_pal <- function(){
 #' @title scale_color_spongeBob
 #' @description Spongebob Squarepants color scale
 #' @param ... PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @rdname scale_color_spongeBob
 #' @export
 #' @importFrom ggplot2 discrete_scale
@@ -50,6 +46,7 @@ scale_color_spongeBob <- function(...){
 
 #' @title scale_colour_spongeBob
 #' @description for British-spelling compatibility
+#' @param ... any other argument that can go into scale_colour_*()
 #' @rdname scale_colour_spongeBob
 #' @export
 #' @importFrom ggplot2 discrete_scale
@@ -59,8 +56,6 @@ scale_colour_spongeBob <- scale_color_spongeBob
 #' @title scale_fill_spongeBob
 #' @description Spongebob Squarepants fill scale
 #' @param ... PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @rdname scale_fill_spongeBob
 #' @export
 #' @importFrom ggplot2 discrete_scale

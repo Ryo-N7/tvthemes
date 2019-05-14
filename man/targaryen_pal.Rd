@@ -6,9 +6,6 @@
 \usage{
 targaryen_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Targaryen palette
 }

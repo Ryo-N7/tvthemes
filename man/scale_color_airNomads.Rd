@@ -9,12 +9,6 @@ scale_color_airNomads(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Air Nomads color scale
-}
-\details{
-DETAILS
 }

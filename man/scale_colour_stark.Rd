@@ -9,9 +9,6 @@ scale_colour_stark(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 FUNCTION_DESCRIPTION
 }

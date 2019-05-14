@@ -9,14 +9,8 @@ scale_fill_tully(...)
 \arguments{
 \item{...}{PARAM_DESCRIPTION}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Tully fill scale
-}
-\details{
-DETAILS
 }
 \examples{
 \dontrun{

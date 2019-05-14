@@ -6,9 +6,6 @@
 \usage{
 tyrell_pal()
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 House Tyrell palette
 }

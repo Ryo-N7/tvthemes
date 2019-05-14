@@ -26,8 +26,6 @@ simpsons_pal <- function(){
 #' @title scale_color_simpsons
 #' @description The Simpsons color scale
 #' @param ... PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @rdname scale_color_simpsons
 #' @export
 #' @importFrom ggplot2 discrete_scale
@@ -38,6 +36,7 @@ scale_color_simpsons <- function(...){
 
 #' @title scale_colour_simpsons
 #' @description for British-spelling compatibility
+#' @param ... any other argument that can go into scale_colour_*()
 #' @rdname scale_colour_simpsons
 #' @export
 #' @importFrom ggplot2 discrete_scale
@@ -47,8 +46,6 @@ scale_colour_simpsons <- scale_color_simpsons
 #' @title scale_fill_simpsons
 #' @description The Simpsons fill scale
 #' @param ... PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @rdname scale_fill_simpsons
 #' @export
 #' @importFrom ggplot2 discrete_scale
