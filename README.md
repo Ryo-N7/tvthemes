@@ -3,8 +3,6 @@
 
 # tvthemes <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
 
-Ryo Nakagawara
-
 <!-- badges: start -->
 
 [![Lifecycle:
@@ -14,6 +12,8 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 [![Coverage
 status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master)
 <!-- badges: end -->
+
+[Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
 
 The `tvthemes` package is a collection of various `ggplot2` themes and
 color/fill palettes based on everybody’s favorite TV shows. What
@@ -97,7 +97,7 @@ import_rickAndMorty()     ## "Get Schwifty" font
 import_roboto_condensed() ## "Roboto Condensed" Google Font import from hrbrmstrthemes
 import_titillium_web()    ## "Titillium Web" Google Font import from hrbrmstrthemes
 import_spongeBob()        ## "Some Time Later" font
-import_cinzel()           ## "Cinzel" font to use with the 'The Palettes of Ice & Fire'
+import_cinzel()           ## "Cinzel" font to use with 'The Palettes of Ice & Fire'
 ```
 
 ## Colors

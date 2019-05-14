@@ -18,13 +18,13 @@ knitr::opts_chunk$set(
 
 # tvthemes <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
 
-Ryo Nakagawara
-
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Coverage status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master)
 <!-- badges: end -->
+
+[Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
 
 The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I love!
 
@@ -92,7 +92,7 @@ import_rickAndMorty()     ## "Get Schwifty" font
 import_roboto_condensed() ## "Roboto Condensed" Google Font import from hrbrmstrthemes
 import_titillium_web()    ## "Titillium Web" Google Font import from hrbrmstrthemes
 import_spongeBob()        ## "Some Time Later" font
-import_cinzel()           ## "Cinzel" font to use with the 'The Palettes of Ice & Fire'
+import_cinzel()           ## "Cinzel" font to use with 'The Palettes of Ice & Fire'
 ```
 
 ## Colors
