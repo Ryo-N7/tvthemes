@@ -30,7 +30,6 @@ The `tvthemes` package is a collection of various `ggplot2` themes and color/fil
 
 ```{r, echo=FALSE, message=FALSE}
 # pacman::p_load(ggplot2, dplyr, tvthemes, extrafont)
-# covr::codecov(token = "56b1ff3c-89d7-417b-9510-43ff141f6792")
 library(tvthemes)
 library(ggplot2)
 library(dplyr)
