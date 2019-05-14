@@ -16,13 +16,13 @@ status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](ht
 <!-- badges: end -->
 
 The `tvthemes` package is a collection of various `ggplot2` themes and
-color/fill palettes based on everybody’s favorite American TV shows.
-What kick-started this whole package was my
+color/fill palettes based on everybody’s favorite TV shows. What
+kick-started this whole package was my
 [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/)
 looking at simple TV stats on my current favorite TV show, Brooklyn
 Nine-Nine. I got a lot of good feedback on the colors I used for the
 custom `ggplot2` theme and color palettes so I decided to expand it to
-other shows that I like\!
+other shows that I love\!
 
 ``` r
 mpg %>% 
@@ -60,7 +60,7 @@ mpg %>%
 `tvthemes` is currently available only on Github, you can install it by:
 
 ``` r
-# install.packages(devtools)
+## install.packages(devtools)
 devtools::install_github("Ryo-N7/tvthemes")
 ```
 
@@ -81,14 +81,14 @@ included with the package.
 
 Instead of dealing with `extrafont` yourself, I repurposed the
 `import_*()` functions from the `hrbrmstrthemes` package so you can
-import the fonts very easily. Do note that you still might need to
-install the fonts directly on your computer from the `.ttf` files found
-in `inst/fonts`.
+import the included fonts very easily. Do note that you still might need
+to install the fonts directly on your computer from the `.ttf` files
+found in `inst/fonts`.
 
 The help files for each function tells you the recommended font names in
 case you forget\! Besides the really custom stuff like for “The
-Simpsons”, “Rick & Morty”, “Spongebob”, font preferences are really up
-to you.
+Simpsons”, “Rick & Morty”, and “SpongeBob”, font preferences are
+really up to you.
 
 ``` r
 import_simpsons()         ## "Akbar" font
@@ -151,7 +151,7 @@ mpg %>%
 ### Spongebob Squarepants
 
 ``` r
-mpg %>% 
+bobspog_plot <- mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   scale_fill_spongeBob() +
@@ -160,11 +160,22 @@ mpg %>%
        caption = "Plankton, those things aren't what fun is about!") +
   theme_spongeBob(title.font = "Some Time Later",
                   text.font = "Some Time Later",
-                  legend.title.size = 14) -> spongyy
+                  title.size = 22,
+                  subtitle.size = 16,
+                  axis.title.size = 16,
+                  axis.text.size = 14,
+                  legend.title.size = 14)
 
-## use a themed background! Inspired by ggpomological
-paintBikiniBottom(sponge.gg = spongyy,
-                  sponge.background = "background") 
+bobspog_plot
+```
+
+<img src="man/figures/README-unnamed-chunk-7-2.png" width="70%" style="display: block; margin: auto;" />
+
+``` r
+
+## use a themed background! Inspired by ggpomological::paint_pomological()!
+paintBikiniBottom(plot = bobspog_plot,
+                  background = "background") 
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" />
@@ -279,6 +290,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   labs(title = "All men are fools, if truth be told, but",
        subtitle = "the ones in motley are more amusing than ones with crowns.",
        caption = "- The Queen of Thorns") +
+  theme_minimal() +
   theme(text = element_text(family = "Cinzel", size = 10),
         plot.title = element_text(family = "Cinzel", size = 16),
         plot.subtitle = element_text(family = "Cinzel", size = 12))

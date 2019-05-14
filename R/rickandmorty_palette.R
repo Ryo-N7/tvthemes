@@ -18,8 +18,13 @@ rickAndMorty_palette <- c(
 # #a9f3fd
 # #4cb5c3
 
-#' @title rickAndMorty_pal
+#' @title Rick & Morty color palette
 #' @description Rick & Morty color palette
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname rickAndMorty_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -29,17 +34,7 @@ rickAndMorty_pal <- function(){
 }
 
 #' @title scale_color_rickAndMorty
-#' @description Rick & Morty color scale
-#' @param ... PARAM_DESCRIPTION
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_color_rickAndMorty
+#' @rdname rickAndMorty_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -48,26 +43,14 @@ scale_color_rickAndMorty <- function(...){
 }
 
 #' @title scale_colour_rickAndMorty
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_rickAndMorty
+#' @rdname rickAndMorty_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_rickAndMorty <- scale_color_rickAndMorty
 
 #' @title scale_fill_rickAndMorty
-#' @description Rick & Morty fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_fill_rickAndMorty
+#' @rdname rickAndMorty_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 

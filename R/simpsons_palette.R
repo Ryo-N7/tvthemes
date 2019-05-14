@@ -11,10 +11,13 @@ simpsons_palette <- c(
   "#46732EFF" ## Flanders green #46732EFF
 )
 
-#' @title simpsons_pal
+#' @title The Simpsons palette
 #' @description The Simpsons palette
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname simpsons_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -24,9 +27,7 @@ simpsons_pal <- function(){
 }
 
 #' @title scale_color_simpsons
-#' @description The Simpsons color scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_color_simpsons
+#' @rdname simpsons_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -35,18 +36,14 @@ scale_color_simpsons <- function(...){
 }
 
 #' @title scale_colour_simpsons
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_simpsons
+#' @rdname simpsons_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_simpsons <- scale_color_simpsons
 
 #' @title scale_fill_simpsons
-#' @description The Simpsons fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_fill_simpsons
+#' @rdname simpsons_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 

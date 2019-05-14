@@ -12,11 +12,14 @@ brooklyn99_palette <- c(
   "#000000"  ## black
 )
 
-#' @title brooklyn99_pal
+#' @title Brooklyn Nine Nine Color and Fill Scales
 #' @description Brooklyn Nine Nine Color and Fill Scales
 #' @details Colors that work well with the blue background!
+#' @inheritDotParams ggplot2::discrete_scale
 #' @seealso
 #'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname brooklyn99_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -26,9 +29,7 @@ brooklyn99_pal <- function(){
 }
 
 #' @title scale_color_brooklyn99
-#' @description color scale B99
-#' @param ... any other argument that can go into scale_color_*()
-#' @rdname scale_color_brooklyn99
+#' @rdname brooklyn99_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -37,18 +38,14 @@ scale_color_brooklyn99 <- function(...){
 }
 
 #' @title scale_colour_brooklyn99
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_brooklyn99
+#' @rdname brooklyn99_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_brooklyn99 <- scale_color_brooklyn99
 
 #' @title scale_fill_brooklyn99
-#' @description fill scales for Brooklyn Nine-Nine
-#' @param ... misc. arguments that can go into scale_fill_*() functions
-#' @rdname scale_fill_brooklyn99
+#' @rdname brooklyn99_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -69,11 +66,14 @@ brooklyn99_dark_palette <- c(
   "#000000"  ## black
 )
 
-#' @title brooklyn99_dark_pal
-#' @description dark version of Brooklyn Nine-Nine palette
+#' @title Dark version of Brooklyn Nine-Nine palette
+#' @description Dark version of Brooklyn Nine-Nine palette
 #' @return B99 dark palette
+#' @inheritDotParams ggplot2::discrete_scale
 #' @seealso
 #'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname brooklyn99_dark_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -83,9 +83,7 @@ brooklyn99_dark_pal <- function(){
 }
 
 #' @title scale_color_brooklyn99_dark
-#' @description DARK color scale B99
-#' @param ... any other argument that can go into scale_color_*()
-#' @rdname scale_color_brooklyn99_dark
+#' @rdname brooklyn99_dark_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -94,18 +92,14 @@ scale_color_brooklyn99_dark <- function(...){
 }
 
 #' @title scale_colour_brooklyn99_dark
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_brooklyn99_dark
+#' @rdname brooklyn99_dark_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_brooklyn99_dark <- scale_color_brooklyn99_dark
 
 #' @title scale_fill_brooklyn99_dark
-#' @description DARK fill scales for Brooklyn Nine-Nine
-#' @param ... misc. arguments that can go into scale_fill_*() functions
-#' @rdname scale_fill_brooklyn99_dark
+#' @rdname brooklyn99_dark_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 

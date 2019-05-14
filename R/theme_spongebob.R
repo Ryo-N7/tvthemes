@@ -1,8 +1,9 @@
 #' @title theme_spongeBob
 #' @description Spongebob Squarepants theme, Recommended font: "Some Time Later"
-#' @param text.font text font
-#' @param title.font title font
-#' @param legend.font legend font
+#' @details Spongbobify your plots even more by combining with `paintBikiniBottom()`!
+#' @param text.font text font, Default: NULL
+#' @param title.font title font, Default: NULL
+#' @param legend.font legend font, Default: NULL
 #' @param title.size size of title, Default: 18
 #' @param text.size text font size, Default: 12
 #' @param subtitle.size subtitle font size, Default:12
@@ -18,17 +19,17 @@
 #' @param legend.title.color legend title color, Default: "F9FEFF"
 #' @param legend.text.color legend text color, Default: "F9FEFF"
 #' @param legend.position legend position, Default: "bottom"
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @examples
 #' \dontrun{
 #' if(interactive()){
-#'  #EXAMPLE1
+#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
+#'  geom_point() +
+#'  theme_spongeBob()
 #'  }
 #' }
 #' @rdname theme_spongeBob
 #' @seealso [ggplot2::theme]
-#' @importFrom ggplot2 element_text element_rect element_blank
+#' @importFrom ggplot2 element_text element_rect element_blank element_line
 #' @export
 
 theme_spongeBob <- function(

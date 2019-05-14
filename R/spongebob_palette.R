@@ -23,8 +23,13 @@ spongeBob_palette <- c(
 #B1D6C5  ## squidward blue
 #AB8323  ## squidward shirt brown
 
-#' @title spongeBob_pal
+#' @title Spongebob Squarepants palette
 #' @description Spongebob Squarepants palette
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname spongeBob_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -34,9 +39,7 @@ spongeBob_pal <- function(){
 }
 
 #' @title scale_color_spongeBob
-#' @description Spongebob Squarepants color scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_color_spongeBob
+#' @rdname spongeBob_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -45,18 +48,14 @@ scale_color_spongeBob <- function(...){
 }
 
 #' @title scale_colour_spongeBob
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_spongeBob
+#' @rdname spongeBob_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_spongeBob <- scale_color_spongeBob
 
 #' @title scale_fill_spongeBob
-#' @description Spongebob Squarepants fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_fill_spongeBob
+#' @rdname spongeBob_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 

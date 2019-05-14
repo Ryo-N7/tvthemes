@@ -14,11 +14,11 @@ theme_spongeBob(text.font = NULL, title.font = NULL,
   legend.text.color = "#F9FEFF", legend.position = "bottom")
 }
 \arguments{
-\item{text.font}{text font}
+\item{text.font}{text font, Default: NULL}
 
-\item{title.font}{title font}
+\item{title.font}{title font, Default: NULL}
 
-\item{legend.font}{legend font}
+\item{legend.font}{legend font, Default: NULL}
 
 \item{title.size}{size of title, Default: 18}
 
@@ -50,19 +50,18 @@ theme_spongeBob(text.font = NULL, title.font = NULL,
 
 \item{legend.position}{legend position, Default: "bottom"}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Spongebob Squarepants theme, Recommended font: "Some Time Later"
 }
 \details{
-DETAILS
+Spongbobify your plots even more by combining with `paintBikiniBottom()`!
 }
 \examples{
 \dontrun{
 if(interactive()){
- #EXAMPLE1
+ ggplot(mtcars, aes(x = hp, y = mpg)) +
+ geom_point() +
+ theme_spongeBob()
  }
 }
 }

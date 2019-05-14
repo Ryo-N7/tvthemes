@@ -2,30 +2,29 @@
 % Please edit documentation in R/bikinibottom.R
 \name{paintBikiniBottom}
 \alias{paintBikiniBottom}
-\title{paintBikiniBottom}
+\title{Add SpongeBob background}
 \usage{
-paintBikiniBottom(sponge.gg, width = 800, height = 500,
-  output.file = NULL, sponge.background = sponge_images(c("background",
-  "floral")), ...)
+paintBikiniBottom(plot, width = 800, height = 500,
+  output.file = NULL, background = "background", ...)
 }
 \arguments{
-\item{sponge.gg}{ggplot object}
+\item{plot}{the ggplot object you want to Spongbobify!}
 
-\item{width}{PARAM_DESCRIPTION, Default: 800}
+\item{width}{width, Default: 800}
 
-\item{height}{PARAM_DESCRIPTION, Default: 500}
+\item{height}{height, Default: 500}
 
-\item{output.file}{PARAM_DESCRIPTION, Default: NULL}
+\item{output.file}{File path to save image, Default: NULL}
 
-\item{sponge.background}{PARAM_DESCRIPTION, Default: sponge_images(c("background", "floral", "floral2"))}
+\item{background}{"background" or "floral", Default: "background"}
 
-\item{...}{PARAM_DESCRIPTION}
+\item{...}{Other options, see `?magick::image_graph()`}
 }
 \value{
 Your plot with a Spongebob themed background!
 }
 \description{
-add SpongeBob background
+Add SpongeBob background
 }
 \details{
 Adapted from ggpomological's paint_pomological() function!

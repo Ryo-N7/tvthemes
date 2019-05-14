@@ -4,11 +4,10 @@
 
 #' @title theme_brooklyn99
 #' @description Brooklyn Nine-Nine theme, Recommended font: "Roboto Condensed" (title), "Calibri Light" (other text)
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
-#' @param text.font text font
-#' @param title.font title font
-#' @param legend.font legend font
+#' @details Actual font: Variants of 'Univers'
+#' @param text.font text font, Default: NULL
+#' @param title.font title font, Default: NULL
+#' @param legend.font legend font, Default: NULL
 #' @param title.size title font size, Default: 18
 #' @param text.size text font size, Default: 14
 #' @param subtitle.size subtitle font size, Default: 12
@@ -34,7 +33,7 @@
 #' }
 #' @rdname theme_brooklyn99
 #' @seealso [ggplot2::theme]
-#' @importFrom ggplot2 element_text element_rect element_blank
+#' @importFrom ggplot2 element_text element_rect element_blank element_line
 #' @export
 
 theme_brooklyn99 <- function(

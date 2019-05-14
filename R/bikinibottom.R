@@ -1,12 +1,12 @@
 ## add background
-#' @title paintBikiniBottom
-#' @description add SpongeBob background
-#' @param sponge.gg ggplot object
-#' @param width PARAM_DESCRIPTION, Default: 800
-#' @param height PARAM_DESCRIPTION, Default: 500
-#' @param output.file PARAM_DESCRIPTION, Default: NULL
-#' @param sponge.background PARAM_DESCRIPTION, Default: sponge_images(c("background", "floral", "floral2"))
-#' @param ... PARAM_DESCRIPTION
+#' @title Add SpongeBob background
+#' @description Add SpongeBob background
+#' @param plot the ggplot object you want to Spongbobify!
+#' @param width width, Default: 800
+#' @param height height, Default: 500
+#' @param output.file File path to save image, Default: NULL
+#' @param background "background" or "floral", Default: "background"
+#' @param ... Other options, see `?magick::image_graph()`
 #' @return Your plot with a Spongebob themed background!
 #' @details Adapted from ggpomological's paint_pomological() function!
 #' @rdname paintBikiniBottom
@@ -15,11 +15,11 @@
 #' @importFrom magick image_graph image_read image_resize image_crop image_composite image_write
 
 paintBikiniBottom <- function(
-  sponge.gg,
+  plot,
   width = 800,
   height = 500,
   output.file = NULL,
-  sponge.background = sponge_images(c("background", "floral")),
+  background = "background",
   ...
 ) {
   ## need magick pkg and background files (should be in inst/backgrounds folder)
@@ -27,13 +27,16 @@ paintBikiniBottom <- function(
     stop("The package magick is required for `paint_pomological()`. ",
          "Please install with `install.packages('magick')`")
   }
-  if (!file.exists(sponge.background)) {
-    warning(paste0("Cannot find file \"", sponge.background, "\""), call. = FALSE)
-  }
 
+  ## Grab background image
   ## Change text color depending on background, then strip background from the ggplot object
-  if (sponge.background == "floral") {
-    bobspog <- sponge.gg +
+  if (background == "floral") {
+    spg.bg <- sponge_images("floral")
+    if (!file.exists(spg.bg)) {
+      warning(paste0("Cannot find file \"", spg.bg, "\""), call. = FALSE)
+    }
+
+    bobspog <- plot +
       ggplot2::theme(text = element_text(color = "black"),
                      plot.title = element_text(color = "black"),
                      plot.subtitle = element_text(color = "black"),
@@ -42,8 +45,13 @@ paintBikiniBottom <- function(
                      legend.title = element_text(color = "black"),
                      legend.text = element_text(color = "black"),
                      plot.background = ggplot2::element_rect(fill = 'transparent', colour = NA))
-  } else {
-    bobspog <- sponge.gg +
+  } else if (background == "background") {
+    spg.bg <- sponge_images("background")
+    if (!file.exists(spg.bg)) {
+      warning(paste0("Cannot find file \"", spg.bg, "\""), call. = FALSE)
+    }
+
+    bobspog <- plot +
       ggplot2::theme(text = element_text(color = "yellow"),
                      plot.title = element_text(color = "yellow"),
                      plot.subtitle = element_text(color = "yellow"),
@@ -52,15 +60,15 @@ paintBikiniBottom <- function(
                      legend.title = element_text(color = "yellow"),
                      legend.text = element_text(color = "yellow"),
                      plot.background = ggplot2::element_rect(fill = 'transparent', colour = NA))
-  }
+  } else stop("You need to specify either 'background' or 'floral' in the background argument")
 
   gg_fig <- magick::image_graph(width, height, bg = "transparent", ...)
   print(bobspog)
   grDevices::dev.off()
 
   ## Add in the background
-  if (file.exists(sponge.background)) {
-    sponge_bg <- magick::image_read(sponge.background)
+  if (file.exists(spg.bg)) {
+    sponge_bg <- magick::image_read(spg.bg)
     sponge_bg <- magick::image_resize(sponge_bg, paste0(width, "x", height, "!"))
     sponge_bg <- magick::image_crop(sponge_bg, paste0(width, "x", height))
     sponge_img <- magick::image_composite(sponge_bg, gg_fig)

@@ -14,11 +14,11 @@ theme_theLastAirbender(text.font = NULL, title.font = NULL,
   legend.position = "bottom")
 }
 \arguments{
-\item{text.font}{text font}
+\item{text.font}{text font, Default: NULL}
 
-\item{title.font}{title font}
+\item{title.font}{title font, Default: NULL}
 
-\item{legend.font}{legend font}
+\item{legend.font}{legend font, Default: NULL}
 
 \item{title.size}{title font size, Default: 14}
 
@@ -50,14 +50,17 @@ theme_theLastAirbender(text.font = NULL, title.font = NULL,
 
 \item{legend.position}{legend position, Default: "bottom"}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Avatar: The Last Airbender theme, Recommended font: "Slayer"
 }
-\details{
-DETAILS
+\examples{
+\dontrun{
+if(interactive()){
+ ggplot(mtcars, aes(x = hp, y = mpg)) +
+ geom_point() +
+ theme_theLastAirbender()
+ }
+}
 }
 \seealso{
 [ggplot2::theme]

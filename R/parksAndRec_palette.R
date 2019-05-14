@@ -20,8 +20,13 @@ parksAndRec_palette <- c(
 #005502 ## darker green
 #fcf7e8 ## grass green
 
-#' @title parksAndRec_pal
-#' @description Parks & Recreation theme
+#' @title Parks & Recreation palette
+#' @description Parks & Recreation palette
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname parksAndRec_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -31,9 +36,7 @@ parksAndRec_pal <- function(){
 }
 
 #' @title scale_color_parksAndRec
-#' @description Parks & Recreation color scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_color_parksAndRec
+#' @rdname parksAndRec_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -42,18 +45,14 @@ scale_color_parksAndRec <- function(...){
 }
 
 #' @title scale_colour_parksAndRec
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_parksAndRec
+#' @rdname parksAndRec_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_parksAndRec <- scale_color_parksAndRec
 
 #' @title scale_fill_parksAndRec
-#' @description Parks & Recreation fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_fill_parksAndRec
+#' @rdname parksAndRec_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 

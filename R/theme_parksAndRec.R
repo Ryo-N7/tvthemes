@@ -3,9 +3,10 @@
 
 #' @title theme_parksAndRec
 #' @description Parks & Recreation theme, Recommended font: "Titillium Web"
-#' @param text.font text font
-#' @param title.font title font
-#' @param legend.font legend font
+#' @details Actual font: 'Champion HTF-Heavyweight'
+#' @param text.font text font, Default: NULL
+#' @param title.font title font, Default: NULL
+#' @param legend.font legend font, Default: NULL
 #' @param title.size title font size, Default: 20
 #' @param text.size text font size, Default: 16
 #' @param subtitle.size subtitle font size, Default: 14
@@ -21,11 +22,17 @@
 #' @param legend.title.color legend title color, Default: NULL
 #' @param legend.text.color legend text color, Default: NULL
 #' @param legend.position legend position, Default: "bottom"
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @examples
+#' \dontrun{
+#' if(interactive()){
+#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
+#'  geom_point() +
+#'  theme_parksAndRec()
+#'  }
+#' }
 #' @rdname theme_parksAndRec
 #' @seealso [ggplot2::theme]
-#' @importFrom ggplot2 element_text element_rect element_blank
+#' @importFrom ggplot2 element_text element_rect element_blank element_line
 #' @export
 
 theme_parksAndRec <- function(
@@ -73,9 +80,10 @@ theme_parksAndRec <- function(
 
 #' @title theme_parksAndRec_light
 #' @description Parks & Recreation light theme, Recommended font: "Titillium Web"
-#' @param text.font text font
-#' @param title.font title font
-#' @param legend.font legend font
+#' @details Actual font: 'Champion HTF-Heavyweight'
+#' @param text.font text font, Default: NULL
+#' @param title.font title font, Default: NULL
+#' @param legend.font legend font, Default: NULL
 #' @param title.size title font size, Default: 20
 #' @param text.size text font size, Default: 16
 #' @param subtitle.size subtitle font size, Default: 14
@@ -91,17 +99,17 @@ theme_parksAndRec <- function(
 #' @param legend.title.color legend title color, Default: "grey20"
 #' @param legend.text.color legend text color, Default: "grey20"
 #' @param legend.position legend position, Default: "bottom"
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @examples
 #' \dontrun{
 #' if(interactive()){
-#'  #EXAMPLE1
+#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
+#'  geom_point() +
+#'  theme_parksAndRec_light()
 #'  }
 #' }
 #' @rdname theme_parksAndRec_light
 #' @seealso [ggplot2::theme]
-#' @importFrom ggplot2 element_text element_rect element_blank
+#' @importFrom ggplot2 element_text element_rect element_blank element_line
 #' @export
 
 theme_parksAndRec_light <- function(

@@ -11,8 +11,13 @@ fireNation_palette <- c(
   "#000000"  ## black
 )
 
-#' @title fireNation_pal
+#' @title Fire Nation palette
 #' @description Fire Nation palette
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname fireNation_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -22,9 +27,7 @@ fireNation_pal <- function(){
 }
 
 #' @title scale_color_fireNation
-#' @description Fire Nation color scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_color_fireNation
+#' @rdname fireNation_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -33,18 +36,14 @@ scale_color_fireNation <- function(...){
 }
 
 #' @title scale_colour_fireNation
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_fireNation
+#' @rdname fireNation_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_fireNation <- scale_color_fireNation
 
 #' @title scale_fill_fireNation
-#' @description Fire Nation fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_fill_fireNation
+#' @rdname fireNation_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -74,6 +73,11 @@ airNomads_palette <- c(
 
 #' @title airNomads_pal
 #' @description Air Nomads palette
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname airNomads_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -83,9 +87,7 @@ airNomads_pal <- function(){
 }
 
 #' @title scale_color_airNomads
-#' @description Air Nomads color scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_color_airNomads
+#' @rdname airNomads_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -94,18 +96,14 @@ scale_color_airNomads <- function(...){
 }
 
 #' @title scale_colour_airNomads
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_airNomads
+#' @rdname airNomads_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_airNomads <- scale_color_airNomads
 
 #' @title scale_fill_air_nomads
-#' @description Air Nomads fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_fill_airNomads
+#' @rdname airNomads_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -138,8 +136,13 @@ earthKingdom_palette <- c(
 #7F6100 light brown
 #FEFED8 light yellow
 
-#' @title earthKingdom_pal
+#' @title Earth Kingdom palette
 #' @description Earth Kingdom palette
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname earth_kingdom_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -149,9 +152,7 @@ earthKingdom_pal <- function(){
 }
 
 #' @title scale_color_earthKingdom
-#' @description Earth Kingdom color scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_color_earthKingdom
+#' @rdname earth_kingdom_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -160,18 +161,14 @@ scale_color_earthKingdom <- function(...){
 }
 
 #' @title scale_colour_earthKingdom
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_earthKingdom
+#' @rdname earth_kingdom_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_earthKingdom <- scale_color_earthKingdom
 
 #' @title scale_fill_earthKingdom
-#' @description Earth Kingdom fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_fill_earthKingdom
+#' @rdname earth_kingdom_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -203,8 +200,13 @@ waterTribe_palette <- c(
 #AFB5B8 ## light grey
 #A2CAED ## light blue
 
-#' @title waterTribe_pal
+#' @title Water Tribe palette
 #' @description Water Tribe palette
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname waterTribe_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -214,9 +216,7 @@ waterTribe_pal <- function(){
 }
 
 #' @title scale_color_waterTribe
-#' @description Water Tribe color scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_color_waterTribe
+#' @rdname waterTribe_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -225,18 +225,14 @@ scale_color_waterTribe <- function(...){
 }
 
 #' @title scale_colour_waterTribe
-#' @description for British-spelling compatibility
-#' @param ... any other argument that can go into scale_colour_*()
-#' @rdname scale_colour_waterTribe
+#' @rdname waterTribe_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_waterTribe <- scale_color_waterTribe
 
 #' @title scale_fill_waterTribe
-#' @description Water Tribe fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_fill_waterTribe
+#' @rdname waterTribe_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 

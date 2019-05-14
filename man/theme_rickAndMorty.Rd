@@ -13,11 +13,11 @@ theme_rickAndMorty(text.font = NULL, title.font = NULL,
   legend.text.color = NULL, legend.position = "bottom")
 }
 \arguments{
-\item{text.font}{text font}
+\item{text.font}{text font, Default: NULL}
 
-\item{title.font}{title font}
+\item{title.font}{title font, Default: NULL}
 
-\item{legend.font}{legend font}
+\item{legend.font}{legend font, Default: NULL}
 
 \item{title.size}{title size, Default: 20}
 
@@ -41,7 +41,7 @@ theme_rickAndMorty(text.font = NULL, title.font = NULL,
 
 \item{axis.title.color}{axis title color, Default: NULL}
 
-\item{axis.text.color}{axis text color, Default: NULL}
+\item{axis.text.color}{axis text color, Default: "black"}
 
 \item{legend.title.color}{legend title color, Default: NULL}
 
@@ -49,19 +49,18 @@ theme_rickAndMorty(text.font = NULL, title.font = NULL,
 
 \item{legend.position}{legend position, Default: "bottom"}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Rick & Morty theme, Recommended font: "Get Schwifty"
 }
 \details{
-DETAILS
+Actual font is based on Justin Roiland's handwriting!
 }
 \examples{
 \dontrun{
 if(interactive()){
- #EXAMPLE1
+ ggplot(mtcars, aes(x = hp, y = mpg)) +
+ geom_point() +
+ theme_rickAndMorty()
  }
 }
 }

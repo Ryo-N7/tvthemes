@@ -1,8 +1,9 @@
 #' @title theme_rickAndMorty
 #' @description Rick & Morty theme, Recommended font: "Get Schwifty"
-#' @param text.font text font
-#' @param title.font title font
-#' @param legend.font legend font
+#' @details Actual font is based on Justin Roiland's handwriting!
+#' @param text.font text font, Default: NULL
+#' @param title.font title font, Default: NULL
+#' @param legend.font legend font, Default: NULL
 #' @param title.size title size, Default: 20
 #' @param text.size text font size, Default: 12
 #' @param subtitle.size subtitle font size, Default: 14
@@ -14,21 +15,21 @@
 #' @param subtitle.color subtitle.color, Default: NULL
 #' @param text.color text color, Default: NULL
 #' @param axis.title.color axis title color, Default: NULL
-#' @param axis.text.color axis text color, Default: NULL
+#' @param axis.text.color axis text color, Default: "black"
 #' @param legend.title.color legend title color, Default: NULL
 #' @param legend.text.color legend text color, Default: NULL
 #' @param legend.position legend position, Default: "bottom"
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
 #' @examples
 #' \dontrun{
 #' if(interactive()){
-#'  #EXAMPLE1
+#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
+#'  geom_point() +
+#'  theme_rickAndMorty()
 #'  }
 #' }
 #' @rdname theme_rickAndMorty
 #' @seealso [ggplot2::theme]
-#' @importFrom ggplot2 element_text element_rect element_blank
+#' @importFrom ggplot2 element_text element_rect element_blank element_line
 #' @export
 
 theme_rickAndMorty <- function(

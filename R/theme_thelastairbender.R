@@ -1,8 +1,8 @@
 #' @title theme_theLastAirbender
 #' @description Avatar: The Last Airbender theme, Recommended font: "Slayer"
-#' @param text.font text font
-#' @param title.font title font
-#' @param legend.font legend font
+#' @param text.font text font, Default: NULL
+#' @param title.font title font, Default: NULL
+#' @param legend.font legend font, Default: NULL
 #' @param title.size title font size, Default: 14
 #' @param text.size text font size, Default: 10
 #' @param subtitle.size subtitle font size, Default: 12
@@ -18,11 +18,17 @@
 #' @param legend.title.color legend title color, Default: "grey20"
 #' @param legend.text.color legend text color, Default: "grey20"
 #' @param legend.position legend position, Default: "bottom"
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @examples
+#' \dontrun{
+#' if(interactive()){
+#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
+#'  geom_point() +
+#'  theme_theLastAirbender()
+#'  }
+#' }
 #' @rdname theme_theLastAirbender
 #' @seealso [ggplot2::theme]
-#' @importFrom ggplot2 element_text element_rect element_blank
+#' @importFrom ggplot2 element_text element_rect element_blank element_line
 #' @export
 
 theme_theLastAirbender <- function(

@@ -1,8 +1,9 @@
 #' @title theme_simpsons
 #' @description The Simpsons theme, Recommended font: "Akbar"
-#' @param text.font text font
-#' @param title.font title font
-#' @param legend.font legend font
+#' @details In part inspired by `@nathancunn`'s blog posts on The Simpsons!
+#' @param text.font text font, Default: NULL
+#' @param title.font title font, Default: NULL
+#' @param legend.font legend font, Default: NULL
 #' @param title.size title font size, Default: 18
 #' @param text.size text font size, Default: 14
 #' @param subtitle.size subtitle font size, Default: 12
@@ -18,8 +19,14 @@
 #' @param legend.title.color legend title color, Default: "#ffffff"
 #' @param legend.text.color legend text color, Default: "#ffffff"
 #' @param legend.position legend position, Default: "bottom"
-#' @return OUTPUT_DESCRIPTION
-#' @details In part inspired by `@nathancunn`'s blog posts on The Simpsons!
+#' @examples
+#' \dontrun{
+#' if(interactive()){
+#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
+#'  geom_point() +
+#'  theme_simpsons()
+#'  }
+#' }
 #' @rdname theme_simpsons
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line

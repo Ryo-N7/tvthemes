@@ -14,8 +14,13 @@ stark_palette <- c(
   "#000000"  ## black
 )
 
-#' @title stark_pal
+#' @title House Stark palette
 #' @description House Stark palette
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @rdname stark_pal
 #' @export
 #' @importFrom scales manual_pal
@@ -25,9 +30,7 @@ stark_pal <- function() {
 }
 
 #' @title scale_color_stark
-#' @description House Stark color scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_color_stark
+#' @rdname stark_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -36,18 +39,14 @@ scale_color_stark <- function(...){
 }
 
 #' @title scale_colour_stark
-#' @description FUNCTION_DESCRIPTION
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_colour_stark
+#' @rdname stark_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_stark <- scale_color_stark
 
 #' @title scale_fill_stark
-#' @description House Stark fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_fill_stark
+#' @rdname stark_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -67,9 +66,14 @@ lannister_palette <- c(
   "#000000"  ## black
 )
 
-#' @title lannister_pal
+#' @title House Lannister palette
 #' @description House Lannister palette
 #' @rdname lannister_pal
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @export
 #' @importFrom scales manual_pal
 
@@ -78,17 +82,7 @@ lannister_pal <- function() {
 }
 
 #' @title scale_color_lannister
-#' @description House Lannister color scale
-#' @param ... PARAM_DESCRIPTION
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_color_lannister
+#' @rdname lannister_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -97,28 +91,14 @@ scale_color_lannister <- function(...){
 }
 
 #' @title scale_colour_lannister
-#' @description FUNCTION_DESCRIPTION
-#' @param ... PARAM_DESCRIPTION
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_colour_lannister
+#' @rdname lannister_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_lannister <- scale_color_lannister
 
 #' @title scale_fill_lannister
-#' @description House Lannister fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_fill_lannister
+#' @rdname lannister_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -140,9 +120,14 @@ tyrell_palette <- c(
   "#3CB371"  ## medium sea green
 )
 
-#' @title tyrell_pal
+#' @title House Tyrell palette
 #' @description House Tyrell palette
 #' @rdname tyrell_pal
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @export
 #' @importFrom scales manual_pal
 
@@ -151,11 +136,7 @@ tyrell_pal <- function() {
 }
 
 #' @title scale_color_tyrell
-#' @description House Tyrell color scale
-#' @param ... PARAM_DESCRIPTION
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_color_tyrell
+#' @rdname tyrell_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -164,26 +145,14 @@ scale_color_tyrell <- function(...){
 }
 
 #' @title scale_colour_tyrell
-#' @description FUNCTION_DESCRIPTION
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_colour_tyrell
+#' @rdname tyrell_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_tyrell <- scale_color_tyrell
 
 #' @title scale_fill_tyrell
-#' @description House Tyrell fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_fill_tyrell
+#' @rdname tyrell_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -201,9 +170,14 @@ targaryen_palette <- c(
   "#96804b"  ## light-brown
 )
 
-#' @title targaryen_pal
+#' @title House Targaryen palette
 #' @description House Targaryen palette
 #' @rdname targaryen_pal
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @export
 #' @importFrom scales manual_pal
 
@@ -212,11 +186,7 @@ targaryen_pal <- function() {
 }
 
 #' @title scale_color_targaryen
-#' @description House Targaryen color scale
-#' @param ... PARAM_DESCRIPTION
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_color_targaryen
+#' @rdname targaryen_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -225,25 +195,14 @@ scale_color_targaryen <- function(...){
 }
 
 #' @title scale_colour_targaryen
-#' @description House Targaryen colour scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_colour_targaryen
+#' @rdname targaryen_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_targaryen <- scale_color_targaryen
 
 #' @title scale_fill_targaryen
-#' @description House Targaryen fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
+#' @rdname targaryen_pal
 #' @rdname scale_fill_targaryen
 #' @export
 #' @importFrom ggplot2 discrete_scale
@@ -263,9 +222,14 @@ tully_palette <- c(
   "#000000"  ## black
 )
 
-#' @title tully_pal
+#' @title House Tully palette
 #' @description House Tully palette
 #' @rdname tully_pal
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @export
 #' @importFrom scales manual_pal
 
@@ -274,11 +238,7 @@ tully_pal <- function() {
 }
 
 #' @title scale_color_tully
-#' @description House Tully color scale
-#' @param ... PARAM_DESCRIPTION
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_color_tully
+#' @rdname tully_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -287,25 +247,14 @@ scale_color_tully <- function(...){
 }
 
 #' @title scale_colour_tully
-#' @description FUNCTION_DESCRIPTION
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_colour_tully
+#' @rdname tully_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_tully <- scale_color_tully
 
 #' @title scale_fill_tully
-#' @description House Tully fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
+#' @rdname tully_pal
 #' @rdname scale_fill_tully
 #' @export
 #' @importFrom ggplot2 discrete_scale
@@ -327,9 +276,14 @@ greyjoy_palette <- c(
 
 # "#828788"  ## metallic grey
 
-#' @title greyjoy_pal
+#' @title House Greyjoy palette
 #' @description House Greyjoy palette
 #' @rdname greyjoy_pal
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
 #' @export
 #' @importFrom scales manual_pal
 
@@ -338,17 +292,7 @@ greyjoy_pal <- function() {
 }
 
 #' @title scale_color_greyjoy
-#' @description House Greyjoy color scale
-#' @param ... PARAM_DESCRIPTION
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_color_greyjoy
+#' @rdname greyjoy_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -357,26 +301,14 @@ scale_color_greyjoy <- function(...){
 }
 
 #' @title scale_colour_grey
-#' @description House Greyjoy colour scale
-#' @param ... PARAM_DESCRIPTION
-#' @rdname scale_colour_greyjoy
+#' @rdname greyjoy_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_greyjoy <- scale_color_greyjoy
 
 #' @title scale_fill_greyjoy
-#' @description House Greyjoy fill scale
-#' @param ... PARAM_DESCRIPTION
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
-#' @seealso
-#'  \code{\link[ggplot2]{discrete_scale}}
-#' @rdname scale_fill_greyjoy
+#' @rdname greyjoy_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 

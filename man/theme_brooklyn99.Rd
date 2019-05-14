@@ -14,11 +14,11 @@ theme_brooklyn99(text.font = NULL, title.font = NULL,
   legend.text.color = "#F9FEFF", legend.position = "bottom")
 }
 \arguments{
-\item{text.font}{text font}
+\item{text.font}{text font, Default: NULL}
 
-\item{title.font}{title font}
+\item{title.font}{title font, Default: NULL}
 
-\item{legend.font}{legend font}
+\item{legend.font}{legend font, Default: NULL}
 
 \item{title.size}{title font size, Default: 18}
 
@@ -50,14 +50,11 @@ theme_brooklyn99(text.font = NULL, title.font = NULL,
 
 \item{legend.position}{legend position, Default: "bottom"}
 }
-\value{
-OUTPUT_DESCRIPTION
-}
 \description{
 Brooklyn Nine-Nine theme, Recommended font: "Roboto Condensed" (title), "Calibri Light" (other text)
 }
 \details{
-DETAILS
+Actual font: Variants of 'Univers'
 }
 \examples{
 \dontrun{
