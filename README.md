@@ -22,7 +22,8 @@ kick-started this whole package was my
 looking at simple TV stats on my current favorite TV show, Brooklyn
 Nine-Nine. I got a lot of good feedback on the colors I used for the
 custom `ggplot2` theme and color palettes so I decided to expand it to
-other shows that I love\!
+other shows that I love\! Suggestions and Pull Requests for
+palettes/themes are welcome\!
 
 ``` r
 mpg %>% 
@@ -71,7 +72,7 @@ I hope to have a CRAN version soon\!
 The difficulty with a lot of the fonts used by TV shows in their logos
 and other paraphernalia is that they are made by font foundries and
 therefore can be rather expensive (for a regular person like you or me)
-to purchase. So I endeavoured to find FREE fonts to use that were
+to purchase. So I endeavored to find FREE fonts to use that were
 somewhat similar to the real ones used by the shows from resources like
 `Google Fonts`. In the documentation you can find the **actual** fonts
 used by the TV shows if you are so inclined to buy them (some are just
@@ -79,7 +80,7 @@ my best guesses though)\! In some cases there were fan-made fonts such
 as “Some Time Later” for Spongebob or “Akbar” for The Simpsons that I
 included with the package.
 
-Instead of dealing with `extrafont` yourself, I repurposed the
+Instead of dealing with `extrafont` yourself, I re-purposed the
 `import_*()` functions from the `hrbrmstrthemes` package so you can
 import the included fonts very easily. Do note that you still might need
 to install the fonts directly on your computer from the `.ttf` files
@@ -327,7 +328,7 @@ airquality %>%
   scale_color_greyjoy() +
   labs(title = "I am the storm, my lord.",
        subtitle = "The first storm, and the last.",
-       caption = "- Euron 'THe Crow's Eye' Greyjoy") +
+       caption = "- Euron 'The Crow's Eye' Greyjoy") +
   theme_minimal() +
   theme(text = element_text(family = "Cinzel", size = 10),
         title = element_text(family = "Cinzel", size = 14))

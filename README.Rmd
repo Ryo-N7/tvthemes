@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
 
-The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I love!
+The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I love! Suggestions and Pull Requests for palettes/themes are welcome!
 
 ```{r, echo=FALSE, message=FALSE}
 # pacman::p_load(ggplot2, dplyr, tvthemes, extrafont)
@@ -79,9 +79,9 @@ I hope to have a CRAN version soon!
 
 ## Fonts
 
-The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavoured to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like `Google Fonts`. In the documentation you can find the __actual__ fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as "Some Time Later" for Spongebob or "Akbar" for The Simpsons that I included with the package. 
+The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavored to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like `Google Fonts`. In the documentation you can find the __actual__ fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as "Some Time Later" for Spongebob or "Akbar" for The Simpsons that I included with the package. 
 
-Instead of dealing with `extrafont` yourself, I repurposed the `import_*()` functions from the `hrbrmstrthemes` package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the `.ttf` files found in `inst/fonts`.
+Instead of dealing with `extrafont` yourself, I re-purposed the `import_*()` functions from the `hrbrmstrthemes` package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the `.ttf` files found in `inst/fonts`.
 
 The help files for each function tells you the recommended font names in case you forget! Besides the really custom stuff like for "The Simpsons", "Rick & Morty", and "SpongeBob", font preferences are really up to you.
 
@@ -282,7 +282,7 @@ airquality %>%
   scale_color_greyjoy() +
   labs(title = "I am the storm, my lord.",
        subtitle = "The first storm, and the last.",
-       caption = "- Euron 'THe Crow's Eye' Greyjoy") +
+       caption = "- Euron 'The Crow's Eye' Greyjoy") +
   theme_minimal() +
   theme(text = element_text(family = "Cinzel", size = 10),
         title = element_text(family = "Cinzel", size = 14))
