@@ -3,4 +3,4 @@
 .RData
 .Ruserdata
 *.txt
-inst/docs/*.png
+inst/docs/
