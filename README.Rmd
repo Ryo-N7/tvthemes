@@ -26,7 +26,7 @@ Ryo Nakagawara
 [![Coverage status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master)
 <!-- badges: end -->
 
-The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite American TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows!
+The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite American TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I like!
 
 ```{r, echo=FALSE, message=FALSE}
 # pacman::p_load(ggplot2, dplyr, tvthemes, extrafont)
@@ -53,22 +53,15 @@ mpg %>%
   theme_brooklyn99(title.font = "Titillium Web",
                    text.font = "Calibri Light",
                    subtitle.size = 14)
-# Amy: I passed a slutty tree on the way here. Who wants to have sex with a tree?
-# Scully: Was it a maple?
-
-# Jake: The doctor said all my bleeding was internal. That’s where the blood is supposed to be!
-
-# I came down with a big old Diane Wiest infection...
-# Like yeaaas-
 ```
 
 ## Current list of TV shows
 
-- __Avatar: The Last Airbender__: theme + palettes (Fire Nation, Water Tribe, Earth Kingdom, Air Nomads)
-- __Brooklyn Nine-Nine__: theme + palettes
+- __Avatar: The Last Airbender__: theme + palettes (Fire Nation, Water Tribe, Earth Kingdom, & Air Nomads)
+- __Brooklyn Nine-Nine__: theme + palettes (regular & dark)
 - __Game of Thrones/A Song of Ice & Fire__: 'The Palettes of Ice & Fire' (currently: Stark, Lannister, Tully, Targaryen, Greyjoy, & Tyrell)
 - __Rick & Morty__: theme + palette
-- __Parks & Recreation__: two themes (light and dark) + palette
+- __Parks & Recreation__: two themes (light & dark) + palette
 - __The Simpsons__: theme + palette
 - __Spongebob Squarepants__: theme + palette + background images
 - _More in future releases..._
@@ -86,7 +79,7 @@ I hope to have a CRAN version soon!
 
 ## Fonts
 
-The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavoured to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like `Google Fonts`. In the documentation you can find the __actual__ fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as "Some Time Later" for Spongebob or ____ that I was able to include within the package. 
+The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavoured to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like `Google Fonts`. In the documentation you can find the __actual__ fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as "Some Time Later" for Spongebob or "Akbar" for The Simpsons that I included with the package. 
 
 Instead of dealing with `extrafont` yourself, I repurposed the `import_*()` functions from the `hrbrmstrthemes` package so you can import the fonts very easily. Do note that you still might need to install the fonts directly on your computer from the `.ttf` files found in `inst/fonts`.
 
@@ -106,7 +99,7 @@ import_cinzel()           ## "Cinzel" font to use with the 'The Palettes of Ice 
 
 I gathered the colors/hex codes by looking at images online or re-watching some old episodes and then using various hex code websites and hex code extraction websites. The colors in some of these palettes may still change from feedback and further experimentation.
 
-You can check out all the colors for each palette by running `scales::show_col(tvthemes:::name_of_palette)`:
+You can check out all the colors for each palette by running `scales::show_col(tvthemes:::name_of_palette)`. Some examples below:
 
 ```{r}
 scales::show_col(tvthemes:::brooklyn99_dark_palette)
@@ -238,6 +231,10 @@ ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
 ### Game of Thrones: House Tyrell
 
 ```{r}
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format='%Y-%b-%d')))
+
 ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.8) +
   scale_x_date(breaks = data$year, date_labels = "%Y") +
@@ -250,7 +247,6 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
         plot.title = element_text(family = "Cinzel", size = 16),
         plot.subtitle = element_text(family = "Cinzel", size = 12))
 ```
-
 
 ### Game of Thrones: House Tully
 
@@ -315,7 +311,6 @@ airquality %>%
                          title.size = 10)
 ```
 
-
 ### Avatar: Water Tribe
 
 ```{r}
@@ -345,36 +340,12 @@ mpg %>%
   theme_theLastAirbender(title.font = "Slayer",
                          text.font = "Slayer",
                          title.size = 14)
-
-airquality %>% 
-  mutate(Month = as.factor(Month)) %>% 
-  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
-  geom_line(size = 1.5) +
-  scale_color_earthKingdom() +
-  labs(title = "There is no war in Ba Sing Se.",
-       subtitle = "(Welcome to Lake Laogai)") +
-  theme_theLastAirbender(title.font = "Slayer",
-                         text.font = "Slayer",
-                         title.size = 14)
 ```
-
-
 
 ### Parks and Recreation
 
 - Regular
 ```{r}
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  labs(title = "Parks & Recreation",
-       subtitle = "Gotta Spend Money To Make Money!",
-       caption = "And I spent... all of my money!") +
-  scale_fill_parksAndRec() + 
-  theme_minimal() +
-  theme_parksAndRec(title.font = "Titillium Web Black",
-                    text.font = "Titillium Web")
-
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
@@ -407,3 +378,6 @@ mpg %>%
 Please note that the `tvthemes` project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
 ## License
+
+This code is released under the GPL v3 License - see the
+[LICENSE.md](LICENSE.md) file for details.

@@ -22,7 +22,7 @@ What kick-started this whole package was my
 looking at simple TV stats on my current favorite TV show, Brooklyn
 Nine-Nine. I got a lot of good feedback on the colors I used for the
 custom `ggplot2` theme and color palettes so I decided to expand it to
-other shows\!
+other shows that I like\!
 
 ``` r
 mpg %>% 
@@ -41,26 +41,16 @@ mpg %>%
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="70%" style="display: block; margin: auto;" />
 
-``` r
-# Amy: I passed a slutty tree on the way here. Who wants to have sex with a tree?
-# Scully: Was it a maple?
-
-# Jake: The doctor said all my bleeding was internal. That’s where the blood is supposed to be!
-
-# I came down with a big old Diane Wiest infection...
-# Like yeaaas-
-```
-
 ## Current list of TV shows
 
   - **Avatar: The Last Airbender**: theme + palettes (Fire Nation, Water
-    Tribe, Earth Kingdom, Air Nomads)
-  - **Brooklyn Nine-Nine**: theme + palettes
+    Tribe, Earth Kingdom, & Air Nomads)
+  - **Brooklyn Nine-Nine**: theme + palettes (regular & dark)
   - **Game of Thrones/A Song of Ice & Fire**: ‘The Palettes of Ice &
     Fire’ (currently: Stark, Lannister, Tully, Targaryen, Greyjoy, &
     Tyrell)
   - **Rick & Morty**: theme + palette
-  - **Parks & Recreation**: two themes (light and dark) + palette
+  - **Parks & Recreation**: two themes (light & dark) + palette
   - **The Simpsons**: theme + palette
   - **Spongebob Squarepants**: theme + palette + background images
   - *More in future releases…*
@@ -86,8 +76,8 @@ somewhat similar to the real ones used by the shows from resources like
 `Google Fonts`. In the documentation you can find the **actual** fonts
 used by the TV shows if you are so inclined to buy them (some are just
 my best guesses though)\! In some cases there were fan-made fonts such
-as “Some Time Later” for Spongebob or \_\_\_\_ that I was able to
-include within the package.
+as “Some Time Later” for Spongebob or “Akbar” for The Simpsons that I
+included with the package.
 
 Instead of dealing with `extrafont` yourself, I repurposed the
 `import_*()` functions from the `hrbrmstrthemes` package so you can
@@ -118,7 +108,8 @@ and hex code extraction websites. The colors in some of these palettes
 may still change from feedback and further experimentation.
 
 You can check out all the colors for each palette by running
-`scales::show_col(tvthemes:::name_of_palette)`:
+`scales::show_col(tvthemes:::name_of_palette)`. Some examples
+below:
 
 ``` r
 scales::show_col(tvthemes:::brooklyn99_dark_palette)
@@ -276,6 +267,10 @@ ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
 ### Game of Thrones: House Tyrell
 
 ``` r
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format='%Y-%b-%d')))
+
 ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.8) +
   scale_x_date(breaks = data$year, date_labels = "%Y") +
@@ -397,22 +392,6 @@ mpg %>%
 
 <img src="man/figures/README-unnamed-chunk-19-1.png" width="70%" style="display: block; margin: auto;" />
 
-``` r
-
-airquality %>% 
-  mutate(Month = as.factor(Month)) %>% 
-  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
-  geom_line(size = 1.5) +
-  scale_color_earthKingdom() +
-  labs(title = "There is no war in Ba Sing Se.",
-       subtitle = "(Welcome to Lake Laogai)") +
-  theme_theLastAirbender(title.font = "Slayer",
-                         text.font = "Slayer",
-                         title.size = 14)
-```
-
-<img src="man/figures/README-unnamed-chunk-19-2.png" width="70%" style="display: block; margin: auto;" />
-
 ### Parks and Recreation
 
   - Regular
@@ -420,22 +399,6 @@ airquality %>%
 <!-- end list -->
 
 ``` r
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  labs(title = "Parks & Recreation",
-       subtitle = "Gotta Spend Money To Make Money!",
-       caption = "And I spent... all of my money!") +
-  scale_fill_parksAndRec() + 
-  theme_minimal() +
-  theme_parksAndRec(title.font = "Titillium Web Black",
-                    text.font = "Titillium Web")
-```
-
-<img src="man/figures/README-unnamed-chunk-20-1.png" width="70%" style="display: block; margin: auto;" />
-
-``` r
-
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
@@ -449,7 +412,7 @@ airquality %>%
                     legend.font = "Titillium Web")
 ```
 
-<img src="man/figures/README-unnamed-chunk-20-2.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-20-1.png" width="70%" style="display: block; margin: auto;" />
 
   - Light
 
@@ -477,3 +440,6 @@ Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
 you agree to abide by its terms.
 
 ## License
+
+This code is released under the GPL v3 License - see the
+[LICENSE.md](LICENSE.md) file for details.
