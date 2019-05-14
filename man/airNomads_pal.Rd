@@ -5,7 +5,7 @@
 \alias{scale_color_airNomads}
 \alias{scale_colour_airNomads}
 \alias{scale_fill_airNomads}
-\title{airNomads_pal}
+\title{Air Nomads palette}
 \usage{
 airNomads_pal()
 

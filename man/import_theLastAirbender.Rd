@@ -11,6 +11,6 @@ The Last Airbender font ("Slayer")
 }
 \details{
 Actual font is Herculanum.
-import_*() functions inspired by hrbrmstrthemes
+import_*() functions taken from hrbrthemes.
 You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }

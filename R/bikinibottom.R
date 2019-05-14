@@ -8,7 +8,7 @@
 #' @param background "background" or "floral", Default: "background"
 #' @param ... Other options, see `?magick::image_graph()`
 #' @return Your plot with a Spongebob themed background!
-#' @details Adapted from ggpomological's paint_pomological() function!
+#' @details Adapted from ggpomological's `paint_pomological()` function!
 #' @rdname paintBikiniBottom
 #' @export
 #' @importFrom ggplot2 theme element_rect

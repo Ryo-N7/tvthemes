@@ -10,7 +10,7 @@ import_cinzel()
 Game of Thrones font ("Cinzel" font)
 }
 \details{
-import_*() functions inspired by hrbrmstrthemes, actual font is "Trajan Pro".
+import_*() functions taken from hrbrthemes, actual font is "Trajan Pro".
 You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }
 \seealso{

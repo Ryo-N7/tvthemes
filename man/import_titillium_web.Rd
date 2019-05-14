@@ -10,7 +10,7 @@ import_titillium_web()
 Imports Titillium Web
 }
 \details{
-import_*() functions inspired by hrbrmstrthemes
+import_*() functions taken from hrbrthemes.
 }
 \seealso{
 \code{\link[extrafont]{font_import}}

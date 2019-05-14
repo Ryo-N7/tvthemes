@@ -48,7 +48,7 @@ mpg %>%
                  binwidth = 0.1) +
   scale_fill_brooklyn99_dark() +
   labs(title = "Do you know what it means to 'clap back', Raymond?",
-       subtitle = glue::glue("BE- {ji('clap')} -CAUSE {ji('clap')} I {ji('clap')} DO {ji('clap')} !"),
+       subtitle = glue::glue("BE- {emo::ji('clap')} -CAUSE {emo::ji('clap')} I {emo::ji('clap')} DO {emo::ji('clap')} !"),
        caption = "Pizza bagels? Pizza rolls? Pizza poppers? Pizzaritos? Pizza pockets?") +
   theme_brooklyn99(title.font = "Titillium Web",
                    text.font = "Calibri Light",
@@ -81,7 +81,7 @@ I hope to have a CRAN version soon!
 
 The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavored to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like `Google Fonts`. In the documentation you can find the __actual__ fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as "Some Time Later" for Spongebob or "Akbar" for The Simpsons that I included with the package. 
 
-Instead of dealing with `extrafont` yourself, I re-purposed the `import_*()` functions from the `hrbrmstrthemes` package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the `.ttf` files found in `inst/fonts`.
+Instead of dealing with `extrafont` yourself, I re-purposed the `import_*()` functions from the `hrbrthemes` package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the `.ttf` files found in `inst/fonts`. When you're done running the functions and installing the `.ttf` files on your computer, load the `extrafont` library and then run `loadfonts()`. If you're having problems check out the documentation on `extrafont`'s [Github repo](https://github.com/wch/extrafont) or on [CRAN](https://cran.r-project.org/web/packages/extrafont/index.html).
 
 The help files for each function tells you the recommended font names in case you forget! Besides the really custom stuff like for "The Simpsons", "Rick & Morty", and "SpongeBob", font preferences are really up to you.
 
@@ -89,10 +89,14 @@ The help files for each function tells you the recommended font names in case yo
 import_simpsons()         ## "Akbar" font
 import_theLastAirbender() ## "Slayer" font
 import_rickAndMorty()     ## "Get Schwifty" font
-import_roboto_condensed() ## "Roboto Condensed" Google Font import from hrbrmstrthemes
-import_titillium_web()    ## "Titillium Web" Google Font import from hrbrmstrthemes
+import_roboto_condensed() ## "Roboto Condensed" Google Font import from hrbrthemes
+import_titillium_web()    ## "Titillium Web" Google Font import from hrbrthemes
 import_spongeBob()        ## "Some Time Later" font
 import_cinzel()           ## "Cinzel" font to use with 'The Palettes of Ice & Fire'
+
+## install.packages("extrafont")
+library(extrafont)
+loadfonts() ## You need to do this at the beginning of a session.
 ```
 
 ## Colors

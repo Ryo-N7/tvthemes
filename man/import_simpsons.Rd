@@ -10,7 +10,7 @@ import_simpsons()
 The Simpsons Font ("Akbar" font)
 }
 \details{
-import_*() functions inspired by hrbrmstrthemes
+import_*() functions taken from hrbrthemes.
 You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }
 \seealso{

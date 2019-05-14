@@ -7,10 +7,10 @@
 import_roboto_condensed()
 }
 \description{
-taken from hrbrmstrthemes
+taken from hrbrthemes
 }
 \details{
-import_*() functions inspired by hrbrmstrthemes
+import_*() functions taken from hrbrthemes.
 You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }
 \seealso{

@@ -27,5 +27,5 @@ Your plot with a Spongebob themed background!
 Add SpongeBob background
 }
 \details{
-Adapted from ggpomological's paint_pomological() function!
+Adapted from ggpomological's `paint_pomological()` function!
 }

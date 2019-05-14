@@ -71,7 +71,7 @@ airNomads_palette <- c(
 #87AFD1 light blue
 #FFFF33  ## lightyellow
 
-#' @title airNomads_pal
+#' @title Air Nomads palette
 #' @description Air Nomads palette
 #' @inheritDotParams ggplot2::discrete_scale
 #' @seealso

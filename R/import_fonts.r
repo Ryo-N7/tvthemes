@@ -1,6 +1,6 @@
 #' @title import_titillium_web
 #' @description Imports Titillium Web
-#' @details import_*() functions inspired by hrbrmstrthemes
+#' @details import_*() functions taken from hrbrthemes.
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
 #' @rdname import_titillium_web
@@ -22,8 +22,8 @@ import_titillium_web <- function() {
 }
 
 #' @title import_roboto_condensed
-#' @description taken from hrbrmstrthemes
-#' @details import_*() functions inspired by hrbrmstrthemes
+#' @description taken from hrbrthemes
+#' @details import_*() functions taken from hrbrthemes.
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
@@ -33,7 +33,7 @@ import_titillium_web <- function() {
 
 import_roboto_condensed <- function() {
 
-  rc_font_dir <- system.file("fonts", "Roboto-Condensed", package = "hrbrthemes")
+  rc_font_dir <- system.file("fonts", "Roboto-Condensed", package = "tvthemes")
 
   suppressWarnings(suppressMessages(extrafont::font_import(paths = rc_font_dir, prompt = FALSE)))
 
@@ -46,7 +46,7 @@ import_roboto_condensed <- function() {
 
 #' @title import_simpsons
 #' @description The Simpsons Font ("Akbar" font)
-#' @details import_*() functions inspired by hrbrmstrthemes
+#' @details import_*() functions taken from hrbrthemes.
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
@@ -70,7 +70,7 @@ import_simpsons <- function() {
 
 #' @title import_cinzel
 #' @description Game of Thrones font ("Cinzel" font)
-#' @details import_*() functions inspired by hrbrmstrthemes, actual font is "Trajan Pro".
+#' @details import_*() functions taken from hrbrthemes, actual font is "Trajan Pro".
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
@@ -80,7 +80,7 @@ import_simpsons <- function() {
 
 import_cinzel <- function() {
 
-  cinzel_font_dir <- system.file("fonts", "Cinzel", package = "hrbrthemes")
+  cinzel_font_dir <- system.file("fonts", "Cinzel", package = "tvthemes")
 
   suppressWarnings(suppressMessages(extrafont::font_import(paths = cinzel_font_dir, prompt = FALSE)))
 
@@ -94,7 +94,7 @@ import_cinzel <- function() {
 #' @title import_rickAndMorty
 #' @description Rick & Morty font ("Get Schwifty")
 #' @details Actual font is ... well, Justin Roiland's actual handwriting.
-#' import_*() functions inspired by hrbrmstrthemes
+#' import_*() functions taken from hrbrthemes.
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @rdname import_rickAndMorty
 #' @export
@@ -115,7 +115,7 @@ import_rickAndMorty <- function() {
 
 #' @title import_spongeBob
 #' @description spongeBob SquarePants font ("Some-Time-Later")
-#' @details import_*() functions inspired by hrbrmstrthemes
+#' @details import_*() functions taken from hrbrthemes.
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @rdname import_spongeBob
 #' @export
@@ -137,7 +137,7 @@ import_spongeBob <- function() {
 #' @title import_theLastAirbender
 #' @description The Last Airbender font ("Slayer")
 #' @details Actual font is Herculanum.
-#' import_*() functions inspired by hrbrmstrthemes
+#' import_*() functions taken from hrbrthemes.
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @rdname import_theLastAirbender
 #' @export

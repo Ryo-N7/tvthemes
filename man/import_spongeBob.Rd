@@ -10,6 +10,6 @@ import_spongeBob()
 spongeBob SquarePants font ("Some-Time-Later")
 }
 \details{
-import_*() functions inspired by hrbrmstrthemes
+import_*() functions taken from hrbrthemes.
 You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }
