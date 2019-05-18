@@ -1,7 +1,7 @@
 Type: Package
 Package: tvthemes
 Title: TV show themes and color palettes for ggplot2 graphics
-Version: 0.0.0.9100
+Version: 0.0.0.9200
 Authors@R: 
   person(given = "Ryo",
          family = "Nakagawara",
