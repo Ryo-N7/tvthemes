@@ -6,3 +6,4 @@
 ^LICENSE\.md$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^notes-todos\.txt$

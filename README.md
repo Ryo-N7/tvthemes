@@ -22,8 +22,11 @@ kick-started this whole package was my
 looking at simple TV stats on my current favorite TV show, Brooklyn
 Nine-Nine. I got a lot of good feedback on the colors I used for the
 custom `ggplot2` theme and color palettes so I decided to expand it to
-other shows that I love\! Suggestions and Pull Requests for
-palettes/themes are welcome\!
+other shows that I love\! You can also learn about `tvthemes` from the
+introductory blog post on my website,
+[here](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/).
+
+Suggestions and Pull Requests for palettes/themes are welcome\!
 
 ``` r
 mpg %>% 
@@ -189,7 +192,7 @@ paintBikiniBottom(plot = bobspog_plot,
 
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Game of Thrones: House Stark
+### Game of Thrones: House Stark, Lannister, Targaryen
 
 ``` r
 mpg %>% 
@@ -202,10 +205,87 @@ mpg %>%
   scale_x_continuous(expand = c(0,0)) +
   scale_fill_stark() +
   theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 14))
+  theme(text = element_text(family = "Cinzel", size = 14)) -> stark
+
+colstully <- tully_pal()(5)
+
+ggplot(diamonds, aes(price, fill = cut)) +
+  geom_histogram(binwidth = 500) +
+  scale_fill_manual(values = rev(colstully)) +
+  #scale_fill_tully() +
+  labs(title = "I've seen wet shits I like better than Walder Frey.",
+       subtitle = "Pardon my lord, my lady. I need to find a tree to piss on.",
+       caption = "- The Blackfish") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 10),
+        title = element_text(family = "Cinzel", size = 14)) -> tully
+
+ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
+  geom_point(aes(color = continent)) + 
+  scale_x_log10() +
+  scale_color_targaryen() +
+  labs(title = "I am the blood of the dragon. I must be strong.",
+       subtitle = "I must have fire in my eyes when I face them, not tears.",
+       caption = "- Fire & Blood.") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 10),
+        title = element_text(family = "Cinzel", size = 14)) -> targaryen
+
+## patchwork together:
+stark + tully - targaryen + plot_layout(ncol = 1)
 ```
 
 <img src="man/figures/README-unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" />
+
+### Game of Thrones: House Tyrell, Tully, Greyjoy
+
+``` r
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.8) +
+  scale_x_date(breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_fill_tyrell() +
+  labs(title = "All men are fools, if truth be told, but",
+       subtitle = "the ones in motley are more amusing than ones with crowns.",
+       caption = "- The Queen of Thorns") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 10),
+        plot.title = element_text(family = "Cinzel", size = 16),
+        plot.subtitle = element_text(family = "Cinzel", size = 12)) -> tyrell
+
+cols <- lannister_pal()(5)
+
+ggplot(diamonds, aes(price, fill = cut)) +
+  geom_histogram(binwidth = 500) +
+  labs(title = "You are done with whores.",
+       subtitle = "The next one I find in your bed, I'll hang.",
+       caption = "Rains of Castamere") +
+  scale_fill_manual(values = rev(cols)) +
+  #scale_fill_lannister() +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 14)) -> lannister
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  scale_color_greyjoy() +
+  labs(title = "I am the storm, my lord.",
+       subtitle = "The first storm, and the last.",
+       caption = "- Euron 'The Crow's Eye' Greyjoy") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 10),
+        title = element_text(family = "Cinzel", size = 14)) -> greyjoy
+
+## patchwork together:
+tyrell + lannister - greyjoy + plot_layout(ncol = 1)
+```
+
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### The Simpsons
 
@@ -231,7 +311,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                  axis.text.size = 8)
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Rick and Morty
 
@@ -247,104 +327,9 @@ ggplot(diamonds, aes(price, fill = cut)) +
                      title.size = 14)
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" />
-
-### Game of Thrones: House Lannister
-
-``` r
-cols <- lannister_pal()(5)
-
-ggplot(diamonds, aes(price, fill = cut)) +
-  geom_histogram(binwidth = 500) +
-  labs(title = "You are done with whores.",
-       subtitle = "The next one I find in your bed, I'll hang.",
-       caption = "Rains of Castamere") +
-  scale_fill_manual(values = rev(cols)) +
-  #scale_fill_lannister() +
-  theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 14))
-```
-
 <img src="man/figures/README-unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Game of Thrones: House Targaryen
-
-``` r
-ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
-  geom_point(aes(color = continent)) + 
-  scale_x_log10() +
-  scale_color_targaryen() +
-  labs(title = "I am the blood of the dragon. I must be strong.",
-       subtitle = "I must have fire in my eyes when I face them, not tears.",
-       caption = "- Fire & Blood.") +
-  theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 10),
-        title = element_text(family = "Cinzel", size = 14))
-```
-
-<img src="man/figures/README-unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" />
-
-### Game of Thrones: House Tyrell
-
-``` r
-data <- gapminder::gapminder %>% 
-  filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus")) %>% 
-  mutate(year = as.Date(paste(year, "-01-01", sep = "", format='%Y-%b-%d')))
-
-ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
-  geom_area(alpha = 0.8) +
-  scale_x_date(breaks = data$year, date_labels = "%Y") +
-  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-  scale_fill_tyrell() +
-  labs(title = "All men are fools, if truth be told, but",
-       subtitle = "the ones in motley are more amusing than ones with crowns.",
-       caption = "- The Queen of Thorns") +
-  theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 10),
-        plot.title = element_text(family = "Cinzel", size = 16),
-        plot.subtitle = element_text(family = "Cinzel", size = 12))
-```
-
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" />
-
-### Game of Thrones: House Tully
-
-``` r
-cols <- tully_pal()(5)
-
-ggplot(diamonds, aes(price, fill = cut)) +
-  geom_histogram(binwidth = 500) +
-  scale_fill_manual(values = rev(cols)) +
-  #scale_fill_tully() +
-  labs(title = "I've seen wet shits I like better than Walder Frey.",
-       subtitle = "Pardon my lord, my lady. I need to find a tree to piss on.",
-       caption = "- The Blackfish") +
-  theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 10),
-        title = element_text(family = "Cinzel", size = 14))
-```
-
-<img src="man/figures/README-unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" />
-
-### Game of Thrones: House Greyjoy
-
-``` r
-airquality %>% 
-  mutate(Month = as.factor(Month)) %>% 
-  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
-  geom_line(size = 1.5) +
-  scale_color_greyjoy() +
-  labs(title = "I am the storm, my lord.",
-       subtitle = "The first storm, and the last.",
-       caption = "- Euron 'The Crow's Eye' Greyjoy") +
-  theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 10),
-        title = element_text(family = "Cinzel", size = 14))
-```
-
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="70%" style="display: block; margin: auto;" />
-
-### Avatar: Fire Nation
+### Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
 ``` r
 mpg %>% 
@@ -356,14 +341,8 @@ mpg %>%
        x = "Lion Vultures Owned",
        y = "Agni Kai Participation") +
   theme_theLastAirbender(title.font = "Slayer",
-                         text.font = "Slayer")
-```
+                         text.font = "Slayer") -> firenation
 
-<img src="man/figures/README-unnamed-chunk-16-1.png" width="70%" style="display: block; margin: auto;" />
-
-### Avatar: Air Nomads
-
-``` r
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
@@ -373,14 +352,8 @@ airquality %>%
        subtitle = "Appa, Yip Yip!") +
   theme_theLastAirbender(title.font = "Slayer",
                          text.font = "Slayer",
-                         title.size = 10)
-```
+                         title.size = 10) -> airnomads
 
-<img src="man/figures/README-unnamed-chunk-17-1.png" width="70%" style="display: block; margin: auto;" />
-
-### Avatar: Water Tribe
-
-``` r
 ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
   geom_point(aes(color = continent)) + 
   scale_x_log10() +
@@ -392,14 +365,8 @@ ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
   theme_theLastAirbender(title.font = "Slayer",
                          text.font = "Slayer",
                          title.size = 8,
-                         subtitle.size = 8)
-```
+                         subtitle.size = 8) -> watertribe
 
-<img src="man/figures/README-unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" />
-
-### Avatar: Earth Kingdom
-
-``` r
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
@@ -408,38 +375,29 @@ mpg %>%
        subtitle = "(Welcome to Lake Laogai)") +
   theme_theLastAirbender(title.font = "Slayer",
                          text.font = "Slayer",
-                         title.size = 14)
+                         title.size = 14) -> earthkingdom
+
+## plot together:
+plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-19-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Parks and Recreation
-
-  - Regular
-
-<!-- end list -->
 
 ``` r
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
-  geom_point(size = 2) +
+  geom_point(size = 2.5) +
   labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
        caption = "No one likes them. Good day, sir.") + 
   scale_color_parksAndRec() + 
   theme_minimal() +
   theme_parksAndRec(text.font = "Titillium Web",
                     title.font = "Titillium Web Black",
-                    legend.font = "Titillium Web")
-```
+                    legend.font = "Titillium Web") -> parksandrec
 
-<img src="man/figures/README-unnamed-chunk-20-1.png" width="70%" style="display: block; margin: auto;" />
-
-  - Light
-
-<!-- end list -->
-
-``` r
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
@@ -449,10 +407,13 @@ mpg %>%
   scale_fill_parksAndRec() + 
   theme_minimal() +
   theme_parksAndRec_light(title.font = "Titillium Web Black",
-                    text.font = "Titillium Web")
+                    text.font = "Titillium Web") -> parksandreclight
+
+## plot together:
+plot_grid(parksandrec, parksandreclight, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-21-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" />
 
 ## Contributing
 
