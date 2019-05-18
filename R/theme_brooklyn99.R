@@ -61,7 +61,7 @@ theme_brooklyn99 <- function(
     ## main b99 theme
     theme(text = ggplot2::element_text(family = text.font, size = text.size, color = text.color),
           plot.title = element_text(family = title.font, face = "bold", size = title.size, color = title.color),
-          plot.subtitle = element_text(family = title.font, size = subtitle.size),
+          plot.subtitle = element_text(family = title.font, size = subtitle.size, color = subtitle.color),
           # background/panel options
           plot.background = element_rect(color = NA, fill = "#0053CD"),
           panel.background = element_rect(color = NA, fill = "#0053CD"),

@@ -53,7 +53,7 @@ theme_theLastAirbender <- function(
 
   ggplot2::theme_minimal() +
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
-        title = element_text(family = title.font, size = title.size, color = title.color),
+        plot.title = element_text(family = title.font, size = title.size, color = title.color),
         plot.subtitle = element_text(family = title.font, size = subtitle.size, color = subtitle.color),
         # axis options
         axis.text = element_text(family = text.font, size = axis.text.size, color = axis.text.color),
