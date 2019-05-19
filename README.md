@@ -415,6 +415,38 @@ plot_grid(parksandrec, parksandreclight, ncol = 2)
 
 <img src="man/figures/README-unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" />
 
+### Attack on Titan
+
+``` r
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_attackOnTitan() +
+  labs(title = "On That Day, Mankind Received A Grim Reminder...",
+       subtitle = "TITANS ARE MY TRIGGER",
+       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
+    theme_parksAndRec()
+```
+
+<img src="man/figures/README-unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" />
+
+### Kim Possible
+
+``` r
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), 
+                 col = "black", size = 0.1,
+                 binwidth = 0.1) +
+  scale_fill_kimPossible() +
+  labs(title = "What's The Sitch, Wade?",
+       subtitle = glue::glue("Call Me {emo::ji('call')}, Beep Me {emo::ji('pager')},  If You Wanna Reach Me {emo::ji('clap')} !"),
+       caption = "Stoppable... What Are You Doing In My House??") +
+  theme_spongeBob()
+```
+
+<img src="man/figures/README-unnamed-chunk-15-1.png" width="70%" style="display: block; margin: auto;" />
+
 ## Contributing
 
 Please note that the `tvthemes` project is released with a [Contributor

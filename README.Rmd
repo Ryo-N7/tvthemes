@@ -368,6 +368,36 @@ mpg %>%
 plot_grid(parksandrec, parksandreclight, ncol = 2)
 ```
 
+### Attack on Titan
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_attackOnTitan() +
+  labs(title = "On That Day, Mankind Received A Grim Reminder...",
+       subtitle = "TITANS ARE MY TRIGGER",
+       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
+    theme_parksAndRec()
+```
+
+### Kim Possible
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), 
+                 col = "black", size = 0.1,
+                 binwidth = 0.1) +
+  scale_fill_kimPossible() +
+  labs(title = "What's The Sitch, Wade?",
+       subtitle = glue::glue("Call Me {emo::ji('call')}, Beep Me {emo::ji('pager')},  If You Wanna Reach Me {emo::ji('clap')} !"),
+       caption = "Stoppable... What Are You Doing In My House??") +
+  theme_spongeBob()
+```
+
+
+
 ## Contributing
 
 Please note that the `tvthemes` project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
