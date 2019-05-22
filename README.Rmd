@@ -248,6 +248,37 @@ airquality %>%
 tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ```
 
+### Game of Thrones: Martell, Dayne, Manderly
+
+```{r}
+cols <- manderly_pal()(7)
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_manual(values = rev(cols)) +
+  #scale_fill_manderly() +
+  labs(title = "The North remembers Lord Davos. The North remembers...",
+       subtitle = "The mummer's farce is almost done, my son is coming home.",
+       caption = "When treating with liars, even an honest man must lie.") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 10),
+        title = element_text(family = "Cinzel", size = 12)) 
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_dayne() +
+  #scale_fill_manderly() +
+  labs(title = "Our knees do not bend easily.",
+       subtitle = "All knights must bleed, Jamie. Blood is the seal of our devotion.",
+       caption = "The Sword of the Morning & Dawn") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 10),
+        title = element_text(family = "Cinzel", size = 12)) 
+```
+
+
 ### The Simpsons
 
 ```{r}

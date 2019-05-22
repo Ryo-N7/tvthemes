@@ -287,6 +287,43 @@ tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 
 <img src="man/figures/README-unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" />
 
+### Game of Thrones: Martell, Dayne, Manderly
+
+``` r
+cols <- manderly_pal()(7)
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_manual(values = rev(cols)) +
+  #scale_fill_manderly() +
+  labs(title = "The North remembers Lord Davos. The North remembers...",
+       subtitle = "The mummer's farce is almost done, my son is coming home.",
+       caption = "When treating with liars, even an honest man must lie.") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 10),
+        title = element_text(family = "Cinzel", size = 12)) 
+```
+
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" />
+
+``` r
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_dayne() +
+  #scale_fill_manderly() +
+  labs(title = "Our knees do not bend easily.",
+       subtitle = "All knights must bleed, Jamie. Blood is the seal of our devotion.",
+       caption = "The Sword of the Morning & Dawn") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 10),
+        title = element_text(family = "Cinzel", size = 12)) 
+```
+
+<img src="man/figures/README-unnamed-chunk-10-2.png" width="70%" style="display: block; margin: auto;" />
+
 ### The Simpsons
 
 ``` r
@@ -311,7 +348,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                  axis.text.size = 8)
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Rick and Morty
 
@@ -327,7 +364,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
                      title.size = 14)
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
@@ -381,7 +418,7 @@ mpg %>%
 plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Parks and Recreation
 
@@ -413,7 +450,7 @@ mpg %>%
 plot_grid(parksandrec, parksandreclight, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Attack on Titan
 
@@ -428,7 +465,7 @@ mpg %>%
     theme_parksAndRec()
 ```
 
-<img src="man/figures/README-unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-15-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Kim Possible
 
@@ -445,7 +482,7 @@ mpg %>%
   theme_spongeBob()
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-16-1.png" width="70%" style="display: block; margin: auto;" />
 
 ## Contributing
 

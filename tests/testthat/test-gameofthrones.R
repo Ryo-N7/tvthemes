@@ -68,7 +68,7 @@ test_that("scale_fill_targaryen works", {
   expect_is(scale_fill_targaryen(), "ScaleDiscrete")
 })
 
-## House tully
+## House Tully
 test_that("tully_pal raises warning with large number, x > 7", {
   expect_warning(tully_pal()(8))
 })
@@ -85,7 +85,7 @@ test_that("scale_fill_tully works", {
   expect_is(scale_fill_tully(), "ScaleDiscrete")
 })
 
-## House greyjoy
+## House Greyjoy
 test_that("greyjoy_pal raises warning with large number, x > 7", {
   expect_warning(greyjoy_pal()(8))
 })
@@ -100,4 +100,38 @@ test_that("scale_colour_greyjoy works", {
 
 test_that("scale_fill_greyjoy works", {
   expect_is(scale_fill_greyjoy(), "ScaleDiscrete")
+})
+
+## House Manderly
+test_that("manderly_pal raises warning with large number, x > 7", {
+  expect_warning(manderly_pal()(8))
+})
+
+test_that("scale_colour_manderly equals scale_color_manderly", {
+  expect_equal(scale_color_manderly(), scale_colour_manderly())
+})
+
+test_that("scale_colour_manderly works", {
+  expect_is(scale_color_manderly(), "ScaleDiscrete")
+})
+
+test_that("scale_fill_manderly works", {
+  expect_is(scale_fill_manderly(), "ScaleDiscrete")
+})
+
+## House Dayne
+test_that("dayne_pal raises warning with large number, x > 7", {
+  expect_warning(dayne_pal()(8))
+})
+
+test_that("scale_colour_dayne equals scale_color_dayne", {
+  expect_equal(scale_color_dayne(), scale_colour_dayne())
+})
+
+test_that("scale_colour_dayne works", {
+  expect_is(scale_color_dayne(), "ScaleDiscrete")
+})
+
+test_that("scale_fill_dayne works", {
+  expect_is(scale_fill_dayne(), "ScaleDiscrete")
 })

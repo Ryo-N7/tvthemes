@@ -300,7 +300,7 @@ scale_color_greyjoy <- function(...){
   ggplot2::discrete_scale("color", "greyjoy", greyjoy_pal(), ...)
 }
 
-#' @title scale_colour_grey
+#' @title scale_colour_greyjoy
 #' @rdname greyjoy_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
@@ -355,3 +355,107 @@ scale_fill_greyjoy <- function(...){
 # scale_fill_baratheon <- function(...){
 #   ggplot2::discrete_scale("fill", "baratheon", baratheon_pal(), ...)
 # }
+
+## House Manderly ----
+
+manderly_palette <- c(
+  "#40e0d0", ## manderly turqouise     #32BB9D
+  "#808080", ## gray
+  "#00ff00", ## light-sea green        #0FBB11
+  "#282828", ## metallic black
+  "#015202", ## dark seaweed green
+  "#195953", ## dark turqoise
+  "#FFFFFF"  ## white
+)
+
+#' @title House Manderly palette
+#' @description House Manderly palette
+#' @rdname manderly_pal
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
+#' @export
+#' @importFrom scales manual_pal
+
+manderly_pal <- function() {
+  scales::manual_pal(manderly_palette)
+}
+
+#' @title scale_color_manderly
+#' @rdname manderly_pal
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_color_manderly <- function(...){
+  ggplot2::discrete_scale("color", "manderly", manderly_pal(), ...)
+}
+
+#' @title scale_colour_manderly
+#' @rdname manderly_pal
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_manderly <- scale_color_manderly
+
+#' @title scale_fill_manderly
+#' @rdname manderly_pal
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_fill_manderly <- function(...){
+  ggplot2::discrete_scale("fill", "manderly", manderly_pal(), ...)
+}
+
+## House Dayne ----
+
+dayne_palette <- c(
+  "#B27ED0", ## dayne lightpurple
+  "#FF00FF", ## dayne magenta
+  "#66033C", ## dayne deep wine purple
+  "#9F3BAB", ## dayne purple
+  "#282828", ## metallic black
+  "#4B0082", ## indigo
+  "#FFFFFF"  ## white
+)
+
+#' @title House Dayne palette
+#' @description House Dayne palette
+#' @rdname dayne_pal
+#' @inheritDotParams ggplot2::discrete_scale
+#' @seealso
+#'  \code{\link[scales]{manual_pal}}
+#'  [ggplot2::scale_color_discrete]
+#'  [ggplot2::scale_fill_discrete]
+#' @export
+#' @importFrom scales manual_pal
+
+dayne_pal <- function() {
+  scales::manual_pal(dayne_palette)
+}
+
+#' @title scale_color_dayne
+#' @rdname dayne_pal
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_color_dayne <- function(...){
+  ggplot2::discrete_scale("color", "dayne", dayne_pal(), ...)
+}
+
+#' @title scale_colour_dayne
+#' @rdname dayne_pal
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_colour_dayne <- scale_color_dayne
+
+#' @title scale_fill_dayne
+#' @rdname dayne_pal
+#' @export
+#' @importFrom ggplot2 discrete_scale
+
+scale_fill_dayne <- function(...){
+  ggplot2::discrete_scale("fill", "dayne", dayne_pal(), ...)
+}

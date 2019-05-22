@@ -23,11 +23,18 @@ test_that("scale_fill_kimPossible works", {
 })
 
 test_that("scale_color_kimPossible outputs correct colors", {
-  expect_equal(kimPossible_pal()(5),
+  expect_equal(kimPossible_pal()(12),
                c("#A75422",  ## KP orange #A75422
                  "#024663",  ## Drakken blue
                  "#70D423",  ## Shego green
                  "#891604",  ## Ron red/burgundy
-                 "#02001F"   ## Ron navy
+                 "#02001F",  ## Ron navy
+                 "#9CF6F7",  ## KP supersuit lightblue
+                 "#FFCE45",  ## Ron yellow hair
+                 "#5D734D",  ## KP green eyes
+                 "#FEC3BB",  ## Rufus pink
+                 "#662C9C",  ## S4 KP combat purple
+                 "#fff9f5",  ## white
+                 "#000000"   ## black
                  ))
 })
