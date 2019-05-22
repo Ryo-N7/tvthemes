@@ -69,6 +69,7 @@ mpg %>%
 - __The Simpsons__: theme + palette
 - __Spongebob Squarepants__: theme + palette + background images
 - _More in future releases..._
+- _Development branch_: House Dayne, House Manderly, Attack on Titan, Kim Possible
 
 ## Installation
 
