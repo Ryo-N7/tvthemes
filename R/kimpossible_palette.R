@@ -1,5 +1,5 @@
 kimPossible_palette <- c(
-  "#A75422",  ## KP orange #A75422
+  "#FF8C00",  ## KP orange #A75422   #cc8400 #b27300   brighter orange #ffa500  #A65021 #AB5524
   "#024663",  ## Drakken blue
   "#70D423",  ## Shego green
   "#891604",  ## Ron red/burgundy

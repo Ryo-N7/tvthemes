@@ -404,27 +404,89 @@ plot_grid(parksandrec, parksandreclight, ncol = 2)
 ```{r}
 mpg %>% 
   ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
   scale_fill_attackOnTitan() +
   labs(title = "On That Day, Mankind Received A Grim Reminder...",
        subtitle = "TITANS ARE MY TRIGGER",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
     theme_parksAndRec()
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_point(size = 3) +
+  labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
+       caption = "No one likes them. Good day, sir.") + 
+  scale_color_attackOnTitan() + 
+  theme_minimal()
+
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", 
+                        "Japan", "Norway", "Belarus", "United Kingdom",
+                        "Peru", "Spain")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.9) +
+  scale_x_date(breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_fill_attackOnTitan() +
+  labs(title = "What's The Sitch, Wade?",
+       subtitle = glue::glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
+       caption = "Stoppable... What Are You Doing In My House??",
+       x = "Year", y = "GDP per Capita") +
+  theme_spongeBob(title.font = "Roboto Condensed",
+                  text.font = "Roboto Condensed",
+                  title.size = 24,
+                  subtitle.size = 20,
+                  text.size = 18,
+                  legend.title.size = 14,
+                  legend.text.size = 12)
 ```
 
 ### Kim Possible
 
-```{r}
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), 
-                 col = "black", size = 0.1,
-                 binwidth = 0.1) +
+```{r fig.width=10, fig.height = 6}
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", 
+                        "Japan", "Norway", "Belarus", "United Kingdom",
+                        "Peru", "Spain")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.9) +
+  scale_x_date(breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
   scale_fill_kimPossible() +
   labs(title = "What's The Sitch, Wade?",
-       subtitle = glue::glue("Call Me {emo::ji('call')}, Beep Me {emo::ji('pager')},  If You Wanna Reach Me {emo::ji('clap')} !"),
-       caption = "Stoppable... What Are You Doing In My House??") +
-  theme_spongeBob()
+       subtitle = glue::glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
+       caption = "Stoppable... What Are You Doing In My House??",
+       x = "Year", y = "GDP per Capita") +
+  theme_spongeBob(title.font = "Roboto Condensed",
+                  text.font = "Roboto Condensed",
+                  title.size = 24,
+                  subtitle.size = 20,
+                  text.size = 18,
+                  legend.title.size = 14,
+                  legend.text.size = 12)
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_point(size = 3) +
+  labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
+       caption = "No one likes them. Good day, sir.") + 
+  scale_color_kimPossible() + 
+  theme_minimal()
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
+  scale_fill_kimPossible() +
+  labs(title = "On That Day, Mankind Received A Grim Reminder...",
+       subtitle = "TITANS ARE MY TRIGGER",
+       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
+    theme_simpsons()
 ```
 
 

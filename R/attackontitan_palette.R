@@ -2,11 +2,10 @@ attackOnTitan_palette <- c(
   "#004c00",  ## cape green  #42694a #004c00 #004000  	#3C4D3D
   "#173357",  ## survey corp blue
   "#3E1E13",  ## jacket brown   lightbrown #6f553f
-  "#BF2F1F",  ## titan red
+  "#e50000",  ## titan red   #BF2F1F
   "#999BA0",  ## blade steel
   "#c8a780",  ## jacket lighttan
   "#EB6154",  ## titan skin pink
-  "#fff9f5",  ## white
   "#000000"   ## black
 )
 
