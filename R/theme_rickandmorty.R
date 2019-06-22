@@ -19,6 +19,7 @@
 #' @param legend.title.color legend title color, Default: NULL
 #' @param legend.text.color legend text color, Default: NULL
 #' @param legend.position legend position, Default: "bottom"
+#' @param ticks add axis ticks, Default: FALSE
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -50,16 +51,16 @@ theme_rickAndMorty <- function(
   axis.text.color = "black",
   legend.title.color = NULL,
   legend.text.color = NULL,
-  legend.position = "bottom"){
+  legend.position = "bottom",
+  ticks = FALSE){
 
-  ggplot2::theme_minimal() +
+  pickleRick <- ggplot2::theme_minimal() +
   theme(text = element_text(family = text.font, size = text.size, color = text.color),
         plot.title = element_text(family = title.font, size = title.size, color = title.color),
         plot.subtitle = element_text(family = title.font, size = subtitle.size, color = subtitle.color),
         # axis options
         axis.text = element_text(family = text.font, size = axis.text.size, color = axis.text.color),
         axis.title = element_text(family = title.font, size = axis.title.size, color = axis.title.color),
-        axis.ticks = element_blank(),
         # background/panel options
         plot.background = element_rect(color = NA, fill = "#9bff16"),
         panel.background = element_rect(color = NA, fill = "#cfdbbe"),
@@ -70,4 +71,15 @@ theme_rickAndMorty <- function(
         legend.position = legend.position,
         legend.background = element_rect(color = "black", fill = "#9bff16", linetype = "solid")
         )
+
+  if (ticks == FALSE) {
+    pickleRick <- pickleRick + theme(axis.ticks = element_blank(),
+                                 axis.ticks.x = element_blank(),
+                                 axis.ticks.y = element_blank())
+  } else {
+    pickleRick <- pickleRick + theme(axis.ticks = element_line(size = 0.15, color = "white"),
+                                 axis.ticks.x = element_line(size = 0.15, color = "white"),
+                                 axis.ticks.y = element_line(size = 0.15, color = "white"),
+                                 axis.ticks.length = grid::unit(4, "pt"))
+  }
 }

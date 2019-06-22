@@ -11,7 +11,7 @@ theme_theLastAirbender(text.font = NULL, title.font = NULL,
   subtitle.color = "grey20", text.color = NULL,
   axis.title.color = "grey20", axis.text.color = "grey20",
   legend.title.color = "grey20", legend.text.color = "grey20",
-  legend.position = "bottom")
+  legend.position = "bottom", ticks = FALSE)
 }
 \arguments{
 \item{text.font}{text font, Default: NULL}
@@ -49,6 +49,8 @@ theme_theLastAirbender(text.font = NULL, title.font = NULL,
 \item{legend.text.color}{legend text color, Default: "grey20"}
 
 \item{legend.position}{legend position, Default: "bottom"}
+
+\item{ticks}{add axis ticks, Default: FALSE}
 }
 \description{
 Avatar: The Last Airbender theme, Recommended font: "Slayer"

@@ -468,7 +468,8 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                   subtitle.size = 20,
                   text.size = 18,
                   legend.title.size = 14,
-                  legend.text.size = 12)
+                  legend.text.size = 12,
+                  ticks = TRUE)
 
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
@@ -530,7 +531,7 @@ mpg %>%
   labs(title = "On That Day, Mankind Received A Grim Reminder...",
        subtitle = "TITANS ARE MY TRIGGER",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
-    theme_simpsons()
+    theme_simpsons(ticks = TRUE)
 ```
 
 ### Hilda
@@ -545,18 +546,19 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.9) +
   scale_x_date(breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-  scale_fill_hildaNight() +
+  scale_fill_hildaDusk() +
   labs(title = "What's The Sitch, Wade?",
        subtitle = glue::glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
        caption = "Stoppable... What Are You Doing In My House??",
        x = "Year", y = "GDP per Capita") +
   theme_hilda(title.font = "Roboto Condensed",
-                  text.font = "Roboto Condensed",
-                  title.size = 24,
-                  subtitle.size = 20,
-                  text.size = 18,
-                  legend.title.size = 14,
-                  legend.text.size = 12)
+              text.font = "Roboto Condensed",
+              title.size = 24,
+              subtitle.size = 20,
+              text.size = 18,
+              legend.title.size = 14,
+              legend.text.size = 12,
+              ticks = TRUE)
 
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
@@ -564,17 +566,17 @@ airquality %>%
   geom_point(size = 3, stroke = 1.25, shape = 21) +
   labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
        caption = "No one likes them. Good day, sir.") + 
-  scale_fill_hildaNight() +
-  theme_hilda()
+  scale_fill_hildaDusk() +
+  theme_hilda(ticks = TRUE)
 
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
-  scale_fill_hildaNight() +
+  scale_fill_hildaDusk() +
   labs(title = "On That Day, Mankind Received A Grim Reminder...",
        subtitle = "TITANS ARE MY TRIGGER",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
-    theme_hilda()
+    theme_hilda(ticks = TRUE)
 ```
 
 

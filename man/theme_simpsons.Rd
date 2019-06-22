@@ -11,7 +11,8 @@ theme_simpsons(text.font = NULL, title.font = NULL,
   title.color = "#FFD235", subtitle.color = "#fee8c8",
   text.color = "#fee8c8", axis.title.color = "#fee8c8",
   axis.text.color = "#fee8c8", legend.title.color = "#ffffff",
-  legend.text.color = "#ffffff", legend.position = "bottom")
+  legend.text.color = "#ffffff", legend.position = "bottom",
+  ticks = FALSE)
 }
 \arguments{
 \item{text.font}{text font, Default: NULL}
@@ -49,6 +50,8 @@ theme_simpsons(text.font = NULL, title.font = NULL,
 \item{legend.text.color}{legend text color, Default: "#ffffff"}
 
 \item{legend.position}{legend position, Default: "bottom"}
+
+\item{ticks}{add axis ticks, Default: FALSE}
 }
 \description{
 The Simpsons theme, Recommended font: "Akbar"

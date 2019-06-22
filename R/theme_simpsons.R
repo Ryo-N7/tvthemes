@@ -19,6 +19,7 @@
 #' @param legend.title.color legend title color, Default: "#ffffff"
 #' @param legend.text.color legend text color, Default: "#ffffff"
 #' @param legend.position legend position, Default: "bottom"
+#' @param ticks add axis ticks, Default: FALSE
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -50,26 +51,37 @@ theme_simpsons <- function(
   axis.text.color = "#fee8c8",
   legend.title.color = "#ffffff",
   legend.text.color = "#ffffff",
-  legend.position = "bottom"){
+  legend.position = "bottom",
+  ticks = FALSE){
 
-  ggplot2::theme_minimal() +
-  theme(text = element_text(family = text.font, size = text.size, color = text.color),
-        plot.title = element_text(family = title.font, size = title.size, color = title.color),
-        plot.subtitle = element_text(family = title.font, size = subtitle.size, color = subtitle.color),
-        # axis options
-        axis.text = element_text(family = text.font, size = axis.text.size, color = axis.text.color),
-        axis.title = element_text(family = title.font, size = axis.title.size, color = axis.title.color),
-        axis.ticks = element_blank(),
-        # background/panel options
-        plot.background = element_rect(color = NA, fill = "#7199E1"),
-        panel.background = element_rect(color = NA, fill = "#7199E1"),
-        panel.grid.major = element_line(color = "#fee8c8"),
-        panel.grid.minor = element_line(color = "#fee8c8"),
-        # legend options
-        legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
-        legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
-        legend.position = legend.position,
-        legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
-        legend.background = element_rect(color = "black", fill = "#7199E1", linetype = "solid")
-        )
+  simpsons <- ggplot2::theme_minimal() +
+    theme(text = element_text(family = text.font, size = text.size, color = text.color),
+          plot.title = element_text(family = title.font, size = title.size, color = title.color),
+          plot.subtitle = element_text(family = title.font, size = subtitle.size, color = subtitle.color),
+          # axis options
+          axis.text = element_text(family = text.font, size = axis.text.size, color = axis.text.color),
+          axis.title = element_text(family = title.font, size = axis.title.size, color = axis.title.color),
+          # background/panel options
+          plot.background = element_rect(color = NA, fill = "#7199E1"),
+          panel.background = element_rect(color = NA, fill = "#7199E1"),
+          panel.grid.major = element_line(color = "#fee8c8"),
+          panel.grid.minor = element_line(color = "#fee8c8"),
+          # legend options
+          legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
+          legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
+          legend.position = legend.position,
+          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
+          legend.background = element_rect(color = "black", fill = "#7199E1", linetype = "solid")
+    )
+
+  if (ticks == FALSE) {
+    simpsons <- simpsons + theme(axis.ticks = element_blank(),
+                               axis.ticks.x = element_blank(),
+                               axis.ticks.y = element_blank())
+  } else {
+    simpsons <- simpsons + theme(axis.ticks = element_line(size = 0.15, color = "white"),
+                               axis.ticks.x = element_line(size = 0.15, color = "white"),
+                               axis.ticks.y = element_line(size = 0.15, color = "white"),
+                               axis.ticks.length = grid::unit(4, "pt"))
+  }
 }
