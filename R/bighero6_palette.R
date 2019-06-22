@@ -1,6 +1,6 @@
 bigHero6_palette <- c(
   "#ffff33",  ## gogo yellow #ffff1a #ffff19
-  "#F84527",  ## honeylemon/fredzilla orange
+  "#ffa500",  ## honeylemon/fredzilla orange #F84527  #ffa500  #ff8c00
   "#4F366F",  ## baymax/hiro darkpurple
   "#ff0000",  ## baymax red
   "#00fa9a",  ## wasabi green
