@@ -50,7 +50,7 @@ mpg %>%
   geom_histogram(aes(fill = class), 
                  col = "black", size = 0.1,
                  binwidth = 0.1) +
-  scale_fill_brooklyn99_dark() +
+  scale_fill_brooklyn99(palette = "Dark") +
   labs(title = "Do you know what it means to 'clap back', Raymond?",
        subtitle = glue::glue("BE- {emo::ji('clap')} -CAUSE {emo::ji('clap')} I {emo::ji('clap')} DO {emo::ji('clap')} !"),
        caption = "Pizza bagels? Pizza rolls? Pizza poppers? Pizzaritos? Pizza pockets?") +
@@ -168,16 +168,13 @@ mpg %>%
        caption = "Winter Is Coming...") +
   scale_y_continuous(expand = c(0,0)) +
   scale_x_continuous(expand = c(0,0)) +
-  scale_fill_stark() +
+  scale_fill_westeros(palette = "Stark") +
   theme_minimal() +
   theme(text = element_text(family = "Cinzel", size = 14)) -> stark
 
-colstully <- tully_pal()(5)
-
 ggplot(diamonds, aes(price, fill = cut)) +
   geom_histogram(binwidth = 500) +
-  scale_fill_manual(values = rev(colstully)) +
-  #scale_fill_tully() +
+  scale_fill_westeros(palette = "Tully", n = 5, reverse = TRUE) +
   labs(title = "I've seen wet shits I like better than Walder Frey.",
        subtitle = "Pardon my lord, my lady. I need to find a tree to piss on.",
        caption = "- The Blackfish") +
@@ -188,7 +185,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
 ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
   geom_point(aes(color = continent)) + 
   scale_x_log10() +
-  scale_color_targaryen() +
+  scale_color_westeros(palette = "Targaryen") +
   labs(title = "I am the blood of the dragon. I must be strong.",
        subtitle = "I must have fire in my eyes when I face them, not tears.",
        caption = "- Fire & Blood.") +
@@ -211,7 +208,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.8) +
   scale_x_date(breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-  scale_fill_tyrell() +
+  scale_fill_westeros(palette = "Tyrell") +
   labs(title = "All men are fools, if truth be told, but",
        subtitle = "the ones in motley are more amusing than ones with crowns.",
        caption = "- The Queen of Thorns") +
@@ -220,15 +217,12 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
         plot.title = element_text(family = "Cinzel", size = 16),
         plot.subtitle = element_text(family = "Cinzel", size = 12)) -> tyrell
 
-cols <- lannister_pal()(5)
-
 ggplot(diamonds, aes(price, fill = cut)) +
   geom_histogram(binwidth = 500) +
   labs(title = "You are done with whores.",
        subtitle = "The next one I find in your bed, I'll hang.",
        caption = "Rains of Castamere") +
-  scale_fill_manual(values = rev(cols)) +
-  #scale_fill_lannister() +
+  scale_fill_westeros(palette = "Lannister", n = 5, reverse = TRUE) +
   theme_minimal() +
   theme(text = element_text(family = "Cinzel", size = 14)) -> lannister
 
@@ -236,7 +230,7 @@ airquality %>%
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
   geom_line(size = 1.5) +
-  scale_color_greyjoy() +
+  scale_color_westeros(palette = "Greyjoy") +
   labs(title = "I am the storm, my lord.",
        subtitle = "The first storm, and the last.",
        caption = "- Euron 'The Crow's Eye' Greyjoy") +
@@ -251,13 +245,10 @@ tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ### Game of Thrones: Martell, Dayne, Manderly
 
 ```{r}
-cols <- manderly_pal()(7)
-
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_manual(values = rev(cols)) +
-  #scale_fill_manderly() +
+  scale_fill_westeros(palette = "Manderly", n = 7, reverse = TRUE) +
   labs(title = "The North remembers Lord Davos. The North remembers...",
        subtitle = "The mummer's farce is almost done, my son is coming home.",
        caption = "When treating with liars, even an honest man must lie.") +
@@ -323,7 +314,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_fireNation() +
+  scale_fill_avatarTLA(palette = "FireNation") +
   labs(title = "Flameo, Hotman!",
        subtitle = "Fire. Wang Fire. This is my wife, Sapphire.",
        x = "Lion Vultures Owned",
@@ -335,7 +326,7 @@ airquality %>%
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
   geom_line(size = 1.5) +
-  scale_color_airNomads() +
+  scale_color_avatarTLA(palette = "AirNomads") +
   labs(title = "Let's head to the Eastern Air Temple!",
        subtitle = "Appa, Yip Yip!") +
   theme_theLastAirbender(title.font = "Slayer",
@@ -345,7 +336,7 @@ airquality %>%
 ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
   geom_point(aes(color = continent)) + 
   scale_x_log10() +
-  scale_color_waterTribe() +
+  scale_color_avatarTLA(palette = "WaterTribe") +
   labs(title = "I am thinking maybe we could... do an activity together?",
        subtitle = "... Do an activity?",
        x = "GDP per Otter-Penguins",
@@ -358,7 +349,7 @@ ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_earthKingdom() +
+  scale_fill_avatarTLA(palette = "EarthKingdom") +
   labs(title = "There is no war in Ba Sing Se",
        subtitle = "(Welcome to Lake Laogai)") +
   theme_theLastAirbender(title.font = "Slayer",
@@ -546,7 +537,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.9) +
   scale_x_date(breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-  scale_fill_hildaDusk() +
+  scale_fill_hilda(palette = "Day") +
   labs(title = "What's The Sitch, Wade?",
        subtitle = glue::glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
        caption = "Stoppable... What Are You Doing In My House??",
@@ -566,33 +557,17 @@ airquality %>%
   geom_point(size = 3, stroke = 1.25, shape = 21) +
   labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
        caption = "No one likes them. Good day, sir.") + 
-  scale_fill_hildaDusk() +
+  scale_fill_hilda(palette = "Dusk", reverse = TRUE) +
   theme_hilda(ticks = TRUE)
-
-ggplot(faithfuld, 
-       aes(waiting, eruptions, fill = density)) +
-  geom_tile() +
-  scale_fill_hildaDay(discrete = FALSE) +
-  theme_hilda()
 
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
-  scale_fill_hildaDay(reverse = TRUE) +
+  scale_fill_hilda(palette = "Night", reverse = TRUE) +
   labs(title = "On That Day, Mankind Received A Grim Reminder...",
        subtitle = "TITANS ARE MY TRIGGER",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
     theme_hilda(ticks = TRUE)
-
-
-airquality %>% 
-  mutate(Month = as.factor(Month)) %>% 
-  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
-  geom_line(size = 1.5) +
-  scale_color_hildaDay(reverse = FALSE) +
-  labs(title = "Let's head to the Eastern Air Temple!",
-       subtitle = "Appa, Yip Yip!") +
-  theme_hilda() 
 ```
 
 

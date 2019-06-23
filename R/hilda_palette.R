@@ -1,6 +1,6 @@
 ## Hilda palettes
 
-hilda_palette = list(
+hilda_palette <- list(
   ## Hilda Day
   Day = c(
     "#F6E0D2",  ##
@@ -36,7 +36,6 @@ hilda_palette = list(
   )
 )
 
-
 #' @title Hilda palette
 #' @description Hilda palette
 #' @inheritDotParams ggplot2::discrete_scale
@@ -44,7 +43,7 @@ hilda_palette = list(
 #'  \code{\link[scales]{manual_pal}}
 #'  [ggplot2::scale_color_discrete]
 #'  [ggplot2::scale_fill_discrete]
-#' @rdname hildaDaypal
+#' @rdname hilda_pal
 #' @export
 #' @importFrom scales manual_pal
 
@@ -76,7 +75,7 @@ hilda_pal <- function(palette, n = n, type = c("continuous", "discrete"),
 }
 
 #' @title scale_color_hilda
-#' @rdname hildapal
+#' @rdname hilda_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -89,14 +88,14 @@ scale_color_hilda <- function(palette = "Day", n = n, type = c("continuous", "di
 }
 
 #' @title scale_colour_hilda
-#' @rdname hildapal
+#' @rdname hilda_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_hilda <- scale_color_hilda
 
 #' @title scale_fill_hilda
-#' @rdname hildapal
+#' @rdname hilda_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
@@ -105,151 +104,4 @@ scale_fill_hilda <- function(palette = "Day", n = n, type = c("continuous", "dis
   ggplot2::discrete_scale("fill", "hilda",
                           hilda_pal(palette = palette, n = n, type = type,
                                     reverse = reverse), ...)
-}
-
-
-
-
-
-
-
-
-#' @title Hilda palette
-#' @description Hilda palette
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @rdname hildaDuskpal
-#' @export
-#' @importFrom scales manual_pal
-
-hildaDusk_pal <- function(n = n, type = c("continuous", "discrete"),
-                          reverse = FALSE){
-  hildaDusk <- hildaDusk_palette
-
-  if (reverse == TRUE) {
-    hildaDusk <- rev(hildaDusk)
-  }
-
-  if (missing(n)) {
-    n <- length(hildaDusk)
-  }
-
-  type <- match.arg(type)
-
-  if (type == "discrete" && n > length(hildaDusk)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(hildaDusk)}!"))
-  }
-
-  hildaDusk <- switch(type,
-                     continuous = grDevices::colorRampPalette(hildaDusk)(n),
-                     discrete = hildaDusk[1:n])
-
-  hildaDusk <- scales::manual_pal(hildaDusk)
-
-  return(hildaDusk)
-}
-
-#' @title scale_color_hildaDusk
-#' @rdname hildaDuskpal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_hildaDusk <- function(n = n, type = c("continuous", "discrete"),
-                                  reverse = FALSE, ...){
-  ggplot2::discrete_scale("color", "hilda",
-                          hildaDay_pal(n = n, type = type,
-                                       reverse = reverse), ...)
-}
-
-#' @title scale_colour_hildaDusk
-#' @rdname hildaDuskpal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_hildaDusk <- scale_color_hildaDusk
-
-#' @title scale_fill_hildaDusk
-#' @rdname hildaDuskpal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_hildaDusk <- function(n = n, type = c("continuous", "discrete"),
-                                 reverse = FALSE, ...){
-  ggplot2::discrete_scale("fill", "hilda",
-                          hildaDay_pal(n = n, type = type,
-                                       reverse = reverse), ...)
-}
-
-
-
-#' @title Hilda palette
-#' @description Hilda palette
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @rdname hildaNightpal
-#' @export
-#' @importFrom scales manual_pal
-
-hildaNight_pal <- function(n = n, type = c("continuous", "discrete"),
-                           reverse = FALSE){
-  hildaNight <- hildaNight_palette
-
-  if (reverse == TRUE) {
-    hildaNight <- rev(hildaNight)
-  }
-
-  if (missing(n)) {
-    n <- length(hildaNight)
-  }
-
-  type <- match.arg(type)
-
-  if (type == "discrete" && n > length(hildaNight)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(hildaNight)}!"))
-  }
-
-  hildaNight <- switch(type,
-                      continuous = grDevices::colorRampPalette(hildaNight)(n),
-                      discrete = hildaNight[1:n])
-
-  hildaNight <- scales::manual_pal(hildaNight)
-
-  return(hildaNight)
-}
-
-#' @title scale_color_hildaNight
-#' @rdname hildaNightpal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_hildaNight <- function(n = n, type = c("continuous", "discrete"),
-                                   reverse = FALSE, ...){
-  ggplot2::discrete_scale("color", "hilda",
-                          hildaDay_pal(n = n, type = type,
-                                       reverse = reverse), ...)
-}
-
-#' @title scale_colour_hildaNight
-#' @rdname hildaNightpal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_hildaNight <- scale_color_hildaNight
-
-#' @title scale_fill_hilda
-#' @rdname hildaNightpal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_hildaNight <- function(n = n, type = c("continuous", "discrete"),
-                                  reverse = FALSE, ...){
-  ggplot2::discrete_scale("fill", "hilda",
-                          hildaDay_pal(n = n, type = type,
-                                       reverse = reverse), ...)
 }

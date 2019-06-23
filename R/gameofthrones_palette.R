@@ -1,319 +1,145 @@
 ## Game of Thrones ----
 
-## House targaryen ----
-
-stark_palette <- c(
-  "#cadde1", ## light-skyblue
-  "#7B906F", ## grey-green
-  "#174D79", ## light teal blue
-  "#fffafa", ## snow white
-  "#898989", ## dark-grey
-  "#D4CDB1", ## light-grey-tan
-  "#708090", ## slate grey
-  "#120976", ## purple blue
-  "#000000"  ## black
+westeros_palette <- list(
+  ## House Stark ----
+  Stark = c(
+    "#cadde1", ## light-skyblue
+    "#7B906F", ## grey-green
+    "#174D79", ## light teal blue
+    "#fffafa", ## snow white
+    "#898989", ## dark-grey
+    "#D4CDB1", ## light-grey-tan
+    "#708090", ## slate grey
+    "#120976", ## purple blue
+    "#000000"  ## black
+  ),
+  ## House Lannister ----
+  Lannister = c(
+    "#89080A", ## maroon
+    "#C5AA73", ## grey
+    "#FEDF25", ## gold
+    "#C24841", ## orange
+    "#8B5B45", ## brown
+    "#000000"  ## black
+  ),
+  ## House Tyrell ----
+  Tyrell = c(
+    "#068105", ## darkgreen
+    "#F7DC27", ## yellow
+    "#808000", ## olive
+    "#AB681B", ## brown
+    "#F9FE76", ## lightgrass-green
+    "#8DA080", ## grey-green
+    "#717497", ## blue-grey
+    "#98FB98", ## pale green
+    "#3CB371"  ## medium sea green
+  ),
+  ## House Targaryen ----
+  Targaryen = c(
+    "#AC1F25", ## blood-red
+    "#272727", ## lightblack
+    "#ff9933", ## saffron
+    "#828788", ## metallic grey
+    "#96804b"  ## light-brown
+  ),
+  ## House Tully ----
+  Tully = c(
+    "#212250", ## darkblue
+    "#AE432F", ## darkorange
+    "#E4EDCA", ## green-white
+    "#8B5B45", ## brown
+    "#4682B4", ## steelblue
+    "#000000"  ## black
+  ),
+  ## House Greyjoy ----
+  Greyjoy = c(
+    "#000000", ## black
+    "#708090", ## slate gray
+    "#D4CDB1", ## light-grey-tan
+    "#DCDCDC", ## gainsborough
+    "#F7DC27", ## yellow
+    "#808080"  ## gray
+  ),
+  ## House Manderly ----
+  Manderly = c(
+    "#40e0d0", ## manderly turqouise     #32BB9D
+    "#808080", ## gray
+    "#00ff00", ## light-sea green        #0FBB11
+    "#282828", ## metallic black
+    "#015202", ## dark seaweed green
+    "#195953", ## dark turqoise
+    "#FFFFFF"  ## white
+  )
 )
 
-#' @title House Stark palette
-#' @description House Stark palette
+#' @title Great Houses of Westeros palette
+#' @description Houses Stark, Lannister, Tyrell, Targaryen,
+#' Tully, Greyjoy, Manderly
 #' @inheritDotParams ggplot2::discrete_scale
 #' @seealso
 #'  \code{\link[scales]{manual_pal}}
 #'  [ggplot2::scale_color_discrete]
 #'  [ggplot2::scale_fill_discrete]
-#' @rdname stark_pal
+#' @rdname westeros_pal
 #' @export
 #' @importFrom scales manual_pal
 
-stark_pal <- function() {
-  scales::manual_pal(stark_palette)
+westeros_pal <- function(palette = "Stark", n = n, type = c("continuous", "discrete"),
+                         reverse = FALSE) {
+  westeros <- westeros_palette[[palette]]
+
+  if (reverse == TRUE) {
+    westeros <- rev(westeros)
+  }
+
+  if (missing(n)) {
+    n <- length(westeros)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(westeros)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(westeros)}!"))
+  }
+
+  westeros <- switch(type,
+                  continuous = grDevices::colorRampPalette(westeros)(n),
+                  discrete = westeros[1:n])
+
+  westeros <- scales::manual_pal(westeros)
+
+  return(westeros)
 }
 
-#' @title scale_color_stark
-#' @rdname stark_pal
+#' @title scale_color_westeros
+#' @rdname westeros_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_stark <- function(...){
-  ggplot2::discrete_scale("color", "stark", stark_pal(), ...)
+scale_color_westeros <- function(palette = "Stark", n = n, type = c("continuous", "discrete"),
+                                 reverse = FALSE, ...){
+  ggplot2::discrete_scale("color", "westeros",
+                          westeros_pal(palette = palette, n = n, type = type,
+                                    reverse = reverse), ...)
 }
 
-#' @title scale_colour_stark
-#' @rdname stark_pal
+#' @title scale_colour_westeros
+#' @rdname westeros_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_colour_stark <- scale_color_stark
+scale_colour_westeros <- scale_color_westeros
 
-#' @title scale_fill_stark
-#' @rdname stark_pal
+#' @title scale_fill_westeros
+#' @rdname westeros_pal
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_stark <- function(...){
-  ggplot2::discrete_scale("fill", "stark", stark_pal(), ...)
-}
-
-
-## House Lannister ----
-
-lannister_palette <- c(
-  "#89080A", ## maroon
-  "#C5AA73", ## grey
-  "#FEDF25", ## gold
-  "#C24841", ## orange
-  "#8B5B45", ## brown
-  "#000000"  ## black
-)
-
-#' @title House Lannister palette
-#' @description House Lannister palette
-#' @rdname lannister_pal
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @export
-#' @importFrom scales manual_pal
-
-lannister_pal <- function() {
-  scales::manual_pal(lannister_palette)
-}
-
-#' @title scale_color_lannister
-#' @rdname lannister_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_lannister <- function(...){
-  ggplot2::discrete_scale("color", "lannister", lannister_pal(), ...)
-}
-
-#' @title scale_colour_lannister
-#' @rdname lannister_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_lannister <- scale_color_lannister
-
-#' @title scale_fill_lannister
-#' @rdname lannister_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_lannister <- function(...){
-  ggplot2::discrete_scale("fill", "lannister", lannister_pal(), ...)
-}
-
-## House Tyrell ----
-
-tyrell_palette <- c(
-  "#068105", ## darkgreen
-  "#F7DC27", ## yellow
-  "#808000", ## olive
-  "#AB681B", ## brown
-  "#F9FE76", ## lightgrass-green
-  "#8DA080", ## grey-green
-  "#717497", ## blue-grey
-  "#98FB98", ## pale green
-  "#3CB371"  ## medium sea green
-)
-
-#' @title House Tyrell palette
-#' @description House Tyrell palette
-#' @rdname tyrell_pal
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @export
-#' @importFrom scales manual_pal
-
-tyrell_pal <- function() {
-  scales::manual_pal(tyrell_palette)
-}
-
-#' @title scale_color_tyrell
-#' @rdname tyrell_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_tyrell <- function(...){
-  ggplot2::discrete_scale("color", "tyrell", tyrell_pal(), ...)
-}
-
-#' @title scale_colour_tyrell
-#' @rdname tyrell_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_tyrell <- scale_color_tyrell
-
-#' @title scale_fill_tyrell
-#' @rdname tyrell_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_tyrell <- function(...){
-  ggplot2::discrete_scale("fill", "tyrell", tyrell_pal(), ...)
-}
-
-## House Targaryen ----
-
-targaryen_palette <- c(
-  "#AC1F25", ## blood-red
-  "#272727", ## lightblack
-  "#ff9933", ## saffron
-  "#828788", ## metallic grey
-  "#96804b"  ## light-brown
-)
-
-#' @title House Targaryen palette
-#' @description House Targaryen palette
-#' @rdname targaryen_pal
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @export
-#' @importFrom scales manual_pal
-
-targaryen_pal <- function() {
-  scales::manual_pal(targaryen_palette)
-}
-
-#' @title scale_color_targaryen
-#' @rdname targaryen_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_targaryen <- function(...){
-  ggplot2::discrete_scale("color", "targaryen", targaryen_pal(), ...)
-}
-
-#' @title scale_colour_targaryen
-#' @rdname targaryen_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_targaryen <- scale_color_targaryen
-
-#' @title scale_fill_targaryen
-#' @rdname targaryen_pal
-#' @rdname scale_fill_targaryen
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_targaryen <- function(...){
-  ggplot2::discrete_scale("fill", "targaryen", targaryen_pal(), ...)
-}
-
-## House Tully ----
-
-tully_palette <- c(
-  "#212250", ## darkblue
-  "#AE432F", ## darkorange
-  "#E4EDCA", ## green-white
-  "#8B5B45", ## brown
-  "#4682B4", ## steelblue
-  "#000000"  ## black
-)
-
-#' @title House Tully palette
-#' @description House Tully palette
-#' @rdname tully_pal
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @export
-#' @importFrom scales manual_pal
-
-tully_pal <- function() {
-  scales::manual_pal(tully_palette)
-}
-
-#' @title scale_color_tully
-#' @rdname tully_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_tully <- function(...){
-  ggplot2::discrete_scale("color", "tully", tully_pal(), ...)
-}
-
-#' @title scale_colour_tully
-#' @rdname tully_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_tully <- scale_color_tully
-
-#' @title scale_fill_tully
-#' @rdname tully_pal
-#' @rdname scale_fill_tully
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_tully <- function(...){
-  ggplot2::discrete_scale("fill", "tully", tully_pal(), ...)
-}
-
-## House Greyjoy ----
-
-greyjoy_palette <- c(
-  "#000000", ## black
-  "#708090", ## slate gray
-  "#D4CDB1", ## light-grey-tan
-  "#DCDCDC", ## gainsborough
-  "#F7DC27", ## yellow
-  "#808080"  ## gray
-)
-
-# "#828788"  ## metallic grey
-
-#' @title House Greyjoy palette
-#' @description House Greyjoy palette
-#' @rdname greyjoy_pal
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @export
-#' @importFrom scales manual_pal
-
-greyjoy_pal <- function() {
-  scales::manual_pal(greyjoy_palette)
-}
-
-#' @title scale_color_greyjoy
-#' @rdname greyjoy_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_greyjoy <- function(...){
-  ggplot2::discrete_scale("color", "greyjoy", greyjoy_pal(), ...)
-}
-
-#' @title scale_colour_greyjoy
-#' @rdname greyjoy_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_greyjoy <- scale_color_greyjoy
-
-#' @title scale_fill_greyjoy
-#' @rdname greyjoy_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_greyjoy <- function(...){
-  ggplot2::discrete_scale("fill", "greyjoy", greyjoy_pal(), ...)
+scale_fill_westeros <- function(palette = "Day", n = n, type = c("continuous", "discrete"),
+                                reverse = FALSE, ...){
+  ggplot2::discrete_scale("fill", "westeros",
+                          westeros_pal(palette = palette, n = n, type = type,
+                                    reverse = reverse), ...)
 }
 
 # ## House Martell ----
@@ -355,58 +181,6 @@ scale_fill_greyjoy <- function(...){
 # scale_fill_baratheon <- function(...){
 #   ggplot2::discrete_scale("fill", "baratheon", baratheon_pal(), ...)
 # }
-
-## House Manderly ----
-
-manderly_palette <- c(
-  "#40e0d0", ## manderly turqouise     #32BB9D
-  "#808080", ## gray
-  "#00ff00", ## light-sea green        #0FBB11
-  "#282828", ## metallic black
-  "#015202", ## dark seaweed green
-  "#195953", ## dark turqoise
-  "#FFFFFF"  ## white
-)
-
-#' @title House Manderly palette
-#' @description House Manderly palette
-#' @rdname manderly_pal
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @export
-#' @importFrom scales manual_pal
-
-manderly_pal <- function() {
-  scales::manual_pal(manderly_palette)
-}
-
-#' @title scale_color_manderly
-#' @rdname manderly_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_manderly <- function(...){
-  ggplot2::discrete_scale("color", "manderly", manderly_pal(), ...)
-}
-
-#' @title scale_colour_manderly
-#' @rdname manderly_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_manderly <- scale_color_manderly
-
-#' @title scale_fill_manderly
-#' @rdname manderly_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_manderly <- function(...){
-  ggplot2::discrete_scale("fill", "manderly", manderly_pal(), ...)
-}
 
 ## House Dayne ----
 

@@ -7,13 +7,17 @@
 \alias{scale_fill_attackOnTitan}
 \title{Attack On Titan palette}
 \usage{
-attackOnTitan_pal()
+attackOnTitan_pal(n = n, type = c("continuous", "discrete"),
+  reverse = FALSE)
 
-scale_color_attackOnTitan(...)
+scale_color_attackOnTitan(n = n, type = c("continuous", "discrete"),
+  reverse = FALSE, ...)
 
-scale_colour_attackOnTitan(...)
+scale_colour_attackOnTitan(n = n, type = c("continuous", "discrete"),
+  reverse = FALSE, ...)
 
-scale_fill_attackOnTitan(...)
+scale_fill_attackOnTitan(n = n, type = c("continuous", "discrete"),
+  reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}

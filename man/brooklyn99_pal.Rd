@@ -7,13 +7,17 @@
 \alias{scale_fill_brooklyn99}
 \title{Brooklyn Nine Nine Color and Fill Scales}
 \usage{
-brooklyn99_pal()
+brooklyn99_pal(palette = "Regular", n = n, type = c("continuous",
+  "discrete"), reverse = FALSE)
 
-scale_color_brooklyn99(...)
+scale_color_brooklyn99(palette = "Regular", n = n,
+  type = c("continuous", "discrete"), reverse = FALSE, ...)
 
-scale_colour_brooklyn99(...)
+scale_colour_brooklyn99(palette = "Regular", n = n,
+  type = c("continuous", "discrete"), reverse = FALSE, ...)
 
-scale_fill_brooklyn99(...)
+scale_fill_brooklyn99(palette = "Regular", n = n,
+  type = c("continuous", "discrete"), reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
