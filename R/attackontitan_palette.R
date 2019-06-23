@@ -20,8 +20,31 @@ attackOnTitan_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-attackOnTitan_pal <- function(){
-  scales::manual_pal(attackOnTitan_palette)
+attackOnTitan_pal <- function(n = n, type = c("continuous", "discrete"),
+                              reverse = FALSE){
+  attackOnTitan <- attackOnTitan_palette
+
+  if (reverse == TRUE) {
+    attackOnTitan <- rev(attackOnTitan)
+  }
+
+  if (missing(n)) {
+    n <- length(attackOnTitan)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(attackOnTitan)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(attackOnTitan)}!"))
+  }
+
+  attackOnTitan <- switch(type,
+                     continuous = grDevices::colorRampPalette(attackOnTitan)(n),
+                     discrete = attackOnTitan[1:n])
+
+  attackOnTitan <- scales::manual_pal(attackOnTitan)
+
+  return(attackOnTitan)
 }
 
 #' @title scale_color_attackOnTitan
@@ -29,8 +52,11 @@ attackOnTitan_pal <- function(){
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_attackOnTitan <- function(...){
-  ggplot2::discrete_scale("color", "attackOnTitan", attackOnTitan_pal(), ...)
+scale_color_attackOnTitan <- function(n = n, type = c("continuous", "discrete"),
+                                      reverse = FALSE, ...){
+  ggplot2::discrete_scale("color", "attackOnTitan",
+                          attackOnTitan_pal(n = n, type = type,
+                                       reverse = reverse), ...)
 }
 
 #' @title scale_colour_attackOnTitan
@@ -45,6 +71,9 @@ scale_colour_attackOnTitan <- scale_color_attackOnTitan
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_attackOnTitan <- function(...){
-  ggplot2::discrete_scale("fill", "attackOnTitan", attackOnTitan_pal(), ...)
+scale_fill_attackOnTitan <- function(n = n, type = c("continuous", "discrete"),
+                                     reverse = FALSE, ...){
+  ggplot2::discrete_scale("fill", "attackOnTitan",
+                          attackOnTitan_pal(n = n, type = type,
+                                       reverse = reverse), ...)
 }

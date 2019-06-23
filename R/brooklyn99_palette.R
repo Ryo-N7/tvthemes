@@ -24,8 +24,31 @@ brooklyn99_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-brooklyn99_pal <- function(){
-  scales::manual_pal(brooklyn99_palette)
+brooklyn99_pal <- function(n = n, type = c("continuous", "discrete"),
+                           reverse = FALSE){
+  brooklyn99 <- brooklyn99_palette
+
+  if (reverse == TRUE) {
+    brooklyn99 <- rev(brooklyn99)
+  }
+
+  if (missing(n)) {
+    n <- length(brooklyn99)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(brooklyn99)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(brooklyn99)}!"))
+  }
+
+  brooklyn99 <- switch(type,
+                     continuous = grDevices::colorRampPalette(brooklyn99)(n),
+                     discrete = brooklyn99[1:n])
+
+  brooklyn99 <- scales::manual_pal(brooklyn99)
+
+  return(brooklyn99)
 }
 
 #' @title scale_color_brooklyn99
@@ -33,8 +56,11 @@ brooklyn99_pal <- function(){
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_brooklyn99 <- function(...){
-  ggplot2::discrete_scale("color", "brooklyn99", brooklyn99_pal(), ...)
+scale_color_brooklyn99 <- function(n = n, type = c("continuous", "discrete"),
+                                   reverse = FALSE, ...){
+  ggplot2::discrete_scale("color", "brooklyn99",
+                          brooklyn99_pal(n = n, type = type,
+                                       reverse = reverse), ...)
 }
 
 #' @title scale_colour_brooklyn99
@@ -49,8 +75,11 @@ scale_colour_brooklyn99 <- scale_color_brooklyn99
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_brooklyn99 <- function(...){
-  ggplot2::discrete_scale("fill", "brooklyn99", brooklyn99_pal(), ...)
+scale_fill_brooklyn99 <- function(n = n, type = c("continuous", "discrete"),
+                                  reverse = FALSE, ...){
+  ggplot2::discrete_scale("fill", "brooklyn99",
+                          brooklyn99_pal(n = n, type = type,
+                                       reverse = reverse), ...)
 }
 
 ## B99 dark palette ----
@@ -78,8 +107,31 @@ brooklyn99_dark_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-brooklyn99_dark_pal <- function(){
-  scales::manual_pal(brooklyn99_dark_palette)
+brooklyn99_dark_pal <- function(n = n, type = c("continuous", "discrete"),
+                                reverse = FALSE){
+  brooklyn99_dark <- brooklyn99_dark_palette
+
+  if (reverse == TRUE) {
+    brooklyn99_dark <- rev(brooklyn99_dark)
+  }
+
+  if (missing(n)) {
+    n <- length(brooklyn99_dark)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(brooklyn99_dark)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(brooklyn99_dark)}!"))
+  }
+
+  brooklyn99_dark <- switch(type,
+                       continuous = grDevices::colorRampPalette(brooklyn99_dark)(n),
+                       discrete = brooklyn99_dark[1:n])
+
+  brooklyn99_dark <- scales::manual_pal(brooklyn99_dark)
+
+  return(brooklyn99_dark)
 }
 
 #' @title scale_color_brooklyn99_dark
@@ -87,8 +139,11 @@ brooklyn99_dark_pal <- function(){
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_brooklyn99_dark <- function(...){
-  ggplot2::discrete_scale("color", "brooklyn99_dark", brooklyn99_dark_pal(), ...)
+scale_color_brooklyn99_dark <- function(n = n, type = c("continuous", "discrete"),
+                                        reverse = FALSE, ...){
+  ggplot2::discrete_scale("color", "brooklyn99_dark",
+                          brooklyn99_dark_pal(n = n, type = type,
+                                         reverse = reverse), ...)
 }
 
 #' @title scale_colour_brooklyn99_dark
@@ -103,7 +158,10 @@ scale_colour_brooklyn99_dark <- scale_color_brooklyn99_dark
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_brooklyn99_dark <- function(...){
-  ggplot2::discrete_scale("fill", "brooklyn99_dark", brooklyn99_dark_pal(), ...)
+scale_fill_brooklyn99_dark <- function(n = n, type = c("continuous", "discrete"),
+                                       reverse = FALSE, ...){
+  ggplot2::discrete_scale("fill", "brooklyn99_dark",
+                          brooklyn99_dark_pal(n = n, type = type,
+                                         reverse = reverse), ...)
 }
 

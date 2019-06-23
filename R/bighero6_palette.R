@@ -20,8 +20,31 @@ bigHero6_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-bigHero6_pal <- function(){
-  scales::manual_pal(bigHero6_palette)
+bigHero6_pal <- function(n = n, type = c("continuous", "discrete"),
+                         reverse = FALSE){
+  bigHero6 <- bigHero6_palette
+
+  if (reverse == TRUE) {
+    bigHero6 <- rev(bigHero6)
+  }
+
+  if (missing(n)) {
+    n <- length(bigHero6)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(bigHero6)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(bigHero6)}!"))
+  }
+
+  bigHero6 <- switch(type,
+                     continuous = grDevices::colorRampPalette(bigHero6)(n),
+                     discrete = bigHero6[1:n])
+
+  bigHero6 <- scales::manual_pal(bigHero6)
+
+  return(bigHero6)
 }
 
 #' @title scale_color_bigHero6
@@ -29,8 +52,11 @@ bigHero6_pal <- function(){
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_bigHero6 <- function(...){
-  ggplot2::discrete_scale("color", "bigHero6", bigHero6_pal(), ...)
+scale_color_bigHero6 <- function(n = n, type = c("continuous", "discrete"),
+                                 reverse = FALSE, ...){
+  ggplot2::discrete_scale("color", "bigHero6",
+                          bigHero6_pal(n = n, type = type,
+                                       reverse = reverse), ...)
 }
 
 #' @title scale_colour_bigHero6
@@ -45,6 +71,9 @@ scale_colour_bigHero6 <- scale_color_bigHero6
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_bigHero6 <- function(...){
-  ggplot2::discrete_scale("fill", "bigHero6", bigHero6_pal(), ...)
+scale_fill_bigHero6 <- function(n = n, type = c("continuous", "discrete"),
+                                reverse = FALSE, ...){
+  ggplot2::discrete_scale("fill", "bigHero6",
+                          bigHero6_pal(n = n, type = type,
+                                       reverse = reverse), ...)
 }

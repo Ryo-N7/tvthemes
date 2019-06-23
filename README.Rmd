@@ -405,7 +405,7 @@ plot_grid(parksandrec, parksandreclight, ncol = 2)
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
-  scale_fill_attackOnTitan() +
+  scale_fill_attackOnTitan(reverse = FALSE) +
   labs(title = "On That Day, Mankind Received A Grim Reminder...",
        subtitle = "TITANS ARE MY TRIGGER",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
@@ -527,7 +527,7 @@ airquality %>%
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
-  scale_fill_bigHero6() +
+  scale_fill_bigHero6(reverse = TRUE) +
   labs(title = "On That Day, Mankind Received A Grim Reminder...",
        subtitle = "TITANS ARE MY TRIGGER",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
@@ -569,14 +569,30 @@ airquality %>%
   scale_fill_hildaDusk() +
   theme_hilda(ticks = TRUE)
 
+ggplot(faithfuld, 
+       aes(waiting, eruptions, fill = density)) +
+  geom_tile() +
+  scale_fill_hildaDay(discrete = FALSE) +
+  theme_hilda()
+
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
-  scale_fill_hildaDusk() +
+  scale_fill_hildaDay(reverse = TRUE) +
   labs(title = "On That Day, Mankind Received A Grim Reminder...",
        subtitle = "TITANS ARE MY TRIGGER",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
     theme_hilda(ticks = TRUE)
+
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  scale_color_hildaDay(reverse = FALSE) +
+  labs(title = "Let's head to the Eastern Air Temple!",
+       subtitle = "Appa, Yip Yip!") +
+  theme_hilda() 
 ```
 
 
