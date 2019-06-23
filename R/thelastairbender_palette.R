@@ -60,7 +60,7 @@ theLastAirbender_palette <- list(
 
 avatarTLA_pal <- function(palette = "FireNation", n = n, type = c("continuous", "discrete"),
                           reverse = FALSE){
-  avatarTLA <- avatarTLA_palette[[palette]]
+  avatarTLA <- theLastAirbender_palette[[palette]]
 
   if (reverse == TRUE) {
     avatarTLA <- rev(avatarTLA)
@@ -93,7 +93,7 @@ avatarTLA_pal <- function(palette = "FireNation", n = n, type = c("continuous", 
 scale_color_avatarTLA <- function(palette = "FireNation", n = n, type = c("continuous", "discrete"),
                                   reverse = FALSE, ...){
   ggplot2::discrete_scale("color", "avatarTLA",
-                          hilda_pal(palette = palette, n = n, type = type,
+                          avatarTLA_pal(palette = palette, n = n, type = type,
                                     reverse = reverse), ...)
 }
 
@@ -112,7 +112,7 @@ scale_colour_avatarTLA <- scale_color_avatarTLA
 scale_fill_avatarTLA <- function(palette = "FireNation", n = n, type = c("continuous", "discrete"),
                                  reverse = FALSE, ...){
   ggplot2::discrete_scale("fill", "avatarTLA",
-                          hilda_pal(palette = palette, n = n, type = type,
+                          avatarTLA_pal(palette = palette, n = n, type = type,
                                     reverse = reverse), ...)
 }
 
