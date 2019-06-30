@@ -7,13 +7,13 @@
 \alias{scale_fill_kimPossible}
 \title{Kim Possible palette}
 \usage{
-kimPossible_pal()
+kimPossible_pal(n, type = c("discrete", "continuous"), reverse = FALSE)
 
-scale_color_kimPossible(...)
+scale_color_kimPossible(n, type = "discrete", reverse = FALSE, ...)
 
-scale_colour_kimPossible(...)
+scale_colour_kimPossible(n, type = "discrete", reverse = FALSE, ...)
 
-scale_fill_kimPossible(...)
+scale_fill_kimPossible(n, type = "discrete", reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}

@@ -20,7 +20,7 @@ bigHero6_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-bigHero6_pal <- function(n = n, type = c("continuous", "discrete"),
+bigHero6_pal <- function(n, type = c("discrete", "continuous"),
                          reverse = FALSE){
   bigHero6 <- bigHero6_palette
 
@@ -52,11 +52,16 @@ bigHero6_pal <- function(n = n, type = c("continuous", "discrete"),
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_bigHero6 <- function(n = n, type = c("continuous", "discrete"),
+scale_color_bigHero6 <- function(n, type = "discrete",
                                  reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("color", "bigHero6",
                           bigHero6_pal(n = n, type = type,
                                        reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_color_gradientn(colors = bigHero6_pal(n = n, type = type,
+                                                      reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_bigHero6
@@ -71,9 +76,14 @@ scale_colour_bigHero6 <- scale_color_bigHero6
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_bigHero6 <- function(n = n, type = c("continuous", "discrete"),
+scale_fill_bigHero6 <- function(n, type = "discrete",
                                 reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("fill", "bigHero6",
                           bigHero6_pal(n = n, type = type,
                                        reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_fill_gradientn(colors = bigHero6_pal(n = n, type = type,
+                                                         reverse = reverse)(8))
+  }
 }

@@ -29,8 +29,31 @@ rickAndMorty_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-rickAndMorty_pal <- function(){
-  scales::manual_pal(rickAndMorty_palette)
+rickAndMorty_pal <- function(n, type = c("discrete", "continuous"),
+                             reverse = FALSE){
+  rickAndMorty <- rickAndMorty_palette
+
+  if (reverse == TRUE) {
+    rickAndMorty <- rev(rickAndMorty)
+  }
+
+  if (missing(n)) {
+    n <- length(rickAndMorty)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(rickAndMorty)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(rickAndMorty)}!"))
+  }
+
+  rickAndMorty <- switch(type,
+                     continuous = grDevices::colorRampPalette(rickAndMorty)(n),
+                     discrete = rickAndMorty[1:n])
+
+  rickAndMorty <- scales::manual_pal(rickAndMorty)
+
+  return(rickAndMorty)
 }
 
 #' @title scale_color_rickAndMorty
@@ -38,8 +61,14 @@ rickAndMorty_pal <- function(){
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_rickAndMorty <- function(...){
+scale_color_rickAndMorty <- function(n, type = "discrete",
+                                     reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("color", "rickAndMorty", rickAndMorty_pal(), ...)
+  } else { ## needs work...
+    ggplot2::scale_color_gradientn(colors = rickAndMorty_pal(n = n, type = type,
+                                                         reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_rickAndMorty
@@ -54,6 +83,12 @@ scale_colour_rickAndMorty <- scale_color_rickAndMorty
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_rickAndMorty <- function(...){
+scale_fill_rickAndMorty <- function(n, type = "discrete",
+                                    reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("fill", "rickAndMorty", rickAndMorty_pal(), ...)
+  } else { ## needs work...
+    ggplot2::scale_fill_gradientn(colors = rickAndMorty_pal(n = n, type = type,
+                                                             reverse = reverse)(8))
+  }
 }

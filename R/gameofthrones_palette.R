@@ -84,7 +84,7 @@ westeros_palette <- list(
 #' @export
 #' @importFrom scales manual_pal
 
-westeros_pal <- function(palette = "Stark", n = n, type = c("continuous", "discrete"),
+westeros_pal <- function(palette = "Stark", n, type = c("discrete", "continuous"),
                          reverse = FALSE) {
   westeros <- westeros_palette[[palette]]
 
@@ -116,11 +116,16 @@ westeros_pal <- function(palette = "Stark", n = n, type = c("continuous", "discr
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_westeros <- function(palette = "Stark", n = n, type = c("continuous", "discrete"),
+scale_color_westeros <- function(palette = "Stark", n, type = "discrete",
                                  reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("color", "westeros",
                           westeros_pal(palette = palette, n = n, type = type,
                                     reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_color_gradientn(colors = westeros_pal(palette = palette, n = n, type = type,
+                                                      reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_westeros
@@ -135,11 +140,16 @@ scale_colour_westeros <- scale_color_westeros
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_westeros <- function(palette = "Day", n = n, type = c("continuous", "discrete"),
+scale_fill_westeros <- function(palette = "Stark", n, type = "discrete",
                                 reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("fill", "westeros",
                           westeros_pal(palette = palette, n = n, type = type,
                                     reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_fill_gradientn(colors = westeros_pal(palette = palette, n = n, type = type,
+                                                         reverse = reverse)(8))
+  }
 }
 
 # ## House Martell ----

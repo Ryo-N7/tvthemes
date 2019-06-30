@@ -7,17 +7,13 @@
 \alias{scale_fill_bigHero6}
 \title{Big Hero 6 palette}
 \usage{
-bigHero6_pal(n = n, type = c("continuous", "discrete"),
-  reverse = FALSE)
+bigHero6_pal(n, type = c("discrete", "continuous"), reverse = FALSE)
 
-scale_color_bigHero6(n = n, type = c("continuous", "discrete"),
-  reverse = FALSE, ...)
+scale_color_bigHero6(n, type = "discrete", reverse = FALSE, ...)
 
-scale_colour_bigHero6(n = n, type = c("continuous", "discrete"),
-  reverse = FALSE, ...)
+scale_colour_bigHero6(n, type = "discrete", reverse = FALSE, ...)
 
-scale_fill_bigHero6(n = n, type = c("continuous", "discrete"),
-  reverse = FALSE, ...)
+scale_fill_bigHero6(n, type = "discrete", reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}

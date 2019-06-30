@@ -40,7 +40,7 @@ brooklyn99_palette <- list(
 #' @export
 #' @importFrom scales manual_pal
 
-brooklyn99_pal <- function(palette = "Regular", n = n, type = c("continuous", "discrete"),
+brooklyn99_pal <- function(palette = "Regular", n = n, type = c("discrete", "continuous"),
                            reverse = FALSE){
   brooklyn99 <- brooklyn99_palette[[palette]]
 
@@ -72,11 +72,16 @@ brooklyn99_pal <- function(palette = "Regular", n = n, type = c("continuous", "d
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_brooklyn99 <- function(palette = "Regular", n = n, type = c("continuous", "discrete"),
+scale_color_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete",
                                    reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("color", "brooklyn99",
                           brooklyn99_pal(palette = palette, n = n, type = type,
                                        reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_color_gradientn(colors = brooklyn99_pal(palette = palette, n = n, type = type,
+                                                      reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_brooklyn99
@@ -91,9 +96,14 @@ scale_colour_brooklyn99 <- scale_color_brooklyn99
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_brooklyn99 <- function(palette = "Regular", n = n, type = c("continuous", "discrete"),
+scale_fill_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete",
                                   reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("fill", "brooklyn99",
                           brooklyn99_pal(palette = palette, n = n, type = type,
                                        reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_fill_gradientn(colors = brooklyn99_pal(palette = palette, n = n, type = type,
+                                                           reverse = reverse)(8))
+  }
 }

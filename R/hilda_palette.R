@@ -38,6 +38,7 @@ hilda_palette <- list(
 
 #' @title Hilda palette
 #' @description Hilda palette
+#' @details Color set from Matt Shanks & `@ChevyRay``
 #' @inheritDotParams ggplot2::discrete_scale
 #' @seealso
 #'  \code{\link[scales]{manual_pal}}
@@ -47,7 +48,7 @@ hilda_palette <- list(
 #' @export
 #' @importFrom scales manual_pal
 
-hilda_pal <- function(palette, n = n, type = c("continuous", "discrete"),
+hilda_pal <- function(palette, n, type = c("discrete", "continuous"),
                          reverse = FALSE){
   hilda <- hilda_palette[[palette]]
 
@@ -79,12 +80,17 @@ hilda_pal <- function(palette, n = n, type = c("continuous", "discrete"),
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_hilda <- function(palette = "Day", n = n, type = c("continuous", "discrete"),
+scale_color_hilda <- function(palette = "Day", n, type = "discrete",
                               reverse = FALSE, ...){
 
+  if (type == "discrete") {
   ggplot2::discrete_scale("color", "hilda",
                           hilda_pal(palette = palette, n = n, type = type,
                                     reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_color_gradientn(colors = hilda_pal(palette = palette, n = n, type = type,
+                                        reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_hilda
@@ -99,9 +105,14 @@ scale_colour_hilda <- scale_color_hilda
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_hilda <- function(palette = "Day", n = n, type = c("continuous", "discrete"),
+scale_fill_hilda <- function(palette = "Day", n, type = "discrete",
                              reverse = FALSE, ...){
-  ggplot2::discrete_scale("fill", "hilda",
-                          hilda_pal(palette = palette, n = n, type = type,
-                                    reverse = reverse), ...)
+  if (type == "discrete") {
+    ggplot2::discrete_scale("fill", "hilda",
+                            hilda_pal(palette = palette, n = n, type = type,
+                                      reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_fill_gradientn(colors = hilda_pal(palette = palette, n = n, type = type,
+                                                      reverse = reverse)(8))
+  }
 }

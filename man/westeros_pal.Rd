@@ -7,17 +7,17 @@
 \alias{scale_fill_westeros}
 \title{Great Houses of Westeros palette}
 \usage{
-westeros_pal(palette = "Stark", n = n, type = c("continuous",
-  "discrete"), reverse = FALSE)
+westeros_pal(palette = "Stark", n, type = c("discrete", "continuous"),
+  reverse = FALSE)
 
-scale_color_westeros(palette = "Stark", n = n, type = c("continuous",
-  "discrete"), reverse = FALSE, ...)
+scale_color_westeros(palette = "Stark", n, type = "discrete",
+  reverse = FALSE, ...)
 
-scale_colour_westeros(palette = "Stark", n = n,
-  type = c("continuous", "discrete"), reverse = FALSE, ...)
+scale_colour_westeros(palette = "Stark", n, type = "discrete",
+  reverse = FALSE, ...)
 
-scale_fill_westeros(palette = "Day", n = n, type = c("continuous",
-  "discrete"), reverse = FALSE, ...)
+scale_fill_westeros(palette = "Stark", n, type = "discrete",
+  reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}

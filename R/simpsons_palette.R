@@ -22,8 +22,31 @@ simpsons_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-simpsons_pal <- function(){
-  scales::manual_pal(simpsons_palette)
+simpsons_pal <- function(n, type = c("discrete", "continuous"),
+                         reverse = FALSE){
+  simpsons <- simpsons_palette
+
+  if (reverse == TRUE) {
+    simpsons <- rev(simpsons)
+  }
+
+  if (missing(n)) {
+    n <- length(simpsons)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(simpsons)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(simpsons)}!"))
+  }
+
+  simpsons <- switch(type,
+                     continuous = grDevices::colorRampPalette(simpsons)(n),
+                     discrete = simpsons[1:n])
+
+  simpsons <- scales::manual_pal(simpsons)
+
+  return(simpsons)
 }
 
 #' @title scale_color_simpsons
@@ -31,8 +54,14 @@ simpsons_pal <- function(){
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_simpsons <- function(...){
+scale_color_simpsons <- function(n, type = "discrete",
+                                 reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("color", "simpsons", simpsons_pal(), ...)
+  } else { ## needs work...
+    ggplot2::scale_color_gradientn(colors = simpsons_pal(n = n, type = type,
+                                                         reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_simpsons
@@ -47,7 +76,13 @@ scale_colour_simpsons <- scale_color_simpsons
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_simpsons <- function(...){
+scale_fill_simpsons <- function(n, type = "discrete",
+                                reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("fill", "simpsons", simpsons_pal(), ...)
+  } else { ## needs work...
+    ggplot2::scale_fill_gradientn(colors = simpsons_pal(n = n, type = type,
+                                                         reverse = reverse)(8))
+  }
 }
 

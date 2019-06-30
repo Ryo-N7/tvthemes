@@ -58,7 +58,7 @@ theLastAirbender_palette <- list(
 #' @export
 #' @importFrom scales manual_pal
 
-avatarTLA_pal <- function(palette = "FireNation", n = n, type = c("continuous", "discrete"),
+avatarTLA_pal <- function(palette = "FireNation", n, type = c("discrete", "continuous"),
                           reverse = FALSE){
   avatarTLA <- theLastAirbender_palette[[palette]]
 
@@ -90,11 +90,16 @@ avatarTLA_pal <- function(palette = "FireNation", n = n, type = c("continuous", 
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_avatarTLA <- function(palette = "FireNation", n = n, type = c("continuous", "discrete"),
+scale_color_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
                                   reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("color", "avatarTLA",
                           avatarTLA_pal(palette = palette, n = n, type = type,
                                     reverse = reverse), ...)
+  } else {
+    ggplot2::scale_color_gradientn(colors = avatarTLA_pal(palette = palette, n = n, type = type,
+                                                     reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_avatarTLA
@@ -109,11 +114,16 @@ scale_colour_avatarTLA <- scale_color_avatarTLA
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_avatarTLA <- function(palette = "FireNation", n = n, type = c("continuous", "discrete"),
+scale_fill_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
                                  reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("fill", "avatarTLA",
                           avatarTLA_pal(palette = palette, n = n, type = type,
                                     reverse = reverse), ...)
+  } else {
+    ggplot2::scale_fill_gradientn(colors = avatarTLA_pal(palette = palette, n = n, type = type,
+                                                         reverse = reverse)(8))
+  }
 }
 
 ## Air

@@ -7,13 +7,14 @@
 \alias{scale_fill_rickAndMorty}
 \title{Rick & Morty color palette}
 \usage{
-rickAndMorty_pal()
+rickAndMorty_pal(n, type = c("discrete", "continuous"),
+  reverse = FALSE)
 
-scale_color_rickAndMorty(...)
+scale_color_rickAndMorty(n, type = "discrete", reverse = FALSE, ...)
 
-scale_colour_rickAndMorty(...)
+scale_colour_rickAndMorty(n, type = "discrete", reverse = FALSE, ...)
 
-scale_fill_rickAndMorty(...)
+scale_fill_rickAndMorty(n, type = "discrete", reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}

@@ -7,13 +7,13 @@
 \alias{scale_fill_parksAndRec}
 \title{Parks & Recreation palette}
 \usage{
-parksAndRec_pal()
+parksAndRec_pal(n, type = c("discrete", "continuous"), reverse = FALSE)
 
-scale_color_parksAndRec(...)
+scale_color_parksAndRec(n, type = "discrete", reverse = FALSE, ...)
 
-scale_colour_parksAndRec(...)
+scale_colour_parksAndRec(n, type = "discrete", reverse = FALSE, ...)
 
-scale_fill_parksAndRec(...)
+scale_fill_parksAndRec(n, type = "discrete", reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}

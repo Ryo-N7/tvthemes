@@ -7,17 +7,17 @@
 \alias{scale_fill_avatarTLA}
 \title{Fire Nation palette}
 \usage{
-avatarTLA_pal(palette = "FireNation", n = n, type = c("continuous",
-  "discrete"), reverse = FALSE)
+avatarTLA_pal(palette = "FireNation", n, type = c("discrete",
+  "continuous"), reverse = FALSE)
 
-scale_color_avatarTLA(palette = "FireNation", n = n,
-  type = c("continuous", "discrete"), reverse = FALSE, ...)
+scale_color_avatarTLA(palette = "FireNation", n, type = "discrete",
+  reverse = FALSE, ...)
 
-scale_colour_avatarTLA(palette = "FireNation", n = n,
-  type = c("continuous", "discrete"), reverse = FALSE, ...)
+scale_colour_avatarTLA(palette = "FireNation", n, type = "discrete",
+  reverse = FALSE, ...)
 
-scale_fill_avatarTLA(palette = "FireNation", n = n,
-  type = c("continuous", "discrete"), reverse = FALSE, ...)
+scale_fill_avatarTLA(palette = "FireNation", n, type = "discrete",
+  reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}

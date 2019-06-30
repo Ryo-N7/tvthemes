@@ -7,17 +7,17 @@
 \alias{scale_fill_hilda}
 \title{Hilda palette}
 \usage{
-hilda_pal(palette, n = n, type = c("continuous", "discrete"),
+hilda_pal(palette, n, type = c("discrete", "continuous"),
   reverse = FALSE)
 
-scale_color_hilda(palette = "Day", n = n, type = c("continuous",
-  "discrete"), reverse = FALSE, ...)
+scale_color_hilda(palette = "Day", n, type = "discrete",
+  reverse = FALSE, ...)
 
-scale_colour_hilda(palette = "Day", n = n, type = c("continuous",
-  "discrete"), reverse = FALSE, ...)
+scale_colour_hilda(palette = "Day", n, type = "discrete",
+  reverse = FALSE, ...)
 
-scale_fill_hilda(palette = "Day", n = n, type = c("continuous",
-  "discrete"), reverse = FALSE, ...)
+scale_fill_hilda(palette = "Day", n, type = "discrete",
+  reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
@@ -75,6 +75,9 @@ scales, "top" or "bottom" for horizontal scales}
 }
 \description{
 Hilda palette
+}
+\details{
+Color set from Matt Shanks & `@ChevyRay``
 }
 \seealso{
 \code{\link[scales]{manual_pal}}

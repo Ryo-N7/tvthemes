@@ -174,7 +174,7 @@ mpg %>%
 
 ggplot(diamonds, aes(price, fill = cut)) +
   geom_histogram(binwidth = 500) +
-  scale_fill_westeros(palette = "Tully", n = 5, reverse = TRUE) +
+  scale_fill_westeros(palette = "Tully", n = 5) +
   labs(title = "I've seen wet shits I like better than Walder Frey.",
        subtitle = "Pardon my lord, my lady. I need to find a tree to piss on.",
        caption = "- The Blackfish") +
@@ -182,7 +182,8 @@ ggplot(diamonds, aes(price, fill = cut)) +
   theme(text = element_text(family = "Cinzel", size = 10),
         title = element_text(family = "Cinzel", size = 14)) -> tully
 
-ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
+gapminder::gapminder %>% 
+  ggplot(aes(x = log10(gdpPercap), y = lifeExp)) +
   geom_point(aes(color = continent)) + 
   scale_x_log10() +
   scale_color_westeros(palette = "Targaryen") +
@@ -333,7 +334,8 @@ airquality %>%
                          text.font = "Slayer",
                          title.size = 10) -> airnomads
 
-ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
+gapminder::gapminder %>% 
+  ggplot(aes(x = log10(gdpPercap), y = lifeExp)) +
   geom_point(aes(color = continent)) + 
   scale_x_log10() +
   scale_color_avatarTLA(palette = "WaterTribe") +
@@ -366,7 +368,7 @@ plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
-  geom_point(size = 2.5) +
+  geom_point(size = 4.5) +
   labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
        caption = "No one likes them. Good day, sir.") + 
   scale_color_parksAndRec() + 
@@ -414,7 +416,7 @@ airquality %>%
 data <- gapminder::gapminder %>% 
   filter(country %in% c("France", "Germany", "Ireland", "Italy", 
                         "Japan", "Norway", "Belarus", "United Kingdom",
-                        "Peru", "Spain")) %>% 
+                        "Spain")) %>% 
   mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
 
 ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
@@ -568,6 +570,18 @@ mpg %>%
        subtitle = "TITANS ARE MY TRIGGER",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
     theme_hilda(ticks = TRUE)
+
+
+ggplot(faithfuld, aes(waiting, eruptions, fill = density)) + 
+  geom_tile() +
+  scale_fill_hilda(palette = "Night", type = "continuous") +
+  theme_hilda()
+
+ggplot(faithfuld, aes(waiting, eruptions, fill = density)) + 
+  geom_tile() +
+  scale_fill_gradient2(low = "#586085", mid = "#F6E0D2", high = "#659794",
+                       midpoint = 0.02) +
+  theme_hilda()
 ```
 
 

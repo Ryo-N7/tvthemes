@@ -20,7 +20,7 @@ attackOnTitan_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-attackOnTitan_pal <- function(n = n, type = c("continuous", "discrete"),
+attackOnTitan_pal <- function(n, type = c("discrete", "continuous"),
                               reverse = FALSE){
   attackOnTitan <- attackOnTitan_palette
 
@@ -52,11 +52,16 @@ attackOnTitan_pal <- function(n = n, type = c("continuous", "discrete"),
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_attackOnTitan <- function(n = n, type = c("continuous", "discrete"),
+scale_color_attackOnTitan <- function(n, type = "discrete",
                                       reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("color", "attackOnTitan",
                           attackOnTitan_pal(n = n, type = type,
                                        reverse = reverse), ...)
+  } else {
+    ggplot2::scale_color_gradientn(colors = attackOnTitan_pal(n = n, type = type,
+                                                      reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_attackOnTitan
@@ -71,9 +76,14 @@ scale_colour_attackOnTitan <- scale_color_attackOnTitan
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_attackOnTitan <- function(n = n, type = c("continuous", "discrete"),
+scale_fill_attackOnTitan <- function(n, type = "discrete",
                                      reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("fill", "attackOnTitan",
                           attackOnTitan_pal(n = n, type = type,
                                        reverse = reverse), ...)
+  } else {
+    ggplot2::scale_fill_gradientn(colors = attackOnTitan_pal(n = n, type = type,
+                                                              reverse = reverse)(8))
+  }
 }

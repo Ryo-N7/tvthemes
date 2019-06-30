@@ -24,8 +24,31 @@ kimPossible_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-kimPossible_pal <- function(){
-  scales::manual_pal(kimPossible_palette)
+kimPossible_pal <- function(n, type = c("discrete", "continuous"),
+                            reverse = FALSE){
+  kimPossible <- kimPossible_palette
+
+  if (reverse == TRUE) {
+    kimPossible <- rev(kimPossible)
+  }
+
+  if (missing(n)) {
+    n <- length(kimPossible)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(kimPossible)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(kimPossible)}!"))
+  }
+
+  kimPossible <- switch(type,
+                  continuous = grDevices::colorRampPalette(kimPossible)(n),
+                  discrete = kimPossible[1:n])
+
+  kimPossible <- scales::manual_pal(kimPossible)
+
+  return(kimPossible)
 }
 
 #' @title scale_color_kimPossible
@@ -33,8 +56,14 @@ kimPossible_pal <- function(){
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_kimPossible <- function(...){
+scale_color_kimPossible <- function(n, type = "discrete",
+                                    reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("color", "kimPossible", kimPossible_pal(), ...)
+  } else { ## needs work...
+    ggplot2::scale_color_gradientn(colors = kimPossible_pal(n = n, type = type,
+                                                      reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_kimPossible
@@ -49,6 +78,12 @@ scale_colour_kimPossible <- scale_color_kimPossible
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_kimPossible <- function(...){
+scale_fill_kimPossible <- function(n, type = "discrete",
+                                   reverse = FALSE, ...){
+  if (type == "discrete") {
   ggplot2::discrete_scale("fill", "kimPossible", kimPossible_pal(), ...)
+  } else { ## needs work...
+    ggplot2::scale_fill_gradientn(colors = kimPossible_pal(n = n, type = type,
+                                                            reverse = reverse)(8))
+  }
 }
