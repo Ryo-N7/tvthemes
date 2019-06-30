@@ -5,7 +5,7 @@
 \alias{scale_color_avatarTLA}
 \alias{scale_colour_avatarTLA}
 \alias{scale_fill_avatarTLA}
-\title{Fire Nation palette}
+\title{Avatar: The Last Airbender palette}
 \usage{
 avatarTLA_pal(palette = "FireNation", n, type = c("discrete",
   "continuous"), reverse = FALSE)
@@ -20,6 +20,14 @@ scale_fill_avatarTLA(palette = "FireNation", n, type = "discrete",
   reverse = FALSE, ...)
 }
 \arguments{
+\item{palette}{name of palette, Default: "FireNation"}
+
+\item{n}{number of colors}
+
+\item{type}{discrete or continuous}
+
+\item{reverse}{reverse order, Default: FALSE}
+
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
 \describe{
   \item{aesthetics}{The names of the aesthetics that this scale works with}
@@ -74,7 +82,7 @@ scales, "top" or "bottom" for horizontal scales}
 }}
 }
 \description{
-Fire Nation palette
+Avatar: The Last Airbender palette
 }
 \seealso{
 \code{\link[scales]{manual_pal}}

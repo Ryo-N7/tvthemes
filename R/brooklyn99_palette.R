@@ -32,6 +32,10 @@ brooklyn99_palette <- list(
 #' @description Brooklyn Nine Nine Color and Fill Scales
 #' @details Colors that work well with the blue background!
 #' @inheritDotParams ggplot2::discrete_scale
+#' @param palette name of palette, Default: "Regular"
+#' @param n number of colors
+#' @param type discrete or continuous
+#' @param reverse reverse order, Default: FALSE
 #' @seealso
 #'  \code{\link[scales]{manual_pal}}
 #'  [ggplot2::scale_color_discrete]

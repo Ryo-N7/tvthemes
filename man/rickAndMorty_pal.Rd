@@ -17,6 +17,12 @@ scale_colour_rickAndMorty(n, type = "discrete", reverse = FALSE, ...)
 scale_fill_rickAndMorty(n, type = "discrete", reverse = FALSE, ...)
 }
 \arguments{
+\item{n}{number of colors}
+
+\item{type}{discrete or continuous}
+
+\item{reverse}{reverse order, Default: FALSE}
+
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
 \describe{
   \item{aesthetics}{The names of the aesthetics that this scale works with}

@@ -20,6 +20,14 @@ scale_fill_westeros(palette = "Stark", n, type = "discrete",
   reverse = FALSE, ...)
 }
 \arguments{
+\item{palette}{name of palette, Default: "Stark"}
+
+\item{n}{number of colors}
+
+\item{type}{discrete or continuous}
+
+\item{reverse}{reverse order, Default: FALSE}
+
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
 \describe{
   \item{aesthetics}{The names of the aesthetics that this scale works with}

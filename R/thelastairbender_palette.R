@@ -47,9 +47,13 @@ theLastAirbender_palette <- list(
   )
 )
 
-#' @title Fire Nation palette
-#' @description Fire Nation palette
+#' @title Avatar: The Last Airbender palette
+#' @description Avatar: The Last Airbender palette
 #' @inheritDotParams ggplot2::discrete_scale
+#' @param palette name of palette, Default: "FireNation"
+#' @param n number of colors
+#' @param type discrete or continuous
+#' @param reverse reverse order, Default: FALSE
 #' @seealso
 #'  \code{\link[scales]{manual_pal}}
 #'  [ggplot2::scale_color_discrete]
