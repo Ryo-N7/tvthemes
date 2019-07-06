@@ -155,3 +155,26 @@ import_theLastAirbender <- function() {
     )
   )
 }
+
+#' @title import_chelseaMarket
+#' @description Imports Chelsea Market (Hilda)
+#' @details import_*() functions taken from hrbrthemes.
+#' @seealso
+#'  \code{\link[extrafont]{font_import}}
+#' @rdname import_ChelseaMarket
+#' @export
+#' @importFrom extrafont font_import
+
+import_ChelseaMarket <- function() {
+
+  ChelseaMarket_font_dir <- system.file("fonts", "ChelseaMarket", package = "tvthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = ChelseaMarket_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You should install these fonts on your system directly. The files are located in [%s]",
+      ChelseaMarket_font_dir
+    )
+  )
+}

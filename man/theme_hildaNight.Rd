@@ -2,9 +2,10 @@
 % Please edit documentation in R/theme_hilda.R
 \name{theme_hilda}
 \alias{theme_hilda}
-\title{theme_hilda}
+\title{theme_hildaNight}
 \usage{
-theme_hilda(text.font = NULL, title.font = NULL, legend.font = NULL,
+theme_hilda(text.font = "Chelsea Market",
+  title.font = "Chelsea Market", legend.font = "Chelsea Market",
   title.size = 18, text.size = 14, subtitle.size = 12,
   axis.title.size = 14, axis.text.size = 12, legend.title.size = 10,
   legend.text.size = 9, title.color = "#F9FEFF",
@@ -14,11 +15,11 @@ theme_hilda(text.font = NULL, title.font = NULL, legend.font = NULL,
   legend.position = "bottom", ticks = FALSE)
 }
 \arguments{
-\item{text.font}{text font, Default: NULL}
+\item{text.font}{text font, Default: "Chelsea Market"}
 
-\item{title.font}{title font, Default: NULL}
+\item{title.font}{title font, Default: "Chelsea Market"}
 
-\item{legend.font}{legend font, Default: NULL}
+\item{legend.font}{legend font, Default: "Chelsea Market"}
 
 \item{title.size}{title font size, Default: 18}
 
@@ -60,7 +61,7 @@ Hilda theme
 if(interactive()){
  ggplot(mtcars, aes(x = hp, y = mpg)) +
  geom_point() +
- theme_hilda()
+ theme_hildaNight()
  }
 }
 }

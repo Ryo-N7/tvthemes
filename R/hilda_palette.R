@@ -3,12 +3,12 @@
 hilda_palette <- list(
   ## Hilda Day
   Day = c(
-    "#F6E0D2",  ##
+    "#F6E0D2",  ## hlida white paper
     "#DFA398",  ##
     "#9C6755",  ##
-    "#659794",  ##
-    "#EA967C",  ##
-    "#F5C98E",  ##
+    "#659794",  ## hilda turqoise
+    "#EA967C",  ## hilda lightorange
+    "#F5C98E",  ## hilda beige
     "#D65B5A",  ##
     "#586085"   ##
   ),
