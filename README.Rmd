@@ -243,9 +243,9 @@ airquality %>%
 tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ```
 
-### Game of Thrones: Martell, Dayne, Manderly
+### Game of Thrones: Martell, Stannis Baratheon, Manderly
 
-```{r}
+```{r, fig.width=15, fig.height = 10}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
@@ -254,21 +254,81 @@ mpg %>%
        subtitle = "The mummer's farce is almost done, my son is coming home.",
        caption = "When treating with liars, even an honest man must lie.") +
   theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 10),
-        title = element_text(family = "Cinzel", size = 12)) 
+  theme(text = element_text(family = "Cinzel", size = 20),
+        title = element_text(family = "Cinzel", size = 24)) 
 
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_dayne() +
-  #scale_fill_manderly() +
-  labs(title = "Our knees do not bend easily.",
-       subtitle = "All knights must bleed, Jamie. Blood is the seal of our devotion.",
-       caption = "The Sword of the Morning & Dawn") +
+  scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE) +
+  labs(title = glue("
+                    We do not choose our destinies. 
+                    Yet we must... we must do our duty, no? 
+                    Great or small, we must do our duty"),
+       subtitle = "I will have no burnings. Pray Harder.",
+       caption = glue("
+                      The Iron Throne is Mine by Right.
+                      - Stannis Baratheon"),
+       x = "Bent Knees", y = "Lightbringer") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 20),
+        plot.title = element_text(family = "Cinzel", size = 26),
+        plot.subtitle = element_text(size = 18),
+        plot.caption = element_text(size = 16),
+        axis.text = element_text(size = 18)) 
+```
+
+### House Arryn
+
+
+```{r, fig.width=15, fig.height = 10}
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus", "Canada", "Mexico")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.8) +
+  scale_x_date(breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_fill_westeros(palette = "Martell", n = 8) +
+  #scale_fill_martell() +
+  #scale_fill_arryn() +
+  labs(title = "All men are fools, if truth be told, but",
+       subtitle = "the ones in motley are more amusing than ones with crowns.",
+       caption = "- The Queen of Thorns") +
   theme_minimal() +
   theme(text = element_text(family = "Cinzel", size = 10),
-        title = element_text(family = "Cinzel", size = 12)) 
+        plot.title = element_text(family = "Cinzel", size = 16),
+        plot.subtitle = element_text(family = "Cinzel", size = 12))
+
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_arryn() +
+  #scale_fill_martell() +
+  scale_fill_westeros(palette = "Arryn", n = 7) +
+  labs(title = "The North remembers Lord Davos. The North remembers...",
+       subtitle = "The mummer's farce is almost done, my son is coming home.",
+       caption = "When treating with liars, even an honest man must lie.") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 20),
+        title = element_text(family = "Cinzel", size = 24)) 
+
+mpg %>% 
+  filter(!class %in% c("suv", "subcompact")) %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_arryn() +
+  labs(title = "The North remembers Lord Davos. The North remembers...",
+       subtitle = "The mummer's farce is almost done, my son is coming home.",
+       caption = "When treating with liars, even an honest man must lie.") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 20),
+        title = element_text(family = "Cinzel", size = 24)) 
 ```
+
+
 
 
 ### The Simpsons

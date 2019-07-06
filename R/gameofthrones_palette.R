@@ -13,6 +13,16 @@ westeros_palette <- list(
     "#120976", ## purple blue
     "#000000"  ## black
   ),
+  ## House Baratheon of Dragonstone ----
+  Stannis = c(
+    "#FF0000", ## rhllor red
+    "#ff8d1a", ## rhllor orange
+    "#FFD700", ## baratheon gold
+    "#b20000", ## fire red
+    "#cc6600", ## baratheon orange
+    "#FFFF66", ## rhllor light yellow
+    "#000000"  ## black
+  ),
   ## House Lannister ----
   Lannister = c(
     "#89080A", ## maroon
@@ -42,6 +52,17 @@ westeros_palette <- list(
     "#828788", ## metallic grey
     "#96804b"  ## light-brown
   ),
+  ## House Martell ----
+  Martell = c(
+    "#ff8000", ## martell orange
+    "#cc6600", ## martell darkorange
+    "#b81b18", ## martell red
+    "#73110f", ## martell wine red
+    "#f8fc23", ## martell brightyellow
+    "#fafd7b", ## martell lightyellow
+    "#4c2600", ## martell brown
+    "#a57642"  ## martell lightbrown
+  ),
   ## House Tully ----
   Tully = c(
     "#212250", ## darkblue
@@ -68,6 +89,16 @@ westeros_palette <- list(
     "#282828", ## metallic black
     "#015202", ## dark seaweed green
     "#195953", ## dark turqoise
+    "#FFFFFF"  ## white
+  ),
+  ## House Arryn ----
+  Arryn = c(
+    "#007fff", ## arryn blue
+    "#7fbfff", ## arryn light blue
+    "#001933", ## arryn dark navy
+    "#4c4cff", ## arryn purple
+    "#ffefb2", ## arryn beige
+    "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   )
 )
@@ -155,46 +186,6 @@ scale_fill_westeros <- function(palette = "Stark", n, type = "discrete",
                                                          reverse = reverse)(8))
   }
 }
-
-# ## House Martell ----
-# martell_pal <- function() {
-#   scales::manual_pal(martell_palette)
-# }
-#
-# scale_color_martell <- function(...){
-#   ggplot2::discrete_scale("color", "martell", martell_pal(), ...)
-# }
-#
-# scale_fill_martell <- function(...){
-#   ggplot2::discrete_scale("fill", "martell", martell_pal(), ...)
-# }
-#
-# ## House Baratheon ----
-# baratheon_pal <- function() {
-#   scales::manual_pal(baratheon_palette)
-# }
-#
-# scale_color_baratheon <- function(...){
-#   ggplot2::discrete_scale("color", "baratheon", baratheon_pal(), ...)
-# }
-#
-# scale_fill_baratheon <- function(...){
-#   ggplot2::discrete_scale("fill", "baratheon", baratheon_pal(), ...)
-# }
-#
-# ## House Arryn ----
-#
-# baratheon_pal <- function() {
-#   scales::manual_pal(baratheon_palette)
-# }
-#
-# scale_color_baratheon <- function(...){
-#   ggplot2::discrete_scale("color", "baratheon", baratheon_pal(), ...)
-# }
-#
-# scale_fill_baratheon <- function(...){
-#   ggplot2::discrete_scale("fill", "baratheon", baratheon_pal(), ...)
-# }
 
 ## House Dayne ----
 
