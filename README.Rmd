@@ -243,28 +243,70 @@ airquality %>%
 tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ```
 
-### Game of Thrones: Martell, Stannis Baratheon, Manderly
+### Game of Thrones: Arryn, Manderly, Martell
 
 ```{r, fig.width=15, fig.height = 10}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_westeros(palette = "Manderly", n = 7, reverse = TRUE) +
+  scale_fill_westeros(palette = "Arryn", n = 7) +
+  labs(title = "The Seed is Strong.",
+       subtitle = "The bad little man. Mother, can I make him fly?",
+       caption = "I want to see him fly.") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 14),
+        plot.title = element_text(family = "Cinzel", size = 18),
+        legend.position = "none") -> arryn
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  scale_color_westeros(palette = "Manderly", n = 6) +
   labs(title = "The North remembers Lord Davos. The North remembers...",
        subtitle = "The mummer's farce is almost done, my son is coming home.",
        caption = "When treating with liars, even an honest man must lie.") +
   theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 20),
-        title = element_text(family = "Cinzel", size = 24)) 
+  theme(text = element_text(family = "Cinzel", size = 12),
+        plot.title = element_text(family = "Cinzel", size = 14),
+        legend.position = "none") -> manderly
 
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus", "Canada", "Mexico")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.8) +
+  scale_x_date(expand = c(0, 0),
+               breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_fill_westeros(palette = "Martell", n = 8) +
+  labs(title = "What is our heart's desire? - Ariane Martell",
+       subtitle = "Vengeance. Justice. Fire And Blood. - Doran Martell",
+       caption = "Hiss with me Sand Snakes, HISSS!") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 10),
+        plot.title = element_text(family = "Cinzel", size = 24),
+        plot.subtitle = element_text(family = "Cinzel", size = 26),
+        legend.position = "none") -> martell
+
+## patchwork together:
+arryn + manderly - martell + plot_layout(ncol = 1)
+```
+
+### Game of Thrones: Stannis Baratheon
+
+```{r, fig.width=13, fig.height = 10}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
   labs(title = glue("
                     We do not choose our destinies. 
                     Yet we must... we must do our duty, no? 
-                    Great or small, we must do our duty"),
+                    Great or small, we must do our duty."),
        subtitle = "I will have no burnings. Pray Harder.",
        caption = glue("
                       The Iron Throne is Mine by Right.
@@ -275,61 +317,9 @@ mpg %>%
         plot.title = element_text(family = "Cinzel", size = 26),
         plot.subtitle = element_text(size = 18),
         plot.caption = element_text(size = 16),
-        axis.text = element_text(size = 18)) 
+        axis.text = element_text(size = 18),
+        legend.position = "none") 
 ```
-
-### House Arryn
-
-
-```{r, fig.width=15, fig.height = 10}
-data <- gapminder::gapminder %>% 
-  filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus", "Canada", "Mexico")) %>% 
-  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
-
-ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
-  geom_area(alpha = 0.8) +
-  scale_x_date(breaks = data$year, date_labels = "%Y") +
-  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-  scale_fill_westeros(palette = "Martell", n = 8) +
-  #scale_fill_martell() +
-  #scale_fill_arryn() +
-  labs(title = "All men are fools, if truth be told, but",
-       subtitle = "the ones in motley are more amusing than ones with crowns.",
-       caption = "- The Queen of Thorns") +
-  theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 10),
-        plot.title = element_text(family = "Cinzel", size = 16),
-        plot.subtitle = element_text(family = "Cinzel", size = 12))
-
-
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_arryn() +
-  #scale_fill_martell() +
-  scale_fill_westeros(palette = "Arryn", n = 7) +
-  labs(title = "The North remembers Lord Davos. The North remembers...",
-       subtitle = "The mummer's farce is almost done, my son is coming home.",
-       caption = "When treating with liars, even an honest man must lie.") +
-  theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 20),
-        title = element_text(family = "Cinzel", size = 24)) 
-
-mpg %>% 
-  filter(!class %in% c("suv", "subcompact")) %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_arryn() +
-  labs(title = "The North remembers Lord Davos. The North remembers...",
-       subtitle = "The mummer's farce is almost done, my son is coming home.",
-       caption = "When treating with liars, even an honest man must lie.") +
-  theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 20),
-        title = element_text(family = "Cinzel", size = 24)) 
-```
-
-
-
 
 ### The Simpsons
 
@@ -459,42 +449,14 @@ mpg %>%
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
   scale_fill_attackOnTitan(reverse = FALSE) +
-  labs(title = "On That Day, Mankind Received A Grim Reminder...",
-       subtitle = "TITANS ARE MY TRIGGER",
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  annotate(geom = "label", x = 5, y = 20, 
+           label = "TITANS ARE MY TRIGGER!!", hjust = 0) +
+  labs(title = "On That Day, Mankind Received A Grim Reminder.",
+       subtitle = "Well, Sweet Mother Theresa on the Hood of a Mercedes Benz!",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
     theme_parksAndRec()
-
-airquality %>% 
-  mutate(Month = as.factor(Month)) %>% 
-  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
-  geom_point(size = 3) +
-  labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
-       caption = "No one likes them. Good day, sir.") + 
-  scale_color_attackOnTitan() + 
-  theme_minimal()
-
-data <- gapminder::gapminder %>% 
-  filter(country %in% c("France", "Germany", "Ireland", "Italy", 
-                        "Japan", "Norway", "Belarus", "United Kingdom",
-                        "Spain")) %>% 
-  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
-
-ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
-  geom_area(alpha = 0.9) +
-  scale_x_date(breaks = data$year, date_labels = "%Y") +
-  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-  scale_fill_attackOnTitan() +
-  labs(title = "What's The Sitch, Wade?",
-       subtitle = glue::glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
-       caption = "Stoppable... What Are You Doing In My House??",
-       x = "Year", y = "GDP per Capita") +
-  theme_spongeBob(title.font = "Roboto Condensed",
-                  text.font = "Roboto Condensed",
-                  title.size = 24,
-                  subtitle.size = 20,
-                  text.size = 18,
-                  legend.title.size = 14,
-                  legend.text.size = 12)
 ```
 
 ### Kim Possible
@@ -508,7 +470,9 @@ data <- gapminder::gapminder %>%
 
 ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.9) +
-  scale_x_date(breaks = data$year, date_labels = "%Y") +
+  scale_x_date(expand = c(0, 0),
+               breaks = data$year, 
+               date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
   scale_fill_kimPossible() +
   labs(title = "What's The Sitch, Wade?",
@@ -523,29 +487,11 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                   legend.title.size = 14,
                   legend.text.size = 12,
                   ticks = TRUE)
-
-airquality %>% 
-  mutate(Month = as.factor(Month)) %>% 
-  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
-  geom_point(size = 3) +
-  labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
-       caption = "No one likes them. Good day, sir.") + 
-  scale_color_kimPossible() + 
-  theme_minimal()
-
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
-  scale_fill_kimPossible() +
-  labs(title = "On That Day, Mankind Received A Grim Reminder...",
-       subtitle = "TITANS ARE MY TRIGGER",
-       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
-    theme_simpsons()
 ```
 
 ### Big Hero 6
 
-```{r}
+```{r, fig.width=15, fig.height = 6, message=FALSE}
 data <- gapminder::gapminder %>% 
   filter(country %in% c("France", "Germany", "Ireland", "Italy", 
                         "Japan", "Norway", "Finland", "United Kingdom")) %>% 
@@ -553,11 +499,11 @@ data <- gapminder::gapminder %>%
 
 ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.9) +
-  scale_x_date(breaks = data$year, date_labels = "%Y") +
+  scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
   scale_fill_bigHero6() +
   labs(title = "What's The Sitch, Wade?",
-       subtitle = glue::glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
+       subtitle = glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
        caption = "Stoppable... What Are You Doing In My House??",
        x = "Year", y = "GDP per Capita") +
   theme_spongeBob(title.font = "Roboto Condensed",
@@ -565,8 +511,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                   title.size = 24,
                   subtitle.size = 20,
                   text.size = 18,
-                  legend.title.size = 14,
-                  legend.text.size = 12)
+                  legend.position = "none") -> bigherobar
 
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
@@ -575,21 +520,55 @@ airquality %>%
   labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
        caption = "No one likes them. Good day, sir.") + 
   scale_fill_bigHero6() + 
-  theme_minimal()
+  theme_minimal() -> bigherodot
 
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
-  scale_fill_bigHero6(reverse = TRUE) +
-  labs(title = "On That Day, Mankind Received A Grim Reminder...",
-       subtitle = "TITANS ARE MY TRIGGER",
-       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
-    theme_simpsons(ticks = TRUE)
+## plot together:
+plot_grid(bigherobar, bigherodot, ncol = 2)
 ```
 
 ### Hilda
 
-```{r}
+```{r, fig.width=15, fig.height = 6, message=FALSE}
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_color_hilda(palette = "Day") +
+  labs(title = "On That Day, Mankind Received A Grim Reminder...",
+       subtitle = "TITANS ARE MY TRIGGER",
+       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
+    theme_hildaDay(ticks = TRUE,
+                    legend.position = "none")
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_fill_hilda(palette = "Dusk", reverse = TRUE) +
+  labs(title = "On That Day, Mankind Received A Grim Reminder...",
+       subtitle = "TITANS ARE MY TRIGGER",
+       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
+    theme_hildaDusk(ticks = TRUE,
+                    legend.position = "none")
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, fill = Month)) +
+  geom_point(size = 3, stroke = 1.25, shape = 21) +
+  labs(title = "Could someone close that door,", 
+       subtitle = "it's a little drafty in here...",
+       caption = "No one likes them. Good day, sir.") + 
+  scale_fill_hilda(palette = "Night", reverse = TRUE) +
+  theme_hildaNight(ticks = TRUE)
+
+```
+
+Also, there is nothing stopping you from mixing the `theme` and `palette`, below: `"Day" palette` with `"Night" theme`!
+
+```{r, fig.width=10, fig.height = 6, message=FALSE}
 data <- gapminder::gapminder %>% 
   filter(country %in% c("France", "Germany", "Ireland", "Italy", 
                         "Japan", "Norway", "Finland", "United Kingdom")) %>% 
@@ -597,14 +576,17 @@ data <- gapminder::gapminder %>%
 
 ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.9) +
-  scale_x_date(breaks = data$year, date_labels = "%Y") +
-  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_x_date(expand = c(0, 0),
+               breaks = data$year, 
+               date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), 
+                     labels = scales::dollar) +
   scale_fill_hilda(palette = "Day") +
   labs(title = "What's The Sitch, Wade?",
-       subtitle = glue::glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
+       subtitle = glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
        caption = "Stoppable... What Are You Doing In My House??",
        x = "Year", y = "GDP per Capita") +
-  theme_hilda(title.font = "Roboto Condensed",
+  theme_hildaNight(title.font = "Roboto Condensed",
               text.font = "Roboto Condensed",
               title.size = 24,
               subtitle.size = 20,
@@ -612,53 +594,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
               legend.title.size = 14,
               legend.text.size = 12,
               ticks = TRUE)
-
-airquality %>% 
-  mutate(Month = as.factor(Month)) %>% 
-  ggplot(aes(x = Day, y = Temp, group = Month, fill = Month)) +
-  geom_point(size = 3, stroke = 1.25, shape = 21) +
-  labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
-       caption = "No one likes them. Good day, sir.") + 
-  scale_fill_hilda(palette = "Dusk", reverse = TRUE) +
-  theme_hilda(ticks = TRUE)
-
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
-  scale_x_continuous(expand = c(0, 0)) +
-  scale_y_continuous(expand = c(0, 0)) +
-  scale_fill_hilda(palette = "Day", reverse = TRUE) +
-  labs(title = "On That Day, Mankind Received A Grim Reminder...",
-       subtitle = "TITANS ARE MY TRIGGER",
-       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
-    theme_hildaDay(ticks = TRUE,
-                   title.font = "Chelsea Market")
-
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
-  scale_x_continuous(expand = c(0, 0)) +
-  scale_y_continuous(expand = c(0, 0)) +
-  scale_fill_hilda(palette = "Night", reverse = TRUE) +
-  labs(title = "On That Day, Mankind Received A Grim Reminder...",
-       subtitle = "TITANS ARE MY TRIGGER",
-       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
-    theme_hildaDusk(ticks = TRUE,
-                    legend.position = "none")
-
-
-ggplot(faithfuld, aes(waiting, eruptions, fill = density)) + 
-  geom_tile() +
-  scale_fill_hilda(palette = "Night", type = "continuous") +
-  theme_hilda()
-
-ggplot(faithfuld, aes(waiting, eruptions, fill = density)) + 
-  geom_tile() +
-  scale_fill_gradient2(low = "#586085", mid = "#F6E0D2", high = "#659794",
-                       midpoint = 0.02) +
-  theme_hildaDay()
 ```
-
 
 ## Contributing
 

@@ -11,7 +11,7 @@ theme_hildaDay(text.font = "Chelsea Market",
   legend.text.size = 9, title.color = "#659794",
   subtitle.color = "#659794", text.color = "#659794",
   axis.title.color = "#659794", axis.text.color = "#93a1a1",
-  legend.title.color = "#93a1a1", legend.text.color = "#93a1a1",
+  legend.title.color = "#659794", legend.text.color = "#93a1a1",
   legend.position = "bottom", ticks = FALSE)
 }
 \arguments{

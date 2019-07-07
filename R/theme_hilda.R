@@ -50,7 +50,7 @@ theme_hildaDay <- function(
   text.color = "#659794",
   axis.title.color = "#659794",
   axis.text.color = "#93a1a1",
-  legend.title.color = "#93a1a1",
+  legend.title.color = "#659794",
   legend.text.color = "#93a1a1",
   legend.position = "bottom",
   ticks = FALSE){
@@ -218,7 +218,7 @@ theme_hildaDusk <- function(
 #' @importFrom ggplot2 theme_minimal element_text
 #' @importFrom grid unit
 
-theme_hilda <- function(
+theme_hildaNight <- function(
   text.font = "Chelsea Market",
   title.font = "Chelsea Market",
   legend.font = "Chelsea Market",
