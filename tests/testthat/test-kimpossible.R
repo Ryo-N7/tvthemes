@@ -22,9 +22,10 @@ test_that("scale_fill_kimPossible works", {
   expect_is(scale_fill_kimPossible(), "ScaleDiscrete")
 })
 
+## Colors are correct ----
 test_that("scale_color_kimPossible outputs correct colors", {
   expect_equal(kimPossible_pal()(12),
-               c("#A75422",  ## KP orange #A75422
+               c("#FF8C00",  ## KP orange #A75422
                  "#024663",  ## Drakken blue
                  "#70D423",  ## Shego green
                  "#891604",  ## Ron red/burgundy

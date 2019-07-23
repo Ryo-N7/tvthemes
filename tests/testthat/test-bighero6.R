@@ -25,7 +25,7 @@ test_that("scale_fill_bigHero6 works", {
 test_that("scale_color_bigHero6 outputs correct colors", {
   expect_equal(bigHero6_pal()(8),
                c(  "#ffff33",  ## gogo yellow #ffff1a #ffff19
-                   "#F84527",  ## honeylemon/fredzilla orange
+                   "#ffa500",  ## honeylemon/fredzilla orange
                    "#4F366F",  ## baymax/hiro darkpurple
                    "#ff0000",  ## baymax red
                    "#00fa9a",  ## wasabi green

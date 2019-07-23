@@ -12,6 +12,9 @@ attackOnTitan_palette <- c(
 #' @title Attack On Titan palette
 #' @description Attack On Titan palette
 #' @inheritDotParams ggplot2::discrete_scale
+#' @param n number of colors
+#' @param type discrete or continuous
+#' @param reverse reverse order, Default: FALSE
 #' @seealso
 #'  \code{\link[scales]{manual_pal}}
 #'  [ggplot2::scale_color_discrete]

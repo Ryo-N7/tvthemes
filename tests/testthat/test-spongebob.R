@@ -42,3 +42,18 @@ test_that("scale_colour_spongeBob works", {
 test_that("scale_fill_spongeBob works", {
   expect_is(scale_fill_spongeBob(), "ScaleDiscrete")
 })
+
+## Colors are correct ----
+test_that("spongebob palette outputs correct colors", {
+  expect_equal(spongeBob_pal()(9),
+               c(  "#C86925",  ## brownpants
+                   "#FDF56C",  ## sponge yellow
+                   "#FC9576",  ## patrick pink
+                   "#5D57AF",  ## patrick purple
+                   "#B2CE31",  ## patrick green
+                   "#FF2027",  ## mr.krabs red
+                   "#B1D6C5",  ## squidward blue
+                   "#AB8323",  ## squidward shirt brown
+                   "#000000"   ## black
+               ))
+})

@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# tvthemes <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
+# tvthemes 1.0.0 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
@@ -26,8 +26,9 @@ knitr::opts_chunk$set(
 
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
 
-The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I love! You can also learn about `tvthemes` from the introductory blog post on my website, [here](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/). 
+**A lot has changed with `tvthemes 1.0.0` so please check the README below rather than the blogpost**
 
+The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I love! You can also learn about `tvthemes` from the introductory blog post on my website, [here](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/). 
 Suggestions and Pull Requests for palettes/themes are welcome!
 
 ```{r, echo=FALSE, message=FALSE}
@@ -63,11 +64,15 @@ mpg %>%
 
 - __Avatar: The Last Airbender__: theme + palettes (Fire Nation, Water Tribe, Earth Kingdom, & Air Nomads)
 - __Brooklyn Nine-Nine__: theme + palettes (regular & dark)
-- __Game of Thrones/A Song of Ice & Fire__: 'The Palettes of Ice & Fire' (currently: Stark, Lannister, Tully, Targaryen, Greyjoy, & Tyrell)
+- __Game of Thrones/A Song of Ice & Fire__: 'The Palettes of Ice & Fire' (currently: Stark, Baratheon (Stannis), Lannister, Tully, Targaryen, Martell, Greyjoy, Tyrell, Arryn, Manderly)
 - __Rick & Morty__: theme + palette
 - __Parks & Recreation__: two themes (light & dark) + palette
 - __The Simpsons__: theme + palette
 - __Spongebob Squarepants__: theme + palette + background images
+- __Hilda__: Day, Dusk, Night themes + palettes
+- __Attack on Titan__: palette
+- __Kim Possible__: palette
+- __Big Hero 6__: palette
 - _More in future releases..._
 
 ## Installation
@@ -110,10 +115,54 @@ I gathered the colors/hex codes by looking at images online or re-watching some 
 You can check out all the colors for each palette by running `scales::show_col(tvthemes:::name_of_palette)`. Some examples below:
 
 ```{r}
-scales::show_col(tvthemes:::brooklyn99_dark_palette)
-scales::show_col(tvthemes:::lannister_palette)
+scales::show_col(tvthemes:::brooklyn99_palette$Dark)
+scales::show_col(tvthemes:::westeros_palette$Lannister)
 scales::show_col(tvthemes:::simpsons_palette)
 ```
+
+## `tvthemes 1.0.0` Major Changes
+
+In addition to the new palettes and themes which you can see below in the [Examples](#examples) section some of the code in `tvthemes` has changed significantly.
+
+In palettes for example, when you are calling the palette functions via `scale_fill_*()` or `scale_color_*()` you now have a lot more options: 
+
+* `palette`: If multiple available, select the palette: "Stannis", "FireNation", "Dusk", etc. Leave blank if only single palette available.
+* `n`: Number of colors. If left blank it defaults to the total number of colors available in the palette.
+* `type`: "Discrete" or "Continuous". NOTE: Most palettes are only optimized for "Discrete" at the present time.
+* `reverse`: Reverse order of colors. `TRUE`/`FALSE`
+
+For TV shows with multiple palettes they are now organized under a single "palette list" from which you pass the specific palette that you want. If you want to check out the colors for these specific palettes:
+
+```{r, eval=FALSE}
+## Previously:
+scales::show_col(tvthemes:::lannister_palette)
+scales::show_col(tvthemes:::brooklyn99_dark_palette)
+
+## Now (as seen in colors section above):
+scales::show_col(tvthemes:::westeros_palette$Lannister)
+scales::show_col(tvthemes:::brooklyn99_palette$Dark)
+```
+
+The specific palettes that changed are:
+
+* `Brooklyn Nine-Nine`: Default = "Regular", "Dark"
+* `Avatar: The Last Airbender`: Default = "FireNation", "EarthKingdom", "WaterTribe", "AirNation"
+* `Hilda`: Default = "Day", "Dusk", "Night"
+* `Game of Thrones/A Song of Ice & Fire`: Default = "Stark", "Stannis", "Tyrell", "Lannister", "Manderly", "Martell", "Arryn", "Greyjoy", "Targaryen", "Tully"
+
+```{r}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
+```
+
+For themes
+
+```{r}
+
+```
+
 
 ## Examples
 

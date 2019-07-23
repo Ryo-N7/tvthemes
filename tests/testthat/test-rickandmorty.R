@@ -42,3 +42,18 @@ test_that("scale_colour_rickAndMorty works", {
 test_that("scale_fill_rickAndMorty works", {
   expect_is(scale_fill_rickAndMorty(), "ScaleDiscrete")
 })
+
+## Colors are correct ----
+test_that("R&M palette outputs correct colors", {
+  expect_equal(rickAndMorty_pal()(9),
+               c(  "#01B4C6", ## #01B4C6 R&M turqoise
+                   "#97ce4c",  ## #97ce4c R&M green
+                   "#FFF874",  ## #FFF874 Morty yellow
+                   "#BEE5FD",  ## #BEE5FD Rick blue
+                   "#F675DA", ## #F675DA summer pink
+                   "#44281d",  ## regular brown
+                   "#3a4767", ## #3a4767 morty pants navy
+                   "#F8D3AC", ## #7FD112 portal green   #F8D3AC skin beige
+                   "#E64358"#,  ## #2D8844 portal darker green   #E64358 beth red
+               ))
+})
