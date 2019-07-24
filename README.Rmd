@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
 
-**A lot has changed with `tvthemes 1.0.0` so please check the README below rather than the blogpost**
+**A lot has changed with `tvthemes 1.0.0` so please check the README section below rather than the blogpost.**
 
 The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I love! You can also learn about `tvthemes` from the introductory blog post on my website, [here](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/). 
 Suggestions and Pull Requests for palettes/themes are welcome!
@@ -54,6 +54,7 @@ mpg %>%
   scale_fill_brooklyn99(palette = "Dark") +
   labs(title = "Do you know what it means to 'clap back', Raymond?",
        subtitle = glue::glue("BE- {emo::ji('clap')} -CAUSE {emo::ji('clap')} I {emo::ji('clap')} DO {emo::ji('clap')} !"),
+       x = "Titles of Your Sex Tape",
        caption = "Pizza bagels? Pizza rolls? Pizza poppers? Pizzaritos? Pizza pockets?") +
   theme_brooklyn99(title.font = "Titillium Web",
                    text.font = "Calibri Light",
@@ -157,12 +158,15 @@ mpg %>%
   scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
 ```
 
-For themes
+For themes the one change is a toggle option for axis ticks via `ticks` which you can set to either `TRUE` and the default `FALSE`. 
 
 ```{r}
-
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_kimPossible(n = 5, reverse = FALSE) +
+  theme_hildaDay(ticks = TRUE)
 ```
-
 
 ## Examples
 
@@ -343,7 +347,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 arryn + manderly - martell + plot_layout(ncol = 1)
 ```
 
-### Game of Thrones: Stannis Baratheon
+### Game of Thrones: Stannis Baratheon, The One True King
 
 ```{r, fig.width=13, fig.height = 10}
 mpg %>% 
@@ -653,3 +657,9 @@ Please note that the `tvthemes` project is released with a [Contributor Code of 
 
 This code is released under the GPL v3 License - see the
 [LICENSE.md](LICENSE.md) file for details.
+
+## Credits
+
+Inspired by [Matt Oldach](https://twitter.com/MattOldach/)'s [{vaporwave}](https://github.com/moldach/vapoRwave), [Bob Rudis](https://twitter.com/hrbrmstr)' [{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes), [Garrick Aden-Buie](https://twitter.com/grrrck/)'s [{ggpomological}](https://github.com/gadenbuie/ggpomological), [Ewen Henderson](https://twitter.com/ewen_)'s [{ghibli}](https://github.com/ewenme/ghibli), [rOpenSci]()'s [{ochRe}](https://github.com/ropenscilabs/ochRe), & [Nathan Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
+
+Hilda palettes from [Matt Shanks](http://www.mattshanks.com.au/colour-palette-reference-hilda/) and [ChevyRay](https://pbs.twimg.com/media/DoeR9edWwAMG2hW.png).

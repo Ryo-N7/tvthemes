@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tvthemes <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
+# tvthemes 1.0.0 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
 
 <!-- badges: start -->
 
@@ -15,6 +15,9 @@ status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](ht
 
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
 
+**A lot has changed with `tvthemes 1.0.0` so please check the README
+section below rather than the blogpost.**
+
 The `tvthemes` package is a collection of various `ggplot2` themes and
 color/fill palettes based on everybody’s favorite TV shows. What
 kick-started this whole package was my
@@ -25,7 +28,6 @@ custom `ggplot2` theme and color palettes so I decided to expand it to
 other shows that I love\! You can also learn about `tvthemes` from the
 introductory blog post on my website,
 [here](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/).
-
 Suggestions and Pull Requests for palettes/themes are welcome\!
 
 ``` r
@@ -34,9 +36,10 @@ mpg %>%
   geom_histogram(aes(fill = class), 
                  col = "black", size = 0.1,
                  binwidth = 0.1) +
-  scale_fill_brooklyn99_dark() +
+  scale_fill_brooklyn99(palette = "Dark") +
   labs(title = "Do you know what it means to 'clap back', Raymond?",
        subtitle = glue::glue("BE- {emo::ji('clap')} -CAUSE {emo::ji('clap')} I {emo::ji('clap')} DO {emo::ji('clap')} !"),
+       x = "Titles of Your Sex Tape",
        caption = "Pizza bagels? Pizza rolls? Pizza poppers? Pizzaritos? Pizza pockets?") +
   theme_brooklyn99(title.font = "Titillium Web",
                    text.font = "Calibri Light",
@@ -51,12 +54,16 @@ mpg %>%
     Tribe, Earth Kingdom, & Air Nomads)
   - **Brooklyn Nine-Nine**: theme + palettes (regular & dark)
   - **Game of Thrones/A Song of Ice & Fire**: ‘The Palettes of Ice &
-    Fire’ (currently: Stark, Lannister, Tully, Targaryen, Greyjoy, &
-    Tyrell)
+    Fire’ (currently: Stark, Baratheon (Stannis), Lannister, Tully,
+    Targaryen, Martell, Greyjoy, Tyrell, Arryn, Manderly)
   - **Rick & Morty**: theme + palette
   - **Parks & Recreation**: two themes (light & dark) + palette
   - **The Simpsons**: theme + palette
   - **Spongebob Squarepants**: theme + palette + background images
+  - **Hilda**: Day, Dusk, Night themes + palettes
+  - **Attack on Titan**: palette
+  - **Kim Possible**: palette
+  - **Big Hero 6**: palette
   - *More in future releases…*
 
 ## Installation
@@ -124,13 +131,13 @@ You can check out all the colors for each palette by running
 below:
 
 ``` r
-scales::show_col(tvthemes:::brooklyn99_dark_palette)
+scales::show_col(tvthemes:::brooklyn99_palette$Dark)
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="70%" style="display: block; margin: auto;" />
 
 ``` r
-scales::show_col(tvthemes:::lannister_palette)
+scales::show_col(tvthemes:::westeros_palette$Lannister)
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-2.png" width="70%" style="display: block; margin: auto;" />
@@ -140,6 +147,72 @@ scales::show_col(tvthemes:::simpsons_palette)
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-3.png" width="70%" style="display: block; margin: auto;" />
+
+## `tvthemes 1.0.0` Major Changes
+
+In addition to the new palettes and themes which you can see below in
+the [Examples](#examples) section some of the code in `tvthemes` has
+changed significantly.
+
+In palettes for example, when you are calling the palette functions via
+`scale_fill_*()` or `scale_color_*()` you now have a lot more options:
+
+  - `palette`: If multiple available, select the palette: “Stannis”,
+    “FireNation”, “Dusk”, etc. Leave blank if only single palette
+    available.
+  - `n`: Number of colors. If left blank it defaults to the total number
+    of colors available in the palette.
+  - `type`: “Discrete” or “Continuous”. NOTE: Most palettes are only
+    optimized for “Discrete” at the present time.
+  - `reverse`: Reverse order of colors. `TRUE`/`FALSE`
+
+For TV shows with multiple palettes they are now organized under a
+single “palette list” from which you pass the specific palette that you
+want. If you want to check out the colors for these specific palettes:
+
+``` r
+## Previously:
+scales::show_col(tvthemes:::lannister_palette)
+scales::show_col(tvthemes:::brooklyn99_dark_palette)
+
+## Now (as seen in colors section above):
+scales::show_col(tvthemes:::westeros_palette$Lannister)
+scales::show_col(tvthemes:::brooklyn99_palette$Dark)
+```
+
+The specific palettes that changed are:
+
+  - `Brooklyn Nine-Nine`: Default = “Regular”, “Dark”
+  - `Avatar: The Last Airbender`: Default = “FireNation”,
+    “EarthKingdom”, “WaterTribe”, “AirNation”
+  - `Hilda`: Default = “Day”, “Dusk”, “Night”
+  - `Game of Thrones/A Song of Ice & Fire`: Default = “Stark”,
+    “Stannis”, “Tyrell”, “Lannister”, “Manderly”, “Martell”,
+    “Arryn”, “Greyjoy”, “Targaryen”, “Tully”
+
+<!-- end list -->
+
+``` r
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
+```
+
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" />
+
+For themes the one change is a toggle option for axis ticks via `ticks`
+which you can set to either `TRUE` and the default `FALSE`.
+
+``` r
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_kimPossible(n = 5, reverse = FALSE) +
+  theme_hildaDay(ticks = TRUE)
+```
+
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" />
 
 ## Examples
 
@@ -158,7 +231,7 @@ mpg %>%
                    legend.font = "Calibri Light")
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Spongebob Squarepants
 
@@ -181,7 +254,7 @@ bobspog_plot <- mpg %>%
 bobspog_plot
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-2.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-10-2.png" width="70%" style="display: block; margin: auto;" />
 
 ``` r
 
@@ -190,7 +263,7 @@ paintBikiniBottom(plot = bobspog_plot,
                   background = "background") 
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Game of Thrones: House Stark, Lannister, Targaryen
 
@@ -203,16 +276,13 @@ mpg %>%
        caption = "Winter Is Coming...") +
   scale_y_continuous(expand = c(0,0)) +
   scale_x_continuous(expand = c(0,0)) +
-  scale_fill_stark() +
+  scale_fill_westeros(palette = "Stark") +
   theme_minimal() +
   theme(text = element_text(family = "Cinzel", size = 14)) -> stark
 
-colstully <- tully_pal()(5)
-
 ggplot(diamonds, aes(price, fill = cut)) +
   geom_histogram(binwidth = 500) +
-  scale_fill_manual(values = rev(colstully)) +
-  #scale_fill_tully() +
+  scale_fill_westeros(palette = "Tully", n = 5) +
   labs(title = "I've seen wet shits I like better than Walder Frey.",
        subtitle = "Pardon my lord, my lady. I need to find a tree to piss on.",
        caption = "- The Blackfish") +
@@ -220,10 +290,11 @@ ggplot(diamonds, aes(price, fill = cut)) +
   theme(text = element_text(family = "Cinzel", size = 10),
         title = element_text(family = "Cinzel", size = 14)) -> tully
 
-ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
+gapminder::gapminder %>% 
+  ggplot(aes(x = log10(gdpPercap), y = lifeExp)) +
   geom_point(aes(color = continent)) + 
   scale_x_log10() +
-  scale_color_targaryen() +
+  scale_color_westeros(palette = "Targaryen") +
   labs(title = "I am the blood of the dragon. I must be strong.",
        subtitle = "I must have fire in my eyes when I face them, not tears.",
        caption = "- Fire & Blood.") +
@@ -235,7 +306,7 @@ ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
 stark + tully - targaryen + plot_layout(ncol = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Game of Thrones: House Tyrell, Tully, Greyjoy
 
@@ -248,7 +319,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.8) +
   scale_x_date(breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-  scale_fill_tyrell() +
+  scale_fill_westeros(palette = "Tyrell") +
   labs(title = "All men are fools, if truth be told, but",
        subtitle = "the ones in motley are more amusing than ones with crowns.",
        caption = "- The Queen of Thorns") +
@@ -257,15 +328,12 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
         plot.title = element_text(family = "Cinzel", size = 16),
         plot.subtitle = element_text(family = "Cinzel", size = 12)) -> tyrell
 
-cols <- lannister_pal()(5)
-
 ggplot(diamonds, aes(price, fill = cut)) +
   geom_histogram(binwidth = 500) +
   labs(title = "You are done with whores.",
        subtitle = "The next one I find in your bed, I'll hang.",
        caption = "Rains of Castamere") +
-  scale_fill_manual(values = rev(cols)) +
-  #scale_fill_lannister() +
+  scale_fill_westeros(palette = "Lannister", n = 5, reverse = TRUE) +
   theme_minimal() +
   theme(text = element_text(family = "Cinzel", size = 14)) -> lannister
 
@@ -273,7 +341,7 @@ airquality %>%
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
   geom_line(size = 1.5) +
-  scale_color_greyjoy() +
+  scale_color_westeros(palette = "Greyjoy") +
   labs(title = "I am the storm, my lord.",
        subtitle = "The first storm, and the last.",
        caption = "- Euron 'The Crow's Eye' Greyjoy") +
@@ -285,44 +353,89 @@ airquality %>%
 tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Game of Thrones: Martell, Dayne, Manderly
+### Game of Thrones: Arryn, Manderly, Martell
 
 ``` r
-cols <- manderly_pal()(7)
-
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_manual(values = rev(cols)) +
-  #scale_fill_manderly() +
+  scale_fill_westeros(palette = "Arryn", n = 7) +
+  labs(title = "The Seed is Strong.",
+       subtitle = "The bad little man. Mother, can I make him fly?",
+       caption = "I want to see him fly.") +
+  theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 14),
+        plot.title = element_text(family = "Cinzel", size = 18),
+        legend.position = "none") -> arryn
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  scale_color_westeros(palette = "Manderly", n = 6) +
   labs(title = "The North remembers Lord Davos. The North remembers...",
        subtitle = "The mummer's farce is almost done, my son is coming home.",
        caption = "When treating with liars, even an honest man must lie.") +
   theme_minimal() +
+  theme(text = element_text(family = "Cinzel", size = 12),
+        plot.title = element_text(family = "Cinzel", size = 14),
+        legend.position = "none") -> manderly
+
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus", "Canada", "Mexico")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.8) +
+  scale_x_date(expand = c(0, 0),
+               breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_fill_westeros(palette = "Martell", n = 8) +
+  labs(title = "What is our heart's desire? - Ariane Martell",
+       subtitle = "Vengeance. Justice. Fire And Blood. - Doran Martell",
+       caption = "Hiss with me Sand Snakes, HISSS!") +
+  theme_minimal() +
   theme(text = element_text(family = "Cinzel", size = 10),
-        title = element_text(family = "Cinzel", size = 12)) 
+        plot.title = element_text(family = "Cinzel", size = 24),
+        plot.subtitle = element_text(family = "Cinzel", size = 26),
+        legend.position = "none") -> martell
+
+## patchwork together:
+arryn + manderly - martell + plot_layout(ncol = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" />
+
+### Game of Thrones: Stannis Baratheon, The One True King
 
 ``` r
-
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_dayne() +
-  #scale_fill_manderly() +
-  labs(title = "Our knees do not bend easily.",
-       subtitle = "All knights must bleed, Jamie. Blood is the seal of our devotion.",
-       caption = "The Sword of the Morning & Dawn") +
+  scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  labs(title = glue("
+                    We do not choose our destinies. 
+                    Yet we must... we must do our duty, no? 
+                    Great or small, we must do our duty."),
+       subtitle = "I will have no burnings. Pray Harder.",
+       caption = glue("
+                      The Iron Throne is Mine by Right.
+                      - Stannis Baratheon"),
+       x = "Bent Knees", y = "Lightbringer") +
   theme_minimal() +
-  theme(text = element_text(family = "Cinzel", size = 10),
-        title = element_text(family = "Cinzel", size = 12)) 
+  theme(text = element_text(family = "Cinzel", size = 20),
+        plot.title = element_text(family = "Cinzel", size = 26),
+        plot.subtitle = element_text(size = 18),
+        plot.caption = element_text(size = 16),
+        axis.text = element_text(size = 18),
+        legend.position = "none") 
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-2.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### The Simpsons
 
@@ -348,7 +461,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                  axis.text.size = 8)
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-15-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Rick and Morty
 
@@ -364,7 +477,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
                      title.size = 14)
 ```
 
-<img src="man/figures/README-unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-16-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
@@ -372,7 +485,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_fireNation() +
+  scale_fill_avatarTLA(palette = "FireNation") +
   labs(title = "Flameo, Hotman!",
        subtitle = "Fire. Wang Fire. This is my wife, Sapphire.",
        x = "Lion Vultures Owned",
@@ -384,17 +497,18 @@ airquality %>%
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
   geom_line(size = 1.5) +
-  scale_color_airNomads() +
+  scale_color_avatarTLA(palette = "AirNomads") +
   labs(title = "Let's head to the Eastern Air Temple!",
        subtitle = "Appa, Yip Yip!") +
   theme_theLastAirbender(title.font = "Slayer",
                          text.font = "Slayer",
                          title.size = 10) -> airnomads
 
-ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
+gapminder::gapminder %>% 
+  ggplot(aes(x = log10(gdpPercap), y = lifeExp)) +
   geom_point(aes(color = continent)) + 
   scale_x_log10() +
-  scale_color_waterTribe() +
+  scale_color_avatarTLA(palette = "WaterTribe") +
   labs(title = "I am thinking maybe we could... do an activity together?",
        subtitle = "... Do an activity?",
        x = "GDP per Otter-Penguins",
@@ -407,7 +521,7 @@ ggplot(gapminder::gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_earthKingdom() +
+  scale_fill_avatarTLA(palette = "EarthKingdom") +
   labs(title = "There is no war in Ba Sing Se",
        subtitle = "(Welcome to Lake Laogai)") +
   theme_theLastAirbender(title.font = "Slayer",
@@ -418,7 +532,7 @@ mpg %>%
 plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-17-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Parks and Recreation
 
@@ -426,7 +540,7 @@ plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
-  geom_point(size = 2.5) +
+  geom_point(size = 4.5) +
   labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
        caption = "No one likes them. Good day, sir.") + 
   scale_color_parksAndRec() + 
@@ -450,39 +564,181 @@ mpg %>%
 plot_grid(parksandrec, parksandreclight, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Attack on Titan
 
 ``` r
 mpg %>% 
   ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_attackOnTitan() +
-  labs(title = "On That Day, Mankind Received A Grim Reminder...",
-       subtitle = "TITANS ARE MY TRIGGER",
+  geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
+  scale_fill_attackOnTitan(reverse = FALSE) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  annotate(geom = "label", x = 5, y = 20, 
+           label = "TITANS ARE MY TRIGGER!!", hjust = 0) +
+  labs(title = "On That Day, Mankind Received A Grim Reminder.",
+       subtitle = "Well, Sweet Mother Theresa on the Hood of a Mercedes Benz!",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
     theme_parksAndRec()
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-19-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Kim Possible
 
 ``` r
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), 
-                 col = "black", size = 0.1,
-                 binwidth = 0.1) +
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", 
+                        "Japan", "Norway", "Belarus", "United Kingdom",
+                        "Peru", "Spain")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.9) +
+  scale_x_date(expand = c(0, 0),
+               breaks = data$year, 
+               date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
   scale_fill_kimPossible() +
   labs(title = "What's The Sitch, Wade?",
-       subtitle = glue::glue("Call Me {emo::ji('call')}, Beep Me {emo::ji('pager')},  If You Wanna Reach Me {emo::ji('clap')} !"),
-       caption = "Stoppable... What Are You Doing In My House??") +
-  theme_spongeBob()
+       subtitle = glue::glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
+       caption = "Stoppable... What Are You Doing In My House??",
+       x = "Year", y = "GDP per Capita") +
+  theme_spongeBob(title.font = "Roboto Condensed",
+                  text.font = "Roboto Condensed",
+                  title.size = 24,
+                  subtitle.size = 20,
+                  text.size = 18,
+                  legend.title.size = 14,
+                  legend.text.size = 12,
+                  ticks = TRUE)
 ```
 
-<img src="man/figures/README-unnamed-chunk-16-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-20-1.png" width="70%" style="display: block; margin: auto;" />
+
+### Big Hero 6
+
+``` r
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", 
+                        "Japan", "Norway", "Finland", "United Kingdom")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.9) +
+  scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_fill_bigHero6() +
+  labs(title = "What's The Sitch, Wade?",
+       subtitle = glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
+       caption = "Stoppable... What Are You Doing In My House??",
+       x = "Year", y = "GDP per Capita") +
+  theme_spongeBob(title.font = "Roboto Condensed",
+                  text.font = "Roboto Condensed",
+                  title.size = 24,
+                  subtitle.size = 20,
+                  text.size = 18,
+                  legend.position = "none") -> bigherobar
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, fill = Month)) +
+  geom_point(size = 3, stroke = 1.25, shape = 21) +
+  labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
+       caption = "No one likes them. Good day, sir.") + 
+  scale_fill_bigHero6() + 
+  theme_minimal() -> bigherodot
+
+## plot together:
+plot_grid(bigherobar, bigherodot, ncol = 2)
+```
+
+<img src="man/figures/README-unnamed-chunk-21-1.png" width="70%" style="display: block; margin: auto;" />
+
+### Hilda
+
+``` r
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
+  geom_line(size = 1.5) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_color_hilda(palette = "Day") +
+  labs(title = "On That Day, Mankind Received A Grim Reminder...",
+       subtitle = "TITANS ARE MY TRIGGER",
+       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
+    theme_hildaDay(ticks = TRUE,
+                    legend.position = "none")
+```
+
+<img src="man/figures/README-unnamed-chunk-22-1.png" width="70%" style="display: block; margin: auto;" />
+
+``` r
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_fill_hilda(palette = "Dusk", reverse = TRUE) +
+  labs(title = "On That Day, Mankind Received A Grim Reminder...",
+       subtitle = "TITANS ARE MY TRIGGER",
+       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
+    theme_hildaDusk(ticks = TRUE,
+                    legend.position = "none")
+```
+
+<img src="man/figures/README-unnamed-chunk-22-2.png" width="70%" style="display: block; margin: auto;" />
+
+``` r
+
+airquality %>% 
+  mutate(Month = as.factor(Month)) %>% 
+  ggplot(aes(x = Day, y = Temp, group = Month, fill = Month)) +
+  geom_point(size = 3, stroke = 1.25, shape = 21) +
+  labs(title = "Could someone close that door,", 
+       subtitle = "it's a little drafty in here...",
+       caption = "No one likes them. Good day, sir.") + 
+  scale_fill_hilda(palette = "Night", reverse = TRUE) +
+  theme_hildaNight(ticks = TRUE)
+```
+
+<img src="man/figures/README-unnamed-chunk-22-3.png" width="70%" style="display: block; margin: auto;" />
+
+Also, there is nothing stopping you from mixing the `theme` and
+`palette`, below: `"Day" palette` with `"Night" theme`\!
+
+``` r
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("France", "Germany", "Ireland", "Italy", 
+                        "Japan", "Norway", "Finland", "United Kingdom")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.9) +
+  scale_x_date(expand = c(0, 0),
+               breaks = data$year, 
+               date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), 
+                     labels = scales::dollar) +
+  scale_fill_hilda(palette = "Day") +
+  labs(title = "What's The Sitch, Wade?",
+       subtitle = glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
+       caption = "Stoppable... What Are You Doing In My House??",
+       x = "Year", y = "GDP per Capita") +
+  theme_hildaNight(title.font = "Roboto Condensed",
+              text.font = "Roboto Condensed",
+              title.size = 24,
+              subtitle.size = 20,
+              text.size = 18,
+              legend.title.size = 14,
+              legend.text.size = 12,
+              ticks = TRUE)
+```
+
+<img src="man/figures/README-unnamed-chunk-23-1.png" width="70%" style="display: block; margin: auto;" />
 
 ## Contributing
 
@@ -494,3 +750,20 @@ you agree to abide by its terms.
 
 This code is released under the GPL v3 License - see the
 [LICENSE.md](LICENSE.md) file for details.
+
+## Credits
+
+Inspired by [Matt Oldach](https://twitter.com/MattOldach/)‘s
+[{vaporwave}](https://github.com/moldach/vapoRwave), [Bob
+Rudis](https://twitter.com/hrbrmstr)’
+[{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes), [Garrick
+Aden-Buie](https://twitter.com/grrrck/)’s
+[{ggpomological}](https://github.com/gadenbuie/ggpomological), [Ewen
+Henderson](https://twitter.com/ewen_)’s
+[{ghibli}](https://github.com/ewenme/ghibli), [rOpenSci]()’s
+[{ochRe}](https://github.com/ropenscilabs/ochRe), & [Nathan
+Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
+
+Hilda palettes from [Matt
+Shanks](http://www.mattshanks.com.au/colour-palette-reference-hilda/)
+and [ChevyRay](https://pbs.twimg.com/media/DoeR9edWwAMG2hW.png).
