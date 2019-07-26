@@ -113,6 +113,7 @@ import_roboto_condensed() ## "Roboto Condensed" Google Font import from hrbrthem
 import_titillium_web()    ## "Titillium Web" Google Font import from hrbrthemes
 import_spongeBob()        ## "Some Time Later" font
 import_cinzel()           ## "Cinzel" font to use with 'The Palettes of Ice & Fire'
+import_ChelseaMarket()    ## "Chelsea Market" font for "Hilda"
 
 ## install.packages("extrafont")
 library(extrafont)
@@ -199,8 +200,6 @@ mpg %>%
   scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" />
-
 For themes the one change is a toggle option for axis ticks via `ticks`
 which you can set to either `TRUE` and the default `FALSE`.
 
@@ -211,8 +210,6 @@ mpg %>%
   scale_fill_kimPossible(n = 5, reverse = FALSE) +
   theme_hildaDay(ticks = TRUE)
 ```
-
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" />
 
 ## Examples
 
@@ -556,6 +553,8 @@ mpg %>%
        subtitle = "Gotta Spend Money To Make Money!",
        caption = "And I spent... all of my money!") +
   scale_fill_parksAndRec() + 
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
   theme_minimal() +
   theme_parksAndRec_light(title.font = "Titillium Web Black",
                     text.font = "Titillium Web") -> parksandreclight
@@ -569,18 +568,21 @@ plot_grid(parksandrec, parksandreclight, ncol = 2)
 ### Attack on Titan
 
 ``` r
+img <- png::readPNG("inst/backgrounds/aot-titan.png")
+
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = rev(class)), col = "black", size = 0.1) +
   scale_fill_attackOnTitan(reverse = FALSE) +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(expand = c(0, 0)) +
-  annotate(geom = "label", x = 5, y = 20, 
-           label = "TITANS ARE MY TRIGGER!!", hjust = 0) +
+  annotation_raster(img, xmin = 4.75, xmax = 7.75, 
+                    ymin = 7, ymax = 33) +
   labs(title = "On That Day, Mankind Received A Grim Reminder.",
        subtitle = "Well, Sweet Mother Theresa on the Hood of a Mercedes Benz!",
        caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
-    theme_parksAndRec()
+    theme_parksAndRec(text.font = "Roboto Condensed",
+                      title.font = "Roboto Condensed")
 ```
 
 <img src="man/figures/README-unnamed-chunk-19-1.png" width="70%" style="display: block; margin: auto;" />
@@ -630,9 +632,9 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
   scale_fill_bigHero6() +
-  labs(title = "What's The Sitch, Wade?",
-       subtitle = glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
-       caption = "Stoppable... What Are You Doing In My House??",
+  labs(title = stringr::str_wrap("Well, Golly Mister! It Looks Like Your Friend Got Pan Fried!", width = 50),
+       subtitle = "Villains Love Exposed Pipes, Beams, and Plastic Tarps!",
+       caption = "*Fist Bump* Falalalalalala~",
        x = "Year", y = "GDP per Capita") +
   theme_spongeBob(title.font = "Roboto Condensed",
                   text.font = "Roboto Condensed",
@@ -644,11 +646,15 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, fill = Month)) +
-  geom_point(size = 3, stroke = 1.25, shape = 21) +
-  labs(title = "Calzones are pointless.", subtitle = "They're just pizza that's harder to eat!",
-       caption = "No one likes them. Good day, sir.") + 
+  geom_point(size = 4, stroke = 1.25, shape = 21) +
+  labs(title = "Hiro, I Will Always Be With You.", 
+       subtitle = "I'm Satisfied With My Care, Baymax",
+       caption = "You Think I Want People To Know You Have A Crush On Me?") + 
   scale_fill_bigHero6() + 
-  theme_minimal() -> bigherodot
+  theme_minimal() +
+  theme(text = element_text(family = "Roboto Condensed"),
+        plot.title = element_text(size = 20),
+        plot.subtitle = element_text(size = 16)) -> bigherodot
 
 ## plot together:
 plot_grid(bigherobar, bigherodot, ncol = 2)
@@ -666,16 +672,11 @@ airquality %>%
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(expand = c(0, 0)) +
   scale_color_hilda(palette = "Day") +
-  labs(title = "On That Day, Mankind Received A Grim Reminder...",
-       subtitle = "TITANS ARE MY TRIGGER",
-       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
+  labs(title = "Well, that was pretty traumatic...",
+       subtitle = "but such is the life of an adventurer!",
+       caption = "I don't even have hands!!") +
     theme_hildaDay(ticks = TRUE,
-                    legend.position = "none")
-```
-
-<img src="man/figures/README-unnamed-chunk-22-1.png" width="70%" style="display: block; margin: auto;" />
-
-``` r
+                    legend.position = "none") -> hildaday
 
 mpg %>% 
   ggplot(aes(displ)) +
@@ -683,16 +684,11 @@ mpg %>%
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(expand = c(0, 0)) +
   scale_fill_hilda(palette = "Dusk", reverse = TRUE) +
-  labs(title = "On That Day, Mankind Received A Grim Reminder...",
-       subtitle = "TITANS ARE MY TRIGGER",
-       caption = "W-Well I'll Just Bertell You What I Berthold Him..") +
+  labs(title = stringr::str_wrap("If you ask me all houses are basically the same. Roof, floors, walls...", width = 50),
+       subtitle = "people saying STOP WALKING IN LIKE THAT WOODMAN!",
+       caption = "I'm more of a writer than a fighter!") +
     theme_hildaDusk(ticks = TRUE,
-                    legend.position = "none")
-```
-
-<img src="man/figures/README-unnamed-chunk-22-2.png" width="70%" style="display: block; margin: auto;" />
-
-``` r
+                    legend.position = "none") -> hildadusk
 
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
@@ -700,45 +696,16 @@ airquality %>%
   geom_point(size = 3, stroke = 1.25, shape = 21) +
   labs(title = "Could someone close that door,", 
        subtitle = "it's a little drafty in here...",
-       caption = "No one likes them. Good day, sir.") + 
+       caption = "I'm quite tall for an elf, actually.") + 
   scale_fill_hilda(palette = "Night", reverse = TRUE) +
-  theme_hildaNight(ticks = TRUE)
+  scale_x_continuous(expand = c(0.05, 0.02)) +
+  scale_y_continuous(expand = c(0.05, 0.02)) +
+  theme_hildaNight(ticks = TRUE) -> hildanight
+
+plot_grid(hildaday, hildadusk, hildanight, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-22-3.png" width="70%" style="display: block; margin: auto;" />
-
-Also, there is nothing stopping you from mixing the `theme` and
-`palette`, below: `"Day" palette` with `"Night" theme`\!
-
-``` r
-data <- gapminder::gapminder %>% 
-  filter(country %in% c("France", "Germany", "Ireland", "Italy", 
-                        "Japan", "Norway", "Finland", "United Kingdom")) %>% 
-  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
-
-ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
-  geom_area(alpha = 0.9) +
-  scale_x_date(expand = c(0, 0),
-               breaks = data$year, 
-               date_labels = "%Y") +
-  scale_y_continuous(expand = c(0, 0), 
-                     labels = scales::dollar) +
-  scale_fill_hilda(palette = "Day") +
-  labs(title = "What's The Sitch, Wade?",
-       subtitle = glue("Call Me {emo::ji('call')} Beep Me {emo::ji('pager')}  If You Wanna Reach Me {emo::ji('clap')} !"),
-       caption = "Stoppable... What Are You Doing In My House??",
-       x = "Year", y = "GDP per Capita") +
-  theme_hildaNight(title.font = "Roboto Condensed",
-              text.font = "Roboto Condensed",
-              title.size = 24,
-              subtitle.size = 20,
-              text.size = 18,
-              legend.title.size = 14,
-              legend.text.size = 12,
-              ticks = TRUE)
-```
-
-<img src="man/figures/README-unnamed-chunk-23-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-22-1.png" width="70%" style="display: block; margin: auto;" />
 
 ## Contributing
 
