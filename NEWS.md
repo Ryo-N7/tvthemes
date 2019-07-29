@@ -1,3 +1,17 @@
+# tvthemes 1.0.0
+
+* New palettes:
+  * Kim Possible, Big Hero 6, Stannis Baratheon, House Manderly, House Martell, House Arryn, Hilda, & Attack on Titan
+* New themes:
+  * Hilda: Day, Dusk, & Night
+* Increased functionality in all palette functions
+  * `palette`, `n`, `type`, `reverse` options added
+* TV shows with multiple palettes have a single function from which you call a specific palette:
+  * `scale_color_westeros(palette = "Stannis")`
+  * `scale_fill_avatarTLA(palette = "EarthKingdom")`
+* Toggle ticks with `ticks = TRUE` or `ticks = FALSE`
+* More tests added
+
 # tvthemes 0.0.0.9100
 
 * Corrected `title` in P&R, R&M, TLA themes to `plot.title`

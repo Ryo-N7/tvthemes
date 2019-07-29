@@ -69,3 +69,19 @@ test_that("scale_colour_parksAndRec/light works", {
 test_that("scale_fill_parksAndRec/light works", {
   expect_is(scale_fill_parksAndRec(), "ScaleDiscrete")
 })
+
+## Colors are correct ----
+test_that("scale_color_kimPossible outputs correct colors", {
+  expect_equal(parksAndRec_pal()(10),
+               c(  "#bdbdbd", ## yellowtan #fcf7e8  grey #969696    #bdbdbd
+                   "#a51209", ## maroon
+                   "#ffdb58",  ## lighter green (turqoise-ish) #238443     #ffdb58  mustard
+                   "#ec7014",  ## #4C3114 darker brown   #ec7014 darker orange
+                   "#7A491E",  ## regular brown
+                   "#C24841", ## darker reddish-orange
+                   "#005502", ## darker green
+                   "#f7fcb9",  ## lime green <<<<
+                   "#69983a", ## lightish gree #1A5E1F darkgreen
+                   "#b5651d"  ## beige #fee0d2     #b5651d light brown
+               ))
+})

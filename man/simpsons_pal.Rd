@@ -7,15 +7,21 @@
 \alias{scale_fill_simpsons}
 \title{The Simpsons palette}
 \usage{
-simpsons_pal()
+simpsons_pal(n, type = c("discrete", "continuous"), reverse = FALSE)
 
-scale_color_simpsons(...)
+scale_color_simpsons(n, type = "discrete", reverse = FALSE, ...)
 
-scale_colour_simpsons(...)
+scale_colour_simpsons(n, type = "discrete", reverse = FALSE, ...)
 
-scale_fill_simpsons(...)
+scale_fill_simpsons(n, type = "discrete", reverse = FALSE, ...)
 }
 \arguments{
+\item{n}{number of colors}
+
+\item{type}{discrete or continuous}
+
+\item{reverse}{reverse order, Default: FALSE}
+
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
 \describe{
   \item{aesthetics}{The names of the aesthetics that this scale works with}

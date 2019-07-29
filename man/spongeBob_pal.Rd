@@ -7,15 +7,21 @@
 \alias{scale_fill_spongeBob}
 \title{Spongebob Squarepants palette}
 \usage{
-spongeBob_pal()
+spongeBob_pal(n, type = c("discrete", "continuous"), reverse = FALSE)
 
-scale_color_spongeBob(...)
+scale_color_spongeBob(n, type = "discrete", reverse = FALSE, ...)
 
-scale_colour_spongeBob(...)
+scale_colour_spongeBob(n, type = "discrete", reverse = FALSE, ...)
 
-scale_fill_spongeBob(...)
+scale_fill_spongeBob(n, type = "discrete", reverse = FALSE, ...)
 }
 \arguments{
+\item{n}{number of colors}
+
+\item{type}{discrete or continuous}
+
+\item{reverse}{reverse order, Default: FALSE}
+
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
 \describe{
   \item{aesthetics}{The names of the aesthetics that this scale works with}

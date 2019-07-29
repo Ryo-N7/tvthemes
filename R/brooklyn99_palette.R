@@ -1,21 +1,41 @@
-## B99 regular palette ----
-brooklyn99_palette <- c(
-  "#e7298a", ## hot pink
-  "#72bcd4", ## lightblue
-  "#e41a1c", ## red
-  "#FCF40E", ## yellow
-  "#49f149", ## light-green
-  "#f16913", ## orange
-  "#525252", ## grey
-  "#F9FEFF", ## white
-  "#000E33", ## dark navy
-  "#000000"  ## black
+## Brooklyn Nine-Nine palette
+
+brooklyn99_palette <- list(
+  ## B99 regular palette ----
+  Regular = c(
+    "#e7298a", ## hot pink
+    "#72bcd4", ## lightblue
+    "#e41a1c", ## red
+    "#FCF40E", ## yellow
+    "#49f149", ## light-green
+    "#f16913", ## orange
+    "#525252", ## grey
+    "#F9FEFF", ## white
+    "#000E33", ## dark navy
+    "#000000"  ## black
+  ),
+  ## B99 dark palette ----
+  Dark = c(
+    "#6CA9C3", ## light blue
+    "#3A3533", ## dark gray
+    "#000E33", ## dark navy
+    "#800000", ## maroon
+    "#CBCFD2", ## light gray
+    "#175E78", ## turqoise
+    "#DAA520", ## goldenrod
+    "#174D79", ## dark teal
+    "#000000"  ## black
+  )
 )
 
 #' @title Brooklyn Nine Nine Color and Fill Scales
 #' @description Brooklyn Nine Nine Color and Fill Scales
 #' @details Colors that work well with the blue background!
 #' @inheritDotParams ggplot2::discrete_scale
+#' @param palette name of palette, Default: "Regular"
+#' @param n number of colors
+#' @param type discrete or continuous
+#' @param reverse reverse order, Default: FALSE
 #' @seealso
 #'  \code{\link[scales]{manual_pal}}
 #'  [ggplot2::scale_color_discrete]
@@ -24,8 +44,31 @@ brooklyn99_palette <- c(
 #' @export
 #' @importFrom scales manual_pal
 
-brooklyn99_pal <- function(){
-  scales::manual_pal(brooklyn99_palette)
+brooklyn99_pal <- function(palette = "Regular", n = n, type = c("discrete", "continuous"),
+                           reverse = FALSE){
+  brooklyn99 <- brooklyn99_palette[[palette]]
+
+  if (reverse == TRUE) {
+    brooklyn99 <- rev(brooklyn99)
+  }
+
+  if (missing(n)) {
+    n <- length(brooklyn99)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(brooklyn99)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(brooklyn99)}!"))
+  }
+
+  brooklyn99 <- switch(type,
+                     continuous = grDevices::colorRampPalette(brooklyn99)(n),
+                     discrete = brooklyn99[1:n])
+
+  brooklyn99 <- scales::manual_pal(brooklyn99)
+
+  return(brooklyn99)
 }
 
 #' @title scale_color_brooklyn99
@@ -33,8 +76,16 @@ brooklyn99_pal <- function(){
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_color_brooklyn99 <- function(...){
-  ggplot2::discrete_scale("color", "brooklyn99", brooklyn99_pal(), ...)
+scale_color_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete",
+                                   reverse = FALSE, ...){
+  if (type == "discrete") {
+  ggplot2::discrete_scale("color", "brooklyn99",
+                          brooklyn99_pal(palette = palette, n = n, type = type,
+                                       reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_color_gradientn(colors = brooklyn99_pal(palette = palette, n = n, type = type,
+                                                      reverse = reverse)(8))
+  }
 }
 
 #' @title scale_colour_brooklyn99
@@ -49,61 +100,14 @@ scale_colour_brooklyn99 <- scale_color_brooklyn99
 #' @export
 #' @importFrom ggplot2 discrete_scale
 
-scale_fill_brooklyn99 <- function(...){
-  ggplot2::discrete_scale("fill", "brooklyn99", brooklyn99_pal(), ...)
+scale_fill_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete",
+                                  reverse = FALSE, ...){
+  if (type == "discrete") {
+  ggplot2::discrete_scale("fill", "brooklyn99",
+                          brooklyn99_pal(palette = palette, n = n, type = type,
+                                       reverse = reverse), ...)
+  } else { ## needs work...
+    ggplot2::scale_fill_gradientn(colors = brooklyn99_pal(palette = palette, n = n, type = type,
+                                                           reverse = reverse)(8))
+  }
 }
-
-## B99 dark palette ----
-brooklyn99_dark_palette <- c(
-  "#6CA9C3", ## light blue
-  "#3A3533", ## dark gray
-  "#000E33", ## dark navy
-  "#800000", ## maroon
-  "#CBCFD2", ## light gray
-  "#175E78", ## turqoise
-  "#DAA520", ## goldenrod
-  "#174D79", ## dark teal
-  "#000000"  ## black
-)
-
-#' @title Dark version of Brooklyn Nine-Nine palette
-#' @description Dark version of Brooklyn Nine-Nine palette
-#' @return B99 dark palette
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @rdname brooklyn99_dark_pal
-#' @export
-#' @importFrom scales manual_pal
-
-brooklyn99_dark_pal <- function(){
-  scales::manual_pal(brooklyn99_dark_palette)
-}
-
-#' @title scale_color_brooklyn99_dark
-#' @rdname brooklyn99_dark_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_brooklyn99_dark <- function(...){
-  ggplot2::discrete_scale("color", "brooklyn99_dark", brooklyn99_dark_pal(), ...)
-}
-
-#' @title scale_colour_brooklyn99_dark
-#' @rdname brooklyn99_dark_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_brooklyn99_dark <- scale_color_brooklyn99_dark
-
-#' @title scale_fill_brooklyn99_dark
-#' @rdname brooklyn99_dark_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_brooklyn99_dark <- function(...){
-  ggplot2::discrete_scale("fill", "brooklyn99_dark", brooklyn99_dark_pal(), ...)
-}
-

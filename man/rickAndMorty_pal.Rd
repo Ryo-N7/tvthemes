@@ -7,15 +7,22 @@
 \alias{scale_fill_rickAndMorty}
 \title{Rick & Morty color palette}
 \usage{
-rickAndMorty_pal()
+rickAndMorty_pal(n, type = c("discrete", "continuous"),
+  reverse = FALSE)
 
-scale_color_rickAndMorty(...)
+scale_color_rickAndMorty(n, type = "discrete", reverse = FALSE, ...)
 
-scale_colour_rickAndMorty(...)
+scale_colour_rickAndMorty(n, type = "discrete", reverse = FALSE, ...)
 
-scale_fill_rickAndMorty(...)
+scale_fill_rickAndMorty(n, type = "discrete", reverse = FALSE, ...)
 }
 \arguments{
+\item{n}{number of colors}
+
+\item{type}{discrete or continuous}
+
+\item{reverse}{reverse order, Default: FALSE}
+
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
 \describe{
   \item{aesthetics}{The names of the aesthetics that this scale works with}

@@ -7,15 +7,27 @@
 \alias{scale_fill_brooklyn99}
 \title{Brooklyn Nine Nine Color and Fill Scales}
 \usage{
-brooklyn99_pal()
+brooklyn99_pal(palette = "Regular", n = n, type = c("discrete",
+  "continuous"), reverse = FALSE)
 
-scale_color_brooklyn99(...)
+scale_color_brooklyn99(palette = "Regular", n = n, type = "discrete",
+  reverse = FALSE, ...)
 
-scale_colour_brooklyn99(...)
+scale_colour_brooklyn99(palette = "Regular", n = n,
+  type = "discrete", reverse = FALSE, ...)
 
-scale_fill_brooklyn99(...)
+scale_fill_brooklyn99(palette = "Regular", n = n, type = "discrete",
+  reverse = FALSE, ...)
 }
 \arguments{
+\item{palette}{name of palette, Default: "Regular"}
+
+\item{n}{number of colors}
+
+\item{type}{discrete or continuous}
+
+\item{reverse}{reverse order, Default: FALSE}
+
 \item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
 \describe{
   \item{aesthetics}{The names of the aesthetics that this scale works with}

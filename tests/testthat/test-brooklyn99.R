@@ -32,16 +32,43 @@ test_that("brooklyn99_pal raises warning with large number, x > 10", {
 })
 
 test_that("scale_colour_brooklyn99/dark equals scale_color_brooklyn99/dark", {
-  expect_equal(scale_color_brooklyn99(), scale_colour_brooklyn99())
-  expect_equal(scale_color_brooklyn99_dark(), scale_colour_brooklyn99_dark())
+  expect_equal(scale_color_brooklyn99(palette = "Regular"), scale_colour_brooklyn99(palette = "Regular"))
+  expect_equal(scale_color_brooklyn99(palette = "Dark"), scale_colour_brooklyn99(palette = "Dark"))
 })
 
 test_that("scale_colour_brooklyn99/dark works", {
-  expect_is(scale_color_brooklyn99(), "ScaleDiscrete")
-  expect_is(scale_color_brooklyn99_dark(), "ScaleDiscrete")
+  expect_is(scale_color_brooklyn99(palette = "Regular"), "ScaleDiscrete")
+  expect_is(scale_color_brooklyn99(palette = "Dark"), "ScaleDiscrete")
 })
 
 test_that("scale_fill_brooklyn99/dark works", {
-  expect_is(scale_fill_brooklyn99(), "ScaleDiscrete")
-  expect_is(scale_fill_brooklyn99_dark(), "ScaleDiscrete")
+  expect_is(scale_fill_brooklyn99(palette = "Regular"), "ScaleDiscrete")
+  expect_is(scale_fill_brooklyn99(palette = "Dark"), "ScaleDiscrete")
+})
+
+test_that("scale_color_brooklyn99 outputs correct colors", {
+  expect_equal(brooklyn99_pal(palette = "Regular")(10),
+               c(    "#e7298a", ## hot pink
+                     "#72bcd4", ## lightblue
+                     "#e41a1c", ## red
+                     "#FCF40E", ## yellow
+                     "#49f149", ## light-green
+                     "#f16913", ## orange
+                     "#525252", ## grey
+                     "#F9FEFF", ## white
+                     "#000E33", ## dark navy
+                     "#000000"  ## black
+               ))
+
+  expect_equal(brooklyn99_pal(palette = "Dark")(9),
+               c(    "#6CA9C3", ## light blue
+                     "#3A3533", ## dark gray
+                     "#000E33", ## dark navy
+                     "#800000", ## maroon
+                     "#CBCFD2", ## light gray
+                     "#175E78", ## turqoise
+                     "#DAA520", ## goldenrod
+                     "#174D79", ## dark teal
+                     "#000000"  ## black
+               ))
 })

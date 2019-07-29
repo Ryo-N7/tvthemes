@@ -1,5 +1,44 @@
 # Contributor Code of Conduct
 
+For the `theme_*()` follow the order of the arguments:
+
+* text.font = __,
+* title.font = __,
+*  legend.font = __,
+*  title.size = __,
+*  text.size = __,
+*  subtitle.size = __,
+*  axis.title.size = __,
+*  axis.text.size = __,
+*  legend.title.size = __,
+*  legend.text.size = __,
+*  title.color = __,
+*  subtitle.color = __,
+*  text.color = __,
+*  axis.title.color = __,
+*  axis.text.color = __,
+*  legend.title.color = __,
+*  legend.text.color = __,
+*  legend.position = __,
+*  ticks = __
+
+For the ordering of the actual `theme()` elements: 
+* text (text, plot.title, plot.subtitle)
+* axis 
+* background/panel
+* legend
+* axis ticks toggle
+
+The best way to go about it is to just copy-paste an existing theme in the package and start editing from there.
+
+For the `palettes`:
+* palette, if multiple then in a list
+* pal object
+* scale_color and colour
+* scale_fill
+
+As with the `themes` it's best to just copy-paste an existing palette in the package and start editing from there.
+
 As contributors and maintainers of this project, we pledge to respect all people who 
 contribute through reporting issues, posting feature requests, updating documentation,
 submitting pull requests or patches, and other activities.

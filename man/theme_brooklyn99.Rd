@@ -11,7 +11,8 @@ theme_brooklyn99(text.font = NULL, title.font = NULL,
   title.color = "#F9FEFF", subtitle.color = "#F9FEFF",
   text.color = "#F9FEFF", axis.title.color = "#F9FEFF",
   axis.text.color = "#F9FEFF", legend.title.color = "#F9FEFF",
-  legend.text.color = "#F9FEFF", legend.position = "bottom")
+  legend.text.color = "#F9FEFF", legend.position = "bottom",
+  ticks = FALSE)
 }
 \arguments{
 \item{text.font}{text font, Default: NULL}
@@ -49,6 +50,8 @@ theme_brooklyn99(text.font = NULL, title.font = NULL,
 \item{legend.text.color}{legend text color, Default: "F9FEFF"}
 
 \item{legend.position}{legend position, Default: "bottom"}
+
+\item{ticks}{add axis ticks, Default: FALSE}
 }
 \description{
 Brooklyn Nine-Nine theme, Recommended font: "Roboto Condensed" (title), "Calibri Light" (other text)
