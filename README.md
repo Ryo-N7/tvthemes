@@ -16,8 +16,7 @@ status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](ht
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
 
 **A lot has changed with `tvthemes 1.0.0` so please check the [tvthemes
-1.0.0](#tvthemes-100-major-changes) section below rather than the
-blogpost.**
+1.0.0](#tvthemes-100-major-changes) section below\!**
 
 The `tvthemes` package is a collection of various `ggplot2` themes and
 color/fill palettes based on everybody’s favorite TV shows. What
