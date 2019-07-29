@@ -15,8 +15,9 @@ status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](ht
 
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
 
-**A lot has changed with `tvthemes 1.0.0` so please check the README
-section below rather than the blogpost.**
+**A lot has changed with `tvthemes 1.0.0` so please check the [tvthemes
+1.0.0](#tvthemes-100-major-changes) section below rather than the
+blogpost.**
 
 The `tvthemes` package is a collection of various `ggplot2` themes and
 color/fill palettes based on everybody’s favorite TV shows. What
@@ -77,6 +78,68 @@ devtools::install_github("Ryo-N7/tvthemes")
 
 I hope to have a CRAN version soon\!
 
+## tvthemes 1.0.0 Major Changes
+
+In addition to the new palettes and themes which you can see below in
+the [Examples](#examples) section some of the code in `tvthemes` has
+changed significantly.
+
+In palettes for example, when you are calling the palette functions via
+`scale_fill_*()` or `scale_color_*()` you now have a lot more options:
+
+  - `palette`: If multiple available, select the palette: “Stannis”,
+    “FireNation”, “Dusk”, etc. Leave blank if only single palette
+    available.
+  - `n`: Number of colors. If left blank it defaults to the total number
+    of colors available in the palette.
+  - `type`: “Discrete” or “Continuous”. NOTE: Most palettes are only
+    optimized for “Discrete” at the present time.
+  - `reverse`: Reverse order of colors. `TRUE`/`FALSE`
+
+For TV shows with multiple palettes they are now organized under a
+single “palette list” from which you pass the specific palette that you
+want. If you want to check out the colors for these specific palettes:
+
+``` r
+## Previously:
+scales::show_col(tvthemes:::lannister_palette)
+scales::show_col(tvthemes:::brooklyn99_dark_palette)
+
+## Now:
+scales::show_col(tvthemes:::westeros_palette$Lannister)
+scales::show_col(tvthemes:::brooklyn99_palette$Dark)
+```
+
+The specific palettes that changed are:
+
+  - `Brooklyn Nine-Nine`: Default = “Regular”, “Dark”
+  - `Avatar: The Last Airbender`: Default = “FireNation”,
+    “EarthKingdom”, “WaterTribe”, “AirNation”
+  - `Hilda`: Default = “Day”, “Dusk”, “Night”
+  - `Game of Thrones/A Song of Ice & Fire`: Default = “Stark”,
+    “Stannis”, “Tyrell”, “Lannister”, “Manderly”, “Martell”,
+    “Arryn”, “Greyjoy”, “Targaryen”, “Tully”
+
+<!-- end list -->
+
+``` r
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
+```
+
+For themes the one change is a toggle option for axis ticks via `ticks`
+which you can set to either `TRUE` and the default `FALSE`.
+
+``` r
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_kimPossible(n = 5, reverse = FALSE) +
+  theme_hildaDay(ticks = TRUE)
+```
+
 ## Fonts
 
 The difficulty with a lot of the fonts used by TV shows in their logos
@@ -135,81 +198,19 @@ below:
 scales::show_col(tvthemes:::brooklyn99_palette$Dark)
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" />
 
 ``` r
 scales::show_col(tvthemes:::westeros_palette$Lannister)
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-2.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-8-2.png" width="70%" style="display: block; margin: auto;" />
 
 ``` r
 scales::show_col(tvthemes:::simpsons_palette)
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-3.png" width="70%" style="display: block; margin: auto;" />
-
-## `tvthemes 1.0.0` Major Changes
-
-In addition to the new palettes and themes which you can see below in
-the [Examples](#examples) section some of the code in `tvthemes` has
-changed significantly.
-
-In palettes for example, when you are calling the palette functions via
-`scale_fill_*()` or `scale_color_*()` you now have a lot more options:
-
-  - `palette`: If multiple available, select the palette: “Stannis”,
-    “FireNation”, “Dusk”, etc. Leave blank if only single palette
-    available.
-  - `n`: Number of colors. If left blank it defaults to the total number
-    of colors available in the palette.
-  - `type`: “Discrete” or “Continuous”. NOTE: Most palettes are only
-    optimized for “Discrete” at the present time.
-  - `reverse`: Reverse order of colors. `TRUE`/`FALSE`
-
-For TV shows with multiple palettes they are now organized under a
-single “palette list” from which you pass the specific palette that you
-want. If you want to check out the colors for these specific palettes:
-
-``` r
-## Previously:
-scales::show_col(tvthemes:::lannister_palette)
-scales::show_col(tvthemes:::brooklyn99_dark_palette)
-
-## Now (as seen in colors section above):
-scales::show_col(tvthemes:::westeros_palette$Lannister)
-scales::show_col(tvthemes:::brooklyn99_palette$Dark)
-```
-
-The specific palettes that changed are:
-
-  - `Brooklyn Nine-Nine`: Default = “Regular”, “Dark”
-  - `Avatar: The Last Airbender`: Default = “FireNation”,
-    “EarthKingdom”, “WaterTribe”, “AirNation”
-  - `Hilda`: Default = “Day”, “Dusk”, “Night”
-  - `Game of Thrones/A Song of Ice & Fire`: Default = “Stark”,
-    “Stannis”, “Tyrell”, “Lannister”, “Manderly”, “Martell”,
-    “Arryn”, “Greyjoy”, “Targaryen”, “Tully”
-
-<!-- end list -->
-
-``` r
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
-```
-
-For themes the one change is a toggle option for axis ticks via `ticks`
-which you can set to either `TRUE` and the default `FALSE`.
-
-``` r
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_kimPossible(n = 5, reverse = FALSE) +
-  theme_hildaDay(ticks = TRUE)
-```
+<img src="man/figures/README-unnamed-chunk-8-3.png" width="70%" style="display: block; margin: auto;" />
 
 ## Examples
 
@@ -632,7 +633,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
   scale_fill_bigHero6() +
-  labs(title = stringr::str_wrap("Well, Golly Mister! It Looks Like Your Friend Got Pan Fried!", width = 50),
+  labs(title = stringr::str_wrap("Welcome To The Nerd Lab.", width = 50),
        subtitle = "Villains Love Exposed Pipes, Beams, and Plastic Tarps!",
        caption = "*Fist Bump* Falalalalalala~",
        x = "Year", y = "GDP per Capita") +
@@ -648,13 +649,14 @@ airquality %>%
   ggplot(aes(x = Day, y = Temp, group = Month, fill = Month)) +
   geom_point(size = 4, stroke = 1.25, shape = 21) +
   labs(title = "Hiro, I Will Always Be With You.", 
-       subtitle = "I'm Satisfied With My Care, Baymax",
-       caption = "You Think I Want People To Know You Have A Crush On Me?") + 
+       subtitle = "I'm Satisfied With My Care, Baymax.",
+       caption = "Stop Whining, Woman Up!") + 
   scale_fill_bigHero6() + 
   theme_minimal() +
   theme(text = element_text(family = "Roboto Condensed"),
         plot.title = element_text(size = 20),
-        plot.subtitle = element_text(size = 16)) -> bigherodot
+        plot.subtitle = element_text(size = 16),
+        plot.caption = element_text(size = 14)) -> bigherodot
 
 ## plot together:
 plot_grid(bigherobar, bigherodot, ncol = 2)

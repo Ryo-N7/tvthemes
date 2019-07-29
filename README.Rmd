@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
 
-**A lot has changed with `tvthemes 1.0.0` so please check the README section below rather than the blogpost.**
+**A lot has changed with `tvthemes 1.0.0` so please check the [tvthemes 1.0.0](#tvthemes-100-major-changes) section below rather than the blogpost.**
 
 The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I love! You can also learn about `tvthemes` from the introductory blog post on my website, [here](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/). 
 Suggestions and Pull Requests for palettes/themes are welcome!
@@ -87,6 +87,53 @@ devtools::install_github("Ryo-N7/tvthemes")
 
 I hope to have a CRAN version soon!
 
+## tvthemes 1.0.0 Major Changes
+
+In addition to the new palettes and themes which you can see below in the [Examples](#examples) section some of the code in `tvthemes` has changed significantly.
+
+In palettes for example, when you are calling the palette functions via `scale_fill_*()` or `scale_color_*()` you now have a lot more options: 
+
+* `palette`: If multiple available, select the palette: "Stannis", "FireNation", "Dusk", etc. Leave blank if only single palette available.
+* `n`: Number of colors. If left blank it defaults to the total number of colors available in the palette.
+* `type`: "Discrete" or "Continuous". NOTE: Most palettes are only optimized for "Discrete" at the present time.
+* `reverse`: Reverse order of colors. `TRUE`/`FALSE`
+
+For TV shows with multiple palettes they are now organized under a single "palette list" from which you pass the specific palette that you want. If you want to check out the colors for these specific palettes:
+
+```{r, eval=FALSE}
+## Previously:
+scales::show_col(tvthemes:::lannister_palette)
+scales::show_col(tvthemes:::brooklyn99_dark_palette)
+
+## Now:
+scales::show_col(tvthemes:::westeros_palette$Lannister)
+scales::show_col(tvthemes:::brooklyn99_palette$Dark)
+```
+
+The specific palettes that changed are:
+
+* `Brooklyn Nine-Nine`: Default = "Regular", "Dark"
+* `Avatar: The Last Airbender`: Default = "FireNation", "EarthKingdom", "WaterTribe", "AirNation"
+* `Hilda`: Default = "Day", "Dusk", "Night"
+* `Game of Thrones/A Song of Ice & Fire`: Default = "Stark", "Stannis", "Tyrell", "Lannister", "Manderly", "Martell", "Arryn", "Greyjoy", "Targaryen", "Tully"
+
+```{r eval=FALSE}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
+```
+
+For themes the one change is a toggle option for axis ticks via `ticks` which you can set to either `TRUE` and the default `FALSE`. 
+
+```{r eval=FALSE}
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_kimPossible(n = 5, reverse = FALSE) +
+  theme_hildaDay(ticks = TRUE)
+```
+
 ## Fonts
 
 The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavored to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like `Google Fonts`. In the documentation you can find the __actual__ fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as "Some Time Later" for Spongebob or "Akbar" for The Simpsons that I included with the package. 
@@ -120,53 +167,6 @@ You can check out all the colors for each palette by running `scales::show_col(t
 scales::show_col(tvthemes:::brooklyn99_palette$Dark)
 scales::show_col(tvthemes:::westeros_palette$Lannister)
 scales::show_col(tvthemes:::simpsons_palette)
-```
-
-## `tvthemes 1.0.0` Major Changes
-
-In addition to the new palettes and themes which you can see below in the [Examples](#examples) section some of the code in `tvthemes` has changed significantly.
-
-In palettes for example, when you are calling the palette functions via `scale_fill_*()` or `scale_color_*()` you now have a lot more options: 
-
-* `palette`: If multiple available, select the palette: "Stannis", "FireNation", "Dusk", etc. Leave blank if only single palette available.
-* `n`: Number of colors. If left blank it defaults to the total number of colors available in the palette.
-* `type`: "Discrete" or "Continuous". NOTE: Most palettes are only optimized for "Discrete" at the present time.
-* `reverse`: Reverse order of colors. `TRUE`/`FALSE`
-
-For TV shows with multiple palettes they are now organized under a single "palette list" from which you pass the specific palette that you want. If you want to check out the colors for these specific palettes:
-
-```{r, eval=FALSE}
-## Previously:
-scales::show_col(tvthemes:::lannister_palette)
-scales::show_col(tvthemes:::brooklyn99_dark_palette)
-
-## Now (as seen in colors section above):
-scales::show_col(tvthemes:::westeros_palette$Lannister)
-scales::show_col(tvthemes:::brooklyn99_palette$Dark)
-```
-
-The specific palettes that changed are:
-
-* `Brooklyn Nine-Nine`: Default = "Regular", "Dark"
-* `Avatar: The Last Airbender`: Default = "FireNation", "EarthKingdom", "WaterTribe", "AirNation"
-* `Hilda`: Default = "Day", "Dusk", "Night"
-* `Game of Thrones/A Song of Ice & Fire`: Default = "Stark", "Stannis", "Tyrell", "Lannister", "Manderly", "Martell", "Arryn", "Greyjoy", "Targaryen", "Tully"
-
-```{r eval=FALSE}
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
-```
-
-For themes the one change is a toggle option for axis ticks via `ticks` which you can set to either `TRUE` and the default `FALSE`. 
-
-```{r eval=FALSE}
-mpg %>% 
-  ggplot(aes(displ)) +
-  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_kimPossible(n = 5, reverse = FALSE) +
-  theme_hildaDay(ticks = TRUE)
 ```
 
 ## Examples
@@ -561,7 +561,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
   scale_fill_bigHero6() +
-  labs(title = stringr::str_wrap("Well, Golly Mister! It Looks Like Your Friend Got Pan Fried!", width = 50),
+  labs(title = stringr::str_wrap("Welcome To The Nerd Lab.", width = 50),
        subtitle = "Villains Love Exposed Pipes, Beams, and Plastic Tarps!",
        caption = "*Fist Bump* Falalalalalala~",
        x = "Year", y = "GDP per Capita") +
@@ -577,13 +577,14 @@ airquality %>%
   ggplot(aes(x = Day, y = Temp, group = Month, fill = Month)) +
   geom_point(size = 4, stroke = 1.25, shape = 21) +
   labs(title = "Hiro, I Will Always Be With You.", 
-       subtitle = "I'm Satisfied With My Care, Baymax",
-       caption = "You Think I Want People To Know You Have A Crush On Me?") + 
+       subtitle = "I'm Satisfied With My Care, Baymax.",
+       caption = "Stop Whining, Woman Up!") + 
   scale_fill_bigHero6() + 
   theme_minimal() +
   theme(text = element_text(family = "Roboto Condensed"),
         plot.title = element_text(size = 20),
-        plot.subtitle = element_text(size = 16)) -> bigherodot
+        plot.subtitle = element_text(size = 16),
+        plot.caption = element_text(size = 14)) -> bigherodot
 
 ## plot together:
 plot_grid(bigherobar, bigherodot, ncol = 2)
@@ -591,7 +592,7 @@ plot_grid(bigherobar, bigherodot, ncol = 2)
 
 ### Hilda
 
-```{r, fig.width=15, fig.height = 8, message=FALSE}
+```{r, fig.width=17, fig.height = 10, message=FALSE}
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
