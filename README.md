@@ -8,7 +8,7 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental/)
 [![License: GPL
-v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0/)
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Coverage
 status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master/)
 <!-- badges: end -->
@@ -732,7 +732,8 @@ Rudis](https://twitter.com/hrbrmstr/)’
 Aden-Buie](https://twitter.com/grrrck/)’s
 [{ggpomological}](https://github.com/gadenbuie/ggpomological/), [Ewen
 Henderson](https://twitter.com/ewen_/)’s
-[{ghibli}](https://github.com/ewenme/ghibli/), [rOpenSci]()’s
+[{ghibli}](https://github.com/ewenme/ghibli/),
+[rOpenSci](https://github.com/ropenscilabs/)’s
 [{ochRe}](https://github.com/ropenscilabs/ochRe/), & [Nathan
 Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
 
