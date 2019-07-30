@@ -6,14 +6,14 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental/)
 [![License: GPL
-v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0/)
 [![Coverage
-status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master)
+status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master/)
 <!-- badges: end -->
 
-[Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
+[Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo/)
 
 **A lot has changed with `tvthemes 1.0.0` so please check the [tvthemes
 1.0.0](#tvthemes-100-major-changes) section below\!**
@@ -46,7 +46,7 @@ mpg %>%
                    subtitle.size = 14)
 ```
 
-![](https://i.imgur.com/SjxWFXd.png)
+![b99header](https://i.imgur.com/SjxWFXd.png)
 
 ## Current list of TV shows
 
@@ -161,8 +161,8 @@ install the fonts directly on your computer from the `.ttf` files found
 in `inst/fonts`. When you’re done running the functions and installing
 the `.ttf` files on your computer, load the `extrafont` library and then
 run `loadfonts()`. If you’re having problems check out the documentation
-on `extrafont`’s [Github repo](https://github.com/wch/extrafont) or on
-[CRAN](https://CRAN.R-project.org/package=extrafont).
+on `extrafont`’s [Github repo](https://github.com/wch/extrafont/) or on
+[CRAN](https://CRAN.R-project.org/package=extrafont/).
 
 The help files for each function tells you the recommended font names in
 case you forget\! Besides the really custom stuff like for “The
@@ -199,19 +199,19 @@ below:
 scales::show_col(tvthemes:::brooklyn99_palette$Dark)
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" />
 
 ``` r
 scales::show_col(tvthemes:::westeros_palette$Lannister)
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-2.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-7-2.png" width="70%" style="display: block; margin: auto;" />
 
 ``` r
 scales::show_col(tvthemes:::simpsons_palette)
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-3.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-7-3.png" width="70%" style="display: block; margin: auto;" />
 
 ## Examples
 
@@ -253,7 +253,7 @@ bobspog_plot <- mpg %>%
 bobspog_plot
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-2.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-8-2.png" width="70%" style="display: block; margin: auto;" />
 
 ``` r
 
@@ -262,7 +262,7 @@ paintBikiniBottom(plot = bobspog_plot,
                   background = "background") 
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Game of Thrones: House Stark, Tully, Targaryen
 
@@ -305,7 +305,7 @@ gapminder::gapminder %>%
 stark + tully - targaryen + plot_layout(ncol = 1)
 ```
 
-![](https://i.imgur.com/TRYevg9.png)
+![StarkTullyTargaryen](https://i.imgur.com/TRYevg9.png)
 
 ### Game of Thrones: House Tyrell, Lannister, Greyjoy
 
@@ -352,7 +352,7 @@ airquality %>%
 tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ```
 
-![](https://i.imgur.com/NUjriiF.png)
+![TyrellLannisterGreyjoy](https://i.imgur.com/NUjriiF.png)
 
 ### Game of Thrones: Arryn, Manderly, Martell
 
@@ -405,7 +405,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 arryn + manderly - martell + plot_layout(ncol = 1)
 ```
 
-![](https://i.imgur.com/WfieMDW.png)
+![ArrynManderlyMartell](https://i.imgur.com/WfieMDW.png)
 
 ### Game of Thrones: Stannis Baratheon, The One True King
 
@@ -619,7 +619,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                   ticks = TRUE)
 ```
 
-![](https://i.imgur.com/2p9Jf8o.png)
+![KimPossible](https://i.imgur.com/2p9Jf8o.png)
 
 ### Big Hero 6
 
@@ -713,25 +713,27 @@ plot_grid(hildaday, hildadusk, hildanight, ncol = 2)
 ## Contributing
 
 Please note that the `tvthemes` project is released with a [Contributor
-Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
-you agree to abide by its terms.
+Code of
+Conduct](https://github.com/Ryo-N7/tvthemes/blob/master/CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
 
 ## License
 
 This code is released under the GPL v3 License - see the
-[LICENSE.md](LICENSE.md) file for details.
+[LICENSE.md](https://github.com/Ryo-N7/tvthemes/blob/master/LICENSE.md)
+file for details.
 
 ## Credits
 
 Inspired by [Matt Oldach](https://twitter.com/MattOldach/)‘s
-[{vaporwave}](https://github.com/moldach/vapoRwave), [Bob
-Rudis](https://twitter.com/hrbrmstr)’
-[{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes), [Garrick
+[{vaporwave}](https://github.com/moldach/vapoRwave/), [Bob
+Rudis](https://twitter.com/hrbrmstr/)’
+[{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes/), [Garrick
 Aden-Buie](https://twitter.com/grrrck/)’s
-[{ggpomological}](https://github.com/gadenbuie/ggpomological), [Ewen
-Henderson](https://twitter.com/ewen_)’s
-[{ghibli}](https://github.com/ewenme/ghibli), [rOpenSci]()’s
-[{ochRe}](https://github.com/ropenscilabs/ochRe), & [Nathan
+[{ggpomological}](https://github.com/gadenbuie/ggpomological/), [Ewen
+Henderson](https://twitter.com/ewen_/)’s
+[{ghibli}](https://github.com/ewenme/ghibli/), [rOpenSci]()’s
+[{ochRe}](https://github.com/ropenscilabs/ochRe/), & [Nathan
 Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
 
 Hilda palettes from [Matt

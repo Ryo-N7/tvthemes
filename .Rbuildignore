@@ -9,3 +9,4 @@
 ^notes-todos\.txt$
 ^inst\docs\.Rmd$
 ^cran-comments\.md$
+^CRAN-RELEASE$

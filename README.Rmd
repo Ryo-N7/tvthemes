@@ -19,12 +19,12 @@ knitr::opts_chunk$set(
 # tvthemes 1.0.0 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Coverage status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0/)
+[![Coverage status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master/)
 <!-- badges: end -->
 
-[Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo)
+[Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo/)
 
 **A lot has changed with `tvthemes 1.0.0` so please check the [tvthemes 1.0.0](#tvthemes-100-major-changes) section below!**
 
@@ -42,7 +42,7 @@ library(extrafont)
 loadfonts()
 ```
 
-```{r, eval=FALSE}
+```{r b99header, eval=FALSE}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), 
@@ -58,7 +58,7 @@ mpg %>%
                    subtitle.size = 14)
 ```
 
-![](https://i.imgur.com/SjxWFXd.png)
+![b99header](https://i.imgur.com/SjxWFXd.png)
 
 ## Current list of TV shows
 
@@ -138,7 +138,7 @@ mpg %>%
 
 The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavored to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like `Google Fonts`. In the documentation you can find the __actual__ fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as "Some Time Later" for Spongebob or "Akbar" for The Simpsons that I included with the package. 
 
-Instead of dealing with `extrafont` yourself, I re-purposed the `import_*()` functions from the `hrbrthemes` package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the `.ttf` files found in `inst/fonts`. When you're done running the functions and installing the `.ttf` files on your computer, load the `extrafont` library and then run `loadfonts()`. If you're having problems check out the documentation on `extrafont`'s [Github repo](https://github.com/wch/extrafont) or on [CRAN](https://CRAN.R-project.org/package=extrafont).
+Instead of dealing with `extrafont` yourself, I re-purposed the `import_*()` functions from the `hrbrthemes` package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the `.ttf` files found in `inst/fonts`. When you're done running the functions and installing the `.ttf` files on your computer, load the `extrafont` library and then run `loadfonts()`. If you're having problems check out the documentation on `extrafont`'s [Github repo](https://github.com/wch/extrafont/) or on [CRAN](https://CRAN.R-project.org/package=extrafont/).
 
 The help files for each function tells you the recommended font names in case you forget! Besides the really custom stuff like for "The Simpsons", "Rick & Morty", and "SpongeBob", font preferences are really up to you.
 
@@ -252,7 +252,7 @@ gapminder::gapminder %>%
 stark + tully - targaryen + plot_layout(ncol = 1)
 ```
 
-![](https://i.imgur.com/TRYevg9.png)
+![StarkTullyTargaryen](https://i.imgur.com/TRYevg9.png)
 
 ### Game of Thrones: House Tyrell, Lannister, Greyjoy
 
@@ -299,7 +299,7 @@ airquality %>%
 tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ```
 
-![](https://i.imgur.com/NUjriiF.png)
+![TyrellLannisterGreyjoy](https://i.imgur.com/NUjriiF.png)
 
 ### Game of Thrones: Arryn, Manderly, Martell
 
@@ -352,7 +352,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 arryn + manderly - martell + plot_layout(ncol = 1)
 ```
 
-![](https://i.imgur.com/WfieMDW.png)
+![ArrynManderlyMartell](https://i.imgur.com/WfieMDW.png)
 
 ### Game of Thrones: Stannis Baratheon, The One True King
 
@@ -554,7 +554,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                   ticks = TRUE)
 ```
 
-![](https://i.imgur.com/2p9Jf8o.png)
+![KimPossible](https://i.imgur.com/2p9Jf8o.png)
 
 ### Big Hero 6
 
@@ -643,15 +643,15 @@ plot_grid(hildaday, hildadusk, hildanight, ncol = 2)
 
 ## Contributing
 
-Please note that the `tvthemes` project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
+Please note that the `tvthemes` project is released with a [Contributor Code of Conduct](https://github.com/Ryo-N7/tvthemes/blob/master/CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
 ## License
 
 This code is released under the GPL v3 License - see the
-[LICENSE.md](LICENSE.md) file for details.
+[LICENSE.md](https://github.com/Ryo-N7/tvthemes/blob/master/LICENSE.md) file for details.
 
 ## Credits
 
-Inspired by [Matt Oldach](https://twitter.com/MattOldach/)'s [{vaporwave}](https://github.com/moldach/vapoRwave), [Bob Rudis](https://twitter.com/hrbrmstr)' [{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes), [Garrick Aden-Buie](https://twitter.com/grrrck/)'s [{ggpomological}](https://github.com/gadenbuie/ggpomological), [Ewen Henderson](https://twitter.com/ewen_)'s [{ghibli}](https://github.com/ewenme/ghibli), [rOpenSci]()'s [{ochRe}](https://github.com/ropenscilabs/ochRe), & [Nathan Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
+Inspired by [Matt Oldach](https://twitter.com/MattOldach/)'s [{vaporwave}](https://github.com/moldach/vapoRwave/), [Bob Rudis](https://twitter.com/hrbrmstr/)' [{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes/), [Garrick Aden-Buie](https://twitter.com/grrrck/)'s [{ggpomological}](https://github.com/gadenbuie/ggpomological/), [Ewen Henderson](https://twitter.com/ewen_/)'s [{ghibli}](https://github.com/ewenme/ghibli/), [rOpenSci]()'s [{ochRe}](https://github.com/ropenscilabs/ochRe/), & [Nathan Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
 
 Hilda palettes from [Matt Shanks](http://www.mattshanks.com.au/colour-palette-reference-hilda/) and [ChevyRay](https://pbs.twimg.com/media/DoeR9edWwAMG2hW.png).
