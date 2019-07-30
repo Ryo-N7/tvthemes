@@ -32,20 +32,17 @@ The `tvthemes` package is a collection of various `ggplot2` themes and color/fil
 Suggestions and Pull Requests for palettes/themes are welcome!
 
 ```{r, echo=FALSE, message=FALSE}
-# pacman::p_load(ggplot2, dplyr, tvthemes, extrafont)
 library(tvthemes)
 library(ggplot2)
 library(dplyr)
 library(glue)
 library(gapminder)
-library(emo)
-library(patchwork)
 library(cowplot)
 library(extrafont)
 loadfonts()
 ```
 
-```{r}
+```{r, eval=FALSE}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), 
@@ -60,6 +57,8 @@ mpg %>%
                    text.font = "Calibri Light",
                    subtitle.size = 14)
 ```
+
+![](https://i.imgur.com/SjxWFXd.png)
 
 ## Current list of TV shows
 
@@ -139,7 +138,7 @@ mpg %>%
 
 The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavored to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like `Google Fonts`. In the documentation you can find the __actual__ fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as "Some Time Later" for Spongebob or "Akbar" for The Simpsons that I included with the package. 
 
-Instead of dealing with `extrafont` yourself, I re-purposed the `import_*()` functions from the `hrbrthemes` package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the `.ttf` files found in `inst/fonts`. When you're done running the functions and installing the `.ttf` files on your computer, load the `extrafont` library and then run `loadfonts()`. If you're having problems check out the documentation on `extrafont`'s [Github repo](https://github.com/wch/extrafont) or on [CRAN](https://cran.r-project.org/web/packages/extrafont/index.html).
+Instead of dealing with `extrafont` yourself, I re-purposed the `import_*()` functions from the `hrbrthemes` package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the `.ttf` files found in `inst/fonts`. When you're done running the functions and installing the `.ttf` files on your computer, load the `extrafont` library and then run `loadfonts()`. If you're having problems check out the documentation on `extrafont`'s [Github repo](https://github.com/wch/extrafont) or on [CRAN](https://CRAN.R-project.org/package=extrafont).
 
 The help files for each function tells you the recommended font names in case you forget! Besides the really custom stuff like for "The Simpsons", "Rick & Morty", and "SpongeBob", font preferences are really up to you.
 
@@ -174,7 +173,7 @@ scales::show_col(tvthemes:::simpsons_palette)
 
 ### Brooklyn Nine-Nine
 
-```{r}
+```{r b99-light}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
@@ -212,9 +211,9 @@ paintBikiniBottom(plot = bobspog_plot,
                   background = "background") 
 ```
 
-### Game of Thrones: House Stark, Lannister, Targaryen
+### Game of Thrones: House Stark, Tully, Targaryen
 
-```{r, fig.width=15, fig.height = 10, message=FALSE}
+```{r StarkTullyTargaryen, fig.width=15, fig.height = 10, message=FALSE, eval=FALSE}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
@@ -253,9 +252,11 @@ gapminder::gapminder %>%
 stark + tully - targaryen + plot_layout(ncol = 1)
 ```
 
-### Game of Thrones: House Tyrell, Tully, Greyjoy
+![](https://i.imgur.com/TRYevg9.png)
 
-```{r, fig.width=15, fig.height = 10}
+### Game of Thrones: House Tyrell, Lannister, Greyjoy
+
+```{r TyrellLannisterGreyjoy, fig.width=15, fig.height = 10, eval=FALSE}
 data <- gapminder::gapminder %>% 
   filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus")) %>% 
   mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
@@ -298,9 +299,11 @@ airquality %>%
 tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ```
 
+![](https://i.imgur.com/NUjriiF.png)
+
 ### Game of Thrones: Arryn, Manderly, Martell
 
-```{r, fig.width=15, fig.height = 10}
+```{r ArrynManderlyMartell, fig.width=15, fig.height = 10, eval=FALSE}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
@@ -349,9 +352,11 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 arryn + manderly - martell + plot_layout(ncol = 1)
 ```
 
+![](https://i.imgur.com/WfieMDW.png)
+
 ### Game of Thrones: Stannis Baratheon, The One True King
 
-```{r, fig.width=13, fig.height = 10}
+```{r Stannis, fig.width=13, fig.height = 10}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
@@ -378,7 +383,7 @@ mpg %>%
 
 ### The Simpsons
 
-```{r}
+```{r Simpsons}
 data <- gapminder::gapminder %>% 
   filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus")) %>% 
   mutate(year = as.Date(paste(year, "-01-01", sep = "", format='%Y-%b-%d')))
@@ -402,7 +407,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 
 ### Rick and Morty
 
-```{r}
+```{r R&M}
 ggplot(diamonds, aes(price, fill = cut)) +
   geom_histogram(binwidth = 500) +
   scale_fill_rickAndMorty() +
@@ -416,7 +421,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
 
 ### Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
-```{r, fig.width=15, fig.height = 10, message=FALSE}
+```{r ATLA, fig.width=15, fig.height = 10, message=FALSE}
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
@@ -469,7 +474,7 @@ plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 
 ### Parks and Recreation
 
-```{r, fig.width=14, fig.height = 6, message=FALSE}
+```{r P&R, fig.width=14, fig.height = 6, message=FALSE}
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
@@ -501,7 +506,7 @@ plot_grid(parksandrec, parksandreclight, ncol = 2)
 
 ### Attack on Titan
 
-```{r fig.width=10, fig.height = 6}
+```{r AoT,fig.width=10, fig.height = 6}
 img <- png::readPNG("inst/backgrounds/aot-titan.png")
 
 mpg %>% 
@@ -521,7 +526,7 @@ mpg %>%
 
 ### Kim Possible
 
-```{r fig.width=10, fig.height = 6}
+```{r KimPossible, fig.width=10, fig.height = 6, eval=FALSE}
 data <- gapminder::gapminder %>% 
   filter(country %in% c("France", "Germany", "Ireland", "Italy", 
                         "Japan", "Norway", "Belarus", "United Kingdom",
@@ -549,9 +554,11 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                   ticks = TRUE)
 ```
 
+![](https://i.imgur.com/2p9Jf8o.png)
+
 ### Big Hero 6
 
-```{r, fig.width=15, fig.height = 6, message=FALSE, warning=FALSE}
+```{r BH6, fig.width=15, fig.height = 6, message=FALSE, warning=FALSE}
 data <- gapminder::gapminder %>% 
   filter(country %in% c("France", "Germany", "Ireland", "Italy", 
                         "Japan", "Norway", "Finland", "United Kingdom")) %>% 
@@ -593,7 +600,7 @@ plot_grid(bigherobar, bigherodot, ncol = 2)
 
 ### Hilda
 
-```{r, fig.width=17, fig.height = 10, message=FALSE}
+```{r Hilda, fig.width=17, fig.height = 10, message=FALSE}
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +

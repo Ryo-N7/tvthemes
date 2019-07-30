@@ -46,7 +46,7 @@ mpg %>%
                    subtitle.size = 14)
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="70%" style="display: block; margin: auto;" />
+![](https://i.imgur.com/SjxWFXd.png)
 
 ## Current list of TV shows
 
@@ -162,7 +162,7 @@ in `inst/fonts`. When you’re done running the functions and installing
 the `.ttf` files on your computer, load the `extrafont` library and then
 run `loadfonts()`. If you’re having problems check out the documentation
 on `extrafont`’s [Github repo](https://github.com/wch/extrafont) or on
-[CRAN](https://cran.r-project.org/web/packages/extrafont/index.html).
+[CRAN](https://CRAN.R-project.org/package=extrafont).
 
 The help files for each function tells you the recommended font names in
 case you forget\! Besides the really custom stuff like for “The
@@ -230,7 +230,7 @@ mpg %>%
                    legend.font = "Calibri Light")
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-b99-light-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Spongebob Squarepants
 
@@ -253,7 +253,7 @@ bobspog_plot <- mpg %>%
 bobspog_plot
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-2.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-9-2.png" width="70%" style="display: block; margin: auto;" />
 
 ``` r
 
@@ -262,9 +262,9 @@ paintBikiniBottom(plot = bobspog_plot,
                   background = "background") 
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Game of Thrones: House Stark, Lannister, Targaryen
+### Game of Thrones: House Stark, Tully, Targaryen
 
 ``` r
 mpg %>% 
@@ -305,9 +305,9 @@ gapminder::gapminder %>%
 stark + tully - targaryen + plot_layout(ncol = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" />
+![](https://i.imgur.com/TRYevg9.png)
 
-### Game of Thrones: House Tyrell, Tully, Greyjoy
+### Game of Thrones: House Tyrell, Lannister, Greyjoy
 
 ``` r
 data <- gapminder::gapminder %>% 
@@ -352,7 +352,7 @@ airquality %>%
 tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" />
+![](https://i.imgur.com/NUjriiF.png)
 
 ### Game of Thrones: Arryn, Manderly, Martell
 
@@ -405,7 +405,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 arryn + manderly - martell + plot_layout(ncol = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" />
+![](https://i.imgur.com/WfieMDW.png)
 
 ### Game of Thrones: Stannis Baratheon, The One True King
 
@@ -434,7 +434,7 @@ mpg %>%
         legend.position = "none") 
 ```
 
-<img src="man/figures/README-unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-Stannis-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### The Simpsons
 
@@ -460,7 +460,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                  axis.text.size = 8)
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-Simpsons-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Rick and Morty
 
@@ -476,7 +476,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
                      title.size = 14)
 ```
 
-<img src="man/figures/README-unnamed-chunk-16-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-R&M-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
@@ -531,7 +531,7 @@ mpg %>%
 plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-17-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-ATLA-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Parks and Recreation
 
@@ -565,7 +565,7 @@ mpg %>%
 plot_grid(parksandrec, parksandreclight, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-P&R-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Attack on Titan
 
@@ -587,7 +587,7 @@ mpg %>%
                       title.font = "Roboto Condensed")
 ```
 
-<img src="man/figures/README-unnamed-chunk-19-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-AoT-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Kim Possible
 
@@ -619,7 +619,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                   ticks = TRUE)
 ```
 
-<img src="man/figures/README-unnamed-chunk-20-1.png" width="70%" style="display: block; margin: auto;" />
+![](https://i.imgur.com/2p9Jf8o.png)
 
 ### Big Hero 6
 
@@ -663,7 +663,7 @@ airquality %>%
 plot_grid(bigherobar, bigherodot, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-21-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-BH6-1.png" width="70%" style="display: block; margin: auto;" />
 
 ### Hilda
 
@@ -708,7 +708,7 @@ airquality %>%
 plot_grid(hildaday, hildadusk, hildanight, ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-22-1.png" width="70%" style="display: block; margin: auto;" />
+<img src="man/figures/README-Hilda-1.png" width="70%" style="display: block; margin: auto;" />
 
 ## Contributing
 

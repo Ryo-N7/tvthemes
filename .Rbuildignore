@@ -8,3 +8,4 @@
 ^\.Rproj\.user$
 ^notes-todos\.txt$
 ^inst\docs\.Rmd$
+^cran-comments\.md$
