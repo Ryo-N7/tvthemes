@@ -21,14 +21,6 @@
 #' @param legend.text.color legend text color, Default: '#F9FEFF'
 #' @param legend.position legend position, Default: 'bottom'
 #' @param ticks add axis ticks, Default: FALSE
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
-#'  geom_point() +
-#'  theme_hildaDay()
-#'  }
-#' }
 #' @rdname theme_hildaDay
 #' @export
 #' @importFrom ggplot2 theme_minimal element_text
@@ -113,14 +105,6 @@ theme_hildaDay <- function(
 #' @param legend.text.color legend text color, Default: '#F9FEFF'
 #' @param legend.position legend position, Default: 'bottom'
 #' @param ticks add axis ticks, Default: FALSE
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
-#'  geom_point() +
-#'  theme_hildaDusk()
-#'  }
-#' }
 #' @rdname theme_hildaDusk
 #' @export
 #' @importFrom ggplot2 theme_minimal element_text
@@ -205,14 +189,6 @@ theme_hildaDusk <- function(
 #' @param legend.text.color legend text color, Default: '#F9FEFF'
 #' @param legend.position legend position, Default: 'bottom'
 #' @param ticks add axis ticks, Default: FALSE
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
-#'  geom_point() +
-#'  theme_hildaNight()
-#'  }
-#' }
 #' @rdname theme_hildaNight
 #' @export
 #' @importFrom ggplot2 theme_minimal element_text

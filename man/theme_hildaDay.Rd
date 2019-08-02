@@ -56,12 +56,3 @@ theme_hildaDay(text.font = "Chelsea Market",
 \description{
 Hilda Day theme
 }
-\examples{
-\dontrun{
-if(interactive()){
- ggplot(mtcars, aes(x = hp, y = mpg)) +
- geom_point() +
- theme_hildaDay()
- }
-}
-}

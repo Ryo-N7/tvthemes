@@ -59,15 +59,6 @@ The Simpsons theme, Recommended font: "Akbar"
 \details{
 In part inspired by `@nathancunn`'s blog posts on The Simpsons!
 }
-\examples{
-\dontrun{
-if(interactive()){
- ggplot(mtcars, aes(x = hp, y = mpg)) +
- geom_point() +
- theme_simpsons()
- }
-}
-}
 \seealso{
 [ggplot2::theme]
 }

@@ -20,14 +20,6 @@
 #' @param legend.text.color legend text color, Default: "#ffffff"
 #' @param legend.position legend position, Default: "bottom"
 #' @param ticks add axis ticks, Default: FALSE
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
-#'  geom_point() +
-#'  theme_simpsons()
-#'  }
-#' }
 #' @rdname theme_simpsons
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line

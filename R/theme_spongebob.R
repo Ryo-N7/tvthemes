@@ -20,14 +20,6 @@
 #' @param legend.text.color legend text color, Default: "F9FEFF"
 #' @param legend.position legend position, Default: "bottom"
 #' @param ticks add axis ticks, Default: FALSE
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
-#'  geom_point() +
-#'  theme_spongeBob()
-#'  }
-#' }
 #' @rdname theme_spongeBob
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line

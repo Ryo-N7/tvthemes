@@ -59,15 +59,6 @@ Brooklyn Nine-Nine theme, Recommended font: "Roboto Condensed" (title), "Calibri
 \details{
 Actual font: Variants of 'Univers'
 }
-\examples{
-\dontrun{
-if(interactive()){
- ggplot(mtcars, aes(x = hp, y = mpg)) +
- geom_point() +
- theme_brooklyn99()
- }
-}
-}
 \seealso{
 [ggplot2::theme]
 }

@@ -59,15 +59,6 @@ Spongebob Squarepants theme, Recommended font: "Some Time Later"
 \details{
 Spongbobify your plots even more by combining with `paintBikiniBottom()`!
 }
-\examples{
-\dontrun{
-if(interactive()){
- ggplot(mtcars, aes(x = hp, y = mpg)) +
- geom_point() +
- theme_spongeBob()
- }
-}
-}
 \seealso{
 [ggplot2::theme]
 }

@@ -59,15 +59,6 @@ Parks & Recreation light theme, Recommended font: "Titillium Web"
 \details{
 Actual font: 'Champion HTF-Heavyweight'
 }
-\examples{
-\dontrun{
-if(interactive()){
- ggplot(mtcars, aes(x = hp, y = mpg)) +
- geom_point() +
- theme_parksAndRec_light()
- }
-}
-}
 \seealso{
 [ggplot2::theme]
 }

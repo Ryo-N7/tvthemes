@@ -56,12 +56,3 @@ theme_hildaDusk(text.font = "Chelsea Market",
 \description{
 Hilda theme
 }
-\examples{
-\dontrun{
-if(interactive()){
- ggplot(mtcars, aes(x = hp, y = mpg)) +
- geom_point() +
- theme_hildaDusk()
- }
-}
-}

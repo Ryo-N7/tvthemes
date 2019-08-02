@@ -55,15 +55,6 @@ theme_theLastAirbender(text.font = NULL, title.font = NULL,
 \description{
 Avatar: The Last Airbender theme, Recommended font: "Slayer"
 }
-\examples{
-\dontrun{
-if(interactive()){
- ggplot(mtcars, aes(x = hp, y = mpg)) +
- geom_point() +
- theme_theLastAirbender()
- }
-}
-}
 \seealso{
 [ggplot2::theme]
 }

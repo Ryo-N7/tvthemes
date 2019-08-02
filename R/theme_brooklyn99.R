@@ -1,7 +1,3 @@
-## Roboto Slab
-## Calibri Light
-## Roboto Condensed
-
 #' @title theme_brooklyn99
 #' @description Brooklyn Nine-Nine theme, Recommended font: "Roboto Condensed" (title), "Calibri Light" (other text)
 #' @details Actual font: Variants of 'Univers'
@@ -24,14 +20,6 @@
 #' @param legend.text.color legend text color, Default: "F9FEFF"
 #' @param legend.position legend position, Default: "bottom"
 #' @param ticks add axis ticks, Default: FALSE
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  ggplot(mtcars, aes(x = hp, y = mpg)) +
-#'  geom_point() +
-#'  theme_brooklyn99()
-#'  }
-#' }
 #' @rdname theme_brooklyn99
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line
