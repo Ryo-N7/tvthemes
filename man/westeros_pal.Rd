@@ -83,10 +83,30 @@ scales, "top" or "bottom" for horizontal scales}
 }
 \description{
 Houses Stark, Lannister, Tyrell, Targaryen,
-Tully, Greyjoy, Manderly
+Tully, Greyjoy, Manderly, Martell, Stannis Baratheon, & Arryn
 }
-\seealso{
-\code{\link[scales]{manual_pal}}
- [ggplot2::scale_color_discrete]
- [ggplot2::scale_fill_discrete]
+\examples{
+library(scales)
+show_col(westeros_pal(palette = "Stark")(5))
+show_col(westeros_pal(palette = "Stannis")(5))
+
+library(ggplot2)
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_westeros(palette = "Stark")
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_westeros(palette = "Stannis")
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_colour_westeros(palette = "Stannis")
+
+ggplot(mpg, aes(displ)) +
+     geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+     scale_fill_westeros(palette = "Stannis")
 }

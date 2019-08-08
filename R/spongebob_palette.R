@@ -29,12 +29,11 @@ spongeBob_palette <- c(
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
 #' @rdname spongeBob_pal
 #' @export
+#' @examples
+#' library(scales)
+#' show_col(spongeBob_pal()(5))
 #' @importFrom scales manual_pal
 
 spongeBob_pal <- function(n, type = c("discrete", "continuous"),
@@ -67,6 +66,13 @@ spongeBob_pal <- function(n, type = c("discrete", "continuous"),
 #' @title scale_color_spongeBob
 #' @rdname spongeBob_pal
 #' @export
+#' @examples
+#'
+#' library(ggplot2)
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_spongeBob()
 #' @importFrom ggplot2 discrete_scale
 
 scale_color_spongeBob <- function(n, type = "discrete",
@@ -82,6 +88,12 @@ scale_color_spongeBob <- function(n, type = "discrete",
 #' @title scale_colour_spongeBob
 #' @rdname spongeBob_pal
 #' @export
+#' @examples
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_spongeBob()
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_spongeBob <- scale_color_spongeBob
@@ -89,6 +101,11 @@ scale_colour_spongeBob <- scale_color_spongeBob
 #' @title scale_fill_spongeBob
 #' @rdname spongeBob_pal
 #' @export
+#' @examples
+#'
+#' ggplot(mpg, aes(displ)) +
+#'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+#'      scale_fill_spongeBob()
 #' @importFrom ggplot2 discrete_scale
 
 scale_fill_spongeBob <- function(n, type = "discrete",

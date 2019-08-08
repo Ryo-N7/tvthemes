@@ -20,7 +20,7 @@ scale_fill_hilda(palette = "Day", n, type = "discrete",
   reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{name of palette, Default: "Day"}
+\item{palette}{name of palette (Day, Dusk, Night), Default: "Day"}
 
 \item{n}{number of colors}
 
@@ -85,10 +85,29 @@ scales, "top" or "bottom" for horizontal scales}
 Hilda palette
 }
 \details{
-Color set from Matt Shanks & `@ChevyRay``
+Color set from Matt Shanks & `@ChevyRay`
 }
-\seealso{
-\code{\link[scales]{manual_pal}}
- [ggplot2::scale_color_discrete]
- [ggplot2::scale_fill_discrete]
+\examples{
+library(scales)
+show_col(hilda_pal(palette = "Dusk")(5))
+
+library(ggplot2)
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_hilda(palette = "Day")
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_hilda(palette = "Night")
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_colour_hilda(palette = "Day")
+
+ggplot(mpg, aes(displ)) +
+     geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+     scale_fill_hilda(palette = "Night")
 }

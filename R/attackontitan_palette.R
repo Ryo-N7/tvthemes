@@ -15,11 +15,10 @@ attackOnTitan_palette <- c(
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
 #' @rdname attackOnTitan_pal
+#' @examples
+#' library(scales)
+#' show_col(attackOnTitan_pal()(5))
 #' @export
 #' @importFrom scales manual_pal
 
@@ -53,6 +52,13 @@ attackOnTitan_pal <- function(n, type = c("discrete", "continuous"),
 #' @title scale_color_attackOnTitan
 #' @rdname attackOnTitan_pal
 #' @export
+#' @examples
+#'
+#' library(ggplot2)
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_attackOnTitan()
 #' @importFrom ggplot2 discrete_scale
 
 scale_color_attackOnTitan <- function(n, type = "discrete",
@@ -70,6 +76,12 @@ scale_color_attackOnTitan <- function(n, type = "discrete",
 #' @title scale_colour_attackOnTitan
 #' @rdname attackOnTitan_pal
 #' @export
+#' @examples
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_colour_attackOnTitan()
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_attackOnTitan <- scale_color_attackOnTitan
@@ -77,6 +89,12 @@ scale_colour_attackOnTitan <- scale_color_attackOnTitan
 #' @title scale_fill_attackOnTitan
 #' @rdname attackOnTitan_pal
 #' @export
+#' @examples
+#'
+#' ggplot(mpg, aes(displ)) +
+#'     geom_histogram(aes(fill = class),
+#'                    col = "black", size = 0.1) +
+#'     scale_fill_attackOnTitan()
 #' @importFrom ggplot2 discrete_scale
 
 scale_fill_attackOnTitan <- function(n, type = "discrete",

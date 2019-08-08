@@ -79,8 +79,23 @@ scales, "top" or "bottom" for horizontal scales}
 \description{
 Attack On Titan palette
 }
-\seealso{
-\code{\link[scales]{manual_pal}}
- [ggplot2::scale_color_discrete]
- [ggplot2::scale_fill_discrete]
+\examples{
+library(scales)
+show_col(attackOnTitan_pal()(5))
+
+library(ggplot2)
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_attackOnTitan()
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_colour_attackOnTitan()
+
+ggplot(mpg, aes(displ)) +
+    geom_histogram(aes(fill = class),
+                   col = "black", size = 0.1) +
+    scale_fill_attackOnTitan()
 }

@@ -26,12 +26,11 @@ parksAndRec_palette <- c(
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
 #' @rdname parksAndRec_pal
 #' @export
+#' @examples
+#' library(scales)
+#' show_col(parksAndRec_pal()(5))
 #' @importFrom scales manual_pal
 
 parksAndRec_pal <- function(n, type = c("discrete", "continuous"),
@@ -64,6 +63,13 @@ parksAndRec_pal <- function(n, type = c("discrete", "continuous"),
 #' @title scale_color_parksAndRec
 #' @rdname parksAndRec_pal
 #' @export
+#' @examples
+#'
+#' library(ggplot2)
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_parksAndRec()
 #' @importFrom ggplot2 discrete_scale
 
 scale_color_parksAndRec <- function(n, type = "discrete",
@@ -79,6 +85,12 @@ scale_color_parksAndRec <- function(n, type = "discrete",
 #' @title scale_colour_parksAndRec
 #' @rdname parksAndRec_pal
 #' @export
+#' @examples
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_colour_parksAndRec()
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_parksAndRec <- scale_color_parksAndRec
@@ -86,6 +98,11 @@ scale_colour_parksAndRec <- scale_color_parksAndRec
 #' @title scale_fill_parksAndRec
 #' @rdname parksAndRec_pal
 #' @export
+#' @examples
+#'
+#' ggplot(mpg, aes(displ)) +
+#'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+#'      scale_fill_parksAndRec()
 #' @importFrom ggplot2 discrete_scale
 
 scale_fill_parksAndRec <- function(n, type = "discrete",

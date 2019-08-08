@@ -19,12 +19,11 @@ kimPossible_palette <- c(
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
 #' @rdname kimPossible_pal
 #' @export
+#' @examples
+#' library(scales)
+#' show_col(kimPossible_pal()(5))
 #' @importFrom scales manual_pal
 
 kimPossible_pal <- function(n, type = c("discrete", "continuous"),
@@ -57,6 +56,13 @@ kimPossible_pal <- function(n, type = c("discrete", "continuous"),
 #' @title scale_color_kimPossible
 #' @rdname kimPossible_pal
 #' @export
+#' @examples
+#'
+#' library(ggplot2)
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_kimPossible()
 #' @importFrom ggplot2 discrete_scale
 
 scale_color_kimPossible <- function(n, type = "discrete",
@@ -72,6 +78,12 @@ scale_color_kimPossible <- function(n, type = "discrete",
 #' @title scale_colour_kimPossible
 #' @rdname kimPossible_pal
 #' @export
+#' @examples
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_colour_kimPossible()
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_kimPossible <- scale_color_kimPossible
@@ -79,6 +91,11 @@ scale_colour_kimPossible <- scale_color_kimPossible
 #' @title scale_fill_kimPossible
 #' @rdname kimPossible_pal
 #' @export
+#' @examples
+#'
+#' ggplot(mpg, aes(displ)) +
+#'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+#'      scale_fill_kimPossible()
 #' @importFrom ggplot2 discrete_scale
 
 scale_fill_kimPossible <- function(n, type = "discrete",

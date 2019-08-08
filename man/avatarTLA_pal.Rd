@@ -20,7 +20,8 @@ scale_fill_avatarTLA(palette = "FireNation", n, type = "discrete",
   reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{name of palette, Default: "FireNation"}
+\item{palette}{name of palette (FireNation, EarthKingdom, WaterTribe, AirNomads),
+Default: "FireNation"}
 
 \item{n}{number of colors}
 
@@ -84,8 +85,22 @@ scales, "top" or "bottom" for horizontal scales}
 \description{
 Avatar: The Last Airbender palette
 }
-\seealso{
-\code{\link[scales]{manual_pal}}
- [ggplot2::scale_color_discrete]
- [ggplot2::scale_fill_discrete]
+\examples{
+library(scales)
+show_col(avatarTLA_pal()(5))
+
+library(ggplot2)
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_avatarTLA()
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_colour_avatarTLA()
+
+ggplot(mpg, aes(displ)) +
+     geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+     scale_fill_avatarTLA()
 }

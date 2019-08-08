@@ -20,7 +20,7 @@ scale_fill_brooklyn99(palette = "Regular", n = n, type = "discrete",
   reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{name of palette, Default: "Regular"}
+\item{palette}{name of palette, Regular or Dark Default: "Regular"}
 
 \item{n}{number of colors}
 
@@ -87,8 +87,28 @@ Brooklyn Nine Nine Color and Fill Scales
 \details{
 Colors that work well with the blue background!
 }
-\seealso{
-\code{\link[scales]{manual_pal}}
- [ggplot2::scale_color_discrete]
- [ggplot2::scale_fill_discrete]
+\examples{
+library(scales)
+show_col(brooklyn99_pal()(5))
+show_col(brooklyn99_pal(palette = "Dark")(5))
+
+library(ggplot2)
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_brooklyn99()
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_brooklyn99(palette = "Dark")
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_colour_brooklyn99(palette = "Dark")
+
+ggplot(mpg, aes(displ)) +
+     geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+     scale_fill_brooklyn99()
 }

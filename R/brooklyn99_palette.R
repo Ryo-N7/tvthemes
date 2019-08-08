@@ -32,16 +32,16 @@ brooklyn99_palette <- list(
 #' @description Brooklyn Nine Nine Color and Fill Scales
 #' @details Colors that work well with the blue background!
 #' @inheritDotParams ggplot2::discrete_scale
-#' @param palette name of palette, Default: "Regular"
+#' @param palette name of palette, Regular or Dark Default: "Regular"
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
 #' @rdname brooklyn99_pal
 #' @export
+#' @examples
+#' library(scales)
+#' show_col(brooklyn99_pal()(5))
+#' show_col(brooklyn99_pal(palette = "Dark")(5))
 #' @importFrom scales manual_pal
 
 brooklyn99_pal <- function(palette = "Regular", n = n, type = c("discrete", "continuous"),
@@ -74,7 +74,19 @@ brooklyn99_pal <- function(palette = "Regular", n = n, type = c("discrete", "con
 #' @title scale_color_brooklyn99
 #' @rdname brooklyn99_pal
 #' @export
-#' @importFrom ggplot2 discrete_scale
+#' @examples
+#'
+#' library(ggplot2)
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_brooklyn99()
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_brooklyn99(palette = "Dark")
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete",
                                    reverse = FALSE, ...){
@@ -91,6 +103,12 @@ scale_color_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete"
 #' @title scale_colour_brooklyn99
 #' @rdname brooklyn99_pal
 #' @export
+#' @examples
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_colour_brooklyn99(palette = "Dark")
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_brooklyn99 <- scale_color_brooklyn99
@@ -98,6 +116,11 @@ scale_colour_brooklyn99 <- scale_color_brooklyn99
 #' @title scale_fill_brooklyn99
 #' @rdname brooklyn99_pal
 #' @export
+#' @examples
+#'
+#' ggplot(mpg, aes(displ)) +
+#'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+#'      scale_fill_brooklyn99()
 #' @importFrom ggplot2 discrete_scale
 
 scale_fill_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete",

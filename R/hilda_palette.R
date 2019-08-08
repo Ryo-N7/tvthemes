@@ -38,18 +38,17 @@ hilda_palette <- list(
 
 #' @title Hilda palette
 #' @description Hilda palette
-#' @details Color set from Matt Shanks & `@ChevyRay``
+#' @details Color set from Matt Shanks & `@ChevyRay`
 #' @inheritDotParams ggplot2::discrete_scale
-#' @param palette name of palette, Default: "Day"
+#' @param palette name of palette (Day, Dusk, Night), Default: "Day"
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
 #' @rdname hilda_pal
 #' @export
+#' @examples
+#' library(scales)
+#' show_col(hilda_pal(palette = "Dusk")(5))
 #' @importFrom scales manual_pal
 
 hilda_pal <- function(palette, n, type = c("discrete", "continuous"),
@@ -82,6 +81,18 @@ hilda_pal <- function(palette, n, type = c("discrete", "continuous"),
 #' @title scale_color_hilda
 #' @rdname hilda_pal
 #' @export
+#' @examples
+#'
+#' library(ggplot2)
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_hilda(palette = "Day")
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_hilda(palette = "Night")
 #' @importFrom ggplot2 discrete_scale
 
 scale_color_hilda <- function(palette = "Day", n, type = "discrete",
@@ -100,6 +111,12 @@ scale_color_hilda <- function(palette = "Day", n, type = "discrete",
 #' @title scale_colour_hilda
 #' @rdname hilda_pal
 #' @export
+#' @examples
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_colour_hilda(palette = "Day")
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_hilda <- scale_color_hilda
@@ -107,6 +124,11 @@ scale_colour_hilda <- scale_color_hilda
 #' @title scale_fill_hilda
 #' @rdname hilda_pal
 #' @export
+#' @examples
+#'
+#' ggplot(mpg, aes(displ)) +
+#'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+#'      scale_fill_hilda(palette = "Night")
 #' @importFrom ggplot2 discrete_scale
 
 scale_fill_hilda <- function(palette = "Day", n, type = "discrete",

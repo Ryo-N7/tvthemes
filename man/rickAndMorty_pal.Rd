@@ -79,8 +79,22 @@ scales, "top" or "bottom" for horizontal scales}
 \description{
 Rick & Morty color palette
 }
-\seealso{
-\code{\link[scales]{manual_pal}}
- [ggplot2::scale_color_discrete]
- [ggplot2::scale_fill_discrete]
+\examples{
+library(scales)
+show_col(rickAndMorty_pal()(5))
+
+library(ggplot2)
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_rickAndMorty()
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_colour_rickAndMorty()
+
+ggplot(mpg, aes(displ)) +
+     geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+     scale_fill_rickAndMorty()
 }

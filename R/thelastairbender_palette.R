@@ -50,16 +50,16 @@ theLastAirbender_palette <- list(
 #' @title Avatar: The Last Airbender palette
 #' @description Avatar: The Last Airbender palette
 #' @inheritDotParams ggplot2::discrete_scale
-#' @param palette name of palette, Default: "FireNation"
+#' @param palette name of palette (FireNation, EarthKingdom, WaterTribe, AirNomads),
+#' Default: "FireNation"
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
 #' @rdname avatarTLA_pal
 #' @export
+#' @examples
+#' library(scales)
+#' show_col(avatarTLA_pal()(5))
 #' @importFrom scales manual_pal
 
 avatarTLA_pal <- function(palette = "FireNation", n, type = c("discrete", "continuous"),
@@ -92,6 +92,13 @@ avatarTLA_pal <- function(palette = "FireNation", n, type = c("discrete", "conti
 #' @title scale_color_avatarTLA
 #' @rdname avatarTLA_pal
 #' @export
+#' @examples
+#'
+#' library(ggplot2)
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_avatarTLA()
 #' @importFrom ggplot2 discrete_scale
 
 scale_color_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
@@ -109,6 +116,12 @@ scale_color_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
 #' @title scale_colour_avatarTLA
 #' @rdname avatarTLA_pal
 #' @export
+#' @examples
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_colour_avatarTLA()
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_avatarTLA <- scale_color_avatarTLA
@@ -116,6 +129,11 @@ scale_colour_avatarTLA <- scale_color_avatarTLA
 #' @title scale_fill_avatarTLA
 #' @rdname avatarTLA_pal
 #' @export
+#' @examples
+#'
+#' ggplot(mpg, aes(displ)) +
+#'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+#'      scale_fill_avatarTLA()
 #' @importFrom ggplot2 discrete_scale
 
 scale_fill_avatarTLA <- function(palette = "FireNation", n, type = "discrete",

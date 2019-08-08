@@ -105,18 +105,18 @@ westeros_palette <- list(
 
 #' @title Great Houses of Westeros palette
 #' @description Houses Stark, Lannister, Tyrell, Targaryen,
-#' Tully, Greyjoy, Manderly
+#' Tully, Greyjoy, Manderly, Martell, Stannis Baratheon, & Arryn
 #' @inheritDotParams ggplot2::discrete_scale
 #' @param palette name of palette, Default: "Stark"
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
 #' @rdname westeros_pal
 #' @export
+#' @examples
+#' library(scales)
+#' show_col(westeros_pal(palette = "Stark")(5))
+#' show_col(westeros_pal(palette = "Stannis")(5))
 #' @importFrom scales manual_pal
 
 westeros_pal <- function(palette = "Stark", n, type = c("discrete", "continuous"),
@@ -149,6 +149,18 @@ westeros_pal <- function(palette = "Stark", n, type = c("discrete", "continuous"
 #' @title scale_color_westeros
 #' @rdname westeros_pal
 #' @export
+#' @examples
+#'
+#' library(ggplot2)
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_westeros(palette = "Stark")
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_westeros(palette = "Stannis")
 #' @importFrom ggplot2 discrete_scale
 
 scale_color_westeros <- function(palette = "Stark", n, type = "discrete",
@@ -166,6 +178,12 @@ scale_color_westeros <- function(palette = "Stark", n, type = "discrete",
 #' @title scale_colour_westeros
 #' @rdname westeros_pal
 #' @export
+#' @examples
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_colour_westeros(palette = "Stannis")
 #' @importFrom ggplot2 discrete_scale
 
 scale_colour_westeros <- scale_color_westeros
@@ -173,6 +191,11 @@ scale_colour_westeros <- scale_color_westeros
 #' @title scale_fill_westeros
 #' @rdname westeros_pal
 #' @export
+#' @examples
+#'
+#' ggplot(mpg, aes(displ)) +
+#'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+#'      scale_fill_westeros(palette = "Stannis")
 #' @importFrom ggplot2 discrete_scale
 
 scale_fill_westeros <- function(palette = "Stark", n, type = "discrete",
@@ -187,54 +210,54 @@ scale_fill_westeros <- function(palette = "Stark", n, type = "discrete",
   }
 }
 
-## House Dayne ----
-
-dayne_palette <- c(
-  "#B27ED0", ## dayne lightpurple
-  "#FF00FF", ## dayne magenta
-  "#66033C", ## dayne deep wine purple
-  "#9F3BAB", ## dayne purple
-  "#282828", ## metallic black
-  "#4B0082", ## indigo
-  "#FFFFFF"  ## white
-)
-
-#' @title House Dayne palette
-#' @description House Dayne palette
-#' @rdname dayne_pal
-#' @inheritDotParams ggplot2::discrete_scale
-#' @seealso
-#'  \code{\link[scales]{manual_pal}}
-#'  [ggplot2::scale_color_discrete]
-#'  [ggplot2::scale_fill_discrete]
-#' @export
-#' @importFrom scales manual_pal
-
-dayne_pal <- function() {
-  scales::manual_pal(dayne_palette)
-}
-
-#' @title scale_color_dayne
-#' @rdname dayne_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_color_dayne <- function(...){
-  ggplot2::discrete_scale("color", "dayne", dayne_pal(), ...)
-}
-
-#' @title scale_colour_dayne
-#' @rdname dayne_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_colour_dayne <- scale_color_dayne
-
-#' @title scale_fill_dayne
-#' @rdname dayne_pal
-#' @export
-#' @importFrom ggplot2 discrete_scale
-
-scale_fill_dayne <- function(...){
-  ggplot2::discrete_scale("fill", "dayne", dayne_pal(), ...)
-}
+#' ## House Dayne ----
+#'
+#' dayne_palette <- c(
+#'   "#B27ED0", ## dayne lightpurple
+#'   "#FF00FF", ## dayne magenta
+#'   "#66033C", ## dayne deep wine purple
+#'   "#9F3BAB", ## dayne purple
+#'   "#282828", ## metallic black
+#'   "#4B0082", ## indigo
+#'   "#FFFFFF"  ## white
+#' )
+#'
+#' #' @title House Dayne palette
+#' #' @description House Dayne palette
+#' #' @rdname dayne_pal
+#' #' @inheritDotParams ggplot2::discrete_scale
+#' #' @seealso
+#' #'  \code{\link[scales]{manual_pal}}
+#' #'  [ggplot2::scale_color_discrete]
+#' #'  [ggplot2::scale_fill_discrete]
+#' #' @export
+#' #' @importFrom scales manual_pal
+#'
+#' dayne_pal <- function() {
+#'   scales::manual_pal(dayne_palette)
+#' }
+#'
+#' #' @title scale_color_dayne
+#' #' @rdname dayne_pal
+#' #' @export
+#' #' @importFrom ggplot2 discrete_scale
+#'
+#' scale_color_dayne <- function(...){
+#'   ggplot2::discrete_scale("color", "dayne", dayne_pal(), ...)
+#' }
+#'
+#' #' @title scale_colour_dayne
+#' #' @rdname dayne_pal
+#' #' @export
+#' #' @importFrom ggplot2 discrete_scale
+#'
+#' scale_colour_dayne <- scale_color_dayne
+#'
+#' #' @title scale_fill_dayne
+#' #' @rdname dayne_pal
+#' #' @export
+#' #' @importFrom ggplot2 discrete_scale
+#'
+#' scale_fill_dayne <- function(...){
+#'   ggplot2::discrete_scale("fill", "dayne", dayne_pal(), ...)
+#' }
