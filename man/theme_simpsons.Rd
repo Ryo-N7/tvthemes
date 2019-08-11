@@ -59,6 +59,15 @@ The Simpsons theme, Recommended font: "Akbar"
 \details{
 In part inspired by `@nathancunn`'s blog posts on The Simpsons!
 }
+\examples{
+library(ggplot2)
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_simpsons() +
+     theme_simpsons()
+}
 \seealso{
 [ggplot2::theme]
 }

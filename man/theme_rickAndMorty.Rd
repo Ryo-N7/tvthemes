@@ -58,6 +58,15 @@ Rick & Morty theme, Recommended font: "Get Schwifty"
 \details{
 Actual font is based on Justin Roiland's handwriting!
 }
+\examples{
+library(ggplot2)
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_rickAndMorty() +
+     theme_rickAndMorty()
+}
 \seealso{
 [ggplot2::theme]
 }

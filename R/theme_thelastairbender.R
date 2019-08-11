@@ -19,6 +19,14 @@
 #' @param legend.text.color legend text color, Default: "grey20"
 #' @param legend.position legend position, Default: "bottom"
 #' @param ticks add axis ticks, Default: FALSE
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_avatarTLA() +
+#'      theme_theLastAirbender()
 #' @rdname theme_theLastAirbender
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line

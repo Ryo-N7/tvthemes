@@ -59,6 +59,15 @@ Spongebob Squarepants theme, Recommended font: "Some Time Later"
 \details{
 Spongbobify your plots even more by combining with `paintBikiniBottom()`!
 }
+\examples{
+library(ggplot2)
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_spongeBob() +
+     theme_spongeBob()
+}
 \seealso{
 [ggplot2::theme]
 }

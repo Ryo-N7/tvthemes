@@ -59,6 +59,15 @@ Parks & Recreation light theme, Recommended font: "Titillium Web"
 \details{
 Actual font: 'Champion HTF-Heavyweight'
 }
+\examples{
+library(ggplot2)
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_parksAndRec() +
+     theme_parksAndRec_light()
+}
 \seealso{
 [ggplot2::theme]
 }

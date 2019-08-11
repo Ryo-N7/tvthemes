@@ -20,6 +20,14 @@
 #' @param legend.text.color legend text color, Default: "F9FEFF"
 #' @param legend.position legend position, Default: "bottom"
 #' @param ticks add axis ticks, Default: FALSE
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_brooklyn99() +
+#'      theme_brooklyn99()
 #' @rdname theme_brooklyn99
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line
@@ -82,7 +90,7 @@ theme_brooklyn99 <- function(
 #' @description Brooklyn Nine-Nine logo
 #' @return ggplot2 object of logo
 #' @rdname brooklyn99_logo
-#' @export
+# export--
 
 # brooklyn99_logo <- function(){
 #   rect <- data.frame(id = as.factor(c(1, 1, 1, 1,

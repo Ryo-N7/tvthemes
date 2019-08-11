@@ -56,3 +56,13 @@ theme_hildaDay(text.font = "Chelsea Market",
 \description{
 Hilda Day theme
 }
+\examples{
+library(ggplot2)
+
+ggplot(airquality, aes(x = Day, y = Temp,
+     group = as.factor(Month), color = as.factor(Month))) +
+     geom_point(size = 2.5) +
+     scale_color_hilda(palette = "Day") +
+     theme_hildaDay(text.font = "Times", title.font = "Times",
+                    legend.font = "Times")
+}

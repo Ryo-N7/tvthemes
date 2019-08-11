@@ -23,6 +23,14 @@
 #' @param legend.text.color legend text color, Default: NULL
 #' @param legend.position legend position, Default: "bottom"
 #' @param ticks add axis ticks, Default: FALSE
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_parksAndRec() +
+#'      theme_parksAndRec()
 #' @rdname theme_parksAndRec
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line
@@ -104,6 +112,14 @@ theme_parksAndRec <- function(
 #' @param legend.text.color legend text color, Default: "grey20"
 #' @param legend.position legend position, Default: "bottom"
 #' @param ticks add axis ticks, Default: FALSE
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_parksAndRec() +
+#'      theme_parksAndRec_light()
 #' @rdname theme_parksAndRec_light
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line

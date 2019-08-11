@@ -20,6 +20,14 @@
 #' @param legend.text.color legend text color, Default: "F9FEFF"
 #' @param legend.position legend position, Default: "bottom"
 #' @param ticks add axis ticks, Default: FALSE
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_spongeBob() +
+#'      theme_spongeBob()
 #' @rdname theme_spongeBob
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 element_text element_rect element_blank element_line
