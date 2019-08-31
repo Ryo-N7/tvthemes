@@ -32,8 +32,11 @@ parksAndRec_palette <- c(
 #' library(scales)
 #' show_col(parksAndRec_pal()(5))
 #' @importFrom scales manual_pal
+#' @importFrom glue glue
+#' @importFrom grDevices colorRampPalette
 
-parksAndRec_pal <- function(n, type = c("discrete", "continuous"),
+parksAndRec_pal <- function(n,
+                            type = c("discrete", "continuous"),
                             reverse = FALSE){
   parksAndRec <- parksAndRec_palette
 
@@ -70,7 +73,7 @@ parksAndRec_pal <- function(n, type = c("discrete", "continuous"),
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_color_parksAndRec()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_parksAndRec <- function(n, type = "discrete",
                                     reverse = FALSE, ...){
@@ -91,7 +94,7 @@ scale_color_parksAndRec <- function(n, type = "discrete",
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_colour_parksAndRec()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_colour_parksAndRec <- scale_color_parksAndRec
 
@@ -103,7 +106,7 @@ scale_colour_parksAndRec <- scale_color_parksAndRec
 #' ggplot(mpg, aes(displ)) +
 #'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
 #'      scale_fill_parksAndRec()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_parksAndRec <- function(n, type = "discrete",
                                    reverse = FALSE, ...){

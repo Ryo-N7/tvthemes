@@ -3,6 +3,10 @@ This is a resubmission. In this version I have:
 
 * Fixed the Title and Description in DESCRIPTION to use title case.
 * Replaced or erased broken examples.
+* Add two dependencies.
+* Deprecated one function.
+* Add tests for fonts.
+* Add more documentation.
 
 ## Test environments
 * local OS X install, R 3.5.3

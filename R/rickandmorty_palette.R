@@ -30,8 +30,11 @@ rickAndMorty_palette <- c(
 #' library(scales)
 #' show_col(rickAndMorty_pal()(5))
 #' @importFrom scales manual_pal
+#' @importFrom glue glue
+#' @importFrom grDevices colorRampPalette
 
-rickAndMorty_pal <- function(n, type = c("discrete", "continuous"),
+rickAndMorty_pal <- function(n,
+                             type = c("discrete", "continuous"),
                              reverse = FALSE){
   rickAndMorty <- rickAndMorty_palette
 
@@ -68,7 +71,7 @@ rickAndMorty_pal <- function(n, type = c("discrete", "continuous"),
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_color_rickAndMorty()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_rickAndMorty <- function(n, type = "discrete",
                                      reverse = FALSE, ...){
@@ -89,7 +92,7 @@ scale_color_rickAndMorty <- function(n, type = "discrete",
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_colour_rickAndMorty()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_colour_rickAndMorty <- scale_color_rickAndMorty
 
@@ -101,7 +104,7 @@ scale_colour_rickAndMorty <- scale_color_rickAndMorty
 #' ggplot(mpg, aes(displ)) +
 #'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
 #'      scale_fill_rickAndMorty()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_rickAndMorty <- function(n, type = "discrete",
                                     reverse = FALSE, ...){

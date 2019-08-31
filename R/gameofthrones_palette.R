@@ -118,8 +118,11 @@ westeros_palette <- list(
 #' show_col(westeros_pal(palette = "Stark")(5))
 #' show_col(westeros_pal(palette = "Stannis")(5))
 #' @importFrom scales manual_pal
+#' @importFrom glue glue
+#' @importFrom grDevices colorRampPalette
 
-westeros_pal <- function(palette = "Stark", n, type = c("discrete", "continuous"),
+westeros_pal <- function(palette = "Stark", n,
+                         type = c("discrete", "continuous"),
                          reverse = FALSE) {
   westeros <- westeros_palette[[palette]]
 
@@ -161,7 +164,7 @@ westeros_pal <- function(palette = "Stark", n, type = c("discrete", "continuous"
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_color_westeros(palette = "Stannis")
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_westeros <- function(palette = "Stark", n, type = "discrete",
                                  reverse = FALSE, ...){
@@ -184,7 +187,7 @@ scale_color_westeros <- function(palette = "Stark", n, type = "discrete",
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_colour_westeros(palette = "Stannis")
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_colour_westeros <- scale_color_westeros
 
@@ -196,7 +199,7 @@ scale_colour_westeros <- scale_color_westeros
 #' ggplot(mpg, aes(displ)) +
 #'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
 #'      scale_fill_westeros(palette = "Stannis")
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_westeros <- function(palette = "Stark", n, type = "discrete",
                                 reverse = FALSE, ...){

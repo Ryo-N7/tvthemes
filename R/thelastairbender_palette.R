@@ -61,8 +61,11 @@ theLastAirbender_palette <- list(
 #' library(scales)
 #' show_col(avatarTLA_pal()(5))
 #' @importFrom scales manual_pal
+#' @importFrom glue glue
+#' @importFrom grDevices colorRampPalette
 
-avatarTLA_pal <- function(palette = "FireNation", n, type = c("discrete", "continuous"),
+avatarTLA_pal <- function(palette = "FireNation", n,
+                          type = c("discrete", "continuous"),
                           reverse = FALSE){
   avatarTLA <- theLastAirbender_palette[[palette]]
 
@@ -99,7 +102,7 @@ avatarTLA_pal <- function(palette = "FireNation", n, type = c("discrete", "conti
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_color_avatarTLA()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
                                   reverse = FALSE, ...){
@@ -122,7 +125,7 @@ scale_color_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_colour_avatarTLA()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_colour_avatarTLA <- scale_color_avatarTLA
 
@@ -134,7 +137,7 @@ scale_colour_avatarTLA <- scale_color_avatarTLA
 #' ggplot(mpg, aes(displ)) +
 #'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
 #'      scale_fill_avatarTLA()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
                                  reverse = FALSE, ...){

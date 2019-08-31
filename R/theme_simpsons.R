@@ -30,7 +30,9 @@
 #'      theme_simpsons()
 #' @rdname theme_simpsons
 #' @seealso [ggplot2::theme]
-#' @importFrom ggplot2 element_text element_rect element_blank element_line
+#' @importFrom ggplot2 theme element_text element_rect element_blank element_line
+#' theme_minimal
+#' @importFrom grid unit
 #' @export
 
 theme_simpsons <- function(

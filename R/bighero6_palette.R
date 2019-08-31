@@ -21,6 +21,8 @@ bigHero6_palette <- c(
 #' library(scales)
 #' show_col(bigHero6_pal()(5))
 #' @importFrom scales manual_pal
+#' @importFrom glue glue
+#' @importFrom grDevices colorRampPalette
 
 bigHero6_pal <- function(n, type = c("discrete", "continuous"),
                          reverse = FALSE){
@@ -82,7 +84,7 @@ scale_color_bigHero6 <- function(n, type = "discrete",
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_colour_bigHero6()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_colour_bigHero6 <- scale_color_bigHero6
 
@@ -94,7 +96,7 @@ scale_colour_bigHero6 <- scale_color_bigHero6
 #' ggplot(mpg, aes(displ)) +
 #'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
 #'      scale_fill_bigHero6()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_bigHero6 <- function(n, type = "discrete",
                                 reverse = FALSE, ...){

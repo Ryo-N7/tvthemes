@@ -32,7 +32,8 @@
 #'                     legend.font = "Times")
 #' @rdname theme_hildaDay
 #' @export
-#' @importFrom ggplot2 theme_minimal element_text
+#' @importFrom ggplot2 theme element_text element_rect element_blank element_line
+#' theme_minimal
 #' @importFrom grid unit
 
 theme_hildaDay <- function(
@@ -125,7 +126,8 @@ theme_hildaDay <- function(
 #'                      legend.font = "Times")
 #' @rdname theme_hildaDusk
 #' @export
-#' @importFrom ggplot2 theme_minimal element_text
+#' @importFrom ggplot2 theme element_text element_rect element_blank element_line
+#' theme_minimal
 #' @importFrom grid unit
 
 theme_hildaDusk <- function(
@@ -218,7 +220,8 @@ theme_hildaDusk <- function(
 #'                       legend.font = "Times")
 #' @rdname theme_hildaNight
 #' @export
-#' @importFrom ggplot2 theme_minimal element_text
+#' @importFrom ggplot2 theme element_text element_rect element_blank element_line
+#' theme_minimal
 #' @importFrom grid unit
 
 theme_hildaNight <- function(

@@ -35,6 +35,8 @@ spongeBob_palette <- c(
 #' library(scales)
 #' show_col(spongeBob_pal()(5))
 #' @importFrom scales manual_pal
+#' @importFrom glue glue
+#' @importFrom grDevices colorRampPalette
 
 spongeBob_pal <- function(n, type = c("discrete", "continuous"),
                           reverse = FALSE){
@@ -73,7 +75,7 @@ spongeBob_pal <- function(n, type = c("discrete", "continuous"),
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_color_spongeBob()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_spongeBob <- function(n, type = "discrete",
                                   reverse = FALSE, ...){
@@ -94,7 +96,7 @@ scale_color_spongeBob <- function(n, type = "discrete",
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_color_spongeBob()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_colour_spongeBob <- scale_color_spongeBob
 
@@ -106,7 +108,7 @@ scale_colour_spongeBob <- scale_color_spongeBob
 #' ggplot(mpg, aes(displ)) +
 #'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
 #'      scale_fill_spongeBob()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_spongeBob <- function(n, type = "discrete",
                                  reverse = FALSE, ...){

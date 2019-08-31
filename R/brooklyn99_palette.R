@@ -43,8 +43,11 @@ brooklyn99_palette <- list(
 #' show_col(brooklyn99_pal()(5))
 #' show_col(brooklyn99_pal(palette = "Dark")(5))
 #' @importFrom scales manual_pal
+#' @importFrom glue glue
+#' @importFrom grDevices colorRampPalette
 
-brooklyn99_pal <- function(palette = "Regular", n = n, type = c("discrete", "continuous"),
+brooklyn99_pal <- function(palette = "Regular", n = n,
+                           type = c("discrete", "continuous"),
                            reverse = FALSE){
   brooklyn99 <- brooklyn99_palette[[palette]]
 
@@ -88,7 +91,8 @@ brooklyn99_pal <- function(palette = "Regular", n = n, type = c("discrete", "con
 #'      scale_color_brooklyn99(palette = "Dark")
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
-scale_color_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete",
+scale_color_brooklyn99 <- function(palette = "Regular", n = n,
+                                   type = "discrete",
                                    reverse = FALSE, ...){
   if (type == "discrete") {
   ggplot2::discrete_scale("color", "brooklyn99",
@@ -109,7 +113,7 @@ scale_color_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete"
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_colour_brooklyn99(palette = "Dark")
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_colour_brooklyn99 <- scale_color_brooklyn99
 
@@ -121,9 +125,10 @@ scale_colour_brooklyn99 <- scale_color_brooklyn99
 #' ggplot(mpg, aes(displ)) +
 #'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
 #'      scale_fill_brooklyn99()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
-scale_fill_brooklyn99 <- function(palette = "Regular", n = n, type = "discrete",
+scale_fill_brooklyn99 <- function(palette = "Regular", n = n,
+                                  type = "discrete",
                                   reverse = FALSE, ...){
   if (type == "discrete") {
   ggplot2::discrete_scale("fill", "brooklyn99",

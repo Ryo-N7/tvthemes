@@ -69,5 +69,5 @@ ggplot(airquality, aes(x = Day, y = Temp,
      theme_spongeBob()
 }
 \seealso{
-[ggplot2::theme]
+[tvthemes::paintBikiniBottom]
 }

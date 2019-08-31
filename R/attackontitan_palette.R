@@ -21,6 +21,8 @@ attackOnTitan_palette <- c(
 #' show_col(attackOnTitan_pal()(5))
 #' @export
 #' @importFrom scales manual_pal
+#' @importFrom glue glue
+#' @importFrom grDevices colorRampPalette
 
 attackOnTitan_pal <- function(n, type = c("discrete", "continuous"),
                               reverse = FALSE){
@@ -59,7 +61,7 @@ attackOnTitan_pal <- function(n, type = c("discrete", "continuous"),
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_color_attackOnTitan()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_attackOnTitan <- function(n, type = "discrete",
                                       reverse = FALSE, ...){
@@ -82,7 +84,7 @@ scale_color_attackOnTitan <- function(n, type = "discrete",
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_colour_attackOnTitan()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_colour_attackOnTitan <- scale_color_attackOnTitan
 
@@ -95,7 +97,7 @@ scale_colour_attackOnTitan <- scale_color_attackOnTitan
 #'     geom_histogram(aes(fill = class),
 #'                    col = "black", size = 0.1) +
 #'     scale_fill_attackOnTitan()
-#' @importFrom ggplot2 discrete_scale
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_attackOnTitan <- function(n, type = "discrete",
                                      reverse = FALSE, ...){

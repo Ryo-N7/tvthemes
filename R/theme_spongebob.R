@@ -29,8 +29,10 @@
 #'      scale_color_spongeBob() +
 #'      theme_spongeBob()
 #' @rdname theme_spongeBob
-#' @seealso [ggplot2::theme]
-#' @importFrom ggplot2 element_text element_rect element_blank element_line
+#' @seealso [tvthemes::paintBikiniBottom]
+#' @importFrom ggplot2 theme element_text element_rect element_blank element_line
+#' theme_minimal
+#' @importFrom grid unit
 #' @export
 
 theme_spongeBob <- function(

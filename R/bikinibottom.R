@@ -11,7 +11,7 @@
 #' @details Adapted from ggpomological's `paint_pomological()` function!
 #' @rdname paintBikiniBottom
 #' @export
-#' @importFrom ggplot2 theme element_rect
+#' @importFrom ggplot2 theme element_rect element_text
 #' @importFrom magick image_graph image_read image_resize image_crop image_composite image_write
 
 paintBikiniBottom <- function(

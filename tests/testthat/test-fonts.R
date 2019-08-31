@@ -1,0 +1,11 @@
+test_that("fonts install", {
+  testthat::skip_on_cran()
+  invisible(import_roboto_condensed())
+  invisible(import_ChelseaMarket())
+  invisible(import_cinzel())
+  invisible(import_rickAndMorty())
+  invisible(import_simpsons())
+  invisible(import_spongeBob())
+  invisible(import_theLastAirbender())
+  invisible(import_titillium_web())
+})
