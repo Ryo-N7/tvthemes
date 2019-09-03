@@ -19,7 +19,9 @@ knitr::opts_chunk$set(
 # tvthemes 1.0.0 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental/)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/tvthemes)](https://CRAN.R-project.org/package=tvthemes)
+[![Downloads](http://cranlogs.r-pkg.org/badges/tvthemes)](https://cran.r-project.org/package=tvthemes)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Coverage status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master/)
 <!-- badges: end -->
@@ -74,18 +76,21 @@ mpg %>%
 - __Kim Possible__: palette
 - __Big Hero 6__: palette
 - _More in future releases..._
-- _Development branch_: House Dayne, House Manderly, Attack on Titan, Kim Possible
+- _Development branch_: TBD...
 
 ## Installation
 
-`tvthemes` is currently available only on Github, you can install it by:
+You can install `tvthemes` by:
 
 ```{r, eval=FALSE}
 ## install.packages(devtools)
 devtools::install_github("Ryo-N7/tvthemes")
+
+## v1.0.0 is available on CRAN!
+install.packages("tvthemes")
 ```
 
-I hope to have a CRAN version soon!
+Now available on [CRAN](https://CRAN.R-project.org/package=tvthemes)!
 
 ## tvthemes 1.0.0 Major Changes
 

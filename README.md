@@ -6,7 +6,9 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental/)
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/tvthemes)](https://CRAN.R-project.org/package=tvthemes)
+[![Downloads](http://cranlogs.r-pkg.org/badges/tvthemes)](https://cran.r-project.org/package=tvthemes)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Coverage
@@ -65,19 +67,21 @@ mpg %>%
   - **Kim Possible**: palette
   - **Big Hero 6**: palette
   - *More in future releases…*
-  - *Development branch*: House Dayne, House Manderly, Attack on Titan,
-    Kim Possible
+  - *Development branch*: TBD…
 
 ## Installation
 
-`tvthemes` is currently available only on Github, you can install it by:
+You can install `tvthemes` by:
 
 ``` r
 ## install.packages(devtools)
 devtools::install_github("Ryo-N7/tvthemes")
+
+## v1.0.0 is available on CRAN!
+install.packages("tvthemes")
 ```
 
-I hope to have a CRAN version soon\!
+Now available on [CRAN](https://CRAN.R-project.org/package=tvthemes)\!
 
 ## tvthemes 1.0.0 Major Changes
 
