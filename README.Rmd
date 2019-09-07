@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
 
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo/)
 
-**A lot has changed with `tvthemes 1.0.0` so please check the [tvthemes 1.0.0](#tvthemes-100-major-changes) section below!**
+**`tvthemes 1.0.0` is now on CRAN so please check out the [announcement blog post](https://ryo-n7.github.io/2019-09-06-tvthemes-CRAN-announcement/)!**
 
 The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I love! You can also learn about `tvthemes` from the introductory blog post on my website, [here](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/). 
 Suggestions and Pull Requests for palettes/themes are welcome!
