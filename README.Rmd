@@ -170,13 +170,13 @@ You can check out all the colors for each palette by running `scales::show_col(t
 
 ```{r}
 scales::show_col(tvthemes:::brooklyn99_palette$Dark)
-scales::show_col(tvthemes:::westeros_palette$Lannister)
+scales::show_col(tvthemes:::gravityFalls_palette)
 scales::show_col(tvthemes:::simpsons_palette)
 ```
 
-## Examples
+# Examples
 
-### Brooklyn Nine-Nine
+## Brooklyn Nine-Nine
 
 ```{r b99-light}
 mpg %>% 
@@ -191,7 +191,7 @@ mpg %>%
                    legend.font = "Calibri Light")
 ```
 
-### Spongebob Squarepants
+## Spongebob Squarepants
 
 ```{r}
 bobspog_plot <- mpg %>% 
@@ -216,7 +216,7 @@ paintBikiniBottom(plot = bobspog_plot,
                   background = "background") 
 ```
 
-### Game of Thrones: House Stark, Tully, Targaryen
+## Game of Thrones: House Stark, Tully, Targaryen
 
 ```{r StarkTullyTargaryen, fig.width=15, fig.height = 10, message=FALSE, eval=FALSE}
 mpg %>% 
@@ -259,7 +259,7 @@ stark + tully - targaryen + plot_layout(ncol = 1)
 
 ![StarkTullyTargaryen](https://i.imgur.com/TRYevg9.png)
 
-### Game of Thrones: House Tyrell, Lannister, Greyjoy
+## Game of Thrones: House Tyrell, Lannister, Greyjoy
 
 ```{r TyrellLannisterGreyjoy, fig.width=15, fig.height = 10, eval=FALSE}
 data <- gapminder::gapminder %>% 
@@ -306,7 +306,7 @@ tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 
 ![TyrellLannisterGreyjoy](https://i.imgur.com/NUjriiF.png)
 
-### Game of Thrones: Arryn, Manderly, Martell
+## Game of Thrones: Arryn, Manderly, Martell
 
 ```{r ArrynManderlyMartell, fig.width=15, fig.height = 10, eval=FALSE}
 mpg %>% 
@@ -359,7 +359,7 @@ arryn + manderly - martell + plot_layout(ncol = 1)
 
 ![ArrynManderlyMartell](https://i.imgur.com/WfieMDW.png)
 
-### Game of Thrones: Stannis Baratheon, The One True King
+## Game of Thrones: Stannis Baratheon, The One True King
 
 ```{r Stannis, fig.width=13, fig.height = 10}
 mpg %>% 
@@ -386,7 +386,7 @@ mpg %>%
         legend.position = "none") 
 ```
 
-### The Simpsons
+## The Simpsons
 
 ```{r Simpsons}
 data <- gapminder::gapminder %>% 
@@ -410,7 +410,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                  axis.text.size = 8)
 ```
 
-### Rick and Morty
+## Rick and Morty
 
 ```{r R&M}
 ggplot(diamonds, aes(price, fill = cut)) +
@@ -424,7 +424,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
                      title.size = 14)
 ```
 
-### Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
+## Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
 ```{r ATLA, fig.width=15, fig.height = 10, message=FALSE}
 mpg %>% 
@@ -477,7 +477,7 @@ mpg %>%
 plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 ```
 
-### Parks and Recreation
+## Parks and Recreation
 
 ```{r P&R, fig.width=14, fig.height = 6, message=FALSE}
 airquality %>% 
@@ -509,7 +509,7 @@ mpg %>%
 plot_grid(parksandrec, parksandreclight, ncol = 2)
 ```
 
-### Attack on Titan
+## Attack on Titan
 
 ```{r AoT,fig.width=10, fig.height = 6}
 img <- png::readPNG("inst/backgrounds/aot-titan.png")
@@ -529,7 +529,7 @@ mpg %>%
                       title.font = "Roboto Condensed")
 ```
 
-### Kim Possible
+## Kim Possible
 
 ```{r KimPossible, fig.width=10, fig.height = 6, eval=FALSE}
 data <- gapminder::gapminder %>% 
@@ -561,7 +561,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 
 ![KimPossible](https://i.imgur.com/2p9Jf8o.png)
 
-### Big Hero 6
+## Big Hero 6
 
 ```{r BH6, fig.width=15, fig.height = 6, message=FALSE, warning=FALSE}
 data <- gapminder::gapminder %>% 
@@ -603,7 +603,7 @@ airquality %>%
 plot_grid(bigherobar, bigherodot, ncol = 2)
 ```
 
-### Hilda
+## Hilda
 
 ```{r Hilda, fig.width=17, fig.height = 10, message=FALSE}
 airquality %>% 
@@ -646,16 +646,42 @@ airquality %>%
 plot_grid(hildaday, hildadusk, hildanight, ncol = 2)
 ```
 
-## Contributing
+## Gravity Falls
+
+```{r gravityfalls, fig.width=14, fig.height = 6, message=FALSE}
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("Ireland", "Italy", "China", "France", "Germany", 
+                        "Brazil", "Mexico", "Sweden", "United States",
+                        "Japan", "Norway", "Finland", "United Kingdom")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.9) +
+  scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_fill_gravityFalls(reverse = TRUE) +
+  labs(title = stringr::str_wrap("Welcome To The Nerd Lab.", width = 50),
+       subtitle = "Villains Love Exposed Pipes, Beams, and Plastic Tarps!",
+       caption = "*Fist Bump* Falalalalalala~",
+       x = "Year", y = "GDP per Capita") +
+  theme_spongeBob(title.font = "Roboto Condensed",
+                  text.font = "Roboto Condensed",
+                  title.size = 24,
+                  subtitle.size = 20,
+                  text.size = 18,
+                  legend.position = "none")
+```
+
+# Contributing
 
 Please note that the `tvthemes` project is released with a [Contributor Code of Conduct](https://github.com/Ryo-N7/tvthemes/blob/master/CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
-## License
+# License
 
 This code is released under the GPL v3 License - see the
 [LICENSE.md](https://github.com/Ryo-N7/tvthemes/blob/master/LICENSE.md) file for details.
 
-## Credits
+# Credits
 
 Inspired by [Matt Oldach](https://twitter.com/MattOldach/)'s [{vaporwave}](https://github.com/moldach/vapoRwave/), [Bob Rudis](https://twitter.com/hrbrmstr/)' [{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes/), [Garrick Aden-Buie](https://twitter.com/grrrck/)'s [{ggpomological}](https://github.com/gadenbuie/ggpomological/), [Ewen Henderson](https://twitter.com/ewen_/)'s [{ghibli}](https://github.com/ewenme/ghibli/), [rOpenSci](https://github.com/ropenscilabs/)'s [{ochRe}](https://github.com/ropenscilabs/ochRe/), & [Nathan Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
 

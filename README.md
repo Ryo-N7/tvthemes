@@ -207,7 +207,7 @@ scales::show_col(tvthemes:::brooklyn99_palette$Dark)
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" />
 
 ``` r
-scales::show_col(tvthemes:::westeros_palette$Lannister)
+scales::show_col(tvthemes:::gravityFalls_palette)
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-2.png" width="70%" style="display: block; margin: auto;" />
@@ -218,9 +218,9 @@ scales::show_col(tvthemes:::simpsons_palette)
 
 <img src="man/figures/README-unnamed-chunk-7-3.png" width="70%" style="display: block; margin: auto;" />
 
-## Examples
+# Examples
 
-### Brooklyn Nine-Nine
+## Brooklyn Nine-Nine
 
 ``` r
 mpg %>% 
@@ -237,7 +237,7 @@ mpg %>%
 
 <img src="man/figures/README-b99-light-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Spongebob Squarepants
+## Spongebob Squarepants
 
 ``` r
 bobspog_plot <- mpg %>% 
@@ -269,7 +269,7 @@ paintBikiniBottom(plot = bobspog_plot,
 
 <img src="man/figures/README-unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Game of Thrones: House Stark, Tully, Targaryen
+## Game of Thrones: House Stark, Tully, Targaryen
 
 ``` r
 mpg %>% 
@@ -312,7 +312,7 @@ stark + tully - targaryen + plot_layout(ncol = 1)
 
 ![StarkTullyTargaryen](https://i.imgur.com/TRYevg9.png)
 
-### Game of Thrones: House Tyrell, Lannister, Greyjoy
+## Game of Thrones: House Tyrell, Lannister, Greyjoy
 
 ``` r
 data <- gapminder::gapminder %>% 
@@ -359,7 +359,7 @@ tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 
 ![TyrellLannisterGreyjoy](https://i.imgur.com/NUjriiF.png)
 
-### Game of Thrones: Arryn, Manderly, Martell
+## Game of Thrones: Arryn, Manderly, Martell
 
 ``` r
 mpg %>% 
@@ -412,7 +412,7 @@ arryn + manderly - martell + plot_layout(ncol = 1)
 
 ![ArrynManderlyMartell](https://i.imgur.com/WfieMDW.png)
 
-### Game of Thrones: Stannis Baratheon, The One True King
+## Game of Thrones: Stannis Baratheon, The One True King
 
 ``` r
 mpg %>% 
@@ -441,7 +441,7 @@ mpg %>%
 
 <img src="man/figures/README-Stannis-1.png" width="70%" style="display: block; margin: auto;" />
 
-### The Simpsons
+## The Simpsons
 
 ``` r
 data <- gapminder::gapminder %>% 
@@ -467,7 +467,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 
 <img src="man/figures/README-Simpsons-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Rick and Morty
+## Rick and Morty
 
 ``` r
 ggplot(diamonds, aes(price, fill = cut)) +
@@ -483,7 +483,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
 
 <img src="man/figures/README-R&M-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
+## Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
 ``` r
 mpg %>% 
@@ -538,7 +538,7 @@ plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 
 <img src="man/figures/README-ATLA-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Parks and Recreation
+## Parks and Recreation
 
 ``` r
 airquality %>% 
@@ -572,7 +572,7 @@ plot_grid(parksandrec, parksandreclight, ncol = 2)
 
 <img src="man/figures/README-P&R-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Attack on Titan
+## Attack on Titan
 
 ``` r
 img <- png::readPNG("inst/backgrounds/aot-titan.png")
@@ -594,7 +594,7 @@ mpg %>%
 
 <img src="man/figures/README-AoT-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Kim Possible
+## Kim Possible
 
 ``` r
 data <- gapminder::gapminder %>% 
@@ -626,7 +626,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 
 ![KimPossible](https://i.imgur.com/2p9Jf8o.png)
 
-### Big Hero 6
+## Big Hero 6
 
 ``` r
 data <- gapminder::gapminder %>% 
@@ -670,7 +670,7 @@ plot_grid(bigherobar, bigherodot, ncol = 2)
 
 <img src="man/figures/README-BH6-1.png" width="70%" style="display: block; margin: auto;" />
 
-### Hilda
+## Hilda
 
 ``` r
 airquality %>% 
@@ -715,20 +715,48 @@ plot_grid(hildaday, hildadusk, hildanight, ncol = 2)
 
 <img src="man/figures/README-Hilda-1.png" width="70%" style="display: block; margin: auto;" />
 
-## Contributing
+## Gravity Falls
+
+``` r
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("Ireland", "Italy", "China", "France", "Germany", 
+                        "Brazil", "Mexico", "Sweden", "United States",
+                        "Japan", "Norway", "Finland", "United Kingdom")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.9) +
+  scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_fill_gravityFalls(reverse = TRUE) +
+  labs(title = stringr::str_wrap("Welcome To The Nerd Lab.", width = 50),
+       subtitle = "Villains Love Exposed Pipes, Beams, and Plastic Tarps!",
+       caption = "*Fist Bump* Falalalalalala~",
+       x = "Year", y = "GDP per Capita") +
+  theme_spongeBob(title.font = "Roboto Condensed",
+                  text.font = "Roboto Condensed",
+                  title.size = 24,
+                  subtitle.size = 20,
+                  text.size = 18,
+                  legend.position = "none")
+```
+
+<img src="man/figures/README-gravityfalls-1.png" width="70%" style="display: block; margin: auto;" />
+
+# Contributing
 
 Please note that the `tvthemes` project is released with a [Contributor
 Code of
 Conduct](https://github.com/Ryo-N7/tvthemes/blob/master/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
 
-## License
+# License
 
 This code is released under the GPL v3 License - see the
 [LICENSE.md](https://github.com/Ryo-N7/tvthemes/blob/master/LICENSE.md)
 file for details.
 
-## Credits
+# Credits
 
 Inspired by [Matt Oldach](https://twitter.com/MattOldach/)‘s
 [{vaporwave}](https://github.com/moldach/vapoRwave/), [Bob
