@@ -11,6 +11,7 @@ Imports Chelsea Market (Hilda)
 }
 \details{
 import_*() functions taken from hrbrthemes.
+Formerly `import_ChelseaMarket()`.
 }
 \seealso{
 \code{\link[extrafont]{font_import}}
