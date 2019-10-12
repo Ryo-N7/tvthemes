@@ -8,4 +8,9 @@ test_that("fonts install", {
   invisible(import_spongeBob())
   invisible(import_theLastAirbender())
   invisible(import_titillium_web())
+  ## camelCase
+  invisible(import_robotoCondensed())
+  invisible(import_chelseaMarket())
+  invisible(import_avatar())
+  invisible(import_titilliumWeb())
 })

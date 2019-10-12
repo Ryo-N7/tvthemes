@@ -67,6 +67,7 @@ theLastAirbender_palette <- list(
 avatarTLA_pal <- function(palette = "FireNation", n,
                           type = c("discrete", "continuous"),
                           reverse = FALSE){
+  .Deprecated("avatar_pal")
   avatarTLA <- theLastAirbender_palette[[palette]]
 
   if (reverse == TRUE) {
@@ -84,12 +85,57 @@ avatarTLA_pal <- function(palette = "FireNation", n,
   }
 
   avatarTLA <- switch(type,
-                  continuous = grDevices::colorRampPalette(avatarTLA)(n),
-                  discrete = avatarTLA[1:n])
+                      continuous = grDevices::colorRampPalette(avatarTLA)(n),
+                      discrete = avatarTLA[1:n])
 
   avatarTLA <- scales::manual_pal(avatarTLA)
 
   return(avatarTLA)
+}
+
+#' @title Avatar: The Last Airbender palette
+#' @description Avatar: The Last Airbender palette
+#' @inheritDotParams ggplot2::discrete_scale
+#' @param palette name of palette (FireNation, EarthKingdom, WaterTribe, AirNomads),
+#' Default: "FireNation"
+#' @param n number of colors
+#' @param type discrete or continuous
+#' @param reverse reverse order, Default: FALSE
+#' @rdname avatar_pal
+#' @export
+#' @examples
+#' library(scales)
+#' show_col(avatar_pal()(5))
+#' @importFrom scales manual_pal
+#' @importFrom glue glue
+#' @importFrom grDevices colorRampPalette
+
+avatar_pal <- function(palette = "FireNation", n,
+                       type = c("discrete", "continuous"),
+                       reverse = FALSE){
+  avatar <- theLastAirbender_palette[[palette]]
+
+  if (reverse == TRUE) {
+    avatar <- rev(avatar)
+  }
+
+  if (missing(n)) {
+    n <- length(avatar)
+  }
+
+  type <- match.arg(type)
+
+  if (type == "discrete" && n > length(avatar)) {
+    stop(glue::glue("Palette does not have {n} colors, maximum is {length(avatar)}!"))
+  }
+
+  avatar <- switch(type,
+                   continuous = grDevices::colorRampPalette(avatar)(n),
+                   discrete = avatar[1:n])
+
+  avatar <- scales::manual_pal(avatar)
+
+  return(avatar)
 }
 
 #' @title scale_color_avatarTLA
@@ -106,13 +152,38 @@ avatarTLA_pal <- function(palette = "FireNation", n,
 
 scale_color_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
                                   reverse = FALSE, ...){
+  .Deprecated("scale_color_avatar")
   if (type == "discrete") {
-  ggplot2::discrete_scale("color", "avatarTLA",
-                          avatarTLA_pal(palette = palette, n = n, type = type,
-                                    reverse = reverse), ...)
+    ggplot2::discrete_scale("color", "avatarTLA",
+                            avatarTLA_pal(palette = palette, n = n, type = type,
+                                          reverse = reverse), ...)
   } else {
     ggplot2::scale_color_gradientn(colors = avatarTLA_pal(palette = palette, n = n, type = type,
-                                                     reverse = reverse)(8))
+                                                          reverse = reverse)(8))
+  }
+}
+
+#' @title scale_color_avatar
+#' @rdname avatar_pal
+#' @export
+#' @examples
+#'
+#' library(ggplot2)
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_color_avatar()
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
+
+scale_color_avatar <- function(palette = "FireNation", n, type = "discrete",
+                               reverse = FALSE, ...){
+  if (type == "discrete") {
+    ggplot2::discrete_scale("color", "avatarTLA",
+                            avatar_pal(palette = palette, n = n, type = type,
+                                       reverse = reverse), ...)
+  } else {
+    ggplot2::scale_color_gradientn(colors = avatar_pal(palette = palette, n = n, type = type,
+                                                       reverse = reverse)(8))
   }
 }
 
@@ -129,6 +200,19 @@ scale_color_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
 
 scale_colour_avatarTLA <- scale_color_avatarTLA
 
+#' @title scale_colour_avatar
+#' @rdname avatar_pal
+#' @export
+#' @examples
+#'
+#' ggplot(airquality, aes(x = Day, y = Temp,
+#'      group = as.factor(Month), color = as.factor(Month))) +
+#'      geom_point(size = 2.5) +
+#'      scale_colour_avatar()
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn
+
+scale_colour_avatar <- scale_color_avatar
+
 #' @title scale_fill_avatarTLA
 #' @rdname avatarTLA_pal
 #' @export
@@ -141,13 +225,36 @@ scale_colour_avatarTLA <- scale_color_avatarTLA
 
 scale_fill_avatarTLA <- function(palette = "FireNation", n, type = "discrete",
                                  reverse = FALSE, ...){
+  .Deprecated("scale_fill_avatar")
   if (type == "discrete") {
-  ggplot2::discrete_scale("fill", "avatarTLA",
-                          avatarTLA_pal(palette = palette, n = n, type = type,
-                                    reverse = reverse), ...)
+    ggplot2::discrete_scale("fill", "avatarTLA",
+                            avatarTLA_pal(palette = palette, n = n, type = type,
+                                          reverse = reverse), ...)
   } else {
     ggplot2::scale_fill_gradientn(colors = avatarTLA_pal(palette = palette, n = n, type = type,
                                                          reverse = reverse)(8))
+  }
+}
+
+#' @title scale_fill_avatar
+#' @rdname avatar_pal
+#' @export
+#' @examples
+#'
+#' ggplot(mpg, aes(displ)) +
+#'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+#'      scale_fill_avatar()
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
+
+scale_fill_avatar <- function(palette = "FireNation", n, type = "discrete",
+                              reverse = FALSE, ...){
+  if (type == "discrete") {
+    ggplot2::discrete_scale("fill", "avatarTLA",
+                            avatar_pal(palette = palette, n = n, type = type,
+                                       reverse = reverse), ...)
+  } else {
+    ggplot2::scale_fill_gradientn(colors = avatar_pal(palette = palette, n = n, type = type,
+                                                      reverse = reverse)(8))
   }
 }
 

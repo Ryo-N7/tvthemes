@@ -176,13 +176,13 @@ really up to you.
 
 ``` r
 import_simpsons()         ## "Akbar" font
-import_theLastAirbender() ## "Slayer" font
+import_avatar()           ## "Slayer" font (formerly `theme_theLastAirbender()`)
 import_rickAndMorty()     ## "Get Schwifty" font
-import_roboto_condensed() ## "Roboto Condensed" Google Font import from hrbrthemes
-import_titillium_web()    ## "Titillium Web" Google Font import from hrbrthemes
+import_robotoCondensed()  ## "Roboto Condensed" Google Font import from hrbrthemes
+import_titilliumWeb()     ## "Titillium Web" Google Font import from hrbrthemes
 import_spongeBob()        ## "Some Time Later" font
 import_cinzel()           ## "Cinzel" font to use with 'The Palettes of Ice & Fire'
-import_ChelseaMarket()    ## "Chelsea Market" font for "Hilda"
+import_chelseaMarket()    ## "Chelsea Market" font for "Hilda"
 
 ## install.packages("extrafont")
 library(extrafont)
@@ -489,48 +489,48 @@ ggplot(diamonds, aes(price, fill = cut)) +
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_avatarTLA(palette = "FireNation") +
+  scale_fill_avatar(palette = "FireNation") +
   labs(title = "Flameo, Hotman!",
        subtitle = "Fire. Wang Fire. This is my wife, Sapphire.",
        x = "Lion Vultures Owned",
        y = "Agni Kai Participation") +
-  theme_theLastAirbender(title.font = "Slayer",
-                         text.font = "Slayer") -> firenation
+  theme_avatar(title.font = "Slayer",
+               text.font = "Slayer") -> firenation
 
 airquality %>% 
   mutate(Month = as.factor(Month)) %>% 
   ggplot(aes(x = Day, y = Temp, group = Month, color = Month)) +
   geom_line(size = 1.5) +
-  scale_color_avatarTLA(palette = "AirNomads") +
+  scale_color_avatar(palette = "AirNomads") +
   labs(title = "Let's head to the Eastern Air Temple!",
        subtitle = "Appa, Yip Yip!") +
-  theme_theLastAirbender(title.font = "Slayer",
-                         text.font = "Slayer",
-                         title.size = 10) -> airnomads
+  theme_avatar(title.font = "Slayer",
+               text.font = "Slayer",
+               title.size = 10) -> airnomads
 
 gapminder::gapminder %>% 
   ggplot(aes(x = log10(gdpPercap), y = lifeExp)) +
   geom_point(aes(color = continent)) + 
   scale_x_log10() +
-  scale_color_avatarTLA(palette = "WaterTribe") +
+  scale_color_avatar(palette = "WaterTribe") +
   labs(title = "I am thinking maybe we could... do an activity together?",
        subtitle = "... Do an activity?",
        x = "GDP per Otter-Penguins",
        y = "Life Expectancy of Arctic Camels") +
-  theme_theLastAirbender(title.font = "Slayer",
-                         text.font = "Slayer",
-                         title.size = 8,
-                         subtitle.size = 8) -> watertribe
+  theme_avatar(title.font = "Slayer",
+               text.font = "Slayer",
+               title.size = 8,
+               subtitle.size = 8) -> watertribe
 
 mpg %>% 
   ggplot(aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-  scale_fill_avatarTLA(palette = "EarthKingdom") +
+  scale_fill_avatar(palette = "EarthKingdom") +
   labs(title = "There is no war in Ba Sing Se",
        subtitle = "(Welcome to Lake Laogai)") +
-  theme_theLastAirbender(title.font = "Slayer",
-                         text.font = "Slayer",
-                         title.size = 14) -> earthkingdom
+  theme_avatar(title.font = "Slayer",
+               text.font = "Slayer",
+               title.size = 14) -> earthkingdom
 
 ## plot together:
 plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
@@ -563,7 +563,7 @@ mpg %>%
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(expand = c(0, 0)) +
   theme_minimal() +
-  theme_parksAndRec_light(title.font = "Titillium Web Black",
+  theme_parksAndRecLight(title.font = "Titillium Web Black",
                     text.font = "Titillium Web") -> parksandreclight
 
 ## plot together:
