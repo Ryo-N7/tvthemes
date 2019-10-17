@@ -248,3 +248,27 @@ import_chelseaMarket <- function() {
     )
   )
 }
+
+#' @title import_gravitationFalls
+#' @description Imports Gravitation Falls font (Gravity Falls)
+#' @details import_*() functions taken from hrbrthemes.
+#' Font made by MaxiGamer on DeviantArt!
+#' @seealso
+#'  \code{\link[extrafont]{font_import}}
+#' @rdname import_gravitationFalls
+#' @export
+#' @importFrom extrafont font_import
+
+import_gravitationFalls <- function() {
+
+  gravitationFalls_font_dir <- system.file("fonts", "GravitationFalls", package = "tvthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = gravitationFalls_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You should install these fonts on your system directly. The files are located in [%s]",
+      gravitationFalls_font_dir
+    )
+  )
+}

@@ -50,7 +50,7 @@ ggplot(mpg, aes(displ)) +
                    subtitle.size = 14)
 ```
 
--pic
+![b99d](https://i.imgur.com/SjxWFXd.png)
 
 ```{r b99-light}
 ggplot(mpg, aes(displ)) +
@@ -63,6 +63,8 @@ ggplot(mpg, aes(displ)) +
                    title.font = "Roboto Condensed", 
                    legend.font = "Calibri Light")
 ```
+
+![b99l](https://i.imgur.com/OHWQn2q.png)
 
 ## Spongebob Squarepants
 
@@ -82,11 +84,17 @@ bobspog_plot <- ggplot(mpg, aes(displ)) +
                   legend.title.size = 14)
 
 bobspog_plot
+```
 
+![bobspog](https://i.imgur.com/cVHEADt.png)
+
+```{r bobspog-bkg, eval=FALSE}
 ## use a themed background! Inspired by ggpomological::paint_pomological()!
 paintBikiniBottom(plot = bobspog_plot,
                   background = "background") 
 ```
+
+![bobspogbkg](https://i.imgur.com/kpwgeRA.png)
 
 ## Game of Thrones: House Stark, Tully, Targaryen
 
@@ -255,6 +263,8 @@ ggplot(mpg, aes(displ)) +
         legend.position = "none") 
 ```
 
+![stannis](https://i.imgur.com/GuCuzyr.png)
+
 ## The Simpsons
 
 ```{r Simpsons}
@@ -279,6 +289,8 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                  axis.text.size = 8)
 ```
 
+![simpsons](https://i.imgur.com/DFHVlJS.png)
+
 ## Rick and Morty
 
 ```{r R&M}
@@ -292,6 +304,8 @@ ggplot(diamonds, aes(price, fill = cut)) +
                      text.font = "Get Schwifty",
                      title.size = 14)
 ```
+
+![randm](https://i.imgur.com/YB7xSoe.png)
 
 ## Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
@@ -344,6 +358,8 @@ ggplot(mpg, aes(displ)) +
 plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 ```
 
+![tla](https://i.imgur.com/JA4hEbJ.png)
+
 ## Parks and Recreation
 
 ```{r P&R, fig.width=14, fig.height = 6, message=FALSE, eval=FALSE}
@@ -375,6 +391,8 @@ ggplot(mpg, aes(displ)) +
 plot_grid(parksandrec, parksandreclight, ncol = 2)
 ```
 
+![pandr](https://i.imgur.com/9641myM.png)
+
 ## Attack on Titan
 
 ```{r AoT,fig.width=10, fig.height = 6, eval=FALSE}
@@ -394,6 +412,8 @@ ggplot(mpg, aes(displ)) +
     theme_parksAndRec(text.font = "Roboto Condensed",
                       title.font = "Roboto Condensed")
 ```
+
+![aot](https://i.imgur.com/BsLsWPX.png)
 
 ## Kim Possible
 
@@ -469,6 +489,8 @@ airquality %>%
 plot_grid(bigherobar, bigherodot, ncol = 2)
 ```
 
+![bighero6](https://i.imgur.com/ww197w4.png)
+
 ## Hilda
 
 ```{r Hilda, fig.width=17, fig.height = 10, message=FALSE, eval=FALSE}
@@ -511,28 +533,33 @@ airquality %>%
 plot_grid(hildaday, hildadusk, hildanight, ncol = 2)
 ```
 
+![hilda](https://i.imgur.com/J9uv7hV.png)
+
 ## Gravity Falls
 
 ```{r gravityfalls, fig.width=14, fig.height = 6, message=FALSE, eval=FALSE}
 data <- gapminder::gapminder %>% 
-  filter(country %in% c("Ireland", "Italy", "China", "France", "Germany", 
-                        "Brazil", "Mexico", "Sweden", "United States",
-                        "Japan", "Norway", "Finland", "United Kingdom")) %>% 
-  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+  filter(country %in% c("Ireland", "Italy", "Turkey", "France", "Germany", 
+                        "Brazil", "Mexico", "Sweden", "Netherlands",
+                        "Greece", "Spain", "Finland", "United Kingdom")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')),
+         image = "")
 
 ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   geom_area(alpha = 0.9) +
   scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-  scale_fill_gravityFalls(reverse = TRUE) +
-  labs(title = stringr::str_wrap("Welcome To The Nerd Lab.", width = 50),
-       subtitle = "Villains Love Exposed Pipes, Beams, and Plastic Tarps!",
-       caption = "*Fist Bump* Falalalalalala~",
-       x = "Year", y = "GDP per Capita") +
-  theme_spongeBob(title.font = "Roboto Condensed",
-                  text.font = "Roboto Condensed",
-                  title.size = 24,
-                  subtitle.size = 20,
-                  text.size = 18,
-                  legend.position = "none")
+  scale_fill_gravityFalls(reverse = FALSE) +
+  labs(title = stringr::str_wrap("Well, Duck-tective, it seems you've really... quacked the case!", width = 70),
+       subtitle = "Quack-quack Quack-quack-quack (Don't patronize me!)",
+       caption = "Schmebulock!!",
+       x = "Years That Stanford Was Gone", y = "# of Sham Total sold") +
+  theme_avatar(title.font = "Gravitation Falls",
+               text.font = "Gravitation Falls",
+               title.size = 24,
+               subtitle.size = 20,
+               text.size = 18,
+               legend.position = "none")
 ```
+
+![gravityfall](https://i.imgur.com/Gl83AXz.png)

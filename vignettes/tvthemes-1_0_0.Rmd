@@ -58,6 +58,7 @@ The specific palettes that changed are:
 * `Game of Thrones/A Song of Ice & Fire`: Default = "Stark", "Stannis", "Tyrell", "Lannister", "Manderly", "Martell", "Arryn", "Greyjoy", "Targaryen", "Tully"
 
 ```{r eval=FALSE}
+## Plot not shown
 ggplot(mpg, aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
@@ -66,6 +67,7 @@ ggplot(mpg, aes(displ)) +
 For themes the one change is a toggle option for axis ticks via `ticks` which you can set to either `TRUE` and the default `FALSE`. 
 
 ```{r eval=FALSE}
+## Plot not shown
 ggplot(mpg, aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   scale_fill_kimPossible(n = 5, reverse = FALSE) +

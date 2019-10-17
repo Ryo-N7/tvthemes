@@ -66,6 +66,7 @@ ggplot(mpg, aes(displ)) +
   - **Attack on Titan**: palette
   - **Kim Possible**: palette
   - **Big Hero 6**: palette
+  - **Gravity Falls**: palette
   - *More in future releases…*
   - *Development branch*: TBD…
 
@@ -85,7 +86,11 @@ Now available on [CRAN](https://CRAN.R-project.org/package=tvthemes)\!
 
 ## tvthemes 1.0.0 Major Changes
 
+See vignette.
+
 ## Fonts & Colors
+
+See vignette.
 
 # Examples
 
@@ -94,7 +99,15 @@ Vignette.
 
 ## Brooklyn Nine-Nine
 
+![b99d](https://i.imgur.com/SjxWFXd.png)
+
+![b99l](https://i.imgur.com/OHWQn2q.png)
+
 ## Spongebob Squarepants
+
+![bobspog](https://i.imgur.com/cVHEADt.png)
+
+![bobspogbkg](https://i.imgur.com/kpwgeRA.png)
 
 ## Game of Thrones: House Stark, Tully, Targaryen
 
@@ -110,15 +123,27 @@ Vignette.
 
 ## Game of Thrones: Stannis Baratheon, The One True King
 
+![stannis](https://i.imgur.com/GuCuzyr.png)
+
 ## The Simpsons
+
+![simpsons](https://i.imgur.com/DFHVlJS.png)
 
 ## Rick and Morty
 
+![randm](https://i.imgur.com/YB7xSoe.png)
+
 ## Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
+
+![tla](https://i.imgur.com/JA4hEbJ.png)
 
 ## Parks and Recreation
 
+![pandr](https://i.imgur.com/9641myM.png)
+
 ## Attack on Titan
+
+![aot](https://i.imgur.com/BsLsWPX.png)
 
 ## Kim Possible
 
@@ -126,9 +151,15 @@ Vignette.
 
 ## Big Hero 6
 
+![bighero6](https://i.imgur.com/ww197w4.png)
+
 ## Hilda
 
+![hilda](https://i.imgur.com/J9uv7hV.png)
+
 ## Gravity Falls
+
+![gravityfall](https://i.imgur.com/Gl83AXz.png)
 
 # Contributing
 
