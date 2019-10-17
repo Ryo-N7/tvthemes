@@ -12,11 +12,12 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   warning = FALSE, 
   message = FALSE,
+  eval = FALSE,
   comment = "#>"
 )
 ```
 
-```{r setup}
+```{r setup, eval=FALSE}
 library(tvthemes)
 library(ggplot2)
 library(gapminder)
@@ -52,7 +53,7 @@ ggplot(mpg, aes(displ)) +
 
 ![b99d](https://i.imgur.com/SjxWFXd.png)
 
-```{r b99-light}
+```{r b99-light, eval=FALSE}
 ggplot(mpg, aes(displ)) +
   geom_histogram(aes(fill = class), col = "black", size = 0.1) +
   scale_fill_brooklyn99() +
@@ -267,7 +268,7 @@ ggplot(mpg, aes(displ)) +
 
 ## The Simpsons
 
-```{r Simpsons}
+```{r Simpsons, eval=FALSE}
 data <- gapminder::gapminder %>% 
   filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan", "Norway", "Belarus")) %>% 
   mutate(year = as.Date(paste(year, "-01-01", sep = "", format='%Y-%b-%d')))
