@@ -10,3 +10,4 @@
 ^inst\docs\.Rmd$
 ^cran-comments\.md$
 ^CRAN-RELEASE$
+^pkgdown$
