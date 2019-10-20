@@ -1,0 +1,75 @@
+---
+title: "{tvthemes} 1.0.0"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{{tvthemes} 1.0.0}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tvthemes)
+library(ggplot2)
+```
+
+# tvthemes 1.0.0 Major Changes
+
+| TV Show       | New Palette(s)    | New Theme(s) |
+| ------------- |---------------| -------  |
+| [Game of Thrones](https://en.wikipedia.org/wiki/Game_of_Thrones)      | Stannis Baratheon, House Martell, House Arryn, House Manderly | NA    |
+| [Kim Possible](https://en.wikipedia.org/wiki/Kim_Possible)  | 1      |   NA    |
+| [Big Hero 6](https://en.wikipedia.org/wiki/Big_Hero_6:_The_Series) | 1     |    NA    |
+| [Hilda](https://en.wikipedia.org/wiki/Hilda_(TV_series)) | Day, Dusk, Night      |    Day, Dusk, Night    |
+| [Attack on Titan](https://en.wikipedia.org/wiki/Attack_on_Titan) | 1      |    NA    |
+
+In addition to the new palettes and themes some of the code in `tvthemes` has changed significantly.
+
+In palettes for example, when you are calling the palette functions via `scale_fill_*()` or `scale_color_*()` you now have a lot more options: 
+
+* `palette`: If multiple available, select the palette: "Stannis", "FireNation", "Dusk", etc. Leave blank if only single palette available.
+* `n`: Number of colors. If left blank it defaults to the total number of colors available in the palette.
+* `type`: "Discrete" or "Continuous". NOTE: Most palettes are only optimized for "Discrete" at the present time.
+* `reverse`: Reverse order of colors. `TRUE`/`FALSE`
+
+For TV shows with multiple palettes they are now organized under a single "palette list" from which you pass the specific palette that you want. If you want to check out the colors for these specific palettes:
+
+```{r, eval=FALSE}
+## Previously:
+scales::show_col(tvthemes:::lannister_palette)
+scales::show_col(tvthemes:::brooklyn99_dark_palette)
+
+## Now:
+scales::show_col(tvthemes:::westeros_palette$Lannister)
+scales::show_col(tvthemes:::brooklyn99_palette$Dark)
+```
+
+The specific palettes that changed are:
+
+* `Brooklyn Nine-Nine`: Default = "Regular", "Dark"
+* `Avatar: The Last Airbender`: Default = "FireNation", "EarthKingdom", "WaterTribe", "AirNation"
+* `Hilda`: Default = "Day", "Dusk", "Night"
+* `Game of Thrones/A Song of Ice & Fire`: Default = "Stark", "Stannis", "Tyrell", "Lannister", "Manderly", "Martell", "Arryn", "Greyjoy", "Targaryen", "Tully"
+
+```{r eval=FALSE}
+## Plot not shown
+ggplot(mpg, aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_westeros(palette = "Stannis", n = 7, reverse = TRUE)
+```
+
+For themes the one change is a toggle option for axis ticks via `ticks` which you can set to either `TRUE` and the default `FALSE`. 
+
+```{r eval=FALSE}
+## Plot not shown
+ggplot(mpg, aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  scale_fill_kimPossible(n = 5, reverse = FALSE) +
+  theme_hildaDay(ticks = TRUE)
+```

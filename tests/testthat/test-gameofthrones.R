@@ -3,6 +3,8 @@ context("test-gameofthrones")
 ## House Stark ----
 test_that("stark_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Stark")(10))
+  expect_warning(westeros_pal(reverse = TRUE)(10))
+  expect_error(westeros_pal(n = 10))
 })
 
 test_that("scale_colour_stark equals scale_color_stark", {

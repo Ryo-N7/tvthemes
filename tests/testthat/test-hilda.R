@@ -26,11 +26,41 @@ test_that("theme_hildaDay works", {
   expect_equal(thm$legend.text$colour, "#93a1a1")
   expect_equal(thm$legend.title$colour, "#659794")
   expect_equal(thm$legend.position, "bottom")
+
+  ## ticks == TRUE
+  thm <- theme_hildaDay(ticks = TRUE)
+  expect_s3_class(thm, "theme")
+  ## font
+  expect_equal(thm$text$family, "Chelsea Market")
+  expect_equal(thm$plot.title$family, "Chelsea Market")
+  expect_equal(thm$legend.title$family, "Chelsea Market")
+  expect_equal(thm$legend.text$family, "Chelsea Market")
+  ## size
+  expect_equal(thm$text$size, 14)
+  expect_equal(thm$plot.title$size, 18)
+  expect_equal(thm$plot.subtitle$size, 12)
+  expect_equal(thm$axis.text$size, 12)
+  expect_equal(thm$axis.title$size, 14)
+  expect_equal(thm$legend.text$size, 9)
+  expect_equal(thm$legend.title$size, 10)
+  ## ticks
+  expect_equal(thm$axis.ticks$size, 0.15)
+  ## color
+  expect_equal(thm$text$colour, "#659794")
+  expect_equal(thm$plot.title$colour, "#659794")
+  expect_equal(thm$plot.subtitle$colour, "#659794")
+  expect_equal(thm$axis.text$colour, "#93a1a1")
+  expect_equal(thm$axis.title$colour, "#659794")
+  expect_equal(thm$legend.text$colour, "#93a1a1")
+  expect_equal(thm$legend.title$colour, "#659794")
+  expect_equal(thm$legend.position, "bottom")
 })
 
 ## Hilda Day
 test_that("hilda_pal raises warning with large number, x > 8", {
   expect_warning(hilda_pal("Day")(9))
+  expect_warning(hilda_pal(reverse = TRUE)(9))
+  expect_error(hilda_pal(n = 9))
 })
 
 test_that("scale_colour_hilda equals scale_color_hilda", {
@@ -62,6 +92,34 @@ test_that("theme_hildaDusk works", {
   expect_equal(thm$axis.title$size, 14)
   expect_equal(thm$legend.text$size, 9)
   expect_equal(thm$legend.title$size, 10)
+  ## color
+  expect_equal(thm$text$colour, "#F9FEFF")
+  expect_equal(thm$plot.title$colour, "#F9FEFF")
+  expect_equal(thm$plot.subtitle$colour, "#F9FEFF")
+  expect_equal(thm$axis.text$colour, "#F9FEFF")
+  expect_equal(thm$axis.title$colour, "#F9FEFF")
+  expect_equal(thm$legend.text$colour, "#F9FEFF")
+  expect_equal(thm$legend.title$colour, "#F9FEFF")
+  expect_equal(thm$legend.position, "bottom")
+
+  ## ticks == TRUE
+  thm <- theme_hildaDusk(ticks = TRUE)
+  expect_s3_class(thm, "theme")
+  ## font
+  expect_equal(thm$text$family, "Chelsea Market")
+  expect_equal(thm$plot.title$family, "Chelsea Market")
+  expect_equal(thm$legend.title$family, "Chelsea Market")
+  expect_equal(thm$legend.text$family, "Chelsea Market")
+  ## size
+  expect_equal(thm$text$size, 14)
+  expect_equal(thm$plot.title$size, 18)
+  expect_equal(thm$plot.subtitle$size, 12)
+  expect_equal(thm$axis.text$size, 12)
+  expect_equal(thm$axis.title$size, 14)
+  expect_equal(thm$legend.text$size, 9)
+  expect_equal(thm$legend.title$size, 10)
+  ## ticks
+  expect_equal(thm$axis.ticks$size, 0.15)
   ## color
   expect_equal(thm$text$colour, "#F9FEFF")
   expect_equal(thm$plot.title$colour, "#F9FEFF")
@@ -107,6 +165,34 @@ test_that("theme_hildaNight works", {
   expect_equal(thm$axis.title$size, 14)
   expect_equal(thm$legend.text$size, 9)
   expect_equal(thm$legend.title$size, 10)
+  ## color
+  expect_equal(thm$text$colour, "#F9FEFF")
+  expect_equal(thm$plot.title$colour, "#F9FEFF")
+  expect_equal(thm$plot.subtitle$colour, "#F9FEFF")
+  expect_equal(thm$axis.text$colour, "#F9FEFF")
+  expect_equal(thm$axis.title$colour, "#F9FEFF")
+  expect_equal(thm$legend.text$colour, "#F9FEFF")
+  expect_equal(thm$legend.title$colour, "#F9FEFF")
+  expect_equal(thm$legend.position, "bottom")
+
+  ## ticks == TRUE
+  thm <- theme_hildaNight(ticks = TRUE)
+  expect_s3_class(thm, "theme")
+  ## font
+  expect_equal(thm$text$family, "Chelsea Market")
+  expect_equal(thm$plot.title$family, "Chelsea Market")
+  expect_equal(thm$legend.title$family, "Chelsea Market")
+  expect_equal(thm$legend.text$family, "Chelsea Market")
+  ## size
+  expect_equal(thm$text$size, 14)
+  expect_equal(thm$plot.title$size, 18)
+  expect_equal(thm$plot.subtitle$size, 12)
+  expect_equal(thm$axis.text$size, 12)
+  expect_equal(thm$axis.title$size, 14)
+  expect_equal(thm$legend.text$size, 9)
+  expect_equal(thm$legend.title$size, 10)
+  ## ticks
+  expect_equal(thm$axis.ticks$size, 0.15)
   ## color
   expect_equal(thm$text$colour, "#F9FEFF")
   expect_equal(thm$plot.title$colour, "#F9FEFF")

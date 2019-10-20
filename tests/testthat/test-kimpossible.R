@@ -3,6 +3,8 @@ context("test-kimpossible")
 ## Kim Possible
 test_that("kimPossible_pal raises warning with large number, x > 12", {
   expect_warning(kimPossible_pal()(13))
+  expect_warning(kimPossible_pal(reverse = TRUE)(13))
+  expect_error(kimPossible_pal(n = 13))
 })
 
 test_that("scale_colour_kimPossible equals scale_color_kimPossible", {
