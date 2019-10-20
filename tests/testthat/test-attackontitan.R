@@ -3,6 +3,8 @@ context("test-attackontitan")
 ## Attack on Titan
 test_that("attackOnTitan_pal raises warning with large number, x > 8", {
   expect_warning(attackOnTitan_pal()(9))
+  expect_warning(attackOnTitan_pal(reverse = TRUE)(9))
+  expect_error(attackOnTitan_pal(n = 9))
 })
 
 test_that("scale_colour_attackOnTitan equals scale_color_attackOnTitan", {

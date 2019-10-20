@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tvthemes 1.0.0 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
+# tvthemes 1.1.0 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
 
 <!-- badges: start -->
 
@@ -17,10 +17,6 @@ status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](ht
 
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo/)
 
-**`tvthemes 1.0.0` is now on CRAN so please check out the [announcement
-blog
-post](https://ryo-n7.github.io/2019-09-06-tvthemes-CRAN-announcement/)\!**
-
 The `tvthemes` package is a collection of various `ggplot2` themes and
 color/fill palettes based on everybody’s favorite TV shows. What
 kick-started this whole package was my
@@ -28,12 +24,22 @@ kick-started this whole package was my
 looking at simple TV stats on my current favorite TV show, Brooklyn
 Nine-Nine. I got a lot of good feedback on the colors I used for the
 custom `ggplot2` theme and color palettes so I decided to expand it to
-other shows that I love\! You can also learn about `tvthemes` from the
-introductory blog post on my website,
-[here](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/).
-Suggestions and Pull Requests for palettes/themes are welcome\!
+other shows that I love\! Suggestions and Pull Requests for
+palettes/themes are welcome\!
+
+  - [Intro to `tvthemes` blog
+    post](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/)
+  - [`tvthemes 1.0.0` & CRAN release blog
+    post](https://ryo-n7.github.io/2019-09-06-tvthemes-CRAN-announcement/)
+
+<!-- end list -->
 
 ``` r
+library(tvthemes)
+library(ggplot2)
+library(extrafont)
+loadfonts(quiet = TRUE)
+
 ggplot(mpg, aes(displ)) +
   geom_histogram(aes(fill = class), 
                  col = "black", size = 0.1,
@@ -48,7 +54,7 @@ ggplot(mpg, aes(displ)) +
                    subtitle.size = 14)
 ```
 
-![b99header](https://i.imgur.com/SjxWFXd.png)
+![b99d](https://i.imgur.com/SjxWFXd.png)
 
 ## Current list of TV shows
 
@@ -76,6 +82,7 @@ You can install `tvthemes` by:
 
 ``` r
 ## install.packages(devtools)
+## for development version:
 devtools::install_github("Ryo-N7/tvthemes")
 
 ## v1.0.0 is available on CRAN!
@@ -94,8 +101,7 @@ See vignette.
 
 # Examples
 
-You can find the code for all the examples in the “Examples”
-Vignette.
+You can find the code for all the examples in the “Examples” Vignette.
 
 ## Brooklyn Nine-Nine
 

@@ -3,6 +3,8 @@ context("test-gravityFalls")
 ## Big Hero 6
 test_that("gravityFalls_pal raises warning with large number, x > 15", {
   expect_warning(gravityFalls_pal()(15))
+  expect_warning(gravityFalls_pal(reverse = TRUE)(15))
+  expect_error(gravityFalls_pal(n = 15))
 })
 
 test_that("scale_colour_gravityFalls equals scale_color_gravityFalls", {
