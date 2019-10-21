@@ -2,7 +2,7 @@
 % Please edit documentation in R/import_fonts.r
 \name{import_gravitationFalls}
 \alias{import_gravitationFalls}
-\title{import_gravitationFalls}
+\title{Import "Gravitation Falls" font}
 \usage{
 import_gravitationFalls()
 }
@@ -12,6 +12,7 @@ Imports Gravitation Falls font (Gravity Falls)
 \details{
 import_*() functions taken from hrbrthemes.
 Font made by MaxiGamer on DeviantArt!
+You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }
 \seealso{
 \code{\link[extrafont]{font_import}}

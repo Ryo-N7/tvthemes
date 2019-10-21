@@ -1,4 +1,4 @@
-#' @title theme_theLastAirbender
+#' @title Avatar: The Last Airbender theme (deprecated)
 #' @description Avatar: The Last Airbender theme, Recommended font: "Slayer"
 #' @param text.font text font, Default: NULL
 #' @param title.font title font, Default: NULL
@@ -88,7 +88,7 @@ theme_theLastAirbender <- function(
 }
 
 
-#' @title theme_avatar
+#' @title Avatar: The Last Airbender theme
 #' @description Avatar: The Last Airbender theme, Recommended font: "Slayer"
 #' @param text.font text font, Default: NULL
 #' @param title.font title font, Default: NULL

@@ -1,4 +1,4 @@
-#' @title theme_simpsons
+#' @title The Simpsons theme
 #' @description The Simpsons theme, Recommended font: "Akbar"
 #' @details In part inspired by `@nathancunn`'s blog posts on The Simpsons!
 #' @param text.font text font, Default: NULL

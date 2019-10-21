@@ -1,4 +1,4 @@
-#' @title theme_rickAndMorty
+#' @title Rick & Morty theme
 #' @description Rick & Morty theme, Recommended font: "Get Schwifty"
 #' @details Actual font is based on Justin Roiland's handwriting!
 #' @param text.font text font, Default: NULL

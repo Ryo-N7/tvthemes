@@ -2,7 +2,7 @@
 % Please edit documentation in R/import_fonts.r
 \name{import_rickAndMorty}
 \alias{import_rickAndMorty}
-\title{import_rickAndMorty}
+\title{Import "Get Schwifty" font}
 \usage{
 import_rickAndMorty()
 }
@@ -12,5 +12,6 @@ Rick & Morty font ("Get Schwifty")
 \details{
 Actual font is ... well, Justin Roiland's actual handwriting.
 import_*() functions taken from hrbrthemes.
+Created by jonizaak on DeviantArt!
 You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }

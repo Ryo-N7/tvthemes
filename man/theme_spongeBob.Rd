@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_spongebob.R
 \name{theme_spongeBob}
 \alias{theme_spongeBob}
-\title{theme_spongeBob}
+\title{Spongebob Squarepants theme}
 \usage{
 theme_spongeBob(text.font = NULL, title.font = NULL,
   legend.font = NULL, title.size = 18, text.size = 12,

@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_thelastairbender.R
 \name{theme_avatar}
 \alias{theme_avatar}
-\title{theme_avatar}
+\title{Avatar: The Last Airbender theme}
 \usage{
 theme_avatar(text.font = NULL, title.font = NULL, legend.font = NULL,
   title.size = 14, text.size = 10, subtitle.size = 12,

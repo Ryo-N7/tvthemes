@@ -1,4 +1,4 @@
-#' @title import_titillium_web
+#' @title Import "Titillium Web" font (deprecated)
 #' @description Imports Titillium Web
 #' @details import_*() functions taken from hrbrthemes.
 #' @seealso
@@ -21,7 +21,7 @@ import_titillium_web <- function() {
   )
 }
 
-#' @title import_titilliumWeb
+#' @title Import "Titillium Web" font
 #' @description Imports Titillium Web
 #' @details import_*() functions taken from hrbrthemes.
 #' @seealso
@@ -44,7 +44,7 @@ import_titilliumWeb <- function() {
   )
 }
 
-#' @title import_roboto_condensed
+#' @title Import "Roboto Condensed" font (deprecated)
 #' @description taken from hrbrthemes
 #' @details import_*() functions taken from hrbrthemes.
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
@@ -67,7 +67,7 @@ import_roboto_condensed <- function() {
   )
 }
 
-#' @title import_robotoCondensed
+#' @title Import "Roboto Condensed" font
 #' @description taken from hrbrthemes
 #' @details import_*() functions taken from hrbrthemes.
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
@@ -90,9 +90,10 @@ import_robotoCondensed <- function() {
   )
 }
 
-#' @title import_simpsons
+#' @title Import "Akbar" font
 #' @description The Simpsons Font ("Akbar" font)
 #' @details import_*() functions taken from hrbrthemes.
+#' Created by Jon Bernhardt.
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
@@ -114,7 +115,7 @@ import_simpsons <- function() {
   )
 }
 
-#' @title import_cinzel
+#' @title Import "Cinzel" font
 #' @description Game of Thrones font ("Cinzel" font)
 #' @details import_*() functions taken from hrbrthemes, actual font is "Trajan Pro".
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
@@ -137,10 +138,11 @@ import_cinzel <- function() {
   )
 }
 
-#' @title import_rickAndMorty
+#' @title Import "Get Schwifty" font
 #' @description Rick & Morty font ("Get Schwifty")
 #' @details Actual font is ... well, Justin Roiland's actual handwriting.
 #' import_*() functions taken from hrbrthemes.
+#' Created by jonizaak on DeviantArt!
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @rdname import_rickAndMorty
 #' @export
@@ -159,9 +161,9 @@ import_rickAndMorty <- function() {
   )
 }
 
-#' @title import_spongeBob
+#' @title Import "Some-Time-Later" font
 #' @description spongeBob SquarePants font ("Some-Time-Later")
-#' @details import_*() functions taken from hrbrthemes.
+#' @details import_*() functions taken from hrbrthemes. Created by Frederick R. Brennan.
 #' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @rdname import_spongeBob
 #' @export
@@ -180,7 +182,7 @@ import_spongeBob <- function() {
   )
 }
 
-#' @title import_theLastAirbender
+#' @title Import "Slayer" font (deprecated)
 #' @description The Last Airbender font ("Slayer")
 #' @details Actual font is Herculanum.
 #' import_*() functions taken from hrbrthemes.
@@ -203,7 +205,7 @@ import_theLastAirbender <- function() {
   )
 }
 
-#' @title import_avatar
+#' @title Import "Slayer" font
 #' @description The Last Airbender font ("Slayer")
 #' @details Actual font is Herculanum.
 #' import_*() functions taken from hrbrthemes.
@@ -225,10 +227,11 @@ import_avatar <- function() {
   )
 }
 
-#' @title import_chelseaMarket
+#' @title Import "Chelsea Market" font
 #' @description Imports Chelsea Market (Hilda)
 #' @details import_*() functions taken from hrbrthemes.
-#' Formerly `import_ChelseaMarket()`.
+#' Formerly `import_ChelseaMarket()` which as been deleted rather than deprecated.
+#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
 #' @rdname import_chelseaMarket
@@ -249,10 +252,11 @@ import_chelseaMarket <- function() {
   )
 }
 
-#' @title import_gravitationFalls
+#' @title Import "Gravitation Falls" font
 #' @description Imports Gravitation Falls font (Gravity Falls)
 #' @details import_*() functions taken from hrbrthemes.
 #' Font made by MaxiGamer on DeviantArt!
+#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 #' @seealso
 #'  \code{\link[extrafont]{font_import}}
 #' @rdname import_gravitationFalls

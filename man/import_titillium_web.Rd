@@ -2,7 +2,7 @@
 % Please edit documentation in R/import_fonts.r
 \name{import_titillium_web}
 \alias{import_titillium_web}
-\title{import_titillium_web}
+\title{Import "Titillium Web" font (deprecated)}
 \usage{
 import_titillium_web()
 }

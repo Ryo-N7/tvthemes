@@ -2,7 +2,7 @@
 % Please edit documentation in R/import_fonts.r
 \name{import_cinzel}
 \alias{import_cinzel}
-\title{import_cinzel}
+\title{Import "Cinzel" font}
 \usage{
 import_cinzel()
 }

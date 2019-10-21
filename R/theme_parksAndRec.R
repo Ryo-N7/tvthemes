@@ -1,7 +1,7 @@
 ## Titillium Web BLACK
 ## Champion HTF-Heavyweight
 
-#' @title theme_parksAndRec
+#' @title Parks & Recreation theme
 #' @description Parks & Recreation theme, Recommended font: "Titillium Web"
 #' @details Actual font: 'Champion HTF-Heavyweight'
 #' @param text.font text font, Default: NULL
@@ -92,7 +92,7 @@ theme_parksAndRec <- function(
 }
 
 
-#' @title theme_parksAndRecLight
+#' @title Parks & Recreation "Light" theme
 #' @description Parks & Recreation light theme, Recommended font: "Titillium Web"
 #' @details Actual font: 'Champion HTF-Heavyweight'
 #' @param text.font text font, Default: NULL
@@ -182,7 +182,7 @@ theme_parksAndRecLight <- function(
   }
 }
 
-#' @title theme_parksAndRec_light
+#' @title Parks & Recreation "Light" theme (deprecated)
 #' @description Parks & Recreation light theme, Recommended font: "Titillium Web"
 #' @details Actual font: 'Champion HTF-Heavyweight'
 #' This function has been deprecated in favor of `theme_parksAndRecLight` to follow

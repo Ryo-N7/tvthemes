@@ -2,7 +2,7 @@
 % Please edit documentation in R/import_fonts.r
 \name{import_chelseaMarket}
 \alias{import_chelseaMarket}
-\title{import_chelseaMarket}
+\title{Import "Chelsea Market" font}
 \usage{
 import_chelseaMarket()
 }
@@ -11,7 +11,8 @@ Imports Chelsea Market (Hilda)
 }
 \details{
 import_*() functions taken from hrbrthemes.
-Formerly `import_ChelseaMarket()`.
+Formerly `import_ChelseaMarket()` which as been deleted rather than deprecated.
+You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }
 \seealso{
 \code{\link[extrafont]{font_import}}

@@ -1,4 +1,4 @@
-#' @title theme_brooklyn99
+#' @title Brooklyn Nine-Nine theme
 #' @description Brooklyn Nine-Nine theme, Recommended font: "Roboto Condensed" (title), "Calibri Light" (other text)
 #' @details Actual font: Variants of 'Univers'
 #' @param text.font text font, Default: NULL

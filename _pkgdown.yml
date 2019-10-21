@@ -1,2 +1,58 @@
 url: https://ryo-n7.github.io/tvthemes/
-destination: "."
+
+home:
+  strip_header: true
+
+authors:
+  Ryo Nakagawara:
+    href: https://ryo-n7.github.io
+
+reference:
+  - title: Attack On Titan palette
+    contents:
+      - matches("attackOnTitan")
+  - title: Avatar - The Last Airbender palette
+    desc: avatarTLA() replaced by avatar()
+    contents:
+      - matches("avatar")
+  - title: Big Hero 6 palette
+    contents:
+      - matches("bigHero6")
+  - title: Brooklyn Nine Nine palette
+    desc: Light and Dark
+    contents:
+      - matches("brooklyn99")
+  - title: Gravity Falls
+    contents:
+      - matches("gravityFalls")
+  - title: Hilda
+    desc: Day, Dusk, & Night palettes
+    contents:
+      - matches("hilda")
+  - title: Import Fonts
+    desc: Using {extrafont} package
+    contents:
+      - starts_with("import")
+  - title: Kim Possible
+    contents:
+      - matches("kimPossible")
+  - title: Add Spongebob Background
+    desc: Using {magick} package
+    contents:
+      - matches("BikiniBottom")
+  - title: Parks & Recreation palette and themes
+    desc: Light and Dark
+    contents:
+      - matches("parksAndRec")
+  - title: Rick & Morty palette and theme
+    contents:
+      - matches("rickAndMorty")
+  - title: The Simpsons palette
+    contents:
+      - matches("simpsons")
+  - title: Spongebob Squarepants palette and theme
+    contents:
+      - matches("spongeBob")
+  - title: Great Houses of Westeros palette
+    contents:
+      - matches("westeros")

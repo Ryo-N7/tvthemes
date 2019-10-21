@@ -1,4 +1,4 @@
-#' @title theme_spongeBob
+#' @title Spongebob Squarepants theme
 #' @description Spongebob Squarepants theme, Recommended font: "Some Time Later"
 #' @details Spongbobify your plots even more by combining with `paintBikiniBottom()`!
 #' @param text.font text font, Default: NULL

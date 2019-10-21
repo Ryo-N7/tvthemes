@@ -5,7 +5,7 @@
 \alias{scale_color_avatarTLA}
 \alias{scale_colour_avatarTLA}
 \alias{scale_fill_avatarTLA}
-\title{Avatar: The Last Airbender palette}
+\title{Avatar: The Last Airbender palette (deprecated)}
 \usage{
 avatarTLA_pal(palette = "FireNation", n, type = c("discrete",
   "continuous"), reverse = FALSE)

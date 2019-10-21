@@ -93,15 +93,18 @@ Now available on [CRAN](https://CRAN.R-project.org/package=tvthemes)\!
 
 ## tvthemes 1.0.0 Major Changes
 
-See vignette.
+See
+[vignette](https://ryo-n7.github.io/tvthemes/articles/tvthemes-1_0_0.html).
 
 ## Fonts & Colors
 
-See vignette.
+See
+[vignette](https://ryo-n7.github.io/tvthemes/articles/fonts-and-colors.html).
 
 # Examples
 
-You can find the code for all the examples in the “Examples” Vignette.
+You can find the code for all the examples in the [“Examples”
+Vignette](https://ryo-n7.github.io/tvthemes/articles/examples.html).
 
 ## Brooklyn Nine-Nine
 

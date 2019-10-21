@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_brooklyn99.R
 \name{theme_brooklyn99}
 \alias{theme_brooklyn99}
-\title{theme_brooklyn99}
+\title{Brooklyn Nine-Nine theme}
 \usage{
 theme_brooklyn99(text.font = NULL, title.font = NULL,
   legend.font = NULL, title.size = 18, text.size = 14,

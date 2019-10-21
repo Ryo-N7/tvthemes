@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_hilda.R
 \name{theme_hildaNight}
 \alias{theme_hildaNight}
-\title{theme_hildaNight}
+\title{Hilda "Night" theme}
 \usage{
 theme_hildaNight(text.font = "Chelsea Market",
   title.font = "Chelsea Market", legend.font = "Chelsea Market",

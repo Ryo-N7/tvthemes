@@ -2,7 +2,7 @@
 % Please edit documentation in R/import_fonts.r
 \name{import_robotoCondensed}
 \alias{import_robotoCondensed}
-\title{import_robotoCondensed}
+\title{Import "Roboto Condensed" font}
 \usage{
 import_robotoCondensed()
 }

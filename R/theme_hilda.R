@@ -1,6 +1,6 @@
 ## Hilda Day ----
 
-#' @title theme_hildaDay
+#' @title Hilda "Day" theme
 #' @description Hilda Day theme
 #' @param text.font text font, Default: "Chelsea Market"
 #' @param title.font title font, Default: "Chelsea Market"
@@ -94,7 +94,7 @@ theme_hildaDay <- function(
 
 ## Hilda Dusk ----
 
-#' @title theme_hildaDusk
+#' @title Hilda "Dusk" theme
 #' @description Hilda theme
 #' @param text.font text font, Default: "Chelsea Market"
 #' @param title.font title font, Default: "Chelsea Market"
@@ -188,7 +188,7 @@ theme_hildaDusk <- function(
 
 ## Hilda Night ----
 
-#' @title theme_hildaNight
+#' @title Hilda "Night" theme
 #' @description Hilda theme
 #' @param text.font text font, Default: "Chelsea Market"
 #' @param title.font title font, Default: "Chelsea Market"

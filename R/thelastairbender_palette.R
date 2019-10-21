@@ -47,7 +47,7 @@ theLastAirbender_palette <- list(
   )
 )
 
-#' @title Avatar: The Last Airbender palette
+#' @title Avatar: The Last Airbender palette (deprecated)
 #' @description Avatar: The Last Airbender palette
 #' @inheritDotParams ggplot2::discrete_scale
 #' @param palette name of palette (FireNation, EarthKingdom, WaterTribe, AirNomads),

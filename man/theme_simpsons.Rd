@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_simpsons.R
 \name{theme_simpsons}
 \alias{theme_simpsons}
-\title{theme_simpsons}
+\title{The Simpsons theme}
 \usage{
 theme_simpsons(text.font = NULL, title.font = NULL,
   legend.font = NULL, title.size = 18, text.size = 14,

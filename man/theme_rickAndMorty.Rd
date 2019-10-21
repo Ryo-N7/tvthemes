@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_rickandmorty.R
 \name{theme_rickAndMorty}
 \alias{theme_rickAndMorty}
-\title{theme_rickAndMorty}
+\title{Rick & Morty theme}
 \usage{
 theme_rickAndMorty(text.font = NULL, title.font = NULL,
   legend.font = NULL, title.size = 20, text.size = 12,

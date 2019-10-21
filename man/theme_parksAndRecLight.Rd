@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_parksAndRec.R
 \name{theme_parksAndRecLight}
 \alias{theme_parksAndRecLight}
-\title{theme_parksAndRecLight}
+\title{Parks & Recreation "Light" theme}
 \usage{
 theme_parksAndRecLight(text.font = NULL, title.font = NULL,
   legend.font = NULL, title.size = 20, text.size = 16,

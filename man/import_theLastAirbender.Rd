@@ -2,7 +2,7 @@
 % Please edit documentation in R/import_fonts.r
 \name{import_theLastAirbender}
 \alias{import_theLastAirbender}
-\title{import_theLastAirbender}
+\title{Import "Slayer" font (deprecated)}
 \usage{
 import_theLastAirbender()
 }

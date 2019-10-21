@@ -2,7 +2,7 @@
 % Please edit documentation in R/import_fonts.r
 \name{import_avatar}
 \alias{import_avatar}
-\title{import_avatar}
+\title{Import "Slayer" font}
 \usage{
 import_avatar()
 }

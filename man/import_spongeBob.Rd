@@ -2,7 +2,7 @@
 % Please edit documentation in R/import_fonts.r
 \name{import_spongeBob}
 \alias{import_spongeBob}
-\title{import_spongeBob}
+\title{Import "Some-Time-Later" font}
 \usage{
 import_spongeBob()
 }
@@ -10,6 +10,6 @@ import_spongeBob()
 spongeBob SquarePants font ("Some-Time-Later")
 }
 \details{
-import_*() functions taken from hrbrthemes.
+import_*() functions taken from hrbrthemes. Created by Frederick R. Brennan.
 You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
 }
