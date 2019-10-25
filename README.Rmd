@@ -31,7 +31,7 @@ The `tvthemes` package is a collection of various `ggplot2` themes and color/fil
 * [Intro to `tvthemes` blog post](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/)
 * [`tvthemes 1.0.0` & CRAN release blog post](https://ryo-n7.github.io/2019-09-06-tvthemes-CRAN-announcement/)
 
-```{r b99header, eval=FALSE}
+```{r b99header}
 library(tvthemes)
 library(ggplot2)
 library(extrafont)
@@ -50,8 +50,6 @@ ggplot(mpg, aes(displ)) +
                    text.font = "Calibri Light",
                    subtitle.size = 14)
 ```
-
-![b99d](https://i.imgur.com/SjxWFXd.png)
 
 ## Current list of TV shows
 

@@ -38,6 +38,7 @@ palettes/themes are welcome\!
 library(tvthemes)
 library(ggplot2)
 library(extrafont)
+#> Registering fonts with R
 loadfonts(quiet = TRUE)
 
 ggplot(mpg, aes(displ)) +
@@ -54,7 +55,7 @@ ggplot(mpg, aes(displ)) +
                    subtitle.size = 14)
 ```
 
-![b99d](https://i.imgur.com/SjxWFXd.png)
+<img src="man/figures/README-b99header-1.png" width="70%" style="display: block; margin: auto;" />
 
 ## Current list of TV shows
 
