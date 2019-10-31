@@ -12,11 +12,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="{tvthemes} 1.0.0">
+<script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="{tvthemes} 1.0.0">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://ryo-n7.github.io/tvthemes/logo.png">
 <meta name="twitter:card" content="summary">
@@ -27,7 +28,7 @@
 </head>
 <body>
     <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <header><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
@@ -164,12 +165,12 @@
 </ul>
 <p>For TV shows with multiple palettes they are now organized under a single “palette list” from which you pass the specific palette that you want. If you want to check out the colors for these specific palettes:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co">## Previously:</span></a>
-<a class="sourceLine" id="cb2-2" title="2">scales<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/scales/man/show_col.html">show_col</a></span>(tvthemes<span class="op">:::</span>lannister_palette)</a>
-<a class="sourceLine" id="cb2-3" title="3">scales<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/scales/man/show_col.html">show_col</a></span>(tvthemes<span class="op">:::</span>brooklyn99_dark_palette)</a>
+<a class="sourceLine" id="cb2-2" title="2">scales<span class="op">::</span><span class="kw"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(tvthemes<span class="op">:::</span>lannister_palette)</a>
+<a class="sourceLine" id="cb2-3" title="3">scales<span class="op">::</span><span class="kw"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(tvthemes<span class="op">:::</span>brooklyn99_dark_palette)</a>
 <a class="sourceLine" id="cb2-4" title="4"></a>
 <a class="sourceLine" id="cb2-5" title="5"><span class="co">## Now:</span></a>
-<a class="sourceLine" id="cb2-6" title="6">scales<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/scales/man/show_col.html">show_col</a></span>(tvthemes<span class="op">:::</span>westeros_palette<span class="op">$</span>Lannister)</a>
-<a class="sourceLine" id="cb2-7" title="7">scales<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/scales/man/show_col.html">show_col</a></span>(tvthemes<span class="op">:::</span>brooklyn99_palette<span class="op">$</span>Dark)</a></code></pre></div>
+<a class="sourceLine" id="cb2-6" title="6">scales<span class="op">::</span><span class="kw"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(tvthemes<span class="op">:::</span>westeros_palette<span class="op">$</span>Lannister)</a>
+<a class="sourceLine" id="cb2-7" title="7">scales<span class="op">::</span><span class="kw"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(tvthemes<span class="op">:::</span>brooklyn99_palette<span class="op">$</span>Dark)</a></code></pre></div>
 <p>The specific palettes that changed are:</p>
 <ul>
 <li>

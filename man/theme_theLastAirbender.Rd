@@ -55,15 +55,6 @@ theme_theLastAirbender(text.font = NULL, title.font = NULL,
 \description{
 Avatar: The Last Airbender theme, Recommended font: "Slayer"
 }
-\examples{
-library(ggplot2)
-
-ggplot(airquality, aes(x = Day, y = Temp,
-     group = as.factor(Month), color = as.factor(Month))) +
-     geom_point(size = 2.5) +
-     scale_color_avatarTLA() +
-     theme_theLastAirbender()
-}
 \seealso{
 [ggplot2::theme]
 }

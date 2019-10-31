@@ -1,11 +1,17 @@
 url: https://ryo-n7.github.io/tvthemes/
 
+template:
+  params:
+    bootswatch: cosmo
+
 home:
   strip_header: true
 
 authors:
   Ryo Nakagawara:
     href: https://ryo-n7.github.io
+navbar:
+  type: inverse
 
 reference:
   - title: Attack On Titan palette
