@@ -84,10 +84,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
+  <a href="../index.html">Home</a>
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
@@ -100,18 +97,18 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/examples.html">Examples</a>
+      <a href="../articles/tvthemes-1_0_0.html">tvthemes 1.0.0</a>
     </li>
     <li>
       <a href="../articles/fonts-and-colors.html">Fonts &amp; Colors</a>
     </li>
     <li>
-      <a href="../articles/tvthemes-1_0_0.html">{tvthemes} 1.0.0</a>
+      <a href="../articles/examples.html">Examples (with Code)</a>
     </li>
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">Changelog</a>
+  <a href="../news/index.html">News</a>
 </li>
       </ul>
       
@@ -236,43 +233,12 @@ scales, "top" or "bottom" for horizontal scales</p></dd>
     </table>
     
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>scales</span>)
-<span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'>avatarTLA_pal</span>()(<span class='fl'>5</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: 'avatarTLA_pal' is deprecated.</span>
-#&gt; <span class='warning'>Use 'avatar_pal' instead.</span>
-#&gt; <span class='warning'>See help("Deprecated")</span></div><div class='img'><img src='avatarTLA_pal-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>ggplot2</span>)
-<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>airquality</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>Day</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>Temp</span>,
-     <span class='kw'>group</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span>(<span class='no'>Month</span>), <span class='kw'>color</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span>(<span class='no'>Month</span>))) +
-     <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span>(<span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>2.5</span>) +
-     <span class='fu'>scale_color_avatarTLA</span>()</div><div class='output co'>#&gt; <span class='warning'>Warning: 'scale_color_avatarTLA' is deprecated.</span>
-#&gt; <span class='warning'>Use 'scale_color_avatar' instead.</span>
-#&gt; <span class='warning'>See help("Deprecated")</span></div><div class='output co'>#&gt; <span class='warning'>Warning: 'avatarTLA_pal' is deprecated.</span>
-#&gt; <span class='warning'>Use 'avatar_pal' instead.</span>
-#&gt; <span class='warning'>See help("Deprecated")</span></div><div class='img'><img src='avatarTLA_pal-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>airquality</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>Day</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>Temp</span>,
-     <span class='kw'>group</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span>(<span class='no'>Month</span>), <span class='kw'>color</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span>(<span class='no'>Month</span>))) +
-     <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span>(<span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>2.5</span>) +
-     <span class='fu'>scale_colour_avatarTLA</span>()</div><div class='output co'>#&gt; <span class='warning'>Warning: 'scale_colour_avatarTLA' is deprecated.</span>
-#&gt; <span class='warning'>Use 'scale_color_avatar' instead.</span>
-#&gt; <span class='warning'>See help("Deprecated")</span></div><div class='output co'>#&gt; <span class='warning'>Warning: 'avatarTLA_pal' is deprecated.</span>
-#&gt; <span class='warning'>Use 'avatar_pal' instead.</span>
-#&gt; <span class='warning'>See help("Deprecated")</span></div><div class='img'><img src='avatarTLA_pal-3.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>mpg</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>displ</span>)) +
-     <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_histogram.html'>geom_histogram</a></span>(<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>class</span>), <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"black"</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>0.1</span>) +
-     <span class='fu'>scale_fill_avatarTLA</span>()</div><div class='output co'>#&gt; <span class='warning'>Warning: 'scale_fill_avatarTLA' is deprecated.</span>
-#&gt; <span class='warning'>Use 'scale_fill_avatar' instead.</span>
-#&gt; <span class='warning'>See help("Deprecated")</span></div><div class='output co'>#&gt; <span class='warning'>Warning: 'avatarTLA_pal' is deprecated.</span>
-#&gt; <span class='warning'>Use 'avatar_pal' instead.</span>
-#&gt; <span class='warning'>See help("Deprecated")</span></div><div class='output co'>#&gt; <span class='message'>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></div><div class='img'><img src='avatarTLA_pal-4.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-            
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+                </ul>
 
   </div>
 </div>

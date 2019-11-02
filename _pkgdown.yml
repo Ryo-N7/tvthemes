@@ -4,14 +4,28 @@ template:
   params:
     bootswatch: cosmo
 
-home:
-  strip_header: true
-
 authors:
   Ryo Nakagawara:
     href: https://ryo-n7.github.io
+
 navbar:
+  title: tvthemes
   type: inverse
+  left:
+  - text: Home
+    href: index.html
+  - text: Reference
+    href: reference/index.html
+  - text: Articles
+    menu:
+    - text: tvthemes 1.0.0
+      href: articles/tvthemes-1_0_0.html
+    - text: Fonts & Colors
+      href: articles/fonts-and-colors.html
+    - text: Examples (with Code)
+      href: articles/examples.html
+  - text: News
+    href: news/index.html
 
 reference:
   - title: Attack On Titan palette
