@@ -27,10 +27,12 @@ custom `ggplot2` theme and color palettes so I decided to expand it to
 other shows that I love\! Suggestions and Pull Requests for
 palettes/themes are welcome\!
 
-  - [Intro to `tvthemes` blog
+  - [Intro to `tvthemes 0.0.0.9100` blog
     post](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/)
   - [`tvthemes 1.0.0` & CRAN release blog
     post](https://ryo-n7.github.io/2019-09-06-tvthemes-CRAN-announcement/)
+  - [`tvthemes 1.1.0` & CRAN release blog
+    post](https://ryo-n7.github.io/2019-11-04-tvthemes-1.1.0-announcement/)
 
 <!-- end list -->
 
