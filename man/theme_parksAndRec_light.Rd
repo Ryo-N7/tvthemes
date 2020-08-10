@@ -4,15 +4,27 @@
 \alias{theme_parksAndRec_light}
 \title{Parks & Recreation "Light" theme (deprecated)}
 \usage{
-theme_parksAndRec_light(text.font = NULL, title.font = NULL,
-  legend.font = NULL, title.size = 20, text.size = 16,
-  subtitle.size = 14, axis.title.size = 14, axis.text.size = 12,
-  legend.title.size = 14, legend.text.size = 12,
-  title.color = "grey20", subtitle.color = "grey20",
-  text.color = "grey20", axis.title.color = "grey20",
-  axis.text.color = "grey20", legend.title.color = "grey20",
-  legend.text.color = "grey20", legend.position = "bottom",
-  ticks = FALSE)
+theme_parksAndRec_light(
+  text.font = NULL,
+  title.font = NULL,
+  legend.font = NULL,
+  title.size = 20,
+  text.size = 16,
+  subtitle.size = 14,
+  axis.title.size = 14,
+  axis.text.size = 12,
+  legend.title.size = 14,
+  legend.text.size = 12,
+  title.color = "grey20",
+  subtitle.color = "grey20",
+  text.color = "grey20",
+  axis.title.color = "grey20",
+  axis.text.color = "grey20",
+  legend.title.color = "grey20",
+  legend.text.color = "grey20",
+  legend.position = "bottom",
+  ticks = FALSE
+)
 }
 \arguments{
 \item{text.font}{text font, Default: NULL}

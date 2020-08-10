@@ -4,14 +4,27 @@
 \alias{theme_theLastAirbender}
 \title{Avatar: The Last Airbender theme (deprecated)}
 \usage{
-theme_theLastAirbender(text.font = NULL, title.font = NULL,
-  legend.font = NULL, title.size = 14, text.size = 10,
-  subtitle.size = 12, axis.title.size = 10, axis.text.size = 8,
-  legend.title.size = 10, legend.text.size = 8, title.color = NULL,
-  subtitle.color = "grey20", text.color = NULL,
-  axis.title.color = "grey20", axis.text.color = "grey20",
-  legend.title.color = "grey20", legend.text.color = "grey20",
-  legend.position = "bottom", ticks = FALSE)
+theme_theLastAirbender(
+  text.font = NULL,
+  title.font = NULL,
+  legend.font = NULL,
+  title.size = 14,
+  text.size = 10,
+  subtitle.size = 12,
+  axis.title.size = 10,
+  axis.text.size = 8,
+  legend.title.size = 10,
+  legend.text.size = 8,
+  title.color = NULL,
+  subtitle.color = "grey20",
+  text.color = NULL,
+  axis.title.color = "grey20",
+  axis.text.color = "grey20",
+  legend.title.color = "grey20",
+  legend.text.color = "grey20",
+  legend.position = "bottom",
+  ticks = FALSE
+)
 }
 \arguments{
 \item{text.font}{text font, Default: NULL}

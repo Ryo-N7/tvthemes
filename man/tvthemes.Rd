@@ -3,7 +3,6 @@
 \docType{package}
 \name{tvthemes}
 \alias{tvthemes}
-\alias{tvthemes-package}
 \title{TV Show Themes and Color Palettes for 'ggplot2' Graphics}
 \description{
 Contains various 'ggplot2' themes and color palettes based on TV shows.

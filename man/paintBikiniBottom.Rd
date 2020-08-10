@@ -4,8 +4,14 @@
 \alias{paintBikiniBottom}
 \title{Add SpongeBob background}
 \usage{
-paintBikiniBottom(plot, width = 800, height = 500,
-  output.file = NULL, background = "background", ...)
+paintBikiniBottom(
+  plot,
+  width = 800,
+  height = 500,
+  output.file = NULL,
+  background = "background",
+  ...
+)
 }
 \arguments{
 \item{plot}{the ggplot object you want to Spongbobify!}

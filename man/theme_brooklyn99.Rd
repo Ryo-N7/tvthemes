@@ -4,15 +4,27 @@
 \alias{theme_brooklyn99}
 \title{Brooklyn Nine-Nine theme}
 \usage{
-theme_brooklyn99(text.font = NULL, title.font = NULL,
-  legend.font = NULL, title.size = 18, text.size = 14,
-  subtitle.size = 12, axis.title.size = 14, axis.text.size = 12,
-  legend.title.size = 10, legend.text.size = 9,
-  title.color = "#F9FEFF", subtitle.color = "#F9FEFF",
-  text.color = "#F9FEFF", axis.title.color = "#F9FEFF",
-  axis.text.color = "#F9FEFF", legend.title.color = "#F9FEFF",
-  legend.text.color = "#F9FEFF", legend.position = "bottom",
-  ticks = FALSE)
+theme_brooklyn99(
+  text.font = NULL,
+  title.font = NULL,
+  legend.font = NULL,
+  title.size = 18,
+  text.size = 14,
+  subtitle.size = 12,
+  axis.title.size = 14,
+  axis.text.size = 12,
+  legend.title.size = 10,
+  legend.text.size = 9,
+  title.color = "#F9FEFF",
+  subtitle.color = "#F9FEFF",
+  text.color = "#F9FEFF",
+  axis.title.color = "#F9FEFF",
+  axis.text.color = "#F9FEFF",
+  legend.title.color = "#F9FEFF",
+  legend.text.color = "#F9FEFF",
+  legend.position = "bottom",
+  ticks = FALSE
+)
 }
 \arguments{
 \item{text.font}{text font, Default: NULL}

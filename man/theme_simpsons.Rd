@@ -4,15 +4,27 @@
 \alias{theme_simpsons}
 \title{The Simpsons theme}
 \usage{
-theme_simpsons(text.font = NULL, title.font = NULL,
-  legend.font = NULL, title.size = 18, text.size = 14,
-  subtitle.size = 12, axis.title.size = 14, axis.text.size = 10,
-  legend.title.size = 10, legend.text.size = 9,
-  title.color = "#FFD235", subtitle.color = "#fee8c8",
-  text.color = "#fee8c8", axis.title.color = "#fee8c8",
-  axis.text.color = "#fee8c8", legend.title.color = "#ffffff",
-  legend.text.color = "#ffffff", legend.position = "bottom",
-  ticks = FALSE)
+theme_simpsons(
+  text.font = NULL,
+  title.font = NULL,
+  legend.font = NULL,
+  title.size = 18,
+  text.size = 14,
+  subtitle.size = 12,
+  axis.title.size = 14,
+  axis.text.size = 10,
+  legend.title.size = 10,
+  legend.text.size = 9,
+  title.color = "#FFD235",
+  subtitle.color = "#fee8c8",
+  text.color = "#fee8c8",
+  axis.title.color = "#fee8c8",
+  axis.text.color = "#fee8c8",
+  legend.title.color = "#ffffff",
+  legend.text.color = "#ffffff",
+  legend.position = "bottom",
+  ticks = FALSE
+)
 }
 \arguments{
 \item{text.font}{text font, Default: NULL}

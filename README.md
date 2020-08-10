@@ -27,6 +27,7 @@ custom `ggplot2` theme and color palettes so I decided to expand it to
 other shows that I love\! Suggestions and Pull Requests for
 palettes/themes are welcome\!
 
+  - [Package Website](https://ryo-n7.github.io/tvthemes/)
   - [Intro to `tvthemes 0.0.0.9100` blog
     post](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/)
   - [`tvthemes 1.0.0` & CRAN release blog
@@ -88,7 +89,7 @@ You can install `tvthemes` by:
 ## for development version:
 devtools::install_github("Ryo-N7/tvthemes")
 
-## v1.0.0 is available on CRAN!
+## v1.1.0 is available on CRAN!
 install.packages("tvthemes")
 ```
 
@@ -106,8 +107,9 @@ See
 
 # Examples
 
-You can find the code for all the examples in the [“Examples”
-Vignette](https://ryo-n7.github.io/tvthemes/articles/examples.html).
+You can find the code for all the examples below in the [“Examples”
+Vignette](https://ryo-n7.github.io/tvthemes/articles/examples.html) on
+the [Package Website](https://ryo-n7.github.io/tvthemes/).
 
 ## Brooklyn Nine-Nine
 

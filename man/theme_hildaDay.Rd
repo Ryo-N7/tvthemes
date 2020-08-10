@@ -4,15 +4,27 @@
 \alias{theme_hildaDay}
 \title{Hilda "Day" theme}
 \usage{
-theme_hildaDay(text.font = "Chelsea Market",
-  title.font = "Chelsea Market", legend.font = "Chelsea Market",
-  title.size = 18, text.size = 14, subtitle.size = 12,
-  axis.title.size = 14, axis.text.size = 12, legend.title.size = 10,
-  legend.text.size = 9, title.color = "#659794",
-  subtitle.color = "#659794", text.color = "#659794",
-  axis.title.color = "#659794", axis.text.color = "#93a1a1",
-  legend.title.color = "#659794", legend.text.color = "#93a1a1",
-  legend.position = "bottom", ticks = FALSE)
+theme_hildaDay(
+  text.font = "Chelsea Market",
+  title.font = "Chelsea Market",
+  legend.font = "Chelsea Market",
+  title.size = 18,
+  text.size = 14,
+  subtitle.size = 12,
+  axis.title.size = 14,
+  axis.text.size = 12,
+  legend.title.size = 10,
+  legend.text.size = 9,
+  title.color = "#659794",
+  subtitle.color = "#659794",
+  text.color = "#659794",
+  axis.title.color = "#659794",
+  axis.text.color = "#93a1a1",
+  legend.title.color = "#659794",
+  legend.text.color = "#93a1a1",
+  legend.position = "bottom",
+  ticks = FALSE
+)
 }
 \arguments{
 \item{text.font}{text font, Default: "Chelsea Market"}
