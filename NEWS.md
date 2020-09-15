@@ -1,3 +1,8 @@
+# tvthemes 1.2.0
+
+* Add Github Actions
+  * R-CMD-Check, codecov, build pkgdown
+
 # tvthemes 1.1.0
 
 * New palette:
