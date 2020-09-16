@@ -1,6 +1,6 @@
-## Game of Thrones ----
+## Steven Universe ----
 
-westeros_palette <- list(
+stevenUniverse_palette <- list(
   ## Steven ----
   Steven = c(
     "#cadde1", ## light-skyblue
@@ -81,7 +81,7 @@ westeros_palette <- list(
     "#F7DC27", ## yellow
     "#808080"  ## gray
   ),
-  ##  Manderly ----
+  ## Jasper ----
   Jasper = c(
     "#40e0d0", ## manderly turqouise     #32BB9D
     "#808080", ## gray
@@ -91,7 +91,7 @@ westeros_palette <- list(
     "#195953", ## dark turqoise
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Topaz ----
   Topaz = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -101,7 +101,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Spinel ----
   Spinel = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -111,7 +111,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Bismuth ----
   Bismuth = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -121,7 +121,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Ruby ----
   Ruby = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -131,7 +131,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Sapphire ----
   Sapphire = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -141,7 +141,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Emerald ----
   Emerald = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -151,7 +151,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Nephrite ----
   Nephrite = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -161,7 +161,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Aquamarine ----
   Aquamarine = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -171,7 +171,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Padparadscha ----
   Padparadscha = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -181,7 +181,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Rutile ----
   Rutile = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -191,7 +191,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Rhodonite ----
   Rhodonite = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -201,7 +201,7 @@ westeros_palette <- list(
     "#a89797", ## arryn lightbrown
     "#FFFFFF"  ## white
   ),
-  ##  Arryn ----
+  ## Flourite ----
   Flourite = c(
     "#007fff", ## arryn blue
     "#7fbfff", ## arryn light blue
@@ -213,54 +213,53 @@ westeros_palette <- list(
   )
 )
 
-#' @title Great Houses of Westeros palette
-#' @description Houses Stark, Lannister, Tyrell, Targaryen,
+#' @title Gems & Friends of Steven Universe palette
+#' @description Houses Steven, Lannister, Tyrell, Targaryen,
 #' Tully, Greyjoy, Manderly, Martell, Stannis Baratheon, & Arryn
 #' @inheritDotParams ggplot2::discrete_scale
-#' @param palette name of palette, Default: "Stark"
+#' @param palette name of palette, Default: "Steven"
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @rdname westeros_pal
+#' @rdname stevenUniverse_pal
 #' @export
 #' @examples
 #' library(scales)
-#' show_col(westeros_pal(palette = "Stark")(5))
-#' show_col(westeros_pal(palette = "Stannis")(5))
+#' show_col(stevenUniverse_pal(palette = "Steven")(5))
+#' show_col(stevenUniverse_pal(palette = "Stannis")(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
-westeros_pal <- function(palette = "Stark", n,
+stevenUniverse_pal <- function(palette = "Steven", n,
                          type = c("discrete", "continuous"),
                          reverse = FALSE) {
-  westeros <- westeros_palette[[palette]]
+  stevenUniverse <- stevenUniverse_palette[[palette]]
 
   if (reverse == TRUE) {
-    westeros <- rev(westeros)
+    stevenUniverse <- rev(stevenUniverse)
   }
 
   if (missing(n)) {
-    n <- length(westeros)
+    n <- length(stevenUniverse)
   }
 
   type <- match.arg(type)
 
-  if (type == "discrete" && n > length(westeros)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(westeros)}!"))
+  if (type == "discrete" && n > length(stevenUniverse)) {
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(stevenUniverse), "!"))
   }
 
-  westeros <- switch(type,
-                     continuous = grDevices::colorRampPalette(westeros)(n),
-                     discrete = westeros[1:n])
+  stevenUniverse <- switch(type,
+                     continuous = grDevices::colorRampPalette(stevenUniverse)(n),
+                     discrete = stevenUniverse[1:n])
 
-  westeros <- scales::manual_pal(westeros)
+  stevenUniverse <- scales::manual_pal(stevenUniverse)
 
-  return(westeros)
+  return(stevenUniverse)
 }
 
-#' @title scale_color_westeros
-#' @rdname westeros_pal
+#' @title scale_color_stevenUniverse
+#' @rdname stevenUniverse_pal
 #' @export
 #' @examples
 #'
@@ -268,57 +267,57 @@ westeros_pal <- function(palette = "Stark", n,
 #' ggplot(airquality, aes(x = Day, y = Temp,
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
-#'      scale_color_westeros(palette = "Stark")
+#'      scale_color_stevenUniverse(palette = "Steven")
 #'
 #' ggplot(airquality, aes(x = Day, y = Temp,
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
-#'      scale_color_westeros(palette = "Stannis")
+#'      scale_color_stevenUniverse(palette = "Stannis")
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
-scale_color_westeros <- function(palette = "Stark", n, type = "discrete",
+scale_color_stevenUniverse <- function(palette = "Steven", n, type = "discrete",
                                  reverse = FALSE, ...){
   if (type == "discrete") {
-    ggplot2::discrete_scale("color", "westeros",
-                            westeros_pal(palette = palette, n = n, type = type,
+    ggplot2::discrete_scale("color", "stevenUniverse",
+                            stevenUniverse_pal(palette = palette, n = n, type = type,
                                          reverse = reverse), ...)
   } else { ## needs work...
-    ggplot2::scale_color_gradientn(colors = westeros_pal(palette = palette, n = n, type = type,
+    ggplot2::scale_color_gradientn(colors = stevenUniverse_pal(palette = palette, n = n, type = type,
                                                          reverse = reverse)(8))
   }
 }
 
-#' @title scale_colour_westeros
-#' @rdname westeros_pal
+#' @title scale_colour_stevenUniverse
+#' @rdname stevenUniverse_pal
 #' @export
 #' @examples
 #'
 #' ggplot(airquality, aes(x = Day, y = Temp,
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
-#'      scale_colour_westeros(palette = "Stannis")
+#'      scale_colour_stevenUniverse(palette = "Stannis")
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
-scale_colour_westeros <- scale_color_westeros
+scale_colour_stevenUniverse <- scale_color_stevenUniverse
 
-#' @title scale_fill_westeros
-#' @rdname westeros_pal
+#' @title scale_fill_stevenUniverse
+#' @rdname stevenUniverse_pal
 #' @export
 #' @examples
 #'
 #' ggplot(mpg, aes(displ)) +
 #'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-#'      scale_fill_westeros(palette = "Stannis")
+#'      scale_fill_stevenUniverse(palette = "Stannis")
 #' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
-scale_fill_westeros <- function(palette = "Stark", n, type = "discrete",
+scale_fill_stevenUniverse <- function(palette = "Steven", n, type = "discrete",
                                 reverse = FALSE, ...){
   if (type == "discrete") {
-    ggplot2::discrete_scale("fill", "westeros",
-                            westeros_pal(palette = palette, n = n, type = type,
+    ggplot2::discrete_scale("fill", "stevenUniverse",
+                            stevenUniverse_pal(palette = palette, n = n, type = type,
                                          reverse = reverse), ...)
   } else { ## needs work...
-    ggplot2::scale_fill_gradientn(colors = westeros_pal(palette = palette, n = n, type = type,
+    ggplot2::scale_fill_gradientn(colors = stevenUniverse_pal(palette = palette, n = n, type = type,
                                                         reverse = reverse)(8))
   }
 }
