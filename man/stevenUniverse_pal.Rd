@@ -105,7 +105,7 @@ Tully, Greyjoy, Manderly, Martell, Stannis Baratheon, & Arryn
 \examples{
 library(scales)
 show_col(stevenUniverse_pal(palette = "Steven")(5))
-show_col(stevenUniverse_pal(palette = "Stannis")(5))
+show_col(stevenUniverse_pal(palette = "Pearl")(5))
 
 library(ggplot2)
 ggplot(airquality, aes(x = Day, y = Temp,
