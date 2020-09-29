@@ -3,46 +3,47 @@
 stevenUniverse_palette <- list(
   ## Steven ----
   Steven = c(
-    "#cadde1", ## light-skyblue
-    "#7B906F", ## grey-green
-    "#174D79", ## light teal blue
-    "#fffafa", ## snow white
-    "#898989", ## dark-grey
-    "#D4CDB1", ## light-grey-tan
-    "#708090", ## slate grey
-    "#120976", ## purple blue
-    "#000000"  ## black
+    "#FC5C64", ## salmon pink t-shirt
+    "#FCCC4C", ## yellow star t-shirt
+    "#146C94", ## jeans blue
+    "#F5AA9D", ## steven pink
+    "#150C08", ## steven hair black
+    "#143341", ## steven jeans future blue
+    "#5CCCF4", ## light blue t-shirt future
+    "#F58DA9"  ## steven future pink jacket
   ),
   ## Garnet ----
   Garnet = c(
-    "#FF0000", ## rhllor red
-    "#ff8d1a", ## rhllor orange
-    "#FFD700", ## baratheon gold
-    "#b20000", ## fire red
-    "#cc6600", ## baratheon orange
-    "#FFFF66", ## rhllor light yellow
+    "#0E0723", ## garnet dark navy
+    "#C33D7D", ## garnet violet
+    "#2C3C8C", ## garnet blue
+    "#FC7CF1", ## garnet pink
+    "#748494", ## garnet grey
+    "#F7AF68", ## garnet visor
+    "#C6B7E3", ## garnet lilac
+    "#D4F6F1", ## garnet light blue night
     "#000000"  ## black
   ),
   ## Amethyst ----
   Amethyst = c(
-    "#89080A", ## maroon
-    "#C5AA73", ## grey
-    "#FEDF25", ## gold
-    "#C24841", ## orange
-    "#8B5B45", ## brown
+    "#C0AED9", ## amethyst light lilac grey
+    "#3C3B6C", ## amethyst light navy
+    "#AE56DE", ## amethyst light purple
+    "#94A4AC", ## amethyst light cobalt grey
+    "#8C37E5", ## amethyst darker
     "#000000"  ## black
   ),
   ## Pearl ----
   Pearl = c(
-    "#a6a0f2", ## light purple 80s
-    "#9bf3dc", ## light turqoise 80s
-    "#fad4bf", ## pearl tan 80s
-    "#3e6992", ## pants blue Future
-    "#6deddd", ## light turqoise Future
     "#f6b6c2", ## light pink Future
-    "#f8c8b1", ## pearl tan Future
-    "#98FB98", ## pale green
-    "#3CB371"  ## medium sea green
+    "#a6a0f2", ## light purple 80s
+    #"#9bf3dc", ## light turqoise 80s
+    "#FBE7B8", ## pearl tan
+    "#6deddd", ## light turqoise Future
+    #"#fad4bf", ## pearl tan 80s
+    "#3e6992", ## pants blue Future
+    #"#f8c8b1", ## pearl tan Future
+    "#FCD47C"  ## pale yellow previous gen. outfit
   ),
   ## Rose Quartz ----
   RoseQuartz = c(
@@ -226,7 +227,7 @@ stevenUniverse_palette <- list(
 #' @examples
 #' library(scales)
 #' show_col(stevenUniverse_pal(palette = "Steven")(5))
-#' show_col(stevenUniverse_pal(palette = "Stannis")(5))
+#' show_col(stevenUniverse_pal(palette = "Pearl")(5))
 #' @importFrom scales manual_pal
 #' @importFrom grDevices colorRampPalette
 
