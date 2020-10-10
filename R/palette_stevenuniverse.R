@@ -47,30 +47,32 @@ stevenUniverse_palette <- list(
   ),
   ## Rose Quartz ----
   RoseQuartz = c(
-    "#AC1F25", ## blood-red
-    "#272727", ## lightblack
-    "#ff9933", ## saffron
-    "#828788", ## metallic grey
-    "#96804b"  ## light-brown
+    "#E284B3", ## pink
+    "#84043C", ## dark violet
+    "#AC74C4", ## lilac
+    "#F68CEC", ## bright pink
+    "#C43CC4", ## bright fuchsia
+    "#9B5275", ## brick red
+    "#B5DAE3"  ## shield outer light blue
   ),
   ## Peridot ----
   Peridot = c(
-    "#ff8000", ## martell orange
-    "#cc6600", ## martell darkorange
-    "#b81b18", ## martell red
-    "#73110f", ## martell wine red
-    "#f8fc23", ## martell brightyellow
-    "#fafd7b", ## martell lightyellow
-    "#4c2600", ## martell brown
-    "#a57642"  ## martell lightbrown
+    "#053E21", ## peridot darker green
+    "#FEFF91", ## peridot lightyellow
+    "#92D895", ## peridot light green
+    "#74AC64", ## peridot khaki green
+    "#CCC42C", ## peridot mustard
+    "#92F96A", ## peridot lime green
+    "#4C7434"  ## peridot darker khaki green
   ),
   ## Lapis Lazuli ----
   LapisLazuli = c(
-    "#212250", ## darkblue
-    "#AE432F", ## darkorange
-    "#E4EDCA", ## green-white
-    "#8B5B45", ## brown
+    "#0064C3", ## lapis blue
+    "#9FEEF0", ## lapis light blue
+    "#041859", ## lapis dark navy
     "#4682B4", ## steelblue
+    "#00C4FA", ## lapis turqoise
+    "#00005B", ## lapis dark navy
     "#000000"  ## black
   ),
   ## Diamonds: White, Yellow, Blue, & Pearl ----
@@ -174,13 +176,12 @@ stevenUniverse_palette <- list(
   ),
   ## Padparadscha ----
   Padparadscha = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
-    "#FFFFFF"  ## white
+    "#FCB881", ## pad light orange
+    "#Fb4B4B", ## pad red orange
+    "#FC6444", ## pad orange
+    "#FC6C6C", ## pad salmon
+    "#D48C5C", ## arryn beige
+    "#060505"  ## white
   ),
   ## Rutile ----
   Rutile = c(
