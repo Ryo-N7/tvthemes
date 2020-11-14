@@ -176,3 +176,5 @@ This code is released under the GPL v3 License - see the
 Inspired by [Matt Oldach](https://twitter.com/MattOldach/)'s [{vaporwave}](https://github.com/moldach/vapoRwave/), [Bob Rudis](https://twitter.com/hrbrmstr/)' [{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes/), [Garrick Aden-Buie](https://twitter.com/grrrck/)'s [{ggpomological}](https://github.com/gadenbuie/ggpomological/), [Ewen Henderson](https://twitter.com/ewen_/)'s [{ghibli}](https://github.com/ewenme/ghibli/), [rOpenSci](https://github.com/ropenscilabs/)'s [{ochRe}](https://github.com/ropenscilabs/ochRe/), & [Nathan Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
 
 Hilda palettes from [Matt Shanks](http://www.mattshanks.com.au/colour-palette-reference-hilda/) and [ChevyRay](https://pbs.twimg.com/media/DoeR9edWwAMG2hW.png).
+
+["Some Time Later" font](https://github.com/ctrlcctrlv/some-time-later) courtesy of Frederick Brennan.

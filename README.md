@@ -207,3 +207,6 @@ Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
 Hilda palettes from [Matt
 Shanks](http://www.mattshanks.com.au/colour-palette-reference-hilda/)
 and [ChevyRay](https://pbs.twimg.com/media/DoeR9edWwAMG2hW.png).
+
+[“Some Time Later” font](https://github.com/ctrlcctrlv/some-time-later)
+courtesy of Frederick Brennan.
