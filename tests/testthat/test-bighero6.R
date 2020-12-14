@@ -1,5 +1,7 @@
 context("test-bighero6")
 
+expect_eqNe <- function(...) expect_equal(..., check.environment=FALSE)
+
 ## Big Hero 6
 test_that("bigHero6_pal raises warning with large number, x > 8", {
   expect_warning(bigHero6_pal()(9))
@@ -8,7 +10,7 @@ test_that("bigHero6_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_bigHero6 equals scale_color_bigHero6", {
-  expect_equal(scale_color_bigHero6(), scale_colour_bigHero6())
+  expect_eqNe(scale_color_bigHero6(), scale_colour_bigHero6())
 })
 
 test_that("scale_color_bigHero6 name is correct", {

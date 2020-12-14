@@ -1,5 +1,7 @@
 context("test-attackontitan")
 
+expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+
 ## Attack on Titan
 test_that("attackOnTitan_pal raises warning with large number, x > 8", {
   expect_warning(attackOnTitan_pal()(9))
@@ -8,7 +10,7 @@ test_that("attackOnTitan_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_attackOnTitan equals scale_color_attackOnTitan", {
-  expect_equal(scale_color_attackOnTitan(), scale_colour_attackOnTitan())
+  expect_eqNe(scale_color_attackOnTitan(), scale_colour_attackOnTitan())
 })
 
 test_that("scale_colour_attackOnTitan works", {

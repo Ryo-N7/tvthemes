@@ -1,7 +1,7 @@
 Type: Package
 Package: tvthemes
 Title: TV Show Themes and Color Palettes for 'ggplot2' Graphics
-Version: 1.2.0
+Version: 1.2.1
 Authors@R: 
   person(given = "Ryo",
          family = "Nakagawara",
@@ -36,4 +36,3 @@ URL: https://github.com/Ryo-N7/tvthemes
 BugReports: https://github.com/Ryo-N7/tvthemes/issues
 Language: en-US
 VignetteBuilder: knitr
-Config/testthat/edition: 3

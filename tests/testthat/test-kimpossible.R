@@ -1,5 +1,7 @@
 context("test-kimpossible")
 
+expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+
 ## Kim Possible
 test_that("kimPossible_pal raises warning with large number, x > 12", {
   expect_warning(kimPossible_pal()(13))
@@ -8,7 +10,7 @@ test_that("kimPossible_pal raises warning with large number, x > 12", {
 })
 
 test_that("scale_colour_kimPossible equals scale_color_kimPossible", {
-  expect_equal(scale_color_kimPossible(), scale_colour_kimPossible())
+  expect_eqNe(scale_color_kimPossible(), scale_colour_kimPossible())
 })
 
 test_that("scale_color_kimPossible name is correct", {

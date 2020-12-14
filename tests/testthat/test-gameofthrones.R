@@ -1,5 +1,7 @@
 context("test-gameofthrones")
 
+expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+
 ## House Stark ----
 test_that("stark_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Stark")(10))
@@ -8,7 +10,7 @@ test_that("stark_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_stark equals scale_color_stark", {
-  expect_equal(scale_color_westeros(palette = "Stark"), scale_colour_westeros(palette = "Stark"))
+  expect_eqNe(scale_color_westeros(palette = "Stark"), scale_colour_westeros(palette = "Stark"))
 })
 
 test_that("scale_colour_stark works", {
@@ -25,7 +27,7 @@ test_that("Lannister_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_Lannister equals scale_color_Lannister", {
-  expect_equal(scale_color_westeros(palette = "Lannister"), scale_colour_westeros(palette = "Lannister"))
+  expect_eqNe(scale_color_westeros(palette = "Lannister"), scale_colour_westeros(palette = "Lannister"))
 })
 
 test_that("scale_colour_Lannister works", {
@@ -42,7 +44,7 @@ test_that("Tyrell_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_Tyrell equals scale_color_Tyrell", {
-  expect_equal(scale_color_westeros(palette = "Tyrell"), scale_colour_westeros(palette = "Tyrell"))
+  expect_eqNe(scale_color_westeros(palette = "Tyrell"), scale_colour_westeros(palette = "Tyrell"))
 })
 
 test_that("scale_colour_Tyrell works", {
@@ -59,7 +61,7 @@ test_that("Targaryen_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_Targaryen equals scale_color_Targaryen", {
-  expect_equal(scale_color_westeros(palette = "Targaryen"), scale_colour_westeros(palette = "Targaryen"))
+  expect_eqNe(scale_color_westeros(palette = "Targaryen"), scale_colour_westeros(palette = "Targaryen"))
 })
 
 test_that("scale_colour_Targaryen works", {
@@ -76,7 +78,7 @@ test_that("Tully_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_Tully equals scale_color_Tully", {
-  expect_equal(scale_color_westeros(palette = "Tully"), scale_colour_westeros(palette = "Tully"))
+  expect_eqNe(scale_color_westeros(palette = "Tully"), scale_colour_westeros(palette = "Tully"))
 })
 
 test_that("scale_colour_Tully works", {
@@ -93,7 +95,7 @@ test_that("Greyjoy_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_Greyjoy equals scale_color_Greyjoy", {
-  expect_equal(scale_color_westeros(palette = "Greyjoy"), scale_colour_westeros(palette = "Greyjoy"))
+  expect_eqNe(scale_color_westeros(palette = "Greyjoy"), scale_colour_westeros(palette = "Greyjoy"))
 })
 
 test_that("scale_colour_Greyjoy works", {
@@ -110,7 +112,7 @@ test_that("Manderly_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_Manderly equals scale_color_Manderly", {
-  expect_equal(scale_color_westeros(palette = "Manderly"), scale_colour_westeros(palette = "Manderly"))
+  expect_eqNe(scale_color_westeros(palette = "Manderly"), scale_colour_westeros(palette = "Manderly"))
 })
 
 test_that("scale_colour_Manderly works", {
@@ -127,7 +129,7 @@ test_that("Stannis_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_Stannis equals scale_color_Stannis", {
-  expect_equal(scale_color_westeros(palette = "Stannis"), scale_colour_westeros(palette = "Stannis"))
+  expect_eqNe(scale_color_westeros(palette = "Stannis"), scale_colour_westeros(palette = "Stannis"))
 })
 
 test_that("scale_colour_Stannis works", {
@@ -144,7 +146,7 @@ test_that("Martell_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_Martell equals scale_color_Martell", {
-  expect_equal(scale_color_westeros(palette = "Martell"), scale_colour_westeros(palette = "Martell"))
+  expect_eqNe(scale_color_westeros(palette = "Martell"), scale_colour_westeros(palette = "Martell"))
 })
 
 test_that("scale_colour_Martell works", {
@@ -161,7 +163,7 @@ test_that("Arryn_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_Arryn equals scale_color_Arryn", {
-  expect_equal(scale_color_westeros(palette = "Arryn"), scale_colour_westeros(palette = "Arryn"))
+  expect_eqNe(scale_color_westeros(palette = "Arryn"), scale_colour_westeros(palette = "Arryn"))
 })
 
 test_that("scale_colour_Arryn works", {
