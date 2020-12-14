@@ -1,5 +1,7 @@
 context("test-spongebob")
 
+expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+
 test_that("theme_spongeBob works", {
   thm <- theme_spongeBob()
   expect_s3_class(thm, "theme")
@@ -62,7 +64,7 @@ test_that("spongeBob_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_spongeBob equals scale_color_spongeBob", {
-  expect_equal(scale_color_spongeBob(), scale_colour_spongeBob())
+  expect_eqNe(scale_color_spongeBob(), scale_colour_spongeBob())
 })
 
 test_that("scale_colour_spongeBob works", {

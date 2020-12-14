@@ -1,5 +1,7 @@
 context("test-brooklyn99")
 
+expect_eqNe <- function(...) expect_equal(..., check.environment=FALSE)
+
 test_that("theme_brooklyn99 works", {
   thm <- theme_brooklyn99()
   expect_s3_class(thm, "theme")
@@ -62,8 +64,8 @@ test_that("brooklyn99_pal raises warning with large number, x > 10", {
 })
 
 test_that("scale_colour_brooklyn99/dark equals scale_color_brooklyn99/dark", {
-  expect_equal(scale_color_brooklyn99(palette = "Regular"), scale_colour_brooklyn99(palette = "Regular"))
-  expect_equal(scale_color_brooklyn99(palette = "Dark"), scale_colour_brooklyn99(palette = "Dark"))
+  expect_eqNe(scale_color_brooklyn99(palette = "Regular"), scale_colour_brooklyn99(palette = "Regular"))
+  expect_eqNe(scale_color_brooklyn99(palette = "Dark"), scale_colour_brooklyn99(palette = "Dark"))
 })
 
 test_that("scale_colour_brooklyn99/dark works", {

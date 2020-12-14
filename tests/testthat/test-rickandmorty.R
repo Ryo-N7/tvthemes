@@ -1,5 +1,7 @@
 context("test-rickandmorty")
 
+expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+
 test_that("theme_rickAndMorty works", {
   thm <- theme_rickAndMorty()
   expect_s3_class(thm, "theme")
@@ -62,7 +64,7 @@ test_that("rickAndMorty_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_rickAndMorty equals scale_color_rickAndMorty", {
-  expect_equal(scale_color_rickAndMorty(), scale_colour_rickAndMorty())
+  expect_eqNe(scale_color_rickAndMorty(), scale_colour_rickAndMorty())
 })
 
 test_that("scale_colour_rickAndMorty works", {

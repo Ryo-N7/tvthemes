@@ -1,5 +1,7 @@
 context("test-simpsons")
 
+expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+
 test_that("theme_simpsons works", {
   thm <- theme_simpsons()
   expect_s3_class(thm, "theme")
@@ -62,7 +64,7 @@ test_that("simpsons_pal raises warning with large number, x > 10", {
 })
 
 test_that("scale_colour_simpsons equals scale_color_simpsons", {
-  expect_equal(scale_color_simpsons(), scale_colour_simpsons())
+  expect_eqNe(scale_color_simpsons(), scale_colour_simpsons())
 })
 
 test_that("scale_colour_simpsons works", {
