@@ -77,22 +77,24 @@ stevenUniverse_palette <- list(
   ),
   ## Diamonds: White, Yellow, Blue, & Pearl ----
   Diamonds = c(
-    "#000000", ## black
-    "#708090", ## slate gray
-    "#D4CDB1", ## light-grey-tan
-    "#DCDCDC", ## gainsborough
-    "#F7DC27", ## yellow
-    "#808080"  ## gray
+    "#FFFF00", ## Yellow
+    "#CCCC00", ## Dark yellow
+    "#00BFFF", ## Light Blue
+    "#0000FF", ## Blue
+    "#FF1493", ## HOt Pink
+    "#FFB6C1", ## Light pink
+    "#FFFFFF", ## White
+    "#000000", ## Black
+    "#D3D3D3" ## Grey
   ),
   ## Jasper ----
   Jasper = c(
-    "#40e0d0", ## manderly turqouise     #32BB9D
-    "#808080", ## gray
-    "#00ff00", ## light-sea green        #0FBB11
-    "#282828", ## metallic black
-    "#015202", ## dark seaweed green
-    "#195953", ## dark turqoise
-    "#FFFFFF"  ## white
+    "#2e0f16", ## deep brown
+    "#a32a2f", ## light reddish brown
+    "#eb9352", ## light orange
+    "#f8e3db", ## light beige
+    "#91837d", ## light grey
+    "#37947e"  ## light turqoise-green
   ),
   ## Topaz ----
   Topaz = c(
@@ -106,23 +108,23 @@ stevenUniverse_palette <- list(
   ),
   ## Spinel ----
   Spinel = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
+    "#c92d7e", ## violet pink
+    "#3c1a2d", ## dark brown-purple
+    "#e7a6cd", ## light pink
+    "#94043a", ## dark wine
+    "#e0bed3", ## beige-pink
     "#FFFFFF"  ## white
   ),
   ## Bismuth ----
   Bismuth = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
-    "#FFFFFF"  ## white
+    "#93aaca", ## Bismuth blue
+    "#f6b8bd", ## salmon
+    "#24dabe", ## turqouise
+    "#c95657", ## dark sand-orange
+    "#89699c", ## dark purple
+    "#71f8d3", ## light turqouise
+    "#bf3847", ## light brick
+    "#19090f"  ## dark brown
   ),
   ## Ruby ----
   Ruby = c(
@@ -156,13 +158,13 @@ stevenUniverse_palette <- list(
   ),
   ## Nephrite ----
   Nephrite = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
-    "#FFFFFF"  ## white
+    "#202e13", ## dark army green
+    "#83c874", ## light lime green
+    "#35782b", ## army green
+    "#0c120b", ## black
+    "#3b3616", ## khaki brown
+    "#6e7469", ## grey
+    "#204519"  ## dark khaki green
   ),
   ## Aquamarine ----
   Aquamarine = c(
@@ -195,23 +197,25 @@ stevenUniverse_palette <- list(
   ),
   ## Rhodonite ----
   Rhodonite = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
-    "#FFFFFF"  ## white
+    "#d776b1", ## rhodonite pink
+    "#180c1d", ## dark purple
+    "#f0e2ef", ## pink beige
+    "#7b5584", ## light purple
+    "#452b5b", ## deep purple
+    "#785069", ## diluted wine
+    "#a4527c", ## light redwine
+    "#8474ac"  ## light purple blue
   ),
   ## Flourite ----
   Flourite = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
-    "#FFFFFF"  ## white
+    "#596be4", ## flourite blue-purple
+    "#3fe6f8", ## light turqoise
+    "#202841", ## dark navy
+    "#957bf9", ## light lilac
+    "#bf7cf6", ## light pink
+    "#62a7bd", ## damp turqouise
+    "#332a91", ## deep purple
+    "#1f76af" ## deep turqouise
   )
 )
 
@@ -278,7 +282,7 @@ stevenUniverse_pal <- function(palette = "Steven", n,
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_stevenUniverse <- function(palette = "Steven", n, type = "discrete",
-                                 reverse = FALSE, ...){
+                                 reverse = FALSE, ...) {
   if (type == "discrete") {
     ggplot2::discrete_scale("color", "stevenUniverse",
                             stevenUniverse_pal(palette = palette, n = n, type = type,
@@ -313,7 +317,7 @@ scale_colour_stevenUniverse <- scale_color_stevenUniverse
 #' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_stevenUniverse <- function(palette = "Steven", n, type = "discrete",
-                                reverse = FALSE, ...){
+                                reverse = FALSE, ...) {
   if (type == "discrete") {
     ggplot2::discrete_scale("fill", "stevenUniverse",
                             stevenUniverse_pal(palette = palette, n = n, type = type,
