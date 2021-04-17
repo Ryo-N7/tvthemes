@@ -98,12 +98,11 @@ stevenUniverse_palette <- list(
   ),
   ## Topaz ----
   Topaz = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
+    "#f5e848", ## yellow
+    "#732c05", ## brown
+    "#db870c", ## orange
+    "#290404", ## dark brown
+    "#909090", ## grey
     "#FFFFFF"  ## white
   ),
   ## Spinel ----
@@ -148,13 +147,13 @@ stevenUniverse_palette <- list(
   ),
   ## Emerald ----
   Emerald = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
-    "#FFFFFF"  ## white
+    "#33e059", ## mint green
+    "#2cc012", ## green
+    "#76facc", ## pop turqouise
+    "#4c4cff", ## pep lime green
+    "#dcfa5a", ## lime
+    "#8ee575", ## grass green
+    "#34963c"  ## turqouiuse green
   ),
   ## Nephrite ----
   Nephrite = c(
@@ -168,13 +167,13 @@ stevenUniverse_palette <- list(
   ),
   ## Aquamarine ----
   Aquamarine = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
+    "#7ff9f7", ## aquamarine
+    "#0b2483", ## dark blue
+    "#0f8cde", ## ocean blue
     "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
-    "#FFFFFF"  ## white
+    "#040509", ## black
+    "#23b4dc", ## turqouise
+    "#3c7084"  ## grey blue
   ),
   ## Padparadscha ----
   Padparadscha = c(
@@ -187,13 +186,11 @@ stevenUniverse_palette <- list(
   ),
   ## Rutile ----
   Rutile = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
-    "#FFFFFF"  ## white
+    "#a92222", ## rutile red
+    "#310f13", ## dark brown
+    "#fb5c5b", ## salmon
+    "#be7977", ## light brick
+    "#9b9a9d"  ## grey
   ),
   ## Rhodonite ----
   Rhodonite = c(
@@ -216,6 +213,18 @@ stevenUniverse_palette <- list(
     "#62a7bd", ## damp turqouise
     "#332a91", ## deep purple
     "#1f76af" ## deep turqouise
+  ),
+  ## Mega Pearl ----
+  MegaPearl = c(
+    "#df84a8", ## cape pink
+    "#f6ffa7", ## sash yellow
+    "#f9d078", ## sash orange
+    "#ffd1ef", ## light pink
+    "#eeb0a1", ## beige
+    "#fa7a91", ## hair salmon
+    "#faffeb", ## cream
+    "#e3edf6", ## light blue collar
+    "#FFFFFF" ## white
   )
 )
 
