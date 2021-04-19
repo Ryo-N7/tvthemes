@@ -225,6 +225,78 @@ stevenUniverse_palette <- list(
     "#faffeb", ## cream
     "#e3edf6", ## light blue collar
     "#FFFFFF" ## white
+  ),
+  Sugilite = c(
+    "#bb55e1", ## light purple
+    "#16041f", ## dank purple
+    "#7e34d4", ## purple
+    "#54157b", ## dark purple
+    "#ccccfa", ## lilac
+    "#839fe2"  ## blue lilac
+  ),
+  CrazyLaceAgate = c(
+    "#fba475", ## light orange
+    "#4c84a3", ## navy light
+    "#f46124", ## orange
+    "#4dacd9", ## light blue
+    "#c2421c", ## dark orange
+    "#761445", ## grape
+    "#fad457"  ## yellow
+  ),
+  Sardonyx = c(
+    "#f04e6e", ## salmon
+    "#22102c", ## dark purple
+    "#fbe8d7", ## cream
+    "#991c50", ## wine purple
+    "#db8282", ## beige pink
+    "#f57194", ## pink
+    "#644c84", ## light purple lilac
+    "#74646c"  ## grey
+  ),
+  Alexandrite = c(
+    "#240e31", ## dark purple
+    "#cb6bce", ## pink
+    "#468892", ## dark turqoiuse
+    "#74f3d3", ## mint
+    "#751c6d", ## purple
+    "#fdc067", ## light orange
+    "#ac9ece", ## lilac
+    "#6ec5ab"  ## turquoise green
+  ),
+  SmokyQuartz = c(
+    "#8b7182", ## quartz
+    "#665e85", ## deep purple
+    "#1b6e9c", ## jeans blue
+    "#f95b70", ## light red
+    "#ffe43f", ## yellow
+    "#9fa4cf"  ## lilac
+  ),
+  BluebirdAzurite = c(
+    "#0b8ef8", ## bluebird
+    "#b5d6f5", ## water blue
+    "#681a15", ## brown
+    "#043cb2", ## deep blue
+    "#dc5750"  ## brick orange
+  ),
+  Sunstone = c(
+    "#f6a1ca", ## pink
+    "#1a1f2b", ## coal black
+    "#eb7746", ## orange
+    "#fbdb82", ## yellow
+    "#9f272e", ## red
+    "#d36b8d", ## dark pink
+    "#ec9e58", ## light orange
+    "#24719b", ## jeans blue
+    "#6a1639"  ## wine
+  ),
+  Opal = c(
+    "#c3f9e9", ## mint
+    "#8491be", ## light purple
+    "#cc8cbb", ## purple lilac
+    "#4685a0", ## turqouise
+    "#fbf5a3", ## light yellow
+    "#864568", ## purple
+    "#d3fec8"  ## lime
   )
 )
 
