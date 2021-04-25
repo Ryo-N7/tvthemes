@@ -301,8 +301,7 @@ stevenUniverse_palette <- list(
 )
 
 #' @title Gems & Friends of Steven Universe palette
-#' @description Houses Steven, Lannister, Tyrell, Targaryen,
-#' Tully, Greyjoy, Manderly, Martell, Stannis Baratheon, & Arryn
+#' @description Steven, Garnet, Amethyst, Pearl, Peridot, Sardonyx, Nephrite, etc.
 #' @inheritDotParams ggplot2::discrete_scale
 #' @param palette name of palette, Default: "Steven"
 #' @param n number of colors
