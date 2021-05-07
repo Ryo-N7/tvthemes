@@ -297,6 +297,20 @@ stevenUniverse_palette <- list(
     "#fbf5a3", ## light yellow
     "#864568", ## purple
     "#d3fec8"  ## lime
+  ),
+  CrystalGems = c(
+    "#FC5C64", ## steven red shirt
+    "#0E0723", ## garnet deep purple
+    "#FC7CF1", ## pink diamond
+    "#6DEDDD", ## pearl turqouise
+    "#C0AED9", ## amethyst light purple
+    "#146C94", ## steven jeans blue
+    "#84043C", ## wine burgundy
+    "#FCCC4C", ## steven yellow
+    "#AE56DE", ## amethyst lilac
+    "#F6B6C2", ## pearl pink
+    "#2C3C8C", ## light navy amethyst
+    "#000000"  ## black
   )
 )
 
