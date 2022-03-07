@@ -68,6 +68,7 @@ ggplot(mpg, aes(displ)) +
 - __Kim Possible__: palette
 - __Big Hero 6__: palette
 - __Gravity Falls__: palette
+- __Steven Universe__: palette
 - _More in future releases..._
 - _Development branch_: TBD...
 
@@ -161,6 +162,10 @@ You can find the code for all the examples below in the ["Examples" Vignette](ht
 ## Gravity Falls
 
 ![gravityfall](https://i.imgur.com/Gl83AXz.png)
+
+## Steven Universe
+
+![stevenuniverse](https://i.imgur.com/Gl83AXz.png)
 
 # Contributing
 

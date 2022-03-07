@@ -564,3 +564,52 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 ```
 
 ![gravityfall](https://i.imgur.com/Gl83AXz.png)
+
+
+
+## Steven Universe
+
+```{r stevenUniverse, fig.width=14, fig.height = 6, message=FALSE, eval=FALSE}
+data <- gapminder::gapminder %>% 
+  filter(country %in% c("Ireland", "Italy", "Turkey", "France", "Germany", 
+                        "Brazil", "Mexico", "Sweden")) %>% 
+  mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')),
+         image = "")
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+  geom_area(alpha = 0.9) +
+  scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
+  scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
+  scale_fill_stevenUniverse(palette = "Steven", reverse = FALSE) +
+  labs(title = stringr::str_wrap("Well, Duck-tective, it seems you've really... quacked the case!", width = 70),
+       subtitle = "Quack-quack Quack-quack-quack (Don't patronize me!)",
+       caption = "Schmebulock!!",
+       x = "Years That Stanford Was Gone", y = "# of Sham Total sold") +
+  theme_avatar(title.font = "Gravitation Falls",
+               text.font = "Gravitation Falls",
+               title.size = 24,
+               subtitle.size = 20,
+               text.size = 18,
+               legend.position = "none")
+```
+
+
+```{r R&M}
+ggplot(diamonds, aes(price, fill = cut)) +
+  geom_histogram(binwidth = 500) +
+  scale_fill_stevenUniverse(palette = "CrystalGems") +
+  labs(title = "Dammit Morty, You Know Diamonds Aren't Forever Right?",
+       subtitle = "They're blood diamonds, Morty **burp**",
+       caption = "Wubbalubbadubdub!") +
+  theme_minimal()
+```
+
+
+
+
+
+
+
+
+
+

@@ -79,6 +79,7 @@ ggplot(mpg, aes(displ)) +
   - **Kim Possible**: palette
   - **Big Hero 6**: palette
   - **Gravity Falls**: palette
+  - **Steven Universe**: palette
   - *More in future releases…*
   - *Development branch*: TBD…
 
@@ -176,6 +177,10 @@ the [Package Website](https://ryo-n7.github.io/tvthemes/).
 ## Gravity Falls
 
 ![gravityfall](https://i.imgur.com/Gl83AXz.png)
+
+## Steven Universe
+
+![stevenuniverse](https://i.imgur.com/Gl83AXz.png)
 
 # Contributing
 
