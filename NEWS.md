@@ -1,3 +1,10 @@
+# tvthemes 1.3.0
+
+* New palette: 
+  * Steven Universe (31 variants based on different Gem characters)
+* Remove {glue} package as a dependency
+* Imgur links for plot examples are replaced with direct links to printed images in man/ folder
+
 # tvthemes 1.2.0
 
 * Add Github Actions
