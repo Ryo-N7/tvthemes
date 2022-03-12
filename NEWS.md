@@ -9,6 +9,8 @@
 
 * Add Github Actions
   * R-CMD-Check, codecov, build pkgdown
+* Add license for 'Some Time Later' font
+* Fix tests, re: check environment
 
 # tvthemes 1.1.0
 

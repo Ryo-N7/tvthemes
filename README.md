@@ -15,6 +15,7 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master/)
 [![R build
 status](https://github.com/Ryo-N7/tvthemes/workflows/R-CMD-check/badge.svg)](https://github.com/Ryo-N7/tvthemes/actions)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O342A2A)
 <!-- badges: end -->
 
 [Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo/)
@@ -211,3 +212,6 @@ Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
 Hilda palettes from [Matt
 Shanks](http://www.mattshanks.com.au/colour-palette-reference-hilda/)
 and [ChevyRay](https://pbs.twimg.com/media/DoeR9edWwAMG2hW.png).
+
+[“Some Time Later” font](https://github.com/ctrlcctrlv/some-time-later)
+courtesy of Frederick Brennan.

@@ -1,5 +1,7 @@
 context("test-parksandrec")
 
+expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+
 test_that("theme_parksAndRec works", {
   thm <- theme_parksAndRec()
   expect_s3_class(thm, "theme")
@@ -174,7 +176,7 @@ test_that("parksAndRec_pal raises warning with large number, x > 10", {
 })
 
 test_that("scale_colour_parksAndRec equals scale_color_parksAndRec", {
-  expect_equal(scale_color_parksAndRec(), scale_colour_parksAndRec())
+  expect_eqNe(scale_color_parksAndRec(), scale_colour_parksAndRec())
 })
 
 test_that("scale_colour_parksAndRec/light works", {

@@ -31,21 +31,21 @@ reference:
   - title: Attack On Titan palette
     contents:
       - matches("attackOnTitan")
-  - title: Avatar - The Last Airbender palette
+  - title: Avatar - The Last Airbender palettes and theme
     desc: avatarTLA() replaced by avatar()
     contents:
       - matches("avatar")
   - title: Big Hero 6 palette
     contents:
       - matches("bigHero6")
-  - title: Brooklyn Nine Nine palette
+  - title: Brooklyn Nine Nine palettes and theme
     desc: Light and Dark
     contents:
       - matches("brooklyn99")
-  - title: Gravity Falls
+  - title: Gravity Falls palette
     contents:
       - matches("gravityFalls")
-  - title: Hilda
+  - title: Hilda palettes and themes
     desc: Day, Dusk, & Night palettes
     contents:
       - matches("hilda")
@@ -53,26 +53,26 @@ reference:
     desc: Using {extrafont} package
     contents:
       - starts_with("import")
-  - title: Kim Possible
+  - title: Kim Possible palettes
     contents:
       - matches("kimPossible")
   - title: Add Spongebob Background
     desc: Using {magick} package
     contents:
       - matches("BikiniBottom")
-  - title: Parks & Recreation palette and themes
+  - title: Parks & Recreation palettes and themes
     desc: Light and Dark
     contents:
       - matches("parksAndRec")
   - title: Rick & Morty palette and theme
     contents:
       - matches("rickAndMorty")
-  - title: The Simpsons palette
+  - title: The Simpsons palette and theme
     contents:
       - matches("simpsons")
   - title: Spongebob Squarepants palette and theme
     contents:
       - matches("spongeBob")
-  - title: Great Houses of Westeros palette
+  - title: Great Houses of Westeros palettes
     contents:
       - matches("westeros")
