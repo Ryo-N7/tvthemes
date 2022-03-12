@@ -30,7 +30,6 @@ rickAndMorty_palette <- c(
 #' library(scales)
 #' show_col(rickAndMorty_pal()(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 rickAndMorty_pal <- function(n,
@@ -49,7 +48,7 @@ rickAndMorty_pal <- function(n,
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(rickAndMorty)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(rickAndMorty)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(rickAndMorty), "!"))
   }
 
   rickAndMorty <- switch(type,

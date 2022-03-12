@@ -58,7 +58,6 @@ theLastAirbender_palette <- list(
 #' @rdname avatarTLA_pal
 #' @export
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 avatarTLA_pal <- function(palette = "FireNation", n,
@@ -78,7 +77,7 @@ avatarTLA_pal <- function(palette = "FireNation", n,
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(avatarTLA)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(avatarTLA)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(avatarTLA), "!"))
   }
 
   avatarTLA <- switch(type,
@@ -104,7 +103,6 @@ avatarTLA_pal <- function(palette = "FireNation", n,
 #' library(scales)
 #' show_col(avatar_pal()(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 avatar_pal <- function(palette = "FireNation", n,
@@ -123,7 +121,7 @@ avatar_pal <- function(palette = "FireNation", n,
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(avatar)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(avatar)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(avatar), "!"))
   }
 
   avatar <- switch(type,

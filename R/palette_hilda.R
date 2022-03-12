@@ -50,7 +50,6 @@ hilda_palette <- list(
 #' library(scales)
 #' show_col(hilda_pal(palette = "Dusk")(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 hilda_pal <- function(palette, n,
@@ -69,7 +68,7 @@ hilda_pal <- function(palette, n,
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(hilda)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(hilda)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(hilda), "!"))
   }
 
   hilda <- switch(type,

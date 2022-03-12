@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tvthemes 1.1.0 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
+# tvthemes 1.3.0 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
 
 <!-- badges: start -->
 
@@ -44,7 +44,6 @@ palettes/themes are welcome\!
 library(tvthemes)
 library(ggplot2)
 library(extrafont)
-#> Registering fonts with R
 loadfonts(quiet = TRUE)
 
 ggplot(mpg, aes(displ)) +
@@ -61,7 +60,7 @@ ggplot(mpg, aes(displ)) +
                    subtitle.size = 14)
 ```
 
-<img src="man/figures/README-b99header-1.png" width="70%" style="display: block; margin: auto;" />
+![](man/figures/README-b99header-1.png)
 
 ## Current list of TV shows
 
@@ -80,6 +79,7 @@ ggplot(mpg, aes(displ)) +
   - **Kim Possible**: palette
   - **Big Hero 6**: palette
   - **Gravity Falls**: palette
+  - **Steven Universe**: palette
   - *More in future releases…*
   - *Development branch*: TBD…
 
@@ -116,67 +116,71 @@ the [Package Website](https://ryo-n7.github.io/tvthemes/).
 
 ## Brooklyn Nine-Nine
 
-![b99d](https://i.imgur.com/SjxWFXd.png)
+![b99d](man/figures/b99_plot.png)
 
-![b99l](https://i.imgur.com/OHWQn2q.png)
+![b99l](man/figures/b99regpal_plot.png)
 
 ## Spongebob Squarepants
 
-![bobspog](https://i.imgur.com/cVHEADt.png)
+![bobspog](man/figures/sponge_plot.png)
 
-![bobspogbkg](https://i.imgur.com/kpwgeRA.png)
+![bobspogbkg](man/figures/bobspog.bg.png)
 
 ## Game of Thrones: House Stark, Tully, Targaryen
 
-![StarkTullyTargaryen](https://i.imgur.com/TRYevg9.png)
+![StarkTullyTargaryen](man/figures/starktullytargaryen.png)
 
 ## Game of Thrones: House Tyrell, Lannister, Greyjoy
 
-![TyrellLannisterGreyjoy](https://i.imgur.com/NUjriiF.png)
+![TyrellLannisterGreyjoy](man/figures/tyrelllannistergreyjoy.png)
 
 ## Game of Thrones: Arryn, Manderly, Martell
 
-![ArrynManderlyMartell](https://i.imgur.com/WfieMDW.png)
+![ArrynManderlyMartell](man/figures/arrynmanderlymartell.png)
 
 ## Game of Thrones: Stannis Baratheon, The One True King
 
-![stannis](https://i.imgur.com/GuCuzyr.png)
+![stannis](man/figures/stannis.png)
 
 ## The Simpsons
 
-![simpsons](https://i.imgur.com/DFHVlJS.png)
+![simpsons](man/figures/simpsons_plot.png)
 
 ## Rick and Morty
 
-![randm](https://i.imgur.com/YB7xSoe.png)
+![randm](man/figures/rickmorty_plot.png)
 
 ## Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
-![tla](https://i.imgur.com/JA4hEbJ.png)
+![tla](man/figures/lastairbender.png)
 
 ## Parks and Recreation
 
-![pandr](https://i.imgur.com/9641myM.png)
+![pandr](man/figures/parksandrec_both.png)
 
 ## Attack on Titan
 
-![aot](https://i.imgur.com/BsLsWPX.png)
+![aot](man/figures/attackontitan.png)
 
 ## Kim Possible
 
-![KimPossible](https://i.imgur.com/2p9Jf8o.png)
+![KimPossible](man/figures/kimpossible.png)
 
 ## Big Hero 6
 
-![bighero6](https://i.imgur.com/ww197w4.png)
+![bighero6](man/figures/bighero6.png)
 
 ## Hilda
 
-![hilda](https://i.imgur.com/J9uv7hV.png)
+![hilda](man/figures/hilda.png)
 
 ## Gravity Falls
 
-![gravityfall](https://i.imgur.com/Gl83AXz.png)
+![gravityfall](man/figures/gravityfalls.png)
+
+## Steven Universe
+
+![stevenuniverse](man/figures/stevenuniverse.png)
 
 # Contributing
 
