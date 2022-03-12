@@ -32,7 +32,6 @@ parksAndRec_palette <- c(
 #' library(scales)
 #' show_col(parksAndRec_pal()(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 parksAndRec_pal <- function(n,
@@ -51,7 +50,7 @@ parksAndRec_pal <- function(n,
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(parksAndRec)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(parksAndRec)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(parksAndRec), "!"))
   }
 
   parksAndRec <- switch(type,

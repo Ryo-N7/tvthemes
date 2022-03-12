@@ -23,7 +23,6 @@ simpsons_palette <- c(
 #' library(scales)
 #' show_col(simpsons_pal()(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 simpsons_pal <- function(n,
@@ -42,7 +41,7 @@ simpsons_pal <- function(n,
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(simpsons)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(simpsons)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(simpsons), "!"))
   }
 
   simpsons <- switch(type,

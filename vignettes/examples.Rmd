@@ -51,7 +51,7 @@ ggplot(mpg, aes(displ)) +
                    subtitle.size = 14)
 ```
 
-![b99d](https://i.imgur.com/SjxWFXd.png)
+![b99d](../man/figures/b99_plot.png)
 
 ```{r b99-light, eval=FALSE}
 ggplot(mpg, aes(displ)) +
@@ -65,7 +65,7 @@ ggplot(mpg, aes(displ)) +
                    legend.font = "Calibri Light")
 ```
 
-![b99l](https://i.imgur.com/OHWQn2q.png)
+![b99l](../man/figures/b99regpal_plot.png)
 
 ## Spongebob Squarepants
 
@@ -87,7 +87,7 @@ bobspog_plot <- ggplot(mpg, aes(displ)) +
 bobspog_plot
 ```
 
-![bobspog](https://i.imgur.com/cVHEADt.png)
+![bobspog](../man/figures/sponge_plot.png)
 
 ```{r bobspog-bkg, eval=FALSE}
 ## use a themed background! Inspired by ggpomological::paint_pomological()!
@@ -95,7 +95,7 @@ paintBikiniBottom(plot = bobspog_plot,
                   background = "background") 
 ```
 
-![bobspogbkg](https://i.imgur.com/kpwgeRA.png)
+![bobspogbkg](../man/figures/bobspog.bg.png)
 
 ## Game of Thrones: House Stark, Tully, Targaryen
 
@@ -137,7 +137,7 @@ ggplot(gapminder::gapminder,
 stark + tully - targaryen + plot_layout(ncol = 1)
 ```
 
-![StarkTullyTargaryen](https://i.imgur.com/TRYevg9.png)
+![StarkTullyTargaryen](../man/figures/starktullytargaryen.png)
 
 ## Game of Thrones: House Tyrell, Lannister, Greyjoy
 
@@ -184,7 +184,7 @@ airquality %>%
 tyrell + lannister - greyjoy + plot_layout(ncol = 1)
 ```
 
-![TyrellLannisterGreyjoy](https://i.imgur.com/NUjriiF.png)
+![TyrellLannisterGreyjoy](../man/figures/tyrelllannistergreyjoy.png)
 
 ## Game of Thrones: Arryn, Manderly, Martell
 
@@ -236,7 +236,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
 arryn + manderly - martell + plot_layout(ncol = 1)
 ```
 
-![ArrynManderlyMartell](https://i.imgur.com/WfieMDW.png)
+![ArrynManderlyMartell](../man/figures/arrynmanderlymartell.png)
 
 ## Game of Thrones: Stannis Baratheon, The One True King
 
@@ -264,7 +264,7 @@ ggplot(mpg, aes(displ)) +
         legend.position = "none") 
 ```
 
-![stannis](https://i.imgur.com/GuCuzyr.png)
+![stannis](../man/figures/stannis.png)
 
 ## The Simpsons
 
@@ -290,7 +290,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                  axis.text.size = 8)
 ```
 
-![simpsons](https://i.imgur.com/DFHVlJS.png)
+![simpsons](../man/figures/simpsons_plot.png)
 
 ## Rick and Morty
 
@@ -306,7 +306,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
                      title.size = 14)
 ```
 
-![randm](https://i.imgur.com/YB7xSoe.png)
+![randm](../man/figures/rickmorty_plot.png)
 
 ## Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
@@ -359,7 +359,7 @@ ggplot(mpg, aes(displ)) +
 plot_grid(firenation, airnomads, watertribe, earthkingdom, ncol = 2)
 ```
 
-![tla](https://i.imgur.com/JA4hEbJ.png)
+![tla](../man/figures/lastairbender.png)
 
 ## Parks and Recreation
 
@@ -392,7 +392,7 @@ ggplot(mpg, aes(displ)) +
 plot_grid(parksandrec, parksandreclight, ncol = 2)
 ```
 
-![pandr](https://i.imgur.com/9641myM.png)
+![pandr](../man/figures/parksandrec_both.png)
 
 ## Attack on Titan
 
@@ -414,7 +414,7 @@ ggplot(mpg, aes(displ)) +
                       title.font = "Roboto Condensed")
 ```
 
-![aot](https://i.imgur.com/BsLsWPX.png)
+![aot](../man/figures/attackontitan.png)
 
 ## Kim Possible
 
@@ -446,7 +446,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                   ticks = TRUE)
 ```
 
-![KimPossible](https://i.imgur.com/2p9Jf8o.png)
+![KimPossible](../man/figures/kimpossible.png)
 
 ## Big Hero 6
 
@@ -490,7 +490,7 @@ airquality %>%
 plot_grid(bigherobar, bigherodot, ncol = 2)
 ```
 
-![bighero6](https://i.imgur.com/ww197w4.png)
+![bighero6](../man/figures/bighero6.png)
 
 ## Hilda
 
@@ -534,7 +534,7 @@ airquality %>%
 plot_grid(hildaday, hildadusk, hildanight, ncol = 2)
 ```
 
-![hilda](https://i.imgur.com/J9uv7hV.png)
+![hilda](../man/figures/hilda.png)
 
 ## Gravity Falls
 
@@ -563,9 +563,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
                legend.position = "none")
 ```
 
-![gravityfall](https://i.imgur.com/Gl83AXz.png)
-
-
+![gravityfalls](../man/figures/gravityfalls.png)
 
 ## Steven Universe
 
@@ -581,35 +579,31 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
   scale_fill_stevenUniverse(palette = "Steven", reverse = FALSE) +
-  labs(title = stringr::str_wrap("Well, Duck-tective, it seems you've really... quacked the case!", width = 70),
-       subtitle = "Quack-quack Quack-quack-quack (Don't patronize me!)",
-       caption = "Schmebulock!!",
-       x = "Years That Stanford Was Gone", y = "# of Sham Total sold") +
-  theme_avatar(title.font = "Gravitation Falls",
-               text.font = "Gravitation Falls",
-               title.size = 24,
+  labs(title = stringr::str_wrap(" 	
+
+I just can't believe you guys are like a bazillion years old! How do you find a cake big enough for all that many candles?", width = 70),
+       subtitle = "Square pizza!? What's wrong with this crazy state!?",
+       caption = "Yay, Lion!",
+       x = "Years Since The Gem War", y = "Revenue (in $) from COOKIE CAT sold!") +
+  theme_avatar(title.size = 24,
+               subtitle.size = 20,
+               text.size = 20,
+               legend.position = "none")
+```
+
+![stevenuniverse](../man/figures/stevenuniverse.png)
+
+```{r CrystalGems, fig.width=11, fig.height = 8, eval=FALSE, message=FALSE}
+ggplot(diamonds, aes(price, fill = cut)) +
+  geom_histogram(binwidth = 500) +
+  scale_fill_stevenUniverse(palette = "CrystalGems") +
+  labs(title = stringr::str_wrap("We... Are The Crystal Gems! We'll Always Save The Day! And If You Think We Can't, We'll Always Find A Way!", width = 70),
+       subtitle = stringr::str_wrap("That's Why The People Of This World... Believe In: Garnet, Amethyst... Aaand Pearl!", width = 70),
+       caption = "... AND STEVEN!") +
+  theme_avatar(title.size = 24,
                subtitle.size = 20,
                text.size = 18,
                legend.position = "none")
 ```
 
-
-```{r R&M}
-ggplot(diamonds, aes(price, fill = cut)) +
-  geom_histogram(binwidth = 500) +
-  scale_fill_stevenUniverse(palette = "CrystalGems") +
-  labs(title = "Dammit Morty, You Know Diamonds Aren't Forever Right?",
-       subtitle = "They're blood diamonds, Morty **burp**",
-       caption = "Wubbalubbadubdub!") +
-  theme_minimal()
-```
-
-
-
-
-
-
-
-
-
-
+![crystalgems](../man/figures/crystalgems.png)

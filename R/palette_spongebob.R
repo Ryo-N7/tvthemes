@@ -35,7 +35,6 @@ spongeBob_palette <- c(
 #' library(scales)
 #' show_col(spongeBob_pal()(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 spongeBob_pal <- function(n, type = c("discrete", "continuous"),
@@ -53,7 +52,7 @@ spongeBob_pal <- function(n, type = c("discrete", "continuous"),
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(spongeBob)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(spongeBob)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(spongeBob), "!"))
   }
 
   spongeBob <- switch(type,

@@ -372,7 +372,7 @@ stevenUniverse_pal <- function(palette = "Steven", n,
 #' ggplot(airquality, aes(x = Day, y = Temp,
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
-#'      scale_color_stevenUniverse(palette = "Stannis")
+#'      scale_color_stevenUniverse(palette = "Steven")
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_stevenUniverse <- function(palette = "Steven", n, type = "discrete",
@@ -395,7 +395,7 @@ scale_color_stevenUniverse <- function(palette = "Steven", n, type = "discrete",
 #' ggplot(airquality, aes(x = Day, y = Temp,
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
-#'      scale_colour_stevenUniverse(palette = "Stannis")
+#'      scale_colour_stevenUniverse(palette = "Peridot")
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_colour_stevenUniverse <- scale_color_stevenUniverse
@@ -407,7 +407,7 @@ scale_colour_stevenUniverse <- scale_color_stevenUniverse
 #'
 #' ggplot(mpg, aes(displ)) +
 #'      geom_histogram(aes(fill = class), col = "black", size = 0.1) +
-#'      scale_fill_stevenUniverse(palette = "Stannis")
+#'      scale_fill_stevenUniverse(palette = "LapisLazuli")
 #' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_stevenUniverse <- function(palette = "Steven", n, type = "discrete",

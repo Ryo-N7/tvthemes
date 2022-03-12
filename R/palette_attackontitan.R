@@ -21,7 +21,6 @@ attackOnTitan_palette <- c(
 #' show_col(attackOnTitan_pal()(5))
 #' @export
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 attackOnTitan_pal <- function(n, type = c("discrete", "continuous"),
@@ -39,7 +38,7 @@ attackOnTitan_pal <- function(n, type = c("discrete", "continuous"),
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(attackOnTitan)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(attackOnTitan)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(attackOnTitan), "!"))
   }
 
   attackOnTitan <- switch(type,

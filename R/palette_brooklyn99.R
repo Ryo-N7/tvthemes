@@ -43,7 +43,6 @@ brooklyn99_palette <- list(
 #' show_col(brooklyn99_pal()(5))
 #' show_col(brooklyn99_pal(palette = "Dark")(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 brooklyn99_pal <- function(palette = "Regular", n = n,
@@ -62,7 +61,7 @@ brooklyn99_pal <- function(palette = "Regular", n = n,
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(brooklyn99)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(brooklyn99)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(brooklyn99), "!"))
   }
 
   brooklyn99 <- switch(type,

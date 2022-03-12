@@ -25,7 +25,6 @@ kimPossible_palette <- c(
 #' library(scales)
 #' show_col(kimPossible_pal()(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 kimPossible_pal <- function(n, type = c("discrete", "continuous"),
@@ -43,7 +42,7 @@ kimPossible_pal <- function(n, type = c("discrete", "continuous"),
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(kimPossible)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(kimPossible)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(kimPossible), "!"))
   }
 
   kimPossible <- switch(type,

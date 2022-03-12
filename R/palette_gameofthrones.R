@@ -118,7 +118,6 @@ westeros_palette <- list(
 #' show_col(westeros_pal(palette = "Stark")(5))
 #' show_col(westeros_pal(palette = "Stannis")(5))
 #' @importFrom scales manual_pal
-#' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
 westeros_pal <- function(palette = "Stark", n,
@@ -137,7 +136,7 @@ westeros_pal <- function(palette = "Stark", n,
   type <- match.arg(type)
 
   if (type == "discrete" && n > length(westeros)) {
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(westeros)}!"))
+    stop(paste0("Palette does not have ", n, " colors, maximum is ", length(westeros), "!"))
   }
 
   westeros <- switch(type,
