@@ -368,11 +368,6 @@ stevenUniverse_pal <- function(palette = "Steven", n,
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_color_stevenUniverse(palette = "Steven")
-#'
-#' ggplot(airquality, aes(x = Day, y = Temp,
-#'      group = as.factor(Month), color = as.factor(Month))) +
-#'      geom_point(size = 2.5) +
-#'      scale_color_stevenUniverse(palette = "Steven")
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
 scale_color_stevenUniverse <- function(palette = "Steven", n, type = "discrete",

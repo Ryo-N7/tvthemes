@@ -6,13 +6,13 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/tvthemes)](https://CRAN.R-project.org/package=tvthemes)
 [![Downloads](http://cranlogs.r-pkg.org/badges/tvthemes)](https://cran.r-project.org/package=tvthemes)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Coverage
-status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/Ryo-N7/tvthemes?branch=master/)
+status](https://codecov.io/gh/Ryo-N7/tvthemes/branch/master/graph/badge.svg)](https://app.codecov.io/gh/Ryo-N7/tvthemes?branch=master/)
 [![R build
 status](https://github.com/Ryo-N7/tvthemes/workflows/R-CMD-check/badge.svg)](https://github.com/Ryo-N7/tvthemes/actions)
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O342A2A)
@@ -206,12 +206,12 @@ Aden-Buie](https://twitter.com/grrrck/)’s
 Henderson](https://twitter.com/ewen_/)’s
 [{ghibli}](https://github.com/ewenme/ghibli/),
 [rOpenSci](https://github.com/ropenscilabs/)’s
-[{ochRe}](https://github.com/ropenscilabs/ochRe/), & [Nathan
+[{ochRe}](https://github.com/hollylkirk/ochRe), & [Nathan
 Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
 
 Hilda palettes from [Matt
-Shanks](http://www.mattshanks.com.au/colour-palette-reference-hilda/)
-and [ChevyRay](https://pbs.twimg.com/media/DoeR9edWwAMG2hW.png).
+Shanks](https://www.mattshanks.com.au/colour-palette-reference-hilda/)
+and [ChevyRay](https://imgur.com/a/6oY8c6k).
 
 [“Some Time Later” font](https://github.com/ctrlcctrlv/some-time-later)
 courtesy of Frederick Brennan.
