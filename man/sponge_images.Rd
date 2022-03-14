@@ -12,3 +12,4 @@ sponge_images(which = c("background", "floral"))
 \description{
 find SpongeBob background images
 }
+\keyword{internal}

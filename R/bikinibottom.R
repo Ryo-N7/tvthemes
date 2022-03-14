@@ -85,6 +85,7 @@ paintBikiniBottom <- function(
 #' @description find SpongeBob background images
 #' @param which PARAM_DESCRIPTION, Default: c("background", "floral")
 #' @rdname sponge_images
+#' @keywords internal
 
 sponge_images <- function(which = c("background", "floral")) {
   which <- match.arg(which)

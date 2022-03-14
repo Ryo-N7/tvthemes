@@ -2,7 +2,7 @@
 title: "Fonts & Colors"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Fonts}
+  %\VignetteIndexEntry{Fonts & Colors}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

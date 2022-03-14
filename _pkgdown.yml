@@ -73,6 +73,12 @@ reference:
   - title: Spongebob Squarepants palette and theme
     contents:
       - matches("spongeBob")
+  - title: Steven Universe palette
+    contents:
+      - matches("stevenUniverse")
   - title: Great Houses of Westeros palettes
     contents:
       - matches("westeros")
+  - title: internal
+    contents:
+      - theme_theLastAirbender
