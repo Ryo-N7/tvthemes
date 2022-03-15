@@ -579,14 +579,13 @@ ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
   scale_x_date(expand = c(0, 0), breaks = data$year, date_labels = "%Y") +
   scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
   scale_fill_stevenUniverse(palette = "Steven", reverse = FALSE) +
-  labs(title = stringr::str_wrap(" 	
-
-I just can't believe you guys are like a bazillion years old! How do you find a cake big enough for all that many candles?", width = 70),
-       subtitle = "Square pizza!? What's wrong with this crazy state!?",
-       caption = "Yay, Lion!",
-       x = "Years Since The Gem War", y = "Revenue (in $) from COOKIE CAT sold!") +
+  labs(title = stringr::str_wrap("I just can't believe you guys are like a bazillion years old! How do you find a cake big enough for all that many candles?", width = 70),
+subtitle = "Square pizza!? What's wrong with this crazy state!?",
+caption = "Yay, Lion!",
+x = "Years Since The Gem War", y = "Revenue (in $) from COOKIE CAT sold!") +
   theme_avatar(title.size = 24,
                subtitle.size = 20,
+               text.font = "Titillium Web", 
                text.size = 20,
                legend.position = "none")
 ```
@@ -600,10 +599,11 @@ ggplot(diamonds, aes(price, fill = cut)) +
   labs(title = stringr::str_wrap("We... Are The Crystal Gems! We'll Always Save The Day! And If You Think We Can't, We'll Always Find A Way!", width = 70),
        subtitle = stringr::str_wrap("That's Why The People Of This World... Believe In: Garnet, Amethyst... Aaand Pearl!", width = 70),
        caption = "... AND STEVEN!") +
-  theme_avatar(title.size = 24,
-               subtitle.size = 20,
-               text.size = 18,
-               legend.position = "none")
+  theme_spongeBob(title.size = 24,
+                  subtitle.size = 20,
+                  text.font = "Titillium Web",
+                  text.size = 18,
+                  legend.position = "none")
 ```
 
 ![crystalgems](../man/figures/crystalgems.png)

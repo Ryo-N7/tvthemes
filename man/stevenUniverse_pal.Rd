@@ -124,11 +124,6 @@ ggplot(airquality, aes(x = Day, y = Temp,
 ggplot(airquality, aes(x = Day, y = Temp,
      group = as.factor(Month), color = as.factor(Month))) +
      geom_point(size = 2.5) +
-     scale_color_stevenUniverse(palette = "Steven")
-
-ggplot(airquality, aes(x = Day, y = Temp,
-     group = as.factor(Month), color = as.factor(Month))) +
-     geom_point(size = 2.5) +
      scale_colour_stevenUniverse(palette = "Peridot")
 
 ggplot(mpg, aes(displ)) +

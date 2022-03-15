@@ -11,3 +11,5 @@
 ^cran-comments\.md$
 ^CRAN-RELEASE$
 ^pkgdown$
+^inst\test-generation-script.R$
+^test-generation-script.R$

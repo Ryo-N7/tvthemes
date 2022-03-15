@@ -127,13 +127,12 @@ stevenUniverse_palette <- list(
   ),
   ## Ruby ----
   Ruby = c(
-    "#007fff", ## arryn blue
-    "#7fbfff", ## arryn light blue
-    "#001933", ## arryn dark navy
-    "#4c4cff", ## arryn purple
-    "#ffefb2", ## arryn beige
-    "#a89797", ## arryn lightbrown
-    "#FFFFFF"  ## white
+    "#D81E4A", ## ruby
+    "#332027", ## dark brown
+    "#751048", ## violet
+    "#000000", ## red
+    "#F8DB73", ## visor yellow
+    "#F4826A"  ## orange
   ),
   ## Sapphire ----
   Sapphire = c(

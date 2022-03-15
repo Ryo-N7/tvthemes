@@ -7,7 +7,7 @@
 sponge_images(which = c("background", "floral"))
 }
 \arguments{
-\item{which}{PARAM_DESCRIPTION, Default: c("background", "floral")}
+\item{which}{Choose image, Default: c("background", "floral")}
 }
 \description{
 find SpongeBob background images
