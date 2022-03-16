@@ -43,7 +43,7 @@ ggplot(mpg, aes(displ)) +
                  binwidth = 0.1) +
   scale_fill_brooklyn99(palette = "Dark") +
   labs(title = "Do you know what it means to 'clap back', Raymond?",
-       subtitle = glue("BE- {emo::ji('clap')} -CAUSE {emo::ji('clap')} I {emo::ji('clap')} DO {emo::ji('clap')} !"),
+       subtitle = glue::glue("BE- {emo::ji('clap')} -CAUSE {emo::ji('clap')} I {emo::ji('clap')} DO {emo::ji('clap')} !"),
        x = "Titles of Your Sex Tape",
        caption = "Pizza bagels? Pizza rolls? Pizza poppers? Pizzaritos? Pizza pockets?") +
   theme_brooklyn99(title.font = "Titillium Web",
@@ -51,7 +51,7 @@ ggplot(mpg, aes(displ)) +
                    subtitle.size = 14)
 ```
 
-![b99d](../man/figures/b99_plot.png)
+![b99d](../man/figures/README-b99header-1.png)
 
 ```{r b99-light, eval=FALSE}
 ggplot(mpg, aes(displ)) +
