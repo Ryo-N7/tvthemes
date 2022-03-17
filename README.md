@@ -37,6 +37,8 @@ palettes/themes are welcome\!
     post](https://ryo-n7.github.io/2019-09-06-tvthemes-CRAN-announcement/)
   - [`tvthemes 1.1.0` & CRAN release blog
     post](https://ryo-n7.github.io/2019-11-04-tvthemes-1.1.0-announcement/)
+  - [`tvthemes 1.3.0` & CRAN release blog
+    post](https://ryo-n7.github.io/2022-03-17-tvthemes-1.3.0-announcement/)
 
 <!-- end list -->
 
@@ -92,7 +94,7 @@ You can install `tvthemes` by:
 ## for development version:
 devtools::install_github("Ryo-N7/tvthemes")
 
-## v1.1.0 is available on CRAN!
+## v1.3.0 is available on CRAN!
 install.packages("tvthemes")
 ```
 
@@ -116,7 +118,7 @@ the [Package Website](https://ryo-n7.github.io/tvthemes/).
 
 ## Brooklyn Nine-Nine
 
-![b99d](man/figures/b99_plot.png)
+![b99d](man/figures/README-b99header-1.png)
 
 ![b99l](man/figures/b99regpal_plot.png)
 
