@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tvthemes</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -67,48 +67,39 @@
     </div>
 
     <div class="section level2">
+<h2 class="page-header" data-toc-text="1.3.1" id="tvthemes-131">tvthemes 1.3.1<a class="anchor" aria-label="anchor" href="#tvthemes-131"></a></h2>
+<ul><li>Removed Google Fonts files from package as they took up a lot of space and people can easily download them themselves</li>
+<li>Removed Google Fonts related functions and tests, edited Fonts vignette</li>
+<li>Fixed Palette Hilda test that failed on CRAN due to no default</li>
+<li>Removed extraneous dependencies (spelling, gapminder)</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="page-header" data-toc-text="1.3.0" id="tvthemes-130">tvthemes 1.3.0<small>2022-03-16</small><a class="anchor" aria-label="anchor" href="#tvthemes-130"></a></h2>
-<ul><li>New palette:
-<ul><li>Steven Universe (31 variants based on different Gem characters)</li>
-</ul></li>
+<ul><li>New palette:<ul><li>Steven Universe (31 variants based on different Gem characters)</li></ul></li>
 <li>Remove {glue} package as a dependency</li>
 <li>Imgur links for plot examples are replaced with direct links to printed images in man/ folder</li>
 </ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="1.2.0" id="tvthemes-120">tvthemes 1.2.0<a class="anchor" aria-label="anchor" href="#tvthemes-120"></a></h2>
-<ul><li>Add Github Actions
-<ul><li>R-CMD-Check, codecov, build pkgdown</li>
-</ul></li>
+<ul><li>Add Github Actions<ul><li>R-CMD-Check, codecov, build pkgdown</li></ul></li>
 <li>Add license for ‘Some Time Later’ font</li>
 <li>Fix tests, re: check environment</li>
 </ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="1.1.0" id="tvthemes-110">tvthemes 1.1.0<small>2019-10-31</small><a class="anchor" aria-label="anchor" href="#tvthemes-110"></a></h2>
-<ul><li>New palette:
-<ul><li>Gravity Falls</li>
-</ul></li>
-<li>New font:
-<ul><li>“Gravitation Falls”</li>
-</ul></li>
-<li>Renamed functions to fit <code>*_camelCase()</code> style:
-<ul><li>
-<code><a href="../reference/import_titilliumWeb.html">import_titilliumWeb()</a></code>, <code><a href="../reference/import_robotoCondensed.html">import_robotoCondensed()</a></code>, <code><a href="../reference/import_chelseaMarket.html">import_chelseaMarket()</a></code>
-</li>
-</ul></li>
-<li>Renamed ‘Avatar: The Last Airbender’ functions:
-<ul><li>
+<ul><li>New palette:<ul><li>Gravity Falls</li></ul></li>
+<li>New font:<ul><li>“Gravitation Falls”</li></ul></li>
+<li>Renamed functions to fit <code>*_camelCase()</code> style:<ul><li>
+<code>import_titilliumWeb()</code>, <code>import_robotoCondensed()</code>, <code>import_chelseaMarket()</code>
+</li></ul></li>
+<li>Renamed ‘Avatar: The Last Airbender’ functions:<ul><li>
 <code>scale_*_avatar()</code>, <code><a href="../reference/theme_avatar.html">theme_avatar()</a></code>
-</li>
-</ul></li>
-<li>Deprecated functions:
-<ul><li>
-<code><a href="../reference/import_titillium_web.html">import_titillium_web()</a></code>, <code><a href="../reference/import_roboto_condensed.html">import_roboto_condensed()</a></code>, <code>scale_*_avatarTLA()</code>, <code><a href="../reference/theme_theLastAirbender.html">theme_theLastAirbender()</a></code>
-</li>
-</ul></li>
-<li>Deleted functions:
-<ul><li>
-<code>import_ChelseaMarket()</code> (replaced by <code><a href="../reference/import_chelseaMarket.html">import_chelseaMarket()</a></code>)</li>
-</ul></li>
+</li></ul></li>
+<li>Deprecated functions:<ul><li>
+<code>import_titillium_web()</code>, <code>import_roboto_condensed()</code>, <code>scale_*_avatarTLA()</code>, <code><a href="../reference/theme_theLastAirbender.html">theme_theLastAirbender()</a></code>
+</li></ul></li>
+<li>Deleted functions:<ul><li>
+<code>import_ChelseaMarket()</code> (replaced by <code>import_chelseaMarket()</code>)</li></ul></li>
 <li>Added <code>{packagedown}</code> website</li>
 <li>Split README into vignettes</li>
 <li>Added more tests</li>
@@ -116,18 +107,11 @@
     <div class="section level2">
 <h2 class="page-header" data-toc-text="1.0.0" id="tvthemes-100">tvthemes 1.0.0<small>2019-09-03</small><a class="anchor" aria-label="anchor" href="#tvthemes-100"></a></h2>
 <ul><li>Released on CRAN! (September 3rd, 2019)</li>
-<li>New palettes:
-<ul><li>Kim Possible, Big Hero 6, Stannis Baratheon, House Manderly, House Martell, House Arryn, Hilda, &amp; Attack on Titan</li>
-</ul></li>
-<li>New themes:
-<ul><li>Hilda: Day, Dusk, &amp; Night</li>
-</ul></li>
-<li>Increased functionality in all palette functions
-<ul><li>
-<code>palette</code>, <code>n</code>, <code>type</code>, <code>reverse</code> options added</li>
-</ul></li>
-<li>TV shows with multiple palettes have a single function from which you call a specific palette:
-<ul><li><code>scale_color_westeros(palette = "Stannis")</code></li>
+<li>New palettes:<ul><li>Kim Possible, Big Hero 6, Stannis Baratheon, House Manderly, House Martell, House Arryn, Hilda, &amp; Attack on Titan</li></ul></li>
+<li>New themes:<ul><li>Hilda: Day, Dusk, &amp; Night</li></ul></li>
+<li>Increased functionality in all palette functions<ul><li>
+<code>palette</code>, <code>n</code>, <code>type</code>, <code>reverse</code> options added</li></ul></li>
+<li>TV shows with multiple palettes have a single function from which you call a specific palette:<ul><li><code>scale_color_westeros(palette = "Stannis")</code></li>
 <li><code>scale_fill_avatarTLA(palette = "EarthKingdom")</code></li>
 </ul></li>
 <li>Toggle ticks with <code>ticks = TRUE</code> or <code>ticks = FALSE</code>
@@ -174,7 +158,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

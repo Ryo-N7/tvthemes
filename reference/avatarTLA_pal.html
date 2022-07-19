@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tvthemes</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -72,36 +72,36 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">avatarTLA_pal</span><span class="op">(</span>
-  palette <span class="op">=</span> <span class="st">"FireNation"</span>,
-  <span class="va">n</span>,
-  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"discrete"</span>, <span class="st">"continuous"</span><span class="op">)</span>,
-  reverse <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-
-<span class="fu">scale_color_avatarTLA</span><span class="op">(</span>
-  palette <span class="op">=</span> <span class="st">"FireNation"</span>,
-  <span class="va">n</span>,
-  type <span class="op">=</span> <span class="st">"discrete"</span>,
-  reverse <span class="op">=</span> <span class="cn">FALSE</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
-
-<span class="fu">scale_colour_avatarTLA</span><span class="op">(</span>
-  palette <span class="op">=</span> <span class="st">"FireNation"</span>,
-  <span class="va">n</span>,
-  type <span class="op">=</span> <span class="st">"discrete"</span>,
-  reverse <span class="op">=</span> <span class="cn">FALSE</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
-
-<span class="fu">scale_fill_avatarTLA</span><span class="op">(</span>
-  palette <span class="op">=</span> <span class="st">"FireNation"</span>,
-  <span class="va">n</span>,
-  type <span class="op">=</span> <span class="st">"discrete"</span>,
-  reverse <span class="op">=</span> <span class="cn">FALSE</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">avatarTLA_pal</span><span class="op">(</span></span>
+<span>  palette <span class="op">=</span> <span class="st">"FireNation"</span>,</span>
+<span>  <span class="va">n</span>,</span>
+<span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"discrete"</span>, <span class="st">"continuous"</span><span class="op">)</span>,</span>
+<span>  reverse <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_color_avatarTLA</span><span class="op">(</span></span>
+<span>  palette <span class="op">=</span> <span class="st">"FireNation"</span>,</span>
+<span>  <span class="va">n</span>,</span>
+<span>  type <span class="op">=</span> <span class="st">"discrete"</span>,</span>
+<span>  reverse <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_colour_avatarTLA</span><span class="op">(</span></span>
+<span>  palette <span class="op">=</span> <span class="st">"FireNation"</span>,</span>
+<span>  <span class="va">n</span>,</span>
+<span>  type <span class="op">=</span> <span class="st">"discrete"</span>,</span>
+<span>  reverse <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_fill_avatarTLA</span><span class="op">(</span></span>
+<span>  palette <span class="op">=</span> <span class="st">"FireNation"</span>,</span>
+<span>  <span class="va">n</span>,</span>
+<span>  type <span class="op">=</span> <span class="st">"discrete"</span>,</span>
+<span>  reverse <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -109,12 +109,20 @@
     <dl><dt>palette</dt>
 <dd><p>name of palette (FireNation, EarthKingdom, WaterTribe, AirNomads),
 Default: "FireNation"</p></dd>
+
+
 <dt>n</dt>
 <dd><p>number of colors</p></dd>
+
+
 <dt>type</dt>
 <dd><p>discrete or continuous</p></dd>
+
+
 <dt>reverse</dt>
 <dd><p>reverse order, Default: FALSE</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Arguments passed on to <code><a href="https://ggplot2.tidyverse.org/reference/discrete_scale.html" class="external-link">ggplot2::discrete_scale</a></code></p><dl><dt><code>aesthetics</code></dt>
 <dd><p>The names of the aesthetics that this scale works with.</p></dd>
@@ -193,6 +201,7 @@ The default, <code>TRUE</code>, uses the levels that appear in the data;
 
   
 </dl></dd>
+
 </dl></div>
 
   </div>
@@ -207,7 +216,7 @@ The default, <code>TRUE</code>, uses the levels that appear in the data;
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>
