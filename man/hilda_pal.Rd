@@ -7,7 +7,12 @@
 \alias{scale_fill_hilda}
 \title{Hilda palette}
 \usage{
-hilda_pal(palette, n, type = c("discrete", "continuous"), reverse = FALSE)
+hilda_pal(
+  palette = "Day",
+  n,
+  type = c("discrete", "continuous"),
+  reverse = FALSE
+)
 
 scale_color_hilda(palette = "Day", n, type = "discrete", reverse = FALSE, ...)
 

@@ -41,7 +41,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tvthemes</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -54,7 +54,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -105,34 +105,63 @@
 
     
     
-<div class="section level1">
-<h1 id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a>
-</h1>
-<p>The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavored to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like <code>Google Fonts</code>. In the documentation you can find the <strong>actual</strong> fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as “Some Time Later” for Spongebob or “Akbar” for The Simpsons that I included with the package.</p>
-<p>Instead of dealing with <code>extrafont</code> yourself, I re-purposed the <code>import_*()</code> functions from the <code>hrbrthemes</code> package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the <code>.ttf</code> files found in <code>inst/fonts</code>. When you’re done running the functions and installing the <code>.ttf</code> files on your computer, load the <code>extrafont</code> library and then run <code><a href="https://rdrr.io/pkg/extrafont/man/loadfonts.html" class="external-link">loadfonts()</a></code>. If you’re having problems check out the documentation on <code>extrafont</code>’s <a href="https://github.com/wch/extrafont/" class="external-link">Github repo</a> or on <a href="https://CRAN.R-project.org/package=extrafont/" class="external-link">CRAN</a>.</p>
-<p>The help files for each function tells you the recommended font names in case you forget! Besides the really custom stuff like for “The Simpsons”, “Rick &amp; Morty”, and “SpongeBob”, font preferences are really up to you.</p>
+<div class="section level2">
+<h2 id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a>
+</h2>
+<p><strong>NOTE</strong>: From <code>v1.3.1</code> onward, the Google
+Fonts (<code>Roboto Condensed</code>, <code>Titillium Web</code>,
+<code>Chelsea Market</code>, and <code>Cinzel</code>) have been removed
+from the package as the files were taking up a lot of space and those
+fonts in particular can be easily downloaded via Google Fonts by users
+themselves. The helper functions to import these fonts have also been
+removed from the package.</p>
+<p>The difficulty with a lot of the fonts used by TV shows in their
+logos and other paraphernalia is that they are made by font foundries
+and therefore can be rather expensive (for a regular person like you or
+me) to purchase. So I endeavored to find FREE fonts to use that were
+somewhat similar to the real ones used by the shows from resources like
+<code>Google Fonts</code>. In the documentation you can find the
+<strong>actual</strong> fonts used by the TV shows if you are so
+inclined to buy them (some are just my best guesses though)! In some
+cases there were fan-made fonts such as “Some Time Later” for Spongebob
+or “Akbar” for The Simpsons that I included with the package.</p>
+<p>Instead of dealing with <code>extrafont</code> yourself, I
+re-purposed the <code>import_*()</code> functions from the
+<code>hrbrthemes</code> package so you can import the included fonts
+very easily. Do note that you still might need to install the fonts
+directly on your computer from the <code>.ttf</code> files found in
+<code>inst/fonts</code>. When you’re done running the functions and
+installing the <code>.ttf</code> files on your computer, load the
+<code>extrafont</code> library and then run <code><a href="https://rdrr.io/pkg/extrafont/man/loadfonts.html" class="external-link">loadfonts()</a></code>. If
+you’re having problems check out the documentation on
+<code>extrafont</code>’s <a href="https://github.com/wch/extrafont/" class="external-link">Github repo</a> or on <a href="https://CRAN.R-project.org/package=extrafont/" class="external-link">CRAN</a>.</p>
+<p>The help files for each function tells you the recommended font names
+in case you forget! Besides the really custom stuff like for “The
+Simpsons”, “Rick &amp; Morty”, and “SpongeBob”, font preferences are
+really up to you.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Ryo-N7/tvthemes" class="external-link">tvthemes</a></span><span class="op">)</span>
 
 <span class="fu"><a href="../reference/import_simpsons.html">import_simpsons</a></span><span class="op">(</span><span class="op">)</span>         <span class="co">## "Akbar" font</span>
 <span class="fu"><a href="../reference/import_avatar.html">import_avatar</a></span><span class="op">(</span><span class="op">)</span>           <span class="co">## "Slayer" font (formerly `theme_theLastAirbender()`)</span>
 <span class="fu"><a href="../reference/import_rickAndMorty.html">import_rickAndMorty</a></span><span class="op">(</span><span class="op">)</span>     <span class="co">## "Get Schwifty" font</span>
-<span class="fu"><a href="../reference/import_robotoCondensed.html">import_robotoCondensed</a></span><span class="op">(</span><span class="op">)</span>  <span class="co">## "Roboto Condensed" Google Font import from hrbrthemes</span>
-<span class="fu"><a href="../reference/import_titilliumWeb.html">import_titilliumWeb</a></span><span class="op">(</span><span class="op">)</span>     <span class="co">## "Titillium Web" Google Font import from hrbrthemes</span>
 <span class="fu"><a href="../reference/import_spongeBob.html">import_spongeBob</a></span><span class="op">(</span><span class="op">)</span>        <span class="co">## "Some Time Later" font</span>
-<span class="fu"><a href="../reference/import_cinzel.html">import_cinzel</a></span><span class="op">(</span><span class="op">)</span>           <span class="co">## "Cinzel" font to use with 'The Palettes of Ice &amp; Fire'</span>
-<span class="fu"><a href="../reference/import_chelseaMarket.html">import_chelseaMarket</a></span><span class="op">(</span><span class="op">)</span>    <span class="co">## "Chelsea Market" font for "Hilda"</span>
 <span class="fu"><a href="../reference/import_gravitationFalls.html">import_gravitationFalls</a></span><span class="op">(</span><span class="op">)</span> <span class="co">## "Gravitation Falls" font for "Gravity Falls"</span>
 
 <span class="co">## install.packages("extrafont")</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/wch/extrafont" class="external-link">extrafont</a></span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/pkg/extrafont/man/loadfonts.html" class="external-link">loadfonts</a></span><span class="op">(</span><span class="op">)</span> <span class="co">## You need to do this at the beginning of a session.</span></code></pre></div>
 </div>
-<div class="section level1">
-<h1 id="colors">Colors<a class="anchor" aria-label="anchor" href="#colors"></a>
-</h1>
-<p>I gathered the colors/hex codes by looking at images online or re-watching some old episodes and then using various hex code websites and hex code extraction websites. The colors in some of these palettes may still change from feedback and further experimentation.</p>
-<p>You can check out all the colors for each palette by running <code>scales::show_col(tvthemes:::name_of_palette)</code>. Some examples below:</p>
+<div class="section level2">
+<h2 id="colors">Colors<a class="anchor" aria-label="anchor" href="#colors"></a>
+</h2>
+<p>I gathered the colors/hex codes by looking at images online or
+re-watching some old episodes and then using various hex code websites
+and hex code extraction websites. The colors in some of these palettes
+may still change from feedback and further experimentation.</p>
+<p>You can check out all the colors for each palette by running
+<code>scales::show_col(tvthemes:::name_of_palette)</code>. Some examples
+below:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/show_col.html" class="external-link">show_col</a></span><span class="op">(</span><span class="fu">tvthemes</span><span class="fu">:::</span><span class="va">brooklyn99_palette</span><span class="op">$</span><span class="va">Dark</span><span class="op">)</span></code></pre></div>
 <p><img src="fonts-and-colors_files/figure-html/unnamed-chunk-3-1.png" width="700"></p>
@@ -160,12 +189,14 @@
 
       <footer><div class="copyright">
   <p></p>
-<p>Developed by <a href="https://ryo-n7.github.io" class="external-link">Ryo Nakagawara</a>.</p>
+<p>Developed by <a href="https://ryo-n7.github.io" class="external-link">Ryo
+Nakagawara</a>.</p>
 </div>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.2.</p>
 </div>
 
       </footer>

@@ -52,7 +52,7 @@ hilda_palette <- list(
 #' @importFrom scales manual_pal
 #' @importFrom grDevices colorRampPalette
 
-hilda_pal <- function(palette, n,
+hilda_pal <- function(palette = "Day", n,
                       type = c("discrete", "continuous"),
                       reverse = FALSE){
   hilda <- hilda_palette[[palette]]

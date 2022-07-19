@@ -1,3 +1,10 @@
+# tvthemes 1.3.1
+
+* Removed Google Fonts files from package as they took up a lot of space and people can easily download them themselves
+* Removed Google Fonts related functions and tests, edited Fonts vignette 
+* Fixed Palette Hilda test that failed on CRAN due to no default
+* Removed extraneous dependencies (spelling, gapminder)
+
 # tvthemes 1.3.0
 
 * New palette: 

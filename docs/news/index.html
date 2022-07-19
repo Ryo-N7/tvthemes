@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tvthemes</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -29,7 +29,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -67,12 +67,22 @@
     </div>
 
     <div class="section level2">
+<h2 class="page-header" data-toc-text="1.3.1" id="tvthemes-131">tvthemes 1.3.1<a class="anchor" aria-label="anchor" href="#tvthemes-131"></a></h2>
+<ul><li>Removed Google Fonts files from package as they took up a lot of
+space and people can easily download them themselves</li>
+<li>Removed Google Fonts related functions and tests, edited Fonts
+vignette</li>
+<li>Fixed Palette Hilda test that failed on CRAN due to no default</li>
+<li>Removed extraneous dependencies (spelling, gapminder)</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="page-header" data-toc-text="1.3.0" id="tvthemes-130">tvthemes 1.3.0<small>2022-03-16</small><a class="anchor" aria-label="anchor" href="#tvthemes-130"></a></h2>
 <ul><li>New palette:
 <ul><li>Steven Universe (31 variants based on different Gem characters)</li>
 </ul></li>
 <li>Remove {glue} package as a dependency</li>
-<li>Imgur links for plot examples are replaced with direct links to printed images in man/ folder</li>
+<li>Imgur links for plot examples are replaced with direct links to
+printed images in man/ folder</li>
 </ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="1.2.0" id="tvthemes-120">tvthemes 1.2.0<a class="anchor" aria-label="anchor" href="#tvthemes-120"></a></h2>
@@ -92,7 +102,9 @@
 </ul></li>
 <li>Renamed functions to fit <code>*_camelCase()</code> style:
 <ul><li>
-<code><a href="../reference/import_titilliumWeb.html">import_titilliumWeb()</a></code>, <code><a href="../reference/import_robotoCondensed.html">import_robotoCondensed()</a></code>, <code><a href="../reference/import_chelseaMarket.html">import_chelseaMarket()</a></code>
+<code>import_titilliumWeb()</code>,
+<code>import_robotoCondensed()</code>,
+<code>import_chelseaMarket()</code>
 </li>
 </ul></li>
 <li>Renamed ‘Avatar: The Last Airbender’ functions:
@@ -102,12 +114,16 @@
 </ul></li>
 <li>Deprecated functions:
 <ul><li>
-<code><a href="../reference/import_titillium_web.html">import_titillium_web()</a></code>, <code><a href="../reference/import_roboto_condensed.html">import_roboto_condensed()</a></code>, <code>scale_*_avatarTLA()</code>, <code><a href="../reference/theme_theLastAirbender.html">theme_theLastAirbender()</a></code>
+<code>import_titillium_web()</code>,
+<code>import_roboto_condensed()</code>,
+<code>scale_*_avatarTLA()</code>,
+<code><a href="../reference/theme_theLastAirbender.html">theme_theLastAirbender()</a></code>
 </li>
 </ul></li>
 <li>Deleted functions:
 <ul><li>
-<code>import_ChelseaMarket()</code> (replaced by <code><a href="../reference/import_chelseaMarket.html">import_chelseaMarket()</a></code>)</li>
+<code>import_ChelseaMarket()</code> (replaced by
+<code>import_chelseaMarket()</code>)</li>
 </ul></li>
 <li>Added <code>{packagedown}</code> website</li>
 <li>Split README into vignettes</li>
@@ -117,48 +133,61 @@
 <h2 class="page-header" data-toc-text="1.0.0" id="tvthemes-100">tvthemes 1.0.0<small>2019-09-03</small><a class="anchor" aria-label="anchor" href="#tvthemes-100"></a></h2>
 <ul><li>Released on CRAN! (September 3rd, 2019)</li>
 <li>New palettes:
-<ul><li>Kim Possible, Big Hero 6, Stannis Baratheon, House Manderly, House Martell, House Arryn, Hilda, &amp; Attack on Titan</li>
+<ul><li>Kim Possible, Big Hero 6, Stannis Baratheon, House Manderly, House
+Martell, House Arryn, Hilda, &amp; Attack on Titan</li>
 </ul></li>
 <li>New themes:
 <ul><li>Hilda: Day, Dusk, &amp; Night</li>
 </ul></li>
 <li>Increased functionality in all palette functions
 <ul><li>
-<code>palette</code>, <code>n</code>, <code>type</code>, <code>reverse</code> options added</li>
+<code>palette</code>, <code>n</code>, <code>type</code>,
+<code>reverse</code> options added</li>
 </ul></li>
-<li>TV shows with multiple palettes have a single function from which you call a specific palette:
+<li>TV shows with multiple palettes have a single function from which
+you call a specific palette:
 <ul><li><code>scale_color_westeros(palette = "Stannis")</code></li>
 <li><code>scale_fill_avatarTLA(palette = "EarthKingdom")</code></li>
 </ul></li>
-<li>Toggle ticks with <code>ticks = TRUE</code> or <code>ticks = FALSE</code>
+<li>Toggle ticks with <code>ticks = TRUE</code> or
+<code>ticks = FALSE</code>
 </li>
 <li>More tests added</li>
 <li>Improved documentation</li>
 </ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.0.0.9100" id="tvthemes-0009100">tvthemes 0.0.0.9100<a class="anchor" aria-label="anchor" href="#tvthemes-0009100"></a></h2>
-<ul><li>Corrected <code>title</code> in P&amp;R, R&amp;M, TLA themes to <code>plot.title</code>
+<ul><li>Corrected <code>title</code> in P&amp;R, R&amp;M, TLA themes to
+<code>plot.title</code>
 </li>
-<li>Fix swapped <code>axis.title.size</code> and <code>axis.text.size</code> in R&amp;M theme</li>
-<li>Tests added for ALL defaults in <code>theme_*()</code> to prevent above bugs</li>
+<li>Fix swapped <code>axis.title.size</code> and
+<code>axis.text.size</code> in R&amp;M theme</li>
+<li>Tests added for ALL defaults in <code>theme_*()</code> to prevent
+above bugs</li>
 </ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.0.0.9000" id="tvthemes-0009000">tvthemes 0.0.0.9000<a class="anchor" aria-label="anchor" href="#tvthemes-0009000"></a></h2>
 <ul><li>Initial release of package.</li>
 <li>
-<strong>Avatar: The Last Airbender</strong>: theme + palettes (Fire Nation, Water Tribe, Earth Kingdom, &amp; Air Nomads)</li>
+<strong>Avatar: The Last Airbender</strong>: theme + palettes (Fire
+Nation, Water Tribe, Earth Kingdom, &amp; Air Nomads)</li>
 <li>
-<strong>Brooklyn Nine-Nine</strong>: theme + palettes (regular &amp; dark)</li>
+<strong>Brooklyn Nine-Nine</strong>: theme + palettes (regular &amp;
+dark)</li>
 <li>
-<strong>Game of Thrones/A Song of Ice &amp; Fire</strong>: ‘The Palettes of Ice &amp; Fire’ (currently: Stark, Lannister, Tully, Targaryen, Greyjoy, &amp; Tyrell)</li>
+<strong>Game of Thrones/A Song of Ice &amp; Fire</strong>: ‘The
+Palettes of Ice &amp; Fire’ (currently: Stark, Lannister, Tully,
+Targaryen, Greyjoy, &amp; Tyrell)</li>
 <li>
 <strong>Rick &amp; Morty</strong>: theme + palette</li>
 <li>
-<strong>Parks &amp; Recreation</strong>: two themes (light &amp; dark) + palette</li>
+<strong>Parks &amp; Recreation</strong>: two themes (light &amp;
+dark) + palette</li>
 <li>
 <strong>The Simpsons</strong>: theme + palette</li>
 <li>
-<strong>Spongebob Squarepants</strong>: theme + palette + background images</li>
+<strong>Spongebob Squarepants</strong>: theme + palette + background
+images</li>
 </ul></div>
   </div>
 
@@ -170,11 +199,13 @@
 
 
       <footer><div class="copyright">
-  <p></p><p>Developed by <a href="https://ryo-n7.github.io" class="external-link">Ryo Nakagawara</a>.</p>
+  <p></p><p>Developed by <a href="https://ryo-n7.github.io" class="external-link">Ryo
+Nakagawara</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.2.</p>
 </div>
 
       </footer></div>

@@ -1,95 +1,3 @@
-#' @title Import "Titillium Web" font (deprecated)
-#' @description Imports Titillium Web
-#' @details import_*() functions taken from hrbrthemes.
-#' @seealso
-#'  \code{\link[extrafont]{font_import}}
-#' @rdname import_titillium_web
-#' @export
-#' @importFrom extrafont font_import
-
-import_titillium_web <- function() {
-  .Deprecated("import_titiliumWeb")
-  titillium_web_font_dir <- system.file("fonts", "Titillium-Web", package = "tvthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(paths = titillium_web_font_dir, prompt = FALSE)))
-
-  message(
-    sprintf(
-      "You should install these fonts on your system directly. The files are located in [%s]",
-      titillium_web_font_dir
-    )
-  )
-}
-
-#' @title Import "Titillium Web" font
-#' @description Imports Titillium Web
-#' @details import_*() functions taken from hrbrthemes.
-#' @seealso
-#'  \code{\link[extrafont]{font_import}}
-#' @rdname import_titilliumWeb
-#' @export
-#' @importFrom extrafont font_import
-
-import_titilliumWeb <- function() {
-
-  titillium_web_font_dir <- system.file("fonts", "Titillium-Web", package = "tvthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(paths = titillium_web_font_dir, prompt = FALSE)))
-
-  message(
-    sprintf(
-      "You should install these fonts on your system directly. The files are located in [%s]",
-      titillium_web_font_dir
-    )
-  )
-}
-
-#' @title Import "Roboto Condensed" font (deprecated)
-#' @description taken from hrbrthemes
-#' @details import_*() functions taken from hrbrthemes.
-#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
-#' @seealso
-#'  \code{\link[extrafont]{font_import}}
-#' @rdname import_roboto_condensed
-#' @export
-#' @importFrom extrafont font_import
-
-import_roboto_condensed <- function() {
-  .Deprecated("import_robotoCondensed")
-  rc_font_dir <- system.file("fonts", "Roboto-Condensed", package = "tvthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(paths = rc_font_dir, prompt = FALSE)))
-
-  message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      rc_font_dir)
-  )
-}
-
-#' @title Import "Roboto Condensed" font
-#' @description taken from hrbrthemes
-#' @details import_*() functions taken from hrbrthemes.
-#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
-#' @seealso
-#'  \code{\link[extrafont]{font_import}}
-#' @rdname import_robotoCondensed
-#' @export
-#' @importFrom extrafont font_import
-
-import_robotoCondensed <- function() {
-
-  rc_font_dir <- system.file("fonts", "Roboto-Condensed", package = "tvthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(paths = rc_font_dir, prompt = FALSE)))
-
-  message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      rc_font_dir)
-  )
-}
-
 #' @title Import "Akbar" font
 #' @description The Simpsons Font ("Akbar" font)
 #' @details import_*() functions taken from hrbrthemes.
@@ -112,29 +20,6 @@ import_simpsons <- function() {
       "You should install these fonts on your system directly. The files are located in [%s]",
       simpsons_font_dir
     )
-  )
-}
-
-#' @title Import "Cinzel" font
-#' @description Game of Thrones font ("Cinzel" font)
-#' @details import_*() functions taken from hrbrthemes, actual font is "Trajan Pro".
-#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
-#' @seealso
-#'  \code{\link[extrafont]{font_import}}
-#' @rdname import_cinzel
-#' @export
-#' @importFrom extrafont font_import
-
-import_cinzel <- function() {
-
-  cinzel_font_dir <- system.file("fonts", "Cinzel", package = "tvthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(paths = cinzel_font_dir, prompt = FALSE)))
-
-  message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      cinzel_font_dir)
   )
 }
 
@@ -227,30 +112,6 @@ import_avatar <- function() {
   )
 }
 
-#' @title Import "Chelsea Market" font
-#' @description Imports Chelsea Market (Hilda)
-#' @details import_*() functions taken from hrbrthemes.
-#' Formerly `import_ChelseaMarket()` which as been deleted rather than deprecated.
-#' You may still need to install each font on your system directly by finding the .ttf file and clicking "Install".
-#' @seealso
-#'  \code{\link[extrafont]{font_import}}
-#' @rdname import_chelseaMarket
-#' @export
-#' @importFrom extrafont font_import
-
-import_chelseaMarket <- function() {
-
-  ChelseaMarket_font_dir <- system.file("fonts", "ChelseaMarket", package = "tvthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(paths = ChelseaMarket_font_dir, prompt = FALSE)))
-
-  message(
-    sprintf(
-      "You should install these fonts on your system directly. The files are located in [%s]",
-      ChelseaMarket_font_dir
-    )
-  )
-}
 
 #' @title Import "Gravitation Falls" font
 #' @description Imports Gravitation Falls font (Gravity Falls)
