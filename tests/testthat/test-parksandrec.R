@@ -45,7 +45,7 @@ test_that("theme_parksAndRec works", {
   expect_equal(thm$legend.text$size, 12)
   expect_equal(thm$legend.title$size, 14)
   ## ticks
-  expect_equal(thm$axis.ticks$size, 0.15)
+  expect_equal(thm$axis.ticks$linewidth, 0.15)
   ## color
   #expect_null(thm$text$colour)
   expect_null(thm$plot.title$colour)
@@ -100,7 +100,7 @@ test_that("theme_parksAndRec-light works", {
   expect_equal(thm$legend.text$size, 12)
   expect_equal(thm$legend.title$size, 14)
   ## ticks
-  expect_equal(thm$axis.ticks$size, 0.15)
+  expect_equal(thm$axis.ticks$linewidth, 0.15)
   ## color
   expect_equal(thm$text$colour, "grey20")
   expect_equal(thm$plot.title$colour, "grey20")
@@ -157,7 +157,7 @@ test_that("theme_parksAndRec-light works", {
   expect_equal(thm$legend.text$size, 12)
   expect_equal(thm$legend.title$size, 14)
   ## ticks
-  expect_equal(thm$axis.ticks$size, 0.15)
+  expect_equal(thm$axis.ticks$linewidth, 0.15)
   ## color
   expect_equal(thm$text$colour, "grey20")
   expect_equal(thm$plot.title$colour, "grey20")

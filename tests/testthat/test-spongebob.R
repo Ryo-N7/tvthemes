@@ -45,7 +45,7 @@ test_that("theme_spongeBob works", {
   expect_equal(thm$legend.text$size, 9)
   expect_equal(thm$legend.title$size, 10)
   ## ticks
-  expect_equal(thm$axis.ticks$size, 0.15)
+  expect_equal(thm$axis.ticks$linewidth, 0.15)
   ## color
   expect_equal(thm$text$colour, "#F9FEFF")
   expect_equal(thm$plot.title$colour, "#F9FEFF")

@@ -83,9 +83,9 @@ theme_hildaDay <- function(
                            axis.ticks.x = element_blank(),
                            axis.ticks.y = element_blank())
   } else {
-    hildaDay <- hildaDay + theme(axis.ticks = element_line(size = 0.15, color = "#93a1a1"),
-                           axis.ticks.x = element_line(size = 0.15, color = "#93a1a1"),
-                           axis.ticks.y = element_line(size = 0.15, color = "#93a1a1"),
+    hildaDay <- hildaDay + theme(axis.ticks = element_line(linewidth = 0.15, color = "#93a1a1"),
+                           axis.ticks.x = element_line(linewidth = 0.15, color = "#93a1a1"),
+                           axis.ticks.y = element_line(linewidth = 0.15, color = "#93a1a1"),
                            axis.ticks.length = grid::unit(4, "pt"))
   }
 
@@ -177,9 +177,9 @@ theme_hildaDusk <- function(
                                      axis.ticks.x = element_blank(),
                                      axis.ticks.y = element_blank())
   } else {
-    hildaDusk <- hildaDusk + theme(axis.ticks = element_line(size = 0.15, color = "white"),
-                                     axis.ticks.x = element_line(size = 0.15, color = "white"),
-                                     axis.ticks.y = element_line(size = 0.15, color = "white"),
+    hildaDusk <- hildaDusk + theme(axis.ticks = element_line(linewidth = 0.15, color = "white"),
+                                     axis.ticks.x = element_line(linewidth = 0.15, color = "white"),
+                                     axis.ticks.y = element_line(linewidth = 0.15, color = "white"),
                                      axis.ticks.length = grid::unit(4, "pt"))
   }
 
@@ -270,9 +270,9 @@ theme_hildaNight <- function(
                   axis.ticks.x = element_blank(),
                   axis.ticks.y = element_blank())
   } else {
-    hildaNight <- hildaNight + theme(axis.ticks = element_line(size = 0.15, color = "white"),
-                  axis.ticks.x = element_line(size = 0.15, color = "white"),
-                  axis.ticks.y = element_line(size = 0.15, color = "white"),
+    hildaNight <- hildaNight + theme(axis.ticks = element_line(linewidth = 0.15, color = "white"),
+                  axis.ticks.x = element_line(linewidth = 0.15, color = "white"),
+                  axis.ticks.y = element_line(linewidth = 0.15, color = "white"),
                   axis.ticks.length = grid::unit(4, "pt"))
   }
 

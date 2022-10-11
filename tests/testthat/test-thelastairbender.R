@@ -45,7 +45,7 @@ test_that("theme_theLastAirbender works", {
   expect_equal(thm$legend.text$size, 8)
   expect_equal(thm$legend.title$size, 10)
   ## ticks
-  expect_equal(thm$axis.ticks$size, 0.15)
+  expect_equal(thm$axis.ticks$linewidth, 0.15)
   ## color
   #expect_null(thm$text$colour)
   expect_null(thm$plot.title$colour)
@@ -100,7 +100,7 @@ test_that("theme_avatar works", {
   expect_equal(thm$legend.text$size, 8)
   expect_equal(thm$legend.title$size, 10)
   ## ticks
-  expect_equal(thm$axis.ticks$size, 0.15)
+  expect_equal(thm$axis.ticks$linewidth, 0.15)
   ## color
   #expect_null(thm$text$colour)
   expect_null(thm$plot.title$colour)

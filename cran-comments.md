@@ -1,9 +1,6 @@
 ## Minor patch
 
-* Removed Google Fonts files from package as they took up a lot of space and people can easily download them themselves
-* Removed Google Fonts related functions and tests, edited Fonts vignette 
-* Fixed Palette Hilda test that failed on CRAN due to no default
-* Removed extraneous dependencies (spelling, gapminder)
+* Change 'size' argument for `element_line()` and `element_rect()` to 'linewidth' in line with upcoming version of {ggplot2}
 
 ## Test environments
 * local Windows 10 x64 install, R 4.0.5

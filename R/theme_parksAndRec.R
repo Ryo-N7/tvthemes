@@ -84,9 +84,9 @@ theme_parksAndRec <- function(
                                  axis.ticks.x = element_blank(),
                                  axis.ticks.y = element_blank())
   } else {
-    lilsebastian <- lilsebastian + theme(axis.ticks = element_line(size = 0.15, color = "white"),
-                                 axis.ticks.x = element_line(size = 0.15, color = "white"),
-                                 axis.ticks.y = element_line(size = 0.15, color = "white"),
+    lilsebastian <- lilsebastian + theme(axis.ticks = element_line(linewidth = 0.15, color = "white"),
+                                 axis.ticks.x = element_line(linewidth = 0.15, color = "white"),
+                                 axis.ticks.y = element_line(linewidth = 0.15, color = "white"),
                                  axis.ticks.length = grid::unit(4, "pt"))
   }
 }
@@ -175,9 +175,9 @@ theme_parksAndRecLight <- function(
                                          axis.ticks.x = element_blank(),
                                          axis.ticks.y = element_blank())
   } else {
-    lilsebastian <- lilsebastian + theme(axis.ticks = element_line(size = 0.15, color = "white"),
-                                         axis.ticks.x = element_line(size = 0.15, color = "white"),
-                                         axis.ticks.y = element_line(size = 0.15, color = "white"),
+    lilsebastian <- lilsebastian + theme(axis.ticks = element_line(linewidth = 0.15, color = "white"),
+                                         axis.ticks.x = element_line(linewidth = 0.15, color = "white"),
+                                         axis.ticks.y = element_line(linewidth = 0.15, color = "white"),
                                          axis.ticks.length = grid::unit(4, "pt"))
   }
 }
@@ -261,9 +261,9 @@ theme_parksAndRec_light <- function(
                                  axis.ticks.x = element_blank(),
                                  axis.ticks.y = element_blank())
   } else {
-    lilsebastian <- lilsebastian + theme(axis.ticks = element_line(size = 0.15, color = "white"),
-                                 axis.ticks.x = element_line(size = 0.15, color = "white"),
-                                 axis.ticks.y = element_line(size = 0.15, color = "white"),
+    lilsebastian <- lilsebastian + theme(axis.ticks = element_line(linewidth = 0.15, color = "white"),
+                                 axis.ticks.x = element_line(linewidth = 0.15, color = "white"),
+                                 axis.ticks.y = element_line(linewidth = 0.15, color = "white"),
                                  axis.ticks.length = grid::unit(4, "pt"))
   }
 }
