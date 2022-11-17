@@ -1,6 +1,6 @@
 ## Minor patch
 
-* Change 'size' argument for `element_line()` and `element_rect()` to 'linewidth' in line with upcoming version of {ggplot2}
+* Change 'size' argument for `element_line()` and `element_rect()` to 'linewidth' in line with new 3.4.0 version of {ggplot2}
 
 ## Test environments
 * local Windows 10 x64 install, R 4.0.5

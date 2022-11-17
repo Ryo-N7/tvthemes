@@ -166,7 +166,7 @@ theme_parksAndRecLight <- function(
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "grey20", linetype = "solid", size = 1.15),
+          legend.key = element_rect(colour = "grey20", linetype = "solid", linewidth = 1.15),
           legend.background = element_rect(color = "grey20", fill = "#CCFFBB", linetype = "solid")
     )
 

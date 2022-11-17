@@ -58,7 +58,7 @@ test_that("theme_parksAndRec works", {
 })
 
 test_that("theme_parksAndRec-light works", {
-  thm <- theme_parksAndRec_light()
+  thm <- theme_parksAndRecLight()
   expect_s3_class(thm, "theme")
   ## font
   expect_equal(thm$text$family, "")
@@ -84,7 +84,7 @@ test_that("theme_parksAndRec-light works", {
   expect_equal(thm$legend.position, "bottom")
 
   ## ticks == TRUE
-  thm <- theme_parksAndRec_light(ticks = TRUE)
+  thm <- theme_parksAndRecLight(ticks = TRUE)
   expect_s3_class(thm, "theme")
   ## font
   expect_equal(thm$text$family, "")

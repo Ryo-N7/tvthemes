@@ -6,7 +6,6 @@ test_that("fonts install", {
   invisible(import_rickAndMorty())
   invisible(import_simpsons())
   invisible(import_spongeBob())
-  invisible(import_theLastAirbender())
   # invisible(import_titillium_web())
   invisible(import_gravitationFalls())
   ## camelCase
