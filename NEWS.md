@@ -1,3 +1,8 @@
+# tvthemes 1.3.2
+
+* Change 'size' argument for `element_line()` and `element_rect()` to 'linewidth' in line with new 3.4.0 version of {ggplot2}
+  * See [issue #20](https://github.com/Ryo-N7/tvthemes/issues/20)
+
 # tvthemes 1.3.1
 
 * Removed Google Fonts files from package as they took up a lot of space and people can easily download them themselves

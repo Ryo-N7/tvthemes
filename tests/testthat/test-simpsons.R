@@ -45,7 +45,7 @@ test_that("theme_simpsons works", {
   expect_equal(thm$legend.text$size, 9)
   expect_equal(thm$legend.title$size, 10)
   ## ticks
-  expect_equal(thm$axis.ticks$size, 0.15)
+  expect_equal(thm$axis.ticks$linewidth, 0.15)
   ## color
   expect_equal(thm$text$colour, "#fee8c8")
   expect_equal(thm$plot.title$colour, "#FFD235")

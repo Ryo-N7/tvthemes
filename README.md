@@ -1,13 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tvthemes 1.3.0 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
+# tvthemes 1.3.1 <img src="man/figures/logo.png" align="right" style="padding-left:10px;background-color:white;" />
 
 <!-- badges: start -->
 
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/tvthemes)](https://CRAN.R-project.org/package=tvthemes)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tvthemes)](https://CRAN.R-project.org/package=tvthemes)
 [![Downloads](http://cranlogs.r-pkg.org/badges/tvthemes)](https://cran.r-project.org/package=tvthemes)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -18,7 +18,7 @@ status](https://github.com/Ryo-N7/tvthemes/workflows/R-CMD-check/badge.svg)](htt
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O342A2A)
 <!-- badges: end -->
 
-[Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo/)
+[Ryo Nakagawara \| Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo/)
 
 The `tvthemes` package is a collection of various `ggplot2` themes and
 color/fill palettes based on everybody’s favorite TV shows. What
@@ -27,20 +27,18 @@ kick-started this whole package was my
 looking at simple TV stats on my current favorite TV show, Brooklyn
 Nine-Nine. I got a lot of good feedback on the colors I used for the
 custom `ggplot2` theme and color palettes so I decided to expand it to
-other shows that I love\! Suggestions and Pull Requests for
-palettes/themes are welcome\!
+other shows that I love! Suggestions and Pull Requests for
+palettes/themes are welcome!
 
-  - [Package Website](https://ryo-n7.github.io/tvthemes/)
-  - [Intro to `tvthemes 0.0.0.9100` blog
+-   [Package Website](https://ryo-n7.github.io/tvthemes/)
+-   [Intro to `tvthemes 0.0.0.9100` blog
     post](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/)
-  - [`tvthemes 1.0.0` & CRAN release blog
+-   [`tvthemes 1.0.0` & CRAN release blog
     post](https://ryo-n7.github.io/2019-09-06-tvthemes-CRAN-announcement/)
-  - [`tvthemes 1.1.0` & CRAN release blog
+-   [`tvthemes 1.1.0` & CRAN release blog
     post](https://ryo-n7.github.io/2019-11-04-tvthemes-1.1.0-announcement/)
-  - [`tvthemes 1.3.0` & CRAN release blog
+-   [`tvthemes 1.3.0` & CRAN release blog
     post](https://ryo-n7.github.io/2022-03-17-tvthemes-1.3.0-announcement/)
-
-<!-- end list -->
 
 ``` r
 library(tvthemes)
@@ -66,24 +64,24 @@ ggplot(mpg, aes(displ)) +
 
 ## Current list of TV shows
 
-  - **Avatar: The Last Airbender**: theme + palettes (Fire Nation, Water
+-   **Avatar: The Last Airbender**: theme + palettes (Fire Nation, Water
     Tribe, Earth Kingdom, & Air Nomads)
-  - **Brooklyn Nine-Nine**: theme + palettes (regular & dark)
-  - **Game of Thrones/A Song of Ice & Fire**: ‘The Palettes of Ice &
+-   **Brooklyn Nine-Nine**: theme + palettes (regular & dark)
+-   **Game of Thrones/A Song of Ice & Fire**: ‘The Palettes of Ice &
     Fire’ (currently: Stark, Baratheon (Stannis), Lannister, Tully,
     Targaryen, Martell, Greyjoy, Tyrell, Arryn, Manderly)
-  - **Rick & Morty**: theme + palette
-  - **Parks & Recreation**: two themes (light & dark) + palette
-  - **The Simpsons**: theme + palette
-  - **Spongebob Squarepants**: theme + palette + background images
-  - **Hilda**: Day, Dusk, Night themes + palettes
-  - **Attack on Titan**: palette
-  - **Kim Possible**: palette
-  - **Big Hero 6**: palette
-  - **Gravity Falls**: palette
-  - **Steven Universe**: palette
-  - *More in future releases…*
-  - *Development branch*: TBD…
+-   **Rick & Morty**: theme + palette
+-   **Parks & Recreation**: two themes (light & dark) + palette
+-   **The Simpsons**: theme + palette
+-   **Spongebob Squarepants**: theme + palette + background images
+-   **Hilda**: Day, Dusk, Night themes + palettes
+-   **Attack on Titan**: palette
+-   **Kim Possible**: palette
+-   **Big Hero 6**: palette
+-   **Gravity Falls**: palette
+-   **Steven Universe**: palette
+-   *More in future releases…*
+-   *Development branch*: TBD…
 
 ## Installation
 
@@ -98,7 +96,7 @@ devtools::install_github("Ryo-N7/tvthemes")
 install.packages("tvthemes")
 ```
 
-Now available on [CRAN](https://CRAN.R-project.org/package=tvthemes)\!
+Now available on [CRAN](https://CRAN.R-project.org/package=tvthemes)!
 
 ## tvthemes 1.0.0 Major Changes
 
