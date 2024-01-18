@@ -1,6 +1,12 @@
 context("test-hilda")
 
 expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+expect_equal_scales <- function(x, y, ...) {
+  x <- as.list(x)
+  y <- as.list(y)
+  x$call <- y$call <- NULL
+  expect_equal(x, y, ...)
+}
 
 # Hilda Day ----
 test_that("theme_hildaDay works", {
@@ -66,7 +72,7 @@ test_that("hilda_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_hilda equals scale_color_hilda", {
-  expect_eqNe(scale_color_hilda(palette = "Day"), scale_colour_hilda(palette = "Day"))
+  expect_equal_scales(scale_color_hilda(palette = "Day"), scale_colour_hilda(palette = "Day"))
 })
 
 test_that("scale_colour_hilda works", {
@@ -139,7 +145,7 @@ test_that("hilda_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_hilda equals scale_color_hilda", {
-  expect_eqNe(scale_color_hilda(palette = "Dusk"), scale_colour_hilda(palette = "Dusk"))
+  expect_equal_scales(scale_color_hilda(palette = "Dusk"), scale_colour_hilda(palette = "Dusk"))
 })
 
 test_that("scale_colour_hilda works", {
@@ -212,7 +218,7 @@ test_that("hilda_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_hilda equals scale_color_hilda", {
-  expect_eqNe(scale_color_hilda(palette = "Night"), scale_colour_hilda(palette = "Night"))
+  expect_equal_scales(scale_color_hilda(palette = "Night"), scale_colour_hilda(palette = "Night"))
 })
 
 test_that("scale_colour_hilda works", {

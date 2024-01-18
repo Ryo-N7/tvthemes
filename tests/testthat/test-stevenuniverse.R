@@ -1,3 +1,10 @@
+expect_equal_scales <- function(x, y, ...) {
+  x <- as.list(x)
+  y <- as.list(y)
+  x$call <- y$call <- NULL
+  expect_equal(x, y, ...)
+}
+
 ### Steven ----
 
 test_that('Steven_pal raises warning with large number, x > 8', {
@@ -7,7 +14,7 @@ test_that('Steven_pal raises warning with large number, x > 8', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Steven', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Steven'), scale_colour_stevenUniverse(palette = 'Steven'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Steven'), scale_colour_stevenUniverse(palette = 'Steven'))
 })
 
 test_that('scale_colour_Steven works', {
@@ -27,7 +34,7 @@ test_that('Garnet_pal raises warning with large number, x > 9', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Garnet', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Garnet'), scale_colour_stevenUniverse(palette = 'Garnet'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Garnet'), scale_colour_stevenUniverse(palette = 'Garnet'))
 })
 
 test_that('scale_colour_Garnet works', {
@@ -47,7 +54,7 @@ test_that('Amethyst_pal raises warning with large number, x > 6', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Amethyst', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Amethyst'), scale_colour_stevenUniverse(palette = 'Amethyst'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Amethyst'), scale_colour_stevenUniverse(palette = 'Amethyst'))
 })
 
 test_that('scale_colour_Amethyst works', {
@@ -67,7 +74,7 @@ test_that('Pearl_pal raises warning with large number, x > 6', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Pearl', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Pearl'), scale_colour_stevenUniverse(palette = 'Pearl'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Pearl'), scale_colour_stevenUniverse(palette = 'Pearl'))
 })
 
 test_that('scale_colour_Pearl works', {
@@ -87,7 +94,7 @@ test_that('RoseQuartz_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_RoseQuartz', {
-  expect_equal(scale_color_stevenUniverse(palette = 'RoseQuartz'), scale_colour_stevenUniverse(palette = 'RoseQuartz'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'RoseQuartz'), scale_colour_stevenUniverse(palette = 'RoseQuartz'))
 })
 
 test_that('scale_colour_RoseQuartz works', {
@@ -107,7 +114,7 @@ test_that('Peridot_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Peridot', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Peridot'), scale_colour_stevenUniverse(palette = 'Peridot'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Peridot'), scale_colour_stevenUniverse(palette = 'Peridot'))
 })
 
 test_that('scale_colour_Peridot works', {
@@ -127,7 +134,7 @@ test_that('LapisLazuli_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_LapisLazuli', {
-  expect_equal(scale_color_stevenUniverse(palette = 'LapisLazuli'), scale_colour_stevenUniverse(palette = 'LapisLazuli'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'LapisLazuli'), scale_colour_stevenUniverse(palette = 'LapisLazuli'))
 })
 
 test_that('scale_colour_LapisLazuli works', {
@@ -147,7 +154,7 @@ test_that('Diamonds_pal raises warning with large number, x > 9', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Diamonds', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Diamonds'), scale_colour_stevenUniverse(palette = 'Diamonds'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Diamonds'), scale_colour_stevenUniverse(palette = 'Diamonds'))
 })
 
 test_that('scale_colour_Diamonds works', {
@@ -167,7 +174,7 @@ test_that('Jasper_pal raises warning with large number, x > 6', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Jasper', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Jasper'), scale_colour_stevenUniverse(palette = 'Jasper'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Jasper'), scale_colour_stevenUniverse(palette = 'Jasper'))
 })
 
 test_that('scale_colour_Jasper works', {
@@ -187,7 +194,7 @@ test_that('Topaz_pal raises warning with large number, x > 6', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Topaz', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Topaz'), scale_colour_stevenUniverse(palette = 'Topaz'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Topaz'), scale_colour_stevenUniverse(palette = 'Topaz'))
 })
 
 test_that('scale_colour_Topaz works', {
@@ -207,7 +214,7 @@ test_that('Spinel_pal raises warning with large number, x > 6', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Spinel', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Spinel'), scale_colour_stevenUniverse(palette = 'Spinel'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Spinel'), scale_colour_stevenUniverse(palette = 'Spinel'))
 })
 
 test_that('scale_colour_Spinel works', {
@@ -227,7 +234,7 @@ test_that('Bismuth_pal raises warning with large number, x > 8', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Bismuth', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Bismuth'), scale_colour_stevenUniverse(palette = 'Bismuth'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Bismuth'), scale_colour_stevenUniverse(palette = 'Bismuth'))
 })
 
 test_that('scale_colour_Bismuth works', {
@@ -247,7 +254,7 @@ test_that('Ruby_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Ruby', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Ruby'), scale_colour_stevenUniverse(palette = 'Ruby'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Ruby'), scale_colour_stevenUniverse(palette = 'Ruby'))
 })
 
 test_that('scale_colour_Ruby works', {
@@ -267,7 +274,7 @@ test_that('Sapphire_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Sapphire', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Sapphire'), scale_colour_stevenUniverse(palette = 'Sapphire'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Sapphire'), scale_colour_stevenUniverse(palette = 'Sapphire'))
 })
 
 test_that('scale_colour_Sapphire works', {
@@ -287,7 +294,7 @@ test_that('Emerald_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Emerald', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Emerald'), scale_colour_stevenUniverse(palette = 'Emerald'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Emerald'), scale_colour_stevenUniverse(palette = 'Emerald'))
 })
 
 test_that('scale_colour_Emerald works', {
@@ -307,7 +314,7 @@ test_that('Nephrite_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Nephrite', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Nephrite'), scale_colour_stevenUniverse(palette = 'Nephrite'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Nephrite'), scale_colour_stevenUniverse(palette = 'Nephrite'))
 })
 
 test_that('scale_colour_Nephrite works', {
@@ -327,7 +334,7 @@ test_that('Aquamarine_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Aquamarine', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Aquamarine'), scale_colour_stevenUniverse(palette = 'Aquamarine'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Aquamarine'), scale_colour_stevenUniverse(palette = 'Aquamarine'))
 })
 
 test_that('scale_colour_Aquamarine works', {
@@ -347,7 +354,7 @@ test_that('Padparadscha_pal raises warning with large number, x > 6', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Padparadscha', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Padparadscha'), scale_colour_stevenUniverse(palette = 'Padparadscha'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Padparadscha'), scale_colour_stevenUniverse(palette = 'Padparadscha'))
 })
 
 test_that('scale_colour_Padparadscha works', {
@@ -367,7 +374,7 @@ test_that('Rutile_pal raises warning with large number, x > 5', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Rutile', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Rutile'), scale_colour_stevenUniverse(palette = 'Rutile'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Rutile'), scale_colour_stevenUniverse(palette = 'Rutile'))
 })
 
 test_that('scale_colour_Rutile works', {
@@ -387,7 +394,7 @@ test_that('Rhodonite_pal raises warning with large number, x > 8', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Rhodonite', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Rhodonite'), scale_colour_stevenUniverse(palette = 'Rhodonite'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Rhodonite'), scale_colour_stevenUniverse(palette = 'Rhodonite'))
 })
 
 test_that('scale_colour_Rhodonite works', {
@@ -407,7 +414,7 @@ test_that('Flourite_pal raises warning with large number, x > 8', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Flourite', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Flourite'), scale_colour_stevenUniverse(palette = 'Flourite'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Flourite'), scale_colour_stevenUniverse(palette = 'Flourite'))
 })
 
 test_that('scale_colour_Flourite works', {
@@ -427,7 +434,7 @@ test_that('MegaPearl_pal raises warning with large number, x > 9', {
 })
 
 test_that('scale_colour_Steven equals scale_color_MegaPearl', {
-  expect_equal(scale_color_stevenUniverse(palette = 'MegaPearl'), scale_colour_stevenUniverse(palette = 'MegaPearl'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'MegaPearl'), scale_colour_stevenUniverse(palette = 'MegaPearl'))
 })
 
 test_that('scale_colour_MegaPearl works', {
@@ -447,7 +454,7 @@ test_that('Sugilite_pal raises warning with large number, x > 6', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Sugilite', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Sugilite'), scale_colour_stevenUniverse(palette = 'Sugilite'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Sugilite'), scale_colour_stevenUniverse(palette = 'Sugilite'))
 })
 
 test_that('scale_colour_Sugilite works', {
@@ -467,7 +474,7 @@ test_that('CrazyLaceAgate_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_CrazyLaceAgate', {
-  expect_equal(scale_color_stevenUniverse(palette = 'CrazyLaceAgate'), scale_colour_stevenUniverse(palette = 'CrazyLaceAgate'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'CrazyLaceAgate'), scale_colour_stevenUniverse(palette = 'CrazyLaceAgate'))
 })
 
 test_that('scale_colour_CrazyLaceAgate works', {
@@ -487,7 +494,7 @@ test_that('Sardonyx_pal raises warning with large number, x > 8', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Sardonyx', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Sardonyx'), scale_colour_stevenUniverse(palette = 'Sardonyx'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Sardonyx'), scale_colour_stevenUniverse(palette = 'Sardonyx'))
 })
 
 test_that('scale_colour_Sardonyx works', {
@@ -507,7 +514,7 @@ test_that('Alexandrite_pal raises warning with large number, x > 8', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Alexandrite', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Alexandrite'), scale_colour_stevenUniverse(palette = 'Alexandrite'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Alexandrite'), scale_colour_stevenUniverse(palette = 'Alexandrite'))
 })
 
 test_that('scale_colour_Alexandrite works', {
@@ -527,7 +534,7 @@ test_that('SmokyQuartz_pal raises warning with large number, x > 6', {
 })
 
 test_that('scale_colour_Steven equals scale_color_SmokyQuartz', {
-  expect_equal(scale_color_stevenUniverse(palette = 'SmokyQuartz'), scale_colour_stevenUniverse(palette = 'SmokyQuartz'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'SmokyQuartz'), scale_colour_stevenUniverse(palette = 'SmokyQuartz'))
 })
 
 test_that('scale_colour_SmokyQuartz works', {
@@ -547,7 +554,7 @@ test_that('BluebirdAzurite_pal raises warning with large number, x > 5', {
 })
 
 test_that('scale_colour_Steven equals scale_color_BluebirdAzurite', {
-  expect_equal(scale_color_stevenUniverse(palette = 'BluebirdAzurite'), scale_colour_stevenUniverse(palette = 'BluebirdAzurite'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'BluebirdAzurite'), scale_colour_stevenUniverse(palette = 'BluebirdAzurite'))
 })
 
 test_that('scale_colour_BluebirdAzurite works', {
@@ -567,7 +574,7 @@ test_that('Sunstone_pal raises warning with large number, x > 9', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Sunstone', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Sunstone'), scale_colour_stevenUniverse(palette = 'Sunstone'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Sunstone'), scale_colour_stevenUniverse(palette = 'Sunstone'))
 })
 
 test_that('scale_colour_Sunstone works', {
@@ -587,7 +594,7 @@ test_that('Opal_pal raises warning with large number, x > 7', {
 })
 
 test_that('scale_colour_Steven equals scale_color_Opal', {
-  expect_equal(scale_color_stevenUniverse(palette = 'Opal'), scale_colour_stevenUniverse(palette = 'Opal'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'Opal'), scale_colour_stevenUniverse(palette = 'Opal'))
 })
 
 test_that('scale_colour_Opal works', {
@@ -607,7 +614,7 @@ test_that('CrystalGems_pal raises warning with large number, x > 12', {
 })
 
 test_that('scale_colour_Steven equals scale_color_CrystalGems', {
-  expect_equal(scale_color_stevenUniverse(palette = 'CrystalGems'), scale_colour_stevenUniverse(palette = 'CrystalGems'))
+  expect_equal_scales(scale_color_stevenUniverse(palette = 'CrystalGems'), scale_colour_stevenUniverse(palette = 'CrystalGems'))
 })
 
 test_that('scale_colour_CrystalGems works', {

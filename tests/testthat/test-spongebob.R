@@ -1,6 +1,12 @@
 context("test-spongebob")
 
 expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+expect_equal_scales <- function(x, y, ...) {
+  x <- as.list(x)
+  y <- as.list(y)
+  x$call <- y$call <- NULL
+  expect_equal(x, y, ...)
+}
 
 test_that("theme_spongeBob works", {
   thm <- theme_spongeBob()
@@ -64,7 +70,7 @@ test_that("spongeBob_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_spongeBob equals scale_color_spongeBob", {
-  expect_eqNe(scale_color_spongeBob(), scale_colour_spongeBob())
+  expect_equal_scales(scale_color_spongeBob(), scale_colour_spongeBob())
 })
 
 test_that("scale_colour_spongeBob works", {

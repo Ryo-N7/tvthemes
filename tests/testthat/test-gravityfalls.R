@@ -1,6 +1,12 @@
 context("test-gravityFalls")
 
 expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+expect_equal_scales <- function(x, y, ...) {
+  x <- as.list(x)
+  y <- as.list(y)
+  x$call <- y$call <- NULL
+  expect_equal(x, y, ...)
+}
 
 ## Big Hero 6
 test_that("gravityFalls_pal raises warning with large number, x > 15", {
@@ -10,12 +16,7 @@ test_that("gravityFalls_pal raises warning with large number, x > 15", {
 })
 
 test_that("scale_colour_gravityFalls equals scale_color_gravityFalls", {
-  expect_eqNe(scale_color_gravityFalls(), scale_colour_gravityFalls())
-})
-
-test_that("scale_color_gravityFalls name is correct", {
-  color_scale <- scale_color_gravityFalls()
-  expect_equal(color_scale$scale_name, "gravityFalls")
+  expect_equal_scales(scale_color_gravityFalls(), scale_colour_gravityFalls())
 })
 
 test_that("scale_colour_gravityFalls works", {

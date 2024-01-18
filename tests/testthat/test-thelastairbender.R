@@ -1,6 +1,12 @@
 context("test-thelastairbender")
 
 expect_eqNe <- function(...) expect_equal(..., check.environment=FALSE)
+expect_equal_scales <- function(x, y, ...) {
+  x <- as.list(x)
+  y <- as.list(y)
+  x$call <- y$call <- NULL
+  expect_equal(x, y, ...)
+}
 
 test_that("theme_avatar works", {
   thm <- theme_avatar()
@@ -73,7 +79,7 @@ test_that("WaterTribe_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_WaterTribe equals scale_color_WaterTribe", {
-  expect_eqNe(scale_color_avatar(palette = "WaterTribe"), scale_colour_avatar(palette = "WaterTribe"))
+  expect_equal_scales(scale_color_avatar(palette = "WaterTribe"), scale_colour_avatar(palette = "WaterTribe"))
 })
 
 test_that("scale_colour_WaterTribe works", {
@@ -92,7 +98,7 @@ test_that("EarthKingdom_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_EarthKingdom equals scale_color_EarthKingdom", {
-  expect_eqNe(scale_color_avatar(palette = "EarthKingdom"), scale_colour_avatar(palette = "EarthKingdom"))
+  expect_equal_scales(scale_color_avatar(palette = "EarthKingdom"), scale_colour_avatar(palette = "EarthKingdom"))
 })
 
 test_that("scale_colour_EarthKingdom works", {
@@ -109,7 +115,7 @@ test_that("AirNomads_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_AirNomads equals scale_color_AirNomads", {
-  expect_eqNe(scale_color_avatar(palette = "AirNomads"), scale_colour_avatar(palette = "AirNomads"))
+  expect_equal_scales(scale_color_avatar(palette = "AirNomads"), scale_colour_avatar(palette = "AirNomads"))
 })
 
 test_that("scale_colour_AirNomads works", {
@@ -200,7 +206,7 @@ test_that("fireNation_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_fireNation equals scale_color_fireNation", {
-  expect_eqNe(scale_color_avatar(palette = "FireNation"), scale_colour_avatar(palette = "FireNation"))
+  expect_equal_scales(scale_color_avatar(palette = "FireNation"), scale_colour_avatar(palette = "FireNation"))
 })
 
 test_that("scale_colour_fireNation works", {
@@ -217,7 +223,7 @@ test_that("WaterTribe_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_WaterTribe equals scale_color_WaterTribe", {
-  expect_eqNe(scale_color_avatar(palette = "WaterTribe"), scale_colour_avatar(palette = "WaterTribe"))
+  expect_equal_scales(scale_color_avatar(palette = "WaterTribe"), scale_colour_avatar(palette = "WaterTribe"))
 })
 
 test_that("scale_colour_WaterTribe works", {
@@ -234,7 +240,7 @@ test_that("EarthKingdom_pal raises warning with large number, x > 9", {
 })
 
 test_that("scale_colour_EarthKingdom equals scale_color_EarthKingdom", {
-  expect_eqNe(scale_color_avatar(palette = "EarthKingdom"), scale_colour_avatar(palette = "EarthKingdom"))
+  expect_equal_scales(scale_color_avatar(palette = "EarthKingdom"), scale_colour_avatar(palette = "EarthKingdom"))
 })
 
 test_that("scale_colour_EarthKingdom works", {
@@ -251,7 +257,7 @@ test_that("AirNomads_pal raises warning with large number, x > 8", {
 })
 
 test_that("scale_colour_AirNomads equals scale_color_AirNomads", {
-  expect_eqNe(scale_color_avatar(palette = "AirNomads"), scale_colour_avatar(palette = "AirNomads"))
+  expect_equal_scales(scale_color_avatar(palette = "AirNomads"), scale_colour_avatar(palette = "AirNomads"))
 })
 
 test_that("scale_colour_AirNomads works", {
