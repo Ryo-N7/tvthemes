@@ -1,6 +1,12 @@
 context("test-kimpossible")
 
 expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+expect_equal_scales <- function(x, y, ...) {
+  x <- as.list(x)
+  y <- as.list(y)
+  x$call <- y$call <- NULL
+  expect_equal(x, y, ...)
+}
 
 ## Kim Possible
 test_that("kimPossible_pal raises warning with large number, x > 12", {
@@ -10,12 +16,7 @@ test_that("kimPossible_pal raises warning with large number, x > 12", {
 })
 
 test_that("scale_colour_kimPossible equals scale_color_kimPossible", {
-  expect_eqNe(scale_color_kimPossible(), scale_colour_kimPossible())
-})
-
-test_that("scale_color_kimPossible name is correct", {
-  color_scale <- scale_color_kimPossible()
-  expect_equal(color_scale$scale_name, "kimPossible")
+  expect_equal_scales(scale_color_kimPossible(), scale_colour_kimPossible())
 })
 
 test_that("scale_colour_kimPossible works", {

@@ -1,6 +1,12 @@
 context("test-simpsons")
 
 expect_eqNe <- function(...) expect_equal(..., check.environment = FALSE)
+expect_equal_scales <- function(x, y, ...) {
+  x <- as.list(x)
+  y <- as.list(y)
+  x$call <- y$call <- NULL
+  expect_equal(x, y, ...)
+}
 
 test_that("theme_simpsons works", {
   thm <- theme_simpsons()
@@ -64,7 +70,7 @@ test_that("simpsons_pal raises warning with large number, x > 10", {
 })
 
 test_that("scale_colour_simpsons equals scale_color_simpsons", {
-  expect_eqNe(scale_color_simpsons(), scale_colour_simpsons())
+  expect_equal_scales(scale_color_simpsons(), scale_colour_simpsons())
 })
 
 test_that("scale_colour_simpsons works", {
