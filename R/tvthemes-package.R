@@ -25,6 +25,7 @@
 #' @md
 #' @name tvthemes
 #' @docType package
+#' @aliases tvthemes-package
 #' @author Ryo Nakagawara (@@R_by_Ryo)
 #' @keywords internal
 

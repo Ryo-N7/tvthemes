@@ -13,7 +13,7 @@ Description: Contains various 'ggplot2' themes and color palettes based on TV sh
     'Spongebob Squarepants', and more.
 License: GPL-3
 Encoding: UTF-8
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Imports: 
     ggplot2 (>= 3.1.0),
     extrafont (>= 0.17),
