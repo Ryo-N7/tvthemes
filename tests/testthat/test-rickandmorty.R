@@ -69,17 +69,17 @@ test_that("rickAndMorty_pal raises warning with large number, x > 9", {
   expect_error(rickAndMorty_pal(n = 10))
 })
 
-test_that("scale_colour_rickAndMorty equals scale_color_rickAndMorty", {
-  expect_equal_scales(scale_color_rickAndMorty(), scale_colour_rickAndMorty())
-})
-
-test_that("scale_colour_rickAndMorty works", {
-  expect_is(scale_color_rickAndMorty(), "ScaleDiscrete")
-})
-
-test_that("scale_fill_rickAndMorty works", {
-  expect_is(scale_fill_rickAndMorty(), "ScaleDiscrete")
-})
+# test_that("scale_colour_rickAndMorty equals scale_color_rickAndMorty", {
+#   expect_equal_scales(scale_color_rickAndMorty(), scale_colour_rickAndMorty())
+# })
+#
+# test_that("scale_colour_rickAndMorty works", {
+#   expect_is(scale_color_rickAndMorty(), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_rickAndMorty works", {
+#   expect_is(scale_fill_rickAndMorty(), "ScaleDiscrete")
+# })
 
 ## Colors are correct ----
 test_that("R&M palette outputs correct colors", {

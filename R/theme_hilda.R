@@ -74,7 +74,7 @@ theme_hildaDay <- function(
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.1),
+          legend.key = element_rect(colour = "black", linetype = "solid", linewidth = 1.1),
           legend.background = element_rect(color = "black", fill = "#F5C98E", linetype = "solid")  ## #64719E  #8a2be2
     )
 
@@ -168,7 +168,7 @@ theme_hildaDusk <- function(
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.1),
+          legend.key = element_rect(colour = "black", linetype = "solid", linewidth = 1.1),
           legend.background = element_rect(color = "black", fill = "#B47880", linetype = "solid")  ## #64719E  #8a2be2
     )
 
@@ -261,7 +261,7 @@ theme_hildaNight <- function(
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.1),
+          legend.key = element_rect(colour = "black", linetype = "solid", linewidth = 1.1),
           legend.background = element_rect(color = "black", fill = "#64719E", linetype = "solid")  ## #64719E  #8a2be2
     )
 

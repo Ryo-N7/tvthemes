@@ -63,7 +63,7 @@ theme_theLastAirbender <- function(
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
+          legend.key = element_rect(colour = "black", linetype = "solid", linewidth = 1.25),
           legend.background = element_rect(color = "black", fill = "#ece5d3", linetype = "solid")
     )
 
@@ -147,13 +147,13 @@ theme_avatar <- function(
           # background/panel options
           plot.background = element_rect(color = NA, fill = "#ece5d3"),
           panel.background = element_rect(color = NA, fill = "#ece5d3"),
-          panel.grid.major = element_line(color = NULL, size = 1.25),
-          panel.grid.minor = element_line(color = NULL, size = 1.25),
+          panel.grid.major = element_line(color = NULL, linewidth = 1.25),
+          panel.grid.minor = element_line(color = NULL, linewidth = 1.25),
           # legend options
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
+          legend.key = element_rect(colour = "black", linetype = "solid", linewidth = 1.25),
           legend.background = element_rect(color = "black", fill = "#ece5d3", linetype = "solid")
     )
 

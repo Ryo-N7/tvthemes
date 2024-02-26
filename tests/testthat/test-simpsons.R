@@ -69,17 +69,17 @@ test_that("simpsons_pal raises warning with large number, x > 10", {
   expect_error(simpsons_pal(n = 11))
 })
 
-test_that("scale_colour_simpsons equals scale_color_simpsons", {
-  expect_equal_scales(scale_color_simpsons(), scale_colour_simpsons())
-})
-
-test_that("scale_colour_simpsons works", {
-  expect_is(scale_color_simpsons(), "ScaleDiscrete")
-})
-
-test_that("scale_fill_simpsons works", {
-  expect_is(scale_fill_simpsons(), "ScaleDiscrete")
-})
+# test_that("scale_colour_simpsons equals scale_color_simpsons", {
+#   expect_equal_scales(scale_color_simpsons(), scale_colour_simpsons())
+# })
+#
+# test_that("scale_colour_simpsons works", {
+#   expect_is(scale_color_simpsons(), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_simpsons works", {
+#   expect_is(scale_fill_simpsons(), "ScaleDiscrete")
+# })
 
 ## Colors are correct ----
 test_that("Simpsons palette outputs correct colors", {

@@ -15,170 +15,170 @@ test_that("stark_pal raises warning with large number, x > 9", {
   expect_error(westeros_pal(n = 10))
 })
 
-test_that("scale_colour_stark equals scale_color_stark", {
-  expect_equal_scales(scale_color_westeros(palette = "Stark"), scale_colour_westeros(palette = "Stark"))
-})
+# test_that("scale_colour_stark equals scale_color_stark", {
+#   expect_equal_scales(scale_color_westeros(palette = "Stark"), scale_colour_westeros(palette = "Stark"))
+# })
 
-test_that("scale_colour_stark works", {
-  expect_is(scale_color_westeros(palette = "Stark"), "ScaleDiscrete")
-})
+# test_that("scale_colour_stark works", {
+#   expect_is(scale_color_westeros(palette = "Stark"), "ScaleDiscrete")
+# })
 
-test_that("scale_fill_stark works", {
-  expect_is(scale_fill_westeros(palette = "Stark"), "ScaleDiscrete")
-})
+# test_that("scale_fill_stark works", {
+#   expect_is(scale_fill_westeros(palette = "Stark"), "ScaleDiscrete")
+# })
 
 ## House Lannister ----
 test_that("Lannister_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Lannister")(10))
 })
 
-test_that("scale_colour_Lannister equals scale_color_Lannister", {
-  expect_equal_scales(scale_color_westeros(palette = "Lannister"), scale_colour_westeros(palette = "Lannister"))
-})
+# test_that("scale_colour_Lannister equals scale_color_Lannister", {
+#   expect_equal_scales(scale_color_westeros(palette = "Lannister"), scale_colour_westeros(palette = "Lannister"))
+# })
 
-test_that("scale_colour_Lannister works", {
-  expect_is(scale_color_westeros(palette = "Lannister"), "ScaleDiscrete")
-})
+# test_that("scale_colour_Lannister works", {
+#   expect_is(scale_color_westeros(palette = "Lannister"), "ScaleDiscrete")
+# })
 
-test_that("scale_fill_Lannister works", {
-  expect_is(scale_fill_westeros(palette = "Lannister"), "ScaleDiscrete")
-})
+# test_that("scale_fill_Lannister works", {
+#   expect_is(scale_fill_westeros(palette = "Lannister"), "ScaleDiscrete")
+# })
 
 ## House Tyrell ----
 test_that("Tyrell_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Tyrell")(10))
 })
 
-test_that("scale_colour_Tyrell equals scale_color_Tyrell", {
-  expect_equal_scales(scale_color_westeros(palette = "Tyrell"), scale_colour_westeros(palette = "Tyrell"))
-})
+# test_that("scale_colour_Tyrell equals scale_color_Tyrell", {
+#   expect_equal_scales(scale_color_westeros(palette = "Tyrell"), scale_colour_westeros(palette = "Tyrell"))
+# })
 
-test_that("scale_colour_Tyrell works", {
-  expect_is(scale_color_westeros(palette = "Tyrell"), "ScaleDiscrete")
-})
+# test_that("scale_colour_Tyrell works", {
+#   expect_is(scale_color_westeros(palette = "Tyrell"), "ScaleDiscrete")
+# })
 
-test_that("scale_fill_Tyrell works", {
-  expect_is(scale_fill_westeros(palette = "Tyrell"), "ScaleDiscrete")
-})
+# test_that("scale_fill_Tyrell works", {
+#   expect_is(scale_fill_westeros(palette = "Tyrell"), "ScaleDiscrete")
+# })
 
 ## House Targaryen ----
 test_that("Targaryen_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Targaryen")(10))
 })
 
-test_that("scale_colour_Targaryen equals scale_color_Targaryen", {
-  expect_equal_scales(scale_color_westeros(palette = "Targaryen"), scale_colour_westeros(palette = "Targaryen"))
-})
+# test_that("scale_colour_Targaryen equals scale_color_Targaryen", {
+#   expect_equal_scales(scale_color_westeros(palette = "Targaryen"), scale_colour_westeros(palette = "Targaryen"))
+# })
 
-test_that("scale_colour_Targaryen works", {
-  expect_is(scale_color_westeros(palette = "Targaryen"), "ScaleDiscrete")
-})
+# test_that("scale_colour_Targaryen works", {
+#   expect_is(scale_color_westeros(palette = "Targaryen"), "ScaleDiscrete")
+# })
 
-test_that("scale_fill_Targaryen works", {
-  expect_is(scale_fill_westeros(palette = "Targaryen"), "ScaleDiscrete")
-})
+# test_that("scale_fill_Targaryen works", {
+#   expect_is(scale_fill_westeros(palette = "Targaryen"), "ScaleDiscrete")
+# })
 
 ## House Tully ----
 test_that("Tully_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Tully")(10))
 })
 
-test_that("scale_colour_Tully equals scale_color_Tully", {
-  expect_equal_scales(scale_color_westeros(palette = "Tully"), scale_colour_westeros(palette = "Tully"))
-})
-
-test_that("scale_colour_Tully works", {
-  expect_is(scale_color_westeros(palette = "Tully"), "ScaleDiscrete")
-})
-
-test_that("scale_fill_Tully works", {
-  expect_is(scale_fill_westeros(palette = "Tully"), "ScaleDiscrete")
-})
+# test_that("scale_colour_Tully equals scale_color_Tully", {
+#   expect_equal_scales(scale_color_westeros(palette = "Tully"), scale_colour_westeros(palette = "Tully"))
+# })
+#
+# test_that("scale_colour_Tully works", {
+#   expect_is(scale_color_westeros(palette = "Tully"), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_Tully works", {
+#   expect_is(scale_fill_westeros(palette = "Tully"), "ScaleDiscrete")
+# })
 
 ## House Greyjoy ----
 test_that("Greyjoy_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Greyjoy")(10))
 })
 
-test_that("scale_colour_Greyjoy equals scale_color_Greyjoy", {
-  expect_equal_scales(scale_color_westeros(palette = "Greyjoy"), scale_colour_westeros(palette = "Greyjoy"))
-})
-
-test_that("scale_colour_Greyjoy works", {
-  expect_is(scale_color_westeros(palette = "Greyjoy"), "ScaleDiscrete")
-})
-
-test_that("scale_fill_Greyjoy works", {
-  expect_is(scale_fill_westeros(palette = "Greyjoy"), "ScaleDiscrete")
-})
+# test_that("scale_colour_Greyjoy equals scale_color_Greyjoy", {
+#   expect_equal_scales(scale_color_westeros(palette = "Greyjoy"), scale_colour_westeros(palette = "Greyjoy"))
+# })
+#
+# test_that("scale_colour_Greyjoy works", {
+#   expect_is(scale_color_westeros(palette = "Greyjoy"), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_Greyjoy works", {
+#   expect_is(scale_fill_westeros(palette = "Greyjoy"), "ScaleDiscrete")
+# })
 
 ## House Manderly ----
 test_that("Manderly_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Manderly")(10))
 })
 
-test_that("scale_colour_Manderly equals scale_color_Manderly", {
-  expect_equal_scales(scale_color_westeros(palette = "Manderly"), scale_colour_westeros(palette = "Manderly"))
-})
-
-test_that("scale_colour_Manderly works", {
-  expect_is(scale_color_westeros(palette = "Manderly"), "ScaleDiscrete")
-})
-
-test_that("scale_fill_Manderly works", {
-  expect_is(scale_fill_westeros(palette = "Manderly"), "ScaleDiscrete")
-})
+# test_that("scale_colour_Manderly equals scale_color_Manderly", {
+#   expect_equal_scales(scale_color_westeros(palette = "Manderly"), scale_colour_westeros(palette = "Manderly"))
+# })
+#
+# test_that("scale_colour_Manderly works", {
+#   expect_is(scale_color_westeros(palette = "Manderly"), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_Manderly works", {
+#   expect_is(scale_fill_westeros(palette = "Manderly"), "ScaleDiscrete")
+# })
 
 ## House Baratheon of Dragonstone (Stannis) ----
 test_that("Stannis_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Stannis")(10))
 })
 
-test_that("scale_colour_Stannis equals scale_color_Stannis", {
-  expect_equal_scales(scale_color_westeros(palette = "Stannis"), scale_colour_westeros(palette = "Stannis"))
-})
-
-test_that("scale_colour_Stannis works", {
-  expect_is(scale_color_westeros(palette = "Stannis"), "ScaleDiscrete")
-})
-
-test_that("scale_fill_Stannis works", {
-  expect_is(scale_fill_westeros(palette = "Stannis"), "ScaleDiscrete")
-})
+# test_that("scale_colour_Stannis equals scale_color_Stannis", {
+#   expect_equal_scales(scale_color_westeros(palette = "Stannis"), scale_colour_westeros(palette = "Stannis"))
+# })
+#
+# test_that("scale_colour_Stannis works", {
+#   expect_is(scale_color_westeros(palette = "Stannis"), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_Stannis works", {
+#   expect_is(scale_fill_westeros(palette = "Stannis"), "ScaleDiscrete")
+# })
 
 ## House Martell ----
 test_that("Martell_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Martell")(10))
 })
 
-test_that("scale_colour_Martell equals scale_color_Martell", {
-  expect_equal_scales(scale_color_westeros(palette = "Martell"), scale_colour_westeros(palette = "Martell"))
-})
-
-test_that("scale_colour_Martell works", {
-  expect_is(scale_color_westeros(palette = "Martell"), "ScaleDiscrete")
-})
-
-test_that("scale_fill_Martell works", {
-  expect_is(scale_fill_westeros(palette = "Martell"), "ScaleDiscrete")
-})
+# test_that("scale_colour_Martell equals scale_color_Martell", {
+#   expect_equal_scales(scale_color_westeros(palette = "Martell"), scale_colour_westeros(palette = "Martell"))
+# })
+#
+# test_that("scale_colour_Martell works", {
+#   expect_is(scale_color_westeros(palette = "Martell"), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_Martell works", {
+#   expect_is(scale_fill_westeros(palette = "Martell"), "ScaleDiscrete")
+# })
 
 ## House Arryn ----
 test_that("Arryn_pal raises warning with large number, x > 9", {
   expect_warning(westeros_pal(palette = "Arryn")(10))
 })
 
-test_that("scale_colour_Arryn equals scale_color_Arryn", {
-  expect_equal_scales(scale_color_westeros(palette = "Arryn"), scale_colour_westeros(palette = "Arryn"))
-})
-
-test_that("scale_colour_Arryn works", {
-  expect_is(scale_color_westeros(palette = "Arryn"), "ScaleDiscrete")
-})
-
-test_that("scale_fill_Arryn works", {
-  expect_is(scale_fill_westeros(palette = "Arryn"), "ScaleDiscrete")
-})
+# test_that("scale_colour_Arryn equals scale_color_Arryn", {
+#   expect_equal_scales(scale_color_westeros(palette = "Arryn"), scale_colour_westeros(palette = "Arryn"))
+# })
+#
+# test_that("scale_colour_Arryn works", {
+#   expect_is(scale_color_westeros(palette = "Arryn"), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_Arryn works", {
+#   expect_is(scale_fill_westeros(palette = "Arryn"), "ScaleDiscrete")
+# })
 
 ## Colors check ----
 test_that("westeros_pal outputs correct colors", {

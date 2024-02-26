@@ -1,6 +1,8 @@
 ## Minor patch
 
-* Change 'size' argument for `element_line()` and `element_rect()` to 'linewidth' in line with new 3.4.0 version of {ggplot2}
+* Add @docType package
+  * See [issue #22](https://github.com/Ryo-N7/tvthemes/issues/22)
+* Fix or delete discrete scale tests as per ggplot2 3.5.0 changes
 
 ## Test environments
 * local Windows 10 x64 install, R 4.0.5

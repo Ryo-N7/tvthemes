@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O342A2A)
 <!-- badges: end -->
 
-[Ryo Nakagawara | Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo/)
+Ryo Nakagawara | Twitter: `@R_by_Ryo`
 
 The `tvthemes` package is a collection of various `ggplot2` themes and color/fill palettes based on everybody's favorite TV shows. What kick-started this whole package was my [blogpost](https://ryo-n7.github.io/2019-02-15-visualize-brooklyn-nine-nine/) looking at simple TV stats on my current favorite TV show, Brooklyn Nine-Nine. I got a lot of good feedback on the colors I used for the custom `ggplot2` theme and color palettes so I decided to expand it to other shows that I love! Suggestions and Pull Requests for palettes/themes are welcome!
 
@@ -182,7 +182,7 @@ This code is released under the GPL v3 License - see the
 
 # Credits
 
-Inspired by [Matt Oldach](https://twitter.com/MattOldach/)'s [{vaporwave}](https://github.com/moldach/vapoRwave/), [Bob Rudis](https://twitter.com/hrbrmstr/)' [{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes/), [Garrick Aden-Buie](https://twitter.com/grrrck/)'s [{ggpomological}](https://github.com/gadenbuie/ggpomological/), [Ewen Henderson](https://twitter.com/ewen_/)'s [{ghibli}](https://github.com/ewenme/ghibli/), [rOpenSci](https://github.com/ropenscilabs/)'s [{ochRe}](https://github.com/hollylkirk/ochRe), & [Nathan Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
+Inspired by Matt Oldach's [{vaporwave}](https://github.com/moldach/vapoRwave/), Bob Rudis' [{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes/), Garrick Aden-Buie's [{ggpomological}](https://github.com/gadenbuie/ggpomological/), Ewen Henderson's [{ghibli}](https://github.com/ewenme/ghibli/), [rOpenSci](https://github.com/ropenscilabs/)'s [{ochRe}](https://github.com/hollylkirk/ochRe), & [Nathan Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).
 
 Hilda palettes from [Matt Shanks](https://www.mattshanks.com.au/colour-palette-reference-hilda/) and [ChevyRay](https://imgur.com/a/6oY8c6k).
 

@@ -69,17 +69,17 @@ test_that("spongeBob_pal raises warning with large number, x > 9", {
   expect_error(spongeBob_pal(n = 10))
 })
 
-test_that("scale_colour_spongeBob equals scale_color_spongeBob", {
-  expect_equal_scales(scale_color_spongeBob(), scale_colour_spongeBob())
-})
-
-test_that("scale_colour_spongeBob works", {
-  expect_is(scale_color_spongeBob(), "ScaleDiscrete")
-})
-
-test_that("scale_fill_spongeBob works", {
-  expect_is(scale_fill_spongeBob(), "ScaleDiscrete")
-})
+# test_that("scale_colour_spongeBob equals scale_color_spongeBob", {
+#   expect_equal_scales(scale_color_spongeBob(), scale_colour_spongeBob())
+# })
+#
+# test_that("scale_colour_spongeBob works", {
+#   expect_is(scale_color_spongeBob(), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_spongeBob works", {
+#   expect_is(scale_fill_spongeBob(), "ScaleDiscrete")
+# })
 
 ## Colors are correct ----
 test_that("spongebob palette outputs correct colors", {

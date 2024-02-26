@@ -18,7 +18,7 @@ status](https://github.com/Ryo-N7/tvthemes/workflows/R-CMD-check/badge.svg)](htt
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O342A2A)
 <!-- badges: end -->
 
-[Ryo Nakagawara \| Twitter: `@R_by_Ryo`](https://twitter.com/R_by_Ryo/)
+Ryo Nakagawara \| Twitter: `@R_by_Ryo`
 
 The `tvthemes` package is a collection of various `ggplot2` themes and
 color/fill palettes based on everybody’s favorite TV shows. What
@@ -30,15 +30,15 @@ custom `ggplot2` theme and color palettes so I decided to expand it to
 other shows that I love! Suggestions and Pull Requests for
 palettes/themes are welcome!
 
--   [Package Website](https://ryo-n7.github.io/tvthemes/)
--   [Intro to `tvthemes 0.0.0.9100` blog
-    post](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/)
--   [`tvthemes 1.0.0` & CRAN release blog
-    post](https://ryo-n7.github.io/2019-09-06-tvthemes-CRAN-announcement/)
--   [`tvthemes 1.1.0` & CRAN release blog
-    post](https://ryo-n7.github.io/2019-11-04-tvthemes-1.1.0-announcement/)
--   [`tvthemes 1.3.0` & CRAN release blog
-    post](https://ryo-n7.github.io/2022-03-17-tvthemes-1.3.0-announcement/)
+- [Package Website](https://ryo-n7.github.io/tvthemes/)
+- [Intro to `tvthemes 0.0.0.9100` blog
+  post](https://ryo-n7.github.io/2019-05-16-introducing-tvthemes-package/)
+- [`tvthemes 1.0.0` & CRAN release blog
+  post](https://ryo-n7.github.io/2019-09-06-tvthemes-CRAN-announcement/)
+- [`tvthemes 1.1.0` & CRAN release blog
+  post](https://ryo-n7.github.io/2019-11-04-tvthemes-1.1.0-announcement/)
+- [`tvthemes 1.3.0` & CRAN release blog
+  post](https://ryo-n7.github.io/2022-03-17-tvthemes-1.3.0-announcement/)
 
 ``` r
 library(tvthemes)
@@ -64,24 +64,24 @@ ggplot(mpg, aes(displ)) +
 
 ## Current list of TV shows
 
--   **Avatar: The Last Airbender**: theme + palettes (Fire Nation, Water
-    Tribe, Earth Kingdom, & Air Nomads)
--   **Brooklyn Nine-Nine**: theme + palettes (regular & dark)
--   **Game of Thrones/A Song of Ice & Fire**: ‘The Palettes of Ice &
-    Fire’ (currently: Stark, Baratheon (Stannis), Lannister, Tully,
-    Targaryen, Martell, Greyjoy, Tyrell, Arryn, Manderly)
--   **Rick & Morty**: theme + palette
--   **Parks & Recreation**: two themes (light & dark) + palette
--   **The Simpsons**: theme + palette
--   **Spongebob Squarepants**: theme + palette + background images
--   **Hilda**: Day, Dusk, Night themes + palettes
--   **Attack on Titan**: palette
--   **Kim Possible**: palette
--   **Big Hero 6**: palette
--   **Gravity Falls**: palette
--   **Steven Universe**: palette
--   *More in future releases…*
--   *Development branch*: TBD…
+- **Avatar: The Last Airbender**: theme + palettes (Fire Nation, Water
+  Tribe, Earth Kingdom, & Air Nomads)
+- **Brooklyn Nine-Nine**: theme + palettes (regular & dark)
+- **Game of Thrones/A Song of Ice & Fire**: ‘The Palettes of Ice & Fire’
+  (currently: Stark, Baratheon (Stannis), Lannister, Tully, Targaryen,
+  Martell, Greyjoy, Tyrell, Arryn, Manderly)
+- **Rick & Morty**: theme + palette
+- **Parks & Recreation**: two themes (light & dark) + palette
+- **The Simpsons**: theme + palette
+- **Spongebob Squarepants**: theme + palette + background images
+- **Hilda**: Day, Dusk, Night themes + palettes
+- **Attack on Titan**: palette
+- **Kim Possible**: palette
+- **Big Hero 6**: palette
+- **Gravity Falls**: palette
+- **Steven Universe**: palette
+- *More in future releases…*
+- *Development branch*: TBD…
 
 ## Installation
 
@@ -116,71 +116,128 @@ the [Package Website](https://ryo-n7.github.io/tvthemes/).
 
 ## Brooklyn Nine-Nine
 
-![b99d](man/figures/README-b99header-1.png)
+<figure>
+<img src="man/figures/README-b99header-1.png" alt="b99d" />
+<figcaption aria-hidden="true">b99d</figcaption>
+</figure>
 
-![b99l](man/figures/b99regpal_plot.png)
+<figure>
+<img src="man/figures/b99regpal_plot.png" alt="b99l" />
+<figcaption aria-hidden="true">b99l</figcaption>
+</figure>
 
 ## Spongebob Squarepants
 
-![bobspog](man/figures/sponge_plot.png)
+<figure>
+<img src="man/figures/sponge_plot.png" alt="bobspog" />
+<figcaption aria-hidden="true">bobspog</figcaption>
+</figure>
 
-![bobspogbkg](man/figures/bobspog.bg.png)
+<figure>
+<img src="man/figures/bobspog.bg.png" alt="bobspogbkg" />
+<figcaption aria-hidden="true">bobspogbkg</figcaption>
+</figure>
 
 ## Game of Thrones: House Stark, Tully, Targaryen
 
-![StarkTullyTargaryen](man/figures/starktullytargaryen.png)
+<figure>
+<img src="man/figures/starktullytargaryen.png"
+alt="StarkTullyTargaryen" />
+<figcaption aria-hidden="true">StarkTullyTargaryen</figcaption>
+</figure>
 
 ## Game of Thrones: House Tyrell, Lannister, Greyjoy
 
-![TyrellLannisterGreyjoy](man/figures/tyrelllannistergreyjoy.png)
+<figure>
+<img src="man/figures/tyrelllannistergreyjoy.png"
+alt="TyrellLannisterGreyjoy" />
+<figcaption aria-hidden="true">TyrellLannisterGreyjoy</figcaption>
+</figure>
 
 ## Game of Thrones: Arryn, Manderly, Martell
 
-![ArrynManderlyMartell](man/figures/arrynmanderlymartell.png)
+<figure>
+<img src="man/figures/arrynmanderlymartell.png"
+alt="ArrynManderlyMartell" />
+<figcaption aria-hidden="true">ArrynManderlyMartell</figcaption>
+</figure>
 
 ## Game of Thrones: Stannis Baratheon, The One True King
 
-![stannis](man/figures/stannis.png)
+<figure>
+<img src="man/figures/stannis.png" alt="stannis" />
+<figcaption aria-hidden="true">stannis</figcaption>
+</figure>
 
 ## The Simpsons
 
-![simpsons](man/figures/simpsons_plot.png)
+<figure>
+<img src="man/figures/simpsons_plot.png" alt="simpsons" />
+<figcaption aria-hidden="true">simpsons</figcaption>
+</figure>
 
 ## Rick and Morty
 
-![randm](man/figures/rickmorty_plot.png)
+<figure>
+<img src="man/figures/rickmorty_plot.png" alt="randm" />
+<figcaption aria-hidden="true">randm</figcaption>
+</figure>
 
 ## Avatar: The Last Airbender (Fire Nation, Air Nomads, Water Tribe, Earth Kingdom)
 
-![tla](man/figures/lastairbender.png)
+<figure>
+<img src="man/figures/lastairbender.png" alt="tla" />
+<figcaption aria-hidden="true">tla</figcaption>
+</figure>
 
 ## Parks and Recreation
 
-![pandr](man/figures/parksandrec_both.png)
+<figure>
+<img src="man/figures/parksandrec_both.png" alt="pandr" />
+<figcaption aria-hidden="true">pandr</figcaption>
+</figure>
 
 ## Attack on Titan
 
-![aot](man/figures/attackontitan.png)
+<figure>
+<img src="man/figures/attackontitan.png" alt="aot" />
+<figcaption aria-hidden="true">aot</figcaption>
+</figure>
 
 ## Kim Possible
 
-![KimPossible](man/figures/kimpossible.png)
+<figure>
+<img src="man/figures/kimpossible.png" alt="KimPossible" />
+<figcaption aria-hidden="true">KimPossible</figcaption>
+</figure>
 
 ## Big Hero 6
 
-![bighero6](man/figures/bighero6.png)
+<figure>
+<img src="man/figures/bighero6.png" alt="bighero6" />
+<figcaption aria-hidden="true">bighero6</figcaption>
+</figure>
 
 ## Hilda
 
-![hilda](man/figures/hilda.png)
+<figure>
+<img src="man/figures/hilda.png" alt="hilda" />
+<figcaption aria-hidden="true">hilda</figcaption>
+</figure>
 
 ## Gravity Falls
 
-![gravityfall](man/figures/gravityfalls.png)
+<figure>
+<img src="man/figures/gravityfalls.png" alt="gravityfall" />
+<figcaption aria-hidden="true">gravityfall</figcaption>
+</figure>
 
 ## Steven Universe
 
-![stevenuniverse](man/figures/stevenuniverse.png)
+<figure>
+<img src="man/figures/stevenuniverse.png" alt="stevenuniverse" />
+<figcaption aria-hidden="true">stevenuniverse</figcaption>
+</figure>
 
 # Contributing
 
@@ -197,14 +254,12 @@ file for details.
 
 # Credits
 
-Inspired by [Matt Oldach](https://twitter.com/MattOldach/)‘s
-[{vaporwave}](https://github.com/moldach/vapoRwave/), [Bob
-Rudis](https://twitter.com/hrbrmstr/)’
-[{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes/), [Garrick
-Aden-Buie](https://twitter.com/grrrck/)’s
-[{ggpomological}](https://github.com/gadenbuie/ggpomological/), [Ewen
-Henderson](https://twitter.com/ewen_/)’s
-[{ghibli}](https://github.com/ewenme/ghibli/),
+Inspired by Matt Oldach’s
+[{vaporwave}](https://github.com/moldach/vapoRwave/), Bob Rudis’
+[{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes/), Garrick
+Aden-Buie’s
+[{ggpomological}](https://github.com/gadenbuie/ggpomological/), Ewen
+Henderson’s [{ghibli}](https://github.com/ewenme/ghibli/),
 [rOpenSci](https://github.com/ropenscilabs/)’s
 [{ochRe}](https://github.com/hollylkirk/ochRe), & [Nathan
 Cunningham](http://www.nathancunn.com/2017-07-16-simpsons-characters/).

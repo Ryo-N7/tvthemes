@@ -72,7 +72,7 @@ theme_simpsons <- function(
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
+          legend.key = element_rect(colour = "black", linetype = "solid", linewidth = 1.25),
           legend.background = element_rect(color = "black", fill = "#7199E1", linetype = "solid")
     )
 

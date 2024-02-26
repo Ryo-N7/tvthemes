@@ -69,20 +69,20 @@ test_that("brooklyn99_pal raises warning with large number, x > 10", {
   expect_error(brooklyn99_pal(n = 12))
 })
 
-test_that("scale_colour_brooklyn99/dark equals scale_color_brooklyn99/dark", {
-  expect_equal_scales(scale_color_brooklyn99(palette = "Regular"), scale_colour_brooklyn99(palette = "Regular"))
-  expect_equal_scales(scale_color_brooklyn99(palette = "Dark"), scale_colour_brooklyn99(palette = "Dark"))
-})
+# test_that("scale_colour_brooklyn99/dark equals scale_color_brooklyn99/dark", {
+#   expect_equal_scales(scale_color_brooklyn99(palette = "Regular"), scale_colour_brooklyn99(palette = "Regular"))
+#   expect_equal_scales(scale_color_brooklyn99(palette = "Dark"), scale_colour_brooklyn99(palette = "Dark"))
+# })
 
-test_that("scale_colour_brooklyn99/dark works", {
-  expect_is(scale_color_brooklyn99(palette = "Regular"), "ScaleDiscrete")
-  expect_is(scale_color_brooklyn99(palette = "Dark"), "ScaleDiscrete")
-})
+# test_that("scale_colour_brooklyn99/dark works", {
+#   expect_is(scale_color_brooklyn99(palette = "Regular"), "ScaleDiscrete")
+#   expect_is(scale_color_brooklyn99(palette = "Dark"), "ScaleDiscrete")
+# })
 
-test_that("scale_fill_brooklyn99/dark works", {
-  expect_is(scale_fill_brooklyn99(palette = "Regular"), "ScaleDiscrete")
-  expect_is(scale_fill_brooklyn99(palette = "Dark"), "ScaleDiscrete")
-})
+# test_that("scale_fill_brooklyn99/dark works", {
+#   expect_is(scale_fill_brooklyn99(palette = "Regular"), "ScaleDiscrete")
+#   expect_is(scale_fill_brooklyn99(palette = "Dark"), "ScaleDiscrete")
+# })
 
 test_that("scale_color_brooklyn99 outputs correct colors", {
   expect_equal(brooklyn99_pal(palette = "Regular")(10),

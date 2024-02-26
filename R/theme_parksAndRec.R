@@ -75,7 +75,7 @@ theme_parksAndRec <- function(
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.15),
+          legend.key = element_rect(colour = "black", linetype = "solid", linewidth = 1.15),
           legend.background = element_rect(color = "black", fill = "#CCFFBB", linetype = "solid")
     )
 
@@ -160,8 +160,8 @@ theme_parksAndRecLight <- function(
           # background/panel options
           plot.background = element_rect(color = NA, fill = "#CCFFBB"),
           panel.background = element_rect(color = NA, fill = "#238443"),
-          panel.grid.major = element_line(color = NULL, size = 1.05),
-          panel.grid.minor = element_line(color = NULL, size = 1.05),
+          panel.grid.major = element_line(color = NULL, linewidth = 1.05),
+          panel.grid.minor = element_line(color = NULL, linewidth = 1.05),
           # legend options
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
@@ -246,13 +246,13 @@ theme_parksAndRec_light <- function(
           # background/panel options
           plot.background = element_rect(color = NA, fill = "#CCFFBB"),
           panel.background = element_rect(color = NA, fill = "#238443"),
-          panel.grid.major = element_line(color = NULL, size = 1.05),
-          panel.grid.minor = element_line(color = NULL, size = 1.05),
+          panel.grid.major = element_line(color = NULL, linewidth = 1.05),
+          panel.grid.minor = element_line(color = NULL, linewidth = 1.05),
           # legend options
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "grey20", linetype = "solid", size = 1.15),
+          legend.key = element_rect(colour = "grey20", linetype = "solid", linewidth = 1.15),
           legend.background = element_rect(color = "grey20", fill = "#CCFFBB", linetype = "solid")
     )
 

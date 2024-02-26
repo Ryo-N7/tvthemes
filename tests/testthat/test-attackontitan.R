@@ -15,17 +15,17 @@ test_that("attackOnTitan_pal raises warning with large number, x > 8", {
   expect_error(attackOnTitan_pal(n = 9))
 })
 
-test_that("scale_colour_attackOnTitan equals scale_color_attackOnTitan", {
-  expect_equal_scales(scale_color_attackOnTitan(), scale_colour_attackOnTitan())
-})
+# test_that("scale_colour_attackOnTitan equals scale_color_attackOnTitan", {
+#   expect_equal_scales(scale_color_attackOnTitan(), scale_colour_attackOnTitan())
+# })
 
-test_that("scale_colour_attackOnTitan works", {
-  expect_is(scale_color_attackOnTitan(), "ScaleDiscrete")
-})
+# test_that("scale_colour_attackOnTitan works", {
+#   expect_is(scale_color_attackOnTitan(), "ScaleDiscrete")
+# })
 
-test_that("scale_fill_attackOnTitan works", {
-  expect_is(scale_fill_attackOnTitan(), "ScaleDiscrete")
-})
+# test_that("scale_fill_attackOnTitan works", {
+#   expect_is(scale_fill_attackOnTitan(), "ScaleDiscrete")
+# })
 
 test_that("attackOnTitan outputs correct colors", {
   expect_equal(attackOnTitan_pal()(8),

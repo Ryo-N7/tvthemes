@@ -71,17 +71,17 @@ test_that("hilda_pal raises warning with large number, x > 8", {
   expect_error(hilda_pal(n = 9))
 })
 
-test_that("scale_colour_hilda equals scale_color_hilda", {
-  expect_equal_scales(scale_color_hilda(palette = "Day"), scale_colour_hilda(palette = "Day"))
-})
-
-test_that("scale_colour_hilda works", {
-  expect_is(scale_color_hilda(palette = "Day"), "ScaleDiscrete")
-})
-
-test_that("scale_fill_hilda works", {
-  expect_is(scale_fill_hilda(palette = "Day"), "ScaleDiscrete")
-})
+# test_that("scale_colour_hilda equals scale_color_hilda", {
+#   expect_equal_scales(scale_color_hilda(palette = "Day"), scale_colour_hilda(palette = "Day"))
+# })
+#
+# test_that("scale_colour_hilda works", {
+#   expect_is(scale_color_hilda(palette = "Day"), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_hilda works", {
+#   expect_is(scale_fill_hilda(palette = "Day"), "ScaleDiscrete")
+# })
 
 # Hilda Dusk ----
 test_that("theme_hildaDusk works", {
@@ -144,17 +144,17 @@ test_that("hilda_pal raises warning with large number, x > 8", {
   expect_warning(hilda_pal("Dusk")(9))
 })
 
-test_that("scale_colour_hilda equals scale_color_hilda", {
-  expect_equal_scales(scale_color_hilda(palette = "Dusk"), scale_colour_hilda(palette = "Dusk"))
-})
-
-test_that("scale_colour_hilda works", {
-  expect_is(scale_color_hilda(palette = "Dusk"), "ScaleDiscrete")
-})
-
-test_that("scale_fill_hilda works", {
-  expect_is(scale_fill_hilda(palette = "Dusk"), "ScaleDiscrete")
-})
+# test_that("scale_colour_hilda equals scale_color_hilda", {
+#   expect_equal_scales(scale_color_hilda(palette = "Dusk"), scale_colour_hilda(palette = "Dusk"))
+# })
+#
+# test_that("scale_colour_hilda works", {
+#   expect_is(scale_color_hilda(palette = "Dusk"), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_hilda works", {
+#   expect_is(scale_fill_hilda(palette = "Dusk"), "ScaleDiscrete")
+# })
 
 # Hilda Night ----
 test_that("theme_hildaNight works", {
@@ -217,17 +217,17 @@ test_that("hilda_pal raises warning with large number, x > 8", {
   expect_warning(hilda_pal("Night")(9))
 })
 
-test_that("scale_colour_hilda equals scale_color_hilda", {
-  expect_equal_scales(scale_color_hilda(palette = "Night"), scale_colour_hilda(palette = "Night"))
-})
-
-test_that("scale_colour_hilda works", {
-  expect_is(scale_color_hilda(palette = "Night"), "ScaleDiscrete")
-})
-
-test_that("scale_fill_hilda works", {
-  expect_is(scale_fill_hilda(palette = "Night"), "ScaleDiscrete")
-})
+# test_that("scale_colour_hilda equals scale_color_hilda", {
+#   expect_equal_scales(scale_color_hilda(palette = "Night"), scale_colour_hilda(palette = "Night"))
+# })
+#
+# test_that("scale_colour_hilda works", {
+#   expect_is(scale_color_hilda(palette = "Night"), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_hilda works", {
+#   expect_is(scale_fill_hilda(palette = "Night"), "ScaleDiscrete")
+# })
 
 ## Colors correct ----
 test_that("Hilda palettes outputs correct colors", {

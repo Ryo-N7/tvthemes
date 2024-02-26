@@ -15,17 +15,17 @@ test_that("kimPossible_pal raises warning with large number, x > 12", {
   expect_error(kimPossible_pal(n = 13))
 })
 
-test_that("scale_colour_kimPossible equals scale_color_kimPossible", {
-  expect_equal_scales(scale_color_kimPossible(), scale_colour_kimPossible())
-})
-
-test_that("scale_colour_kimPossible works", {
-  expect_is(scale_color_kimPossible(), "ScaleDiscrete")
-})
-
-test_that("scale_fill_kimPossible works", {
-  expect_is(scale_fill_kimPossible(), "ScaleDiscrete")
-})
+# test_that("scale_colour_kimPossible equals scale_color_kimPossible", {
+#   expect_equal_scales(scale_color_kimPossible(), scale_colour_kimPossible())
+# })
+#
+# test_that("scale_colour_kimPossible works", {
+#   expect_is(scale_color_kimPossible(), "ScaleDiscrete")
+# })
+#
+# test_that("scale_fill_kimPossible works", {
+#   expect_is(scale_fill_kimPossible(), "ScaleDiscrete")
+# })
 
 ## Colors are correct ----
 test_that("scale_color_kimPossible outputs correct colors", {
