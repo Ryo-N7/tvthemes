@@ -29,7 +29,7 @@ Suggests:
     stringr,
     knitr,
     rmarkdown
-URL: https://github.com/Ryo-N7/tvthemes
+URL: https://ryo-n7.github.io/tvthemes/, https://github.com/Ryo-N7/tvthemes
 BugReports: https://github.com/Ryo-N7/tvthemes/issues
 Language: en-US
 VignetteBuilder: knitr
